@@ -1,0 +1,61 @@
+Financial accounting vs Managerial accounting
+
+Financial Accounting
+- Records past transactions fairly and accurately
+- Follows strict standards (IFRS/GAAP)
+- Shows financial performance & position 
+- For external users (shareholders)
+
+Managerial Accounting
+- Focuses on planning & control
+- Used for future decisions (budgeting, pricing, expansion)
+- Flexible, no strict rules
+- For internal decision-making (managers)
+
+
+Financial Accounting formula 
+Assets = Liabilities + Equity
+
+
+Assets
+- Resources controlled by a biz that are expected to bring future economic benefits
+- 2 types: 
+  - Non Current Assets (nCA)
+    - long term: > 1 year
+      - buildings, machinery, equpiment, vehicles
+  - Current Assets (CA)
+    - short term: < 1 year
+      - cash, inventory, accounts receivable
+
+
+Liabilities 
+- Present obligations of a biz expected to result in an outflow of economic benefits.
+- 2 types:
+  - Non Current Liabilities (nCL)
+    - long term liability due for repayment: > 1 year
+      - long term bonds, mortgage loan
+  - Current Liabilities (CL)
+    - due for payment: < 1 year
+      - creditors 
+
+
+Owner’s Equity
+The owner’s claim on the biz after deducting liabilities from assets.
+- capital invested by owner
+- retained earnings (profits kept in biz)
+
+
+Revenue
+Income earned from normal business activities.
+- Sales of goods
+- Service income
+
+
+Expenses
+Costs incurred to generate revenue.
+- Rent, salaries, utilities, cost of goods sold
+
+
+Profit
+- The surplus after total revenue exceeds total expenses.
+- Profit = Total Revenue − Total Expenses

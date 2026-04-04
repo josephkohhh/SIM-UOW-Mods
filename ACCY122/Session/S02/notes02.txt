@@ -1,0 +1,33 @@
+Asset, Liability, Capital, Revenue, Expense 
+
+Loan received / taken Liability - liability
+Loan given - (asset)
+Mr Zumba, Capital - capital
+Service Revenue - revenue
+Accounts Payable - liability
+Unearned Fitness Revenue - (liability) - still owe svc but alr paid to the biz
+Salaries Payable - liability
+Cash in hand - asset
+Cash at bank - asset 
+Accounts Receivable / Debtors - asset
+Prepaid Advertising - (asset)
+Unexpired insurance - (asset)
+Supplies - (asset)
+Salaries Expense - expense
+Rent Expense - expense
+Bad debts expense - expense
+Bank Fixed Deposit - asset
+Insurance expense - expense
+Supplies expense- expense
+Electricity expense - expense
+Equipment  - asset
+
+
+
+
+note: 
+If the business:
+- has already paid for it
+- will still benefit from it in the future
+
+It is an asset

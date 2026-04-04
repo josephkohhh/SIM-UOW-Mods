@@ -18,7 +18,7 @@ Assets = Liabilities + Equity
 
 
 Assets
-- Resources controlled by a biz from past events that are expected bring future benefits
+- Resources controlled by a biz that are expected to bring future economic benefits
 - 2 types: 
   - Non Current Assets (nCA)
     - long term: > 1 year
@@ -29,14 +29,14 @@ Assets
 
 
 Liabilities 
-- Present obligations of a biz arising from past events, expected to result in an outflow of resources.
+- Present obligations of a biz expected to result in an outflow of economic benefits.
 - 2 types:
   - Non Current Liabilities (nCL)
-    - due for repayment: > 1 year
+    - long term liability due for repayment: > 1 year
       - long term bonds, mortgage loan
   - Current Liabilities (CL)
     - due for payment: < 1 year
-      - creditors
+      - creditors 
 
 
 Owner’s Equity
