@@ -1,12 +1,27 @@
-Assessment 1 Individual - Quiz - online 30%
-Assessment 2 Individual - Xero Assignment – online 20%
-Assessment 3 Individual - Exam – off line 50%
+Accounting Cycle Order:
+Record -> Sort -> Check -> Report
+
+1. Journal 
+2. Ledger 
+3. Trial Balance 
+4. Financial Statements
 
 
 
-April 28 - Online Quiz in 2nd half of session
-- topic 1 - 4
-Due 17 May - Xero Assignment 
-TBA - Examination
+1. Journal
+First step
+Write down every transaction
 
-Tutorial T03
+2. Ledger (sort)
+Group transactions into respective accounts (cash, sales, etc.)
+
+3. Trial Bal (check)
+Add everyth up and tally 
+make sure debit = credit (amount has to tally)  
+
+4. Financial Statements (report)
+Now use the trial bal to prepare 
+- income statement (profit or loss) -> P/L = TR - TE
+- statement of OE -> OE at start + changes = OE at end
+- bal sheet -> show asset, liabilities, equity  
+- statement of cashflows -> cash movement 
