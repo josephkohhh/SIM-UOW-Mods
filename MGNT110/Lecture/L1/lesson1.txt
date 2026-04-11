@@ -91,11 +91,12 @@ Managers operate in uncertainty not clarity
 - Uncertain outcomes
 
 
+Cons: 
  Bounded Rationality
  human are not perfect rational decision makers. it is wrong to
  assume that managers are always logical, perfect decision makers
 
- Humans have cognitive bias
+Humans have cognitive bias
 1. too much data -> quickly filter what is impt -> may miss out impt details
 2. confusing ambiguity -> fill gaps by assuming -> may lead to false beliefs 
 3. fast pace -> too quick conclusions -> make poor decision (may be a one off error)
