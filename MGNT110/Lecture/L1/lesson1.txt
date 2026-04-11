@@ -1,0 +1,133 @@
+Management
+
+40yrs+ of industrial revolution
+- mechanization, water power, steam power
+- mass production, assembly line, electricity
+- computer and automation
+- cyber physical systems
+
+From bureaucracy towards gig economy
+- bureaucracy (traditional systems)
+  - Clear hierarchy (boss → managers → employees)
+  - Fixed roles and responsibilities
+  - Stable, long-term employment
+  - Strict rules and procedures
+
+- gig
+  - Short-term or freelance jobs (“gigs”)
+  - Workers are often independent contractors
+  - Flexible hours and tasks
+  - Work is often found through apps or platforms
+
+
+Managing & Organising
+│
+├── People (WHO)
+│   ├─ Individuals
+│   ├─ Teams
+│   ├─ Leadership
+│   └─ Motivation
+│
+├── Practices & Processes (HOW)
+│   ├─ Culture
+│   ├─ Power & politics
+│   ├─ Decision making
+│   └─ Communication
+│
+└── Structures (SYSTEM)
+    ├─ Knowledge & learning
+    ├─ Innovation & change
+    ├─ Organisation design
+    ├─ Ethics & sustainability
+    └─ Globalisation
+
+
+1. Mangament is a mindset and framework
+- It is set of assumptions, concepts, values and Practices
+
+
+2. Managerialsim 
+- A belief that management knowledge is powerful and important
+  and that managers know the best way to run organisations
+
+
+3. Organisations as purposive goal-oriented tools
+- organisation must be arranged and coordinated so it can achieve
+  its goals
+
+
+4.  Managing involves sensemaking and framing
+- sensemaking: 
+  - trying to understand what is happening
+  - interpreting a confusing situation
+  - deciding what sth means
+
+Managers often face uncertainty so they must make sense 
+of market changes, staff problems, conflict, new tech, crises
+
+Framing actions in order to accomplish objectives
+- interpreting reality and influencing how others understand reality
+  - ppl have their own unique biased views and own interpretations
+  - we have our own mental model 
+  - what we see is based on our personal interpretations based on our 
+    expectations
+
+
+Mental model
+Pros:
+- Enable us to think fast and act quickly
+- More accurate mental models increase performance
+
+Cons:
+- wrong assumptions
+- reject info that does not automatically fit
+
+
+Managers operate in uncertainty not clarity 
+- Unclear problems
+- Conflicting goals
+- Lack of resources
+- Role ambiguity
+- Uncertain outcomes
+
+
+ Bounded Rationality
+ human are not perfect rational decision makers. it is wrong to
+ assume that managers are always logical, perfect decision makers
+
+ Humans have cognitive bias
+1. too much data -> quickly filter what is impt -> may miss out impt details
+2. confusing ambiguity -> fill gaps by assuming -> may lead to false beliefs 
+3. fast pace -> too quick conclusions -> make poor decision (may be a one off error)
+4. overload with data, simplifying too much -> few specifics (miss out impt details) -> error & bias (poor decision)
+
+
+Management is not just doing tasks. Not just managing people.
+- It is an ongoing thinking process of interpreting reality and influencing others
+
+3 key Processes
+1. Sensemaking: interpret
+   - applying various mental models to respond to our environment
+2. Sensegiving: influence
+   - use certain mental models to frame a dominant way of practising in organisations
+   - ex. this is a crisis, we must act fast
+3. Sensebreaking: challenge
+   - this models are challenged and reformed due to new knowledge, failures, crisis
+   - ex. after covid, remote work becomes common
+
+
+Summary:
+
+Changing societal paradigms have implications for
+managing and organising
+• Flow and structure of managing and organizing entails
+people, practices and processes and structures.
+• In managing we deal with complexity, ambiguity, value
+dilemmas, political pressures and paradigm shifts reflected
+in changing nature of organisations, global conditions
+economic contexts.
+• Managers respond to such complexity, pressures and
+paradigm shifts through processes of:
+1. Sense making: interpret
+2. Sense giving: influence
+3. Sense breaking: challenge
