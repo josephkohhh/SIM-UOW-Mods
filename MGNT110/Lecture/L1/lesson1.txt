@@ -28,13 +28,13 @@ Managing & Organising
 │   ├─ Leadership
 │   └─ Motivation
 │
-├── Practices & Processes (HOW)
+├── Practices (HOW)
 │   ├─ Culture
 │   ├─ Power & politics
 │   ├─ Decision making
 │   └─ Communication
 │
-└── Structures (SYSTEM)
+└── Processes & Structures (SYSTEM)
     ├─ Knowledge & learning
     ├─ Innovation & change
     ├─ Organisation design
@@ -54,9 +54,9 @@ Managing & Organising
 3. Organisations as purposive goal-oriented tools
 - organisation must be arranged and coordinated so it can achieve
   its goals
+  
 
-
-4.  Managing involves sensemaking and framing
+4. Managing involves sensemaking and framing
 - sensemaking: 
   - trying to understand what is happening
   - interpreting a confusing situation
