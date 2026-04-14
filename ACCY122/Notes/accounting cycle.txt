@@ -13,7 +13,7 @@ First step
 Write down every transaction
 
 2. Ledger (sort)
-Group transactions into respective accounts (cash, sales, etc.)
+Group transactions into respective accounts (bank a/c, nca a/c, exp a/c, capital a/c, svc revenue a/c.)
 
 3. Trial Bal (check)
 Add everyth up and tally 
