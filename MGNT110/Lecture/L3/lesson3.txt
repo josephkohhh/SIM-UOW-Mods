@@ -1,0 +1,146 @@
+Managing teams and groups 
+
+Team:
+- 2 or more people psychologically contracted
+together to achieve common goals, share
+responsibility and accountability for outcomes
+– A psychological contract refers to the informal
+obligations between one person and another or
+within a group.
+
+Group:
+A group differs from a team
+– Shared goal but no psychological contract is involved
+– No interdependency is assumed
+
+
+Group
+Why group? - safety/belonging
+Ex. new employee joins group to feel included
+
+Group types
+- formal (work teams)
+- informal (friends)
+- open vs closed (exclusive)
+
+Group properties 
+- Size (small vs large)
+- Closeness (friends vs strangers)
+- Strength of relationship 
+
+Impact on performance
+- social facilitation
+  - psychologist say people perform better when being watched
+
+Conformance & Obedience
+- People follow group even if wrong
+  - Everyone agree in meeting even if they disagree
+
+Challenges in groups
+Groupthink (Janis 1972)
+- Everyone agrees too quickly
+-  No one challenges ideas
+
+Social loafing (Latané, Williams and Harkins 1979)
+- People put in less effort in a group
+“Someone else will do it” mindset
+
+Groupthink leads to 
+• Poor decisions
+• No critical thinking
+• No innovation
+
+To fix it
+• Encourage opinions
+• Allow disagreement
+• Promote critique
+• Reflect on decisions
+
+
+Social loafing leads to 
+• Unfair workload
+• Low performance
+• Team conflict
+
+How to fix it:
+• Clear roles
+• Clear goals
+• Accountability
+
+
+Not all teams are same
+3 Key dimensions:
+- Skill differentiation
+  - High Skill differentiation (each member has unique expertise, hard to replace)
+  - Low Skill differentiation (members have similar skills, easily replaceable)
+- Authority Differentiation
+  - Who has decision making power
+    - Traditional company → manager decides
+    - Startup team → everyone contributes
+- Temporal Stability
+  how long team member work together 
+  - High Stability
+    - long term team / strong relationships / high trust
+  - Low Stability 
+    - temporary team / project-based / less bonding 
+
+
+The Tuckman Model (Tuckman & Jensen, 1977) 
+It explains how teams typically develop and function over time. 
+It suggests that groups go through 5 predictable stages as they work together:
+1. Forming (Orientation phase)
+   - Team members first come together
+   - People are polite, cautious, and unsure of their roles
+   - Focus is on understanding goals and getting oriented
+   👉 Think: “We’re just getting to know each other.”
+2. Storming (Conflict phase)
+   - Conflicts and disagreements start to appear
+   - Members challenge ideas, roles, or leadership
+   - This stage can feel uncomfortable but is important for growth
+   👉 Think: “We don’t all agree yet.”
+3. Norming (Emergence phase)
+   - The team begins to resolve conflicts
+   - Roles and rules become clearer
+   - Trust and cooperation increase
+   👉 Think: “We’re starting to work well together.”
+4. Performing (Reinforcement phase)
+   - The team functions effectively and efficiently
+   - Members collaborate smoothly toward shared goals
+   - High productivity and strong relationships
+   👉 Think: “We’re working as a solid team.”
+5. Adjourning (Disbanding phase)
+   - The team disbands after completing its task
+   - Members reflect on achievements and may feel a sense of closure or loss
+   👉 Think: “We’ve finished—time to wrap up.”
+
+
+Managing team conflict
+The Seven Deadly INs
+- Intention (When someone deliberately tries to hurt others)
+- Incompetence (Lack of skills or ability)
+- Infidelity (Betrayal of trust)
+- Insensitivity (Lack of awareness of others’ feelings)
+- Intrusion (Invading personal space or boundaries)
+- Institutional forces (Conflict caused by system or org)
+- Inevitability (Conflict is unavoidable)
+
+How managers should respond?
+Instead of: 
+ – blaming individuals
+
+They should:
+– clarify roles
+– improve communication
+– manage expectations
+– support team members
+
+
+
+Summary 
+• Teams are an important form
+  – stimulate human relations that are productive, cohesive and aligned to organizational outcomes.
+• Group dynamics affect performance
+  – influenced by dynamics such as group size, cohesion and social facilitation, conformance and obedience.
+• Teams develop through different stages
+  – depending on what organizational tasks they are formed to work on.
+• Managing teams is not just about structure; it’s about managing behaviour, relationships, and conflict.
