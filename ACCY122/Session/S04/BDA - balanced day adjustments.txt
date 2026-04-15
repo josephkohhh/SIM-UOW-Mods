@@ -1,0 +1,52 @@
+Session 4 is about adjusting entries
+
+4 core adjustments:
+1. Accrued Income
+2. Prepaid Expenses
+3. Unearned Revenue
+4. Depreciation
+
+
+1. Accrued Income = Earned but NOT received
+You provided services worth $1K, but customer hasn’t paid yet.
+- You earned it → income
+- But no cash yet → someone owes you
+
+Adjusting entry:
+Dr Accounts Receivable (AR)  1,000  
+   Cr Service Revenue          1,000  
+
+
+2. Prepaid Expenses = Paid but NOT used yet
+You paid $1.2K insurance for 12 months.
+At year-end, only 3 months used ($300) → 9 months unused = $900
+
+Adjusting entry:
+Dr Insurance Expense   300  
+   Cr Prepaid Insurance   300  
+
+
+3. Unearned Revenue = Received but NOT earned (Sess 3 wkbk Qn4.12 -no4)
+You received $4,8K rent for 4 months.
+1 month earned ($1.2K) → 3 months unearned = $3.6K
+
+Adjusting entry:
+Dr Unearned Revenue   1,200  
+   Cr Rental Revenue      1,200  
+
+
+4. Depreciation = Asset losing value over time
+Equipment cost = 12,000
+Residual = 2,000 (resale value after useful life)
+Life = 10 years
+
+Annual depreciation = 1,000
+
+Adjusting entry
+Dr Depreciation Expense - equipment 1,000  
+   Cr Accumulated Depreciation - equipment   1,000  
+
+
+
+
+
