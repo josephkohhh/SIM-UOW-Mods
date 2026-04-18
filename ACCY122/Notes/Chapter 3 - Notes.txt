@@ -1,0 +1,73 @@
+Types of Transaction
+- External transaction
+  - Involve the biz and outside parties (customers, suppliers, banks, government, etc.)
+  - Ex. Bought inventory from a supplier on credit, Paid rent to a landlord, Sold goods to a customer for
+    cash, borrowed money from a bank 
+
+- Internal transaction
+  - Happen within the biz itself, with no outside party involved
+  - Ex. Using office supplies, Depreciation on equipment
+  - Xfering cash from petty cash to the main cash account
+
+- Non-Transactional Events
+  - Sth happened, but no actual accounting transaction happened yet, so nth is recorded
+  - Ex. Signing a contract to buy equipment nxt mth, Market value of land rises, but no sale occurs,
+    Hiring a new employee but not paid salary yet
+
+*Dont be confused with accrual basis assumption since non-transactional events are basically just 'promises'
+but no transaction happened yet.
+
+Accounting periods
+- Periodic progress of the entity is divided into time periods of equal length
+
+Interim statements
+- Statements prepared for external users before the end of the annual period
+
+Accounting Cycle
+- The steps and procedures, culminating in the preparation of financial statements
+
+
+Accounts
+• Asset
+  - cash at bank
+  - accounts receivable (AR)
+  - debtors
+  - GST outlays
+  - prepaid expenses
+  - land, buildings, vehicle, plant, equipment
+
+• Liability
+  - unearned income
+  - loan
+  - mortgage payable
+  - accounts payable
+  - GST payable and receivable
+
+• Equity
+  - capital
+  - drawings or withdrawals
+
+• Income
+  - [name] services/fees revenue
+
+• Expense
+  - [name] expense 
+
+
+Accounting Cycle:
+1. Source document (invoice, PO, credit card slips, cash register tape) - daily
+2. General Journal - daily
+3. General Ledger - updated daily
+4. Trial Balance - period-end (monthly, quarterly, year-end)
+5. Financial Statements - SOE, Income Statements, Balance Sheet, Cash Flow Statement (same as trial bal)
+
+*1 to 4 are primarily for internal users and 5 are mainly for external users
+
+*Journal = records transactions, Ledger = stores accounts
+
+A Chart of Accounts (COA) is a list of all account titles and numbers found in the general ledger
+- Chart of Accounts = list of accounts
+- General Ledger = detailed balances in those accounts
+
+
+
