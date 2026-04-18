@@ -1,0 +1,112 @@
+Types of biz entities
+- Single Proprietorship/Sole Trader
+  - Owned by 1 person
+  - Separate accounting entity (keep business records separate from personal records)
+- Partnership
+  - Owned by 2 or more partners
+  - Separate accounting entity, not separate legal entity.
+- Company or corporation
+  - Owned by shareholders
+  - Separate accounting entity
+  - Separate legal entity (biz can own assets, owe debts, sue/be sued but not on the individual itself)
+  - Limited liability (owners personal risk is limited)
+
+
+Role of a managers
+- Management decision process
+  - Planning (what to do / how to do it)
+  - Organising (developing the organizational structure)
+  - Directing (performing according to plan)
+  - Controlling (evaluating actual versus planned performance)
+
+
+Financial Performance (Income Statement)
+- Show profit & loss 
+- Profit/Loss = Income - Expense
+Financial Position (Balance Sheet)
+- Show financial resources (assets, liabilities, capital) controlled by the entity
+Cash Flow Statement
+- Show ability to generate cash flows
+  - Operating Activities 
+    - The provision of and payment for goods and services
+    - Cash received, cash paid to...
+  - Investing Activities 
+    - The acquisition and disposal of long term assets
+    - Buying assets
+  - Financing Activities 
+    - The raising of funds for an entity to carry out its operating and investing activities
+    - Capital contribution 
+
+
+Financial Accounting formula 
+Assets = Liabilities + Equity
+
+Assets
+- Resources controlled by a biz that are expected to bring future economic benefits
+- 2 types: 
+  - Non Current Assets (nCA)
+    - long term: > 1 year
+      - buildings, machinery, equpiment, vehicles
+  - Current Assets (CA)
+    - short term: < 1 year
+      - cash, inventory, accounts receivable
+
+Liabilities 
+- Present obligations of a biz expected to result in an outflow of economic benefits.
+- 2 types:
+  - Non Current Liabilities (nCL)
+    - long term liability due for repayment: > 1 year
+      - long term bonds, mortgage loan
+  - Current Liabilities (CL)
+    - due for payment: < 1 year
+      - creditors 
+
+Owner’s Equity
+The owner’s claim on the biz after deducting liabilities from assets.
+- capital invested by owner
+- retained earnings (profits kept in biz)
+
+Revenue
+Income earned from normal business activities.
+- Sales of goods
+- Service income
+
+Expenses
+Costs incurred to generate revenue.
+- Rent, salaries, utilities, cost of goods sold
+
+Profit
+- The surplus after total revenue exceeds total expenses.
+- Profit = Total Revenue − Total Expenses
+
+
+
+Accounting Entity Assumption
+It means that a business is assumed to be treated as separate from its owner(s) for accounting purposes, 
+so its financial records are kept independently.
+ – Identify clearly the boundaries of the entity being accounted for. 
+ – Personal transactions of the owner must remain separate from the transactions of the entity. 
+ – It is assumed that each entity controls its assets and incurs its liabilities.
+
+
+Accrual Basis Assumption
+It means that revenue and expenses are recorded when they are earned or incurred, not when cash is actually received or paid (Record the transaction when it happens, even if the cash has not moved yet)
+ - Accounting is an event driven process.
+ - The effects of transactions are recognised when they occur, not when the cash is received/paid.
+ - It is argued in the Framework:
+   - The accrual basis provides information about the transactions and other events.
+  -  The information is most useful for decision making by both internal and external users.
+
+
+Going Concern Assumption 
+Always assume a business is expected to continue operating in the foreseeable future, 
+rather than closing down or being liquidated
+ - Assume an entity will continue to operate in the future unless there is evidence to the contrary. 
+ – Liquidation values (prices in a forced sale) of the entity’s assets are not generally reported.
+
+
+
+
+
+
+

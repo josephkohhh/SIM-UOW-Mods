@@ -5,7 +5,7 @@ Loan given - (asset)
 Mr Zumba, Capital - capital
 Service Revenue - revenue
 Accounts Payable - liability
-Unearned Fitness Revenue - (liability) - still owe svc but alr paid to the biz
+Unearned Fitness Revenue - (liability) - still owe svc but alr received the money
 Salaries Payable - liability
 Cash in hand - asset
 Cash at bank - asset 

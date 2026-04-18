@@ -1,0 +1,60 @@
+Accounting is a service activity
+- to provide and interpret financial info to assist decision making
+- used in biz, govt, charities, non-profits
+
+Accounting is the process of identifying, measuring, recording and communicating economic info
+- identification: observing economic events
+- external transaction: economic events between 1 entity and another entity
+- measuring must take place before the effects of transactions can be recorded
+- recording provides history of economic activities of a particular entity
+
+Accounting Process 
+1. Identification (transactions)
+2. Measurement (quantification in money terms)
+3. Recording (classification, summarization) 
+4. Communication (accounting reports -> analysis & interpretation) 
+
+
+Users of accounting information
+- Internal users
+  - Managers
+  - Owners
+  - Employees
+- External users
+  - Investors (Retail/Institution)
+  - Banks/creditors
+  - Government (ATO)
+  - Suppliers
+  - Customers
+  - Public 
+
+
+2 broad branches of accounting
+- Management 
+- Financial
+
+Financial Accounting (FA)
+- Records past transactions fairly and accurately
+- Follows strict accounting standards (IFRS/GAAP)
+- Shows financial performance & position 
+- For external users 
+
+Managerial Accounting (MA)
+- Focuses on planning & control
+- Used for future decisions (budgeting, pricing, expansion)
+- Flexible, no strict rules
+- For internal users 
+
+
+2 broad type of financial statements
+- Special Purpose Financial Statements (SPFS)
+  - Customized reports 
+  - Prepared for specific users or specific needs
+- General Purpose Financial Statements (GPFS)
+  - Income statements, balance sheets, etc
+  - For broad external users (investors, creditors, regulators)
+
+*FA can have SPFS but usually focus more on GPFS
+*MA does not have GPFS as it is prepared for external users
+
+
