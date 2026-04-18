@@ -1,0 +1,50 @@
+Cash Basis
+– Income is recorded when cash is received. 
+– Expenses are recorded when cash is paid. 
+– It does not recognise income when goods are sold or services are performed on credit.
+– It is simple to operate.
+
+Ex. U dont record as expense or income until payment is completed
+
+Accrual Basis (Accrual Basis Assumption)
+- Income is recognised in the period in which the expected inflow of 
+economic benefit can be reliably measured.
+– Expenses recognised when the consumption of benefits can be reliably measured.
+
+Accounting has adopted the Accrual Basis Assumption
+
+The need for adjusting entries:
+– Period in which cash is paid or received does not coincide with 
+period in which expense and income are recognised.
+– Some accounts must be adjusted on the last day of the accounting 
+period to correctly recognise income and expenses not reflected in 
+cash receipts or payments.
+
+2 categories for adjusting entries
+- Deferrals:
+  - the expenses paid in advance (called ‘prepaid expenses’) or 
+    revenues received in advance (called ‘unearned revenues’).
+- Accruals:
+  - the recognition of expenses incurred but not yet paid for 
+    (called ‘accrued income/expenses’).
+
+
+1. Prepaid Expenses (You paid first, but haven’t used up the benefit yet.)
+   - Paid 1 year of rent
+     - DR Rent Expense +1,000
+     - CR Prepaid Rent -1,000
+2. Unearned Revenue (You received cash first, but haven’t earned it yet.)
+   - Received 1 year pay of svc
+     - DR Unearned Revenue -100
+     - CR Service Revenue +100
+3. Accrued Expense (Expense incurred, but not yet paid)
+   - Employees earned $2,000 wages by month-end, but payment will be made next week.
+     - DR Wages Expense +2,000
+     - CR Wages Payable +2,000
+4. Accrued Income (Income earned, but not yet received.)
+   - You provided consulting services worth $500, but the client hasn’t paid yet.
+     - DR Accounts Receivable +500
+     - CR Income Revenue +500 
+5. Depreciation 
+   - DR Depreciation Expense +2,000
+   - CR Accumulated Depreciation -2,000
