@@ -1,0 +1,95 @@
+Inventory = goods a biz owns for sale
+
+Ex.
+- A phone shop’s inventory = phones, chargers, cases
+- A grocery store’s inventory = food products on shelves
+- A clothing store’s inventory = shirts, pants, shoes
+
+Basically inventory = stock
+
+
+When inventory is sold, it becomes Cost of Goods Sold (COGS) - an expense
+
+Ex. 
+
+- Buy inventory for $50
+- Sell for $80
+
+Revenue = $80
+COGS = $50
+Profit = $30 
+
+
+Perpetual vs Periodic
+- Perpetual and Periodic are 2 systems for tracking inventory
+
+Perpetual Inventory System (continuous updating)
+Every time inventory moves, records are updated immediately
+- Buy goods → Inventory account increases
+- Sell goods → Inventory decreases
+- COGS is recorded right away
+
+Ex.
+- Buy 10 units for $5 each 
+- Inventory = $50 
+- Sell 2 units = $10
+- Inventory becomes $40
+- COGS = $10
+
+Common with modern POS systems (supermarkets, large businesses).
+
+Periodic Inventory System (updated periodically)
+Periodic = update only at intervals (end of month/year)
+- Purchases go into Purchases Account (not Inventory directly)
+- Inventory is not continuously updated
+- At the end, do a stock count and calculate: COGS=Beginning Inventory+Purchases−Ending Inventory
+
+Ex.
+Beginning inventory = $1000
+Purchases = $500
+Ending inventory count = $300
+COGS = 1000 + 500 − 300 = $1200
+
+
+
+Conclusion:
+More common today: Perpetual inventory system
+- Used by many modern biz cuz software tracks stock automatically
+
+
+
+
+1.  Perpetual System journal entries
+
+Buy inventory on credit ($500)
+Dr Inventory            500
+   Cr Accounts Payable       500
+
+Sell goods for $800 cash, cost was $500
+1. 
+Dr Cash                 800
+   Cr Sales Revenue         800
+
+2.
+Dr Cost of Goods Sold   500
+   Cr Inventory             500
+
+
+2. Periodic System journal entries
+
+Buy inventory on credit ($500)
+Dr Purchases            500
+   Cr Accounts Payable       500
+
+Sell goods for $800 cash
+Dr Cash                 800
+   Cr Sales Revenue         800
+
+At end of period, after stock count, COGS is calculated:
+COGS=Beginning Inventory+Purchases−Ending Inventory
+
+Then adjustments are made.
+
+
+
+
