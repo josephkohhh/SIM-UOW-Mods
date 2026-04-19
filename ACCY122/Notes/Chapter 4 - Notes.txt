@@ -48,3 +48,8 @@ cash receipts or payments.
 5. Depreciation 
    - DR Depreciation Expense +2,000
    - CR Accumulated Depreciation -2,000
+
+
+note:
+drawings is an contra-equity account so it behaves like an expense account dr + / cr -
+accum dep is an contra-asset account so it behaves like an expense account dr + / cr -
