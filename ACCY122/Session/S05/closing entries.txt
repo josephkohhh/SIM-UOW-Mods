@@ -1,0 +1,16 @@
+Closing Entries
+
+- closing the books for last year books 
+- balance brought forward to new year 
+
+Ex. 
+31 dec 25 - close Entries (bal c/d)
+1 jan 26 - open Entries (bal b/d)
+31 dec 26 - close Entries (bal c/d)
+
+
+there are always 4 closing Entries
+- revenue reset to 0
+- expense reset to 0
+- transfer profit to capital
+- transfer drawings against capital
