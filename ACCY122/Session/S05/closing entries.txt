@@ -13,9 +13,12 @@ there are always 4 closing Entries
 - revenue reset to 0
 - expense reset to 0
 - transfer profit/loss to capital -> updates owner’s capital
-- transfer drawings against capital -> reduces capital
+- close drawings -> reduces capital
 
 
 note:
-Profit → Credit balance in P&L Summary
-Loss → Debit balance in P&L Summary
+The Profit or Loss Summary account is a temporary account used at 
+the end of an accounting period to close revenue and expense accounts
+- Profit → Credit balance in P&L Summary
+- Loss → Debit balance in P&L Summary
+
