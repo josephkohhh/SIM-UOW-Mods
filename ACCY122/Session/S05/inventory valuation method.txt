@@ -1,0 +1,63 @@
+These are inventory valuation methods in Principles of Accounts (POA), used to calculate Cost of Goods Sold (COGS) and Closing Inventory when purchase prices change.
+
+1. FIFO (First In, First Out)
+
+Oldest goods are sold first.
+Goods bought first are assumed to leave inventory first.
+
+Formula (for COGS):
+COGS = Cost of oldest units sold
+
+Closing Inventory:
+= Cost of newest units left
+
+Summary:
+
+Sell old stock first
+Ending inventory uses latest prices
+2. LIFO (Last In, First Out)
+
+Newest goods are sold first.
+Goods bought last are assumed to be sold first.
+
+Formula (for COGS):
+COGS = Cost of newest units sold
+
+Closing Inventory:
+= Cost of oldest units left
+
+Summary:
+
+Sell new stock first
+Ending inventory uses oldest prices
+3. WAVCO (Weighted Average Cost)
+
+(Also called Average Cost Method)
+
+All units are given an average cost.
+
+Formula:
+Average Cost per Unit=
+Total Units Available
+Total Cost of Goods Available
+	​
+
+
+Then:
+
+COGS:
+COGS=Units Sold×Average Cost per Unit
+
+Closing Inventory:
+Closing Inventory=Units Left×Average Cost per Unit
+
+Summary:
+
+Use average cost for every unit
+No oldest/newest distinction
+Quick memory trick
+FIFO = First In First Out → oldest cost
+LIFO = Last In First Out → newest cost
+WAVCO = Weighted Average → average cost
+
+If you’re doing POA exam questions, I can also show how these appear in inventory cards.
