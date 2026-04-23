@@ -1,0 +1,170 @@
+Managing Teams & Groups
+
+Team vs Group
+- A team is 2 more ppl psychologically contracted tgt to 
+  achieve shared goals, and share responsibility and accountability for 
+  outcomes 
+  - a psychological contract = informal obligation between 1 person
+    and another or within a group 
+
+- A group has a shared goal but 
+  - no psychologically contract is involved
+  - no interdependency is assumed 
+  
+
+In summary:
+Team 
+- shared goal
+- psychological contract
+- interpendence
+- shared accountability
+
+Ex. students working on an assignment (depends on each other)
+
+Group
+- shared goal
+- no psychological contract
+- no interpendence (dont rely on each other)
+
+Ex. students sitting tgt but doing own work 
+
+
+Why Group? 
+- Ppl join group to have sense of safety/belonging
+
+1. Group Types
+   - formal (work teams)
+   - informal (friends)
+   - open vs closed (exclusive)
+     - open = flexible, easy entry/exit | closed = selective, limited entry/exit
+
+2. Group Properties
+   - size (small vs large)
+   - closeness (friends vs strangers)
+   - strength of relationship 
+
+3. Impact on Performance
+   - social facilitation
+     - "ppl perform better when others are watching"
+
+4. Conformance & obedience 
+   - ppl follow group even if wrong
+     - everyone agrees in meeting even if they disagree
+
+
+
+Challenges in Groups
+
+1. Groupthink (Janis 1972)
+- Everyone agrees too quickly and no one challenge ideas
+  - desire for consensus within a group overrides individuals'
+    motivation to critically evaluate alternative ideas/viewpoints 
+
+Groupthink leads to 
+• Poor decisions
+• No critical thinking
+• No innovation
+
+To fix it
+• Encourage opinions
+• Allow disagreement
+• Promote critique
+• Reflect on decisions
+
+
+2. Social loafing (Latané, Williams and Harkins 1979)
+- Ppl put in less effort in a group compared to working alone 
+  - due to reduced accountability and diffusion of responsibility 
+    ("someone else will do it mindset")
+
+Social loafing leads to 
+• Unfair workload
+• Low performance
+• Team conflict
+
+How to fix it:
+• Clear roles
+• Clear goals
+• Accountability
+
+
+Not all teams are the same. 3 key dimensions to classify them
+1. Skill Differentiation
+  - High Skill differentiation (each member has unique expertise, hard to replace)
+  - Low Skill differentiation (members have similar skills, easily replaceable)
+
+2. Authority Differentiation
+   - Traditional company → manager decides
+   - Startup team → everyone contributes
+
+3. Temporal Stability
+   - High Stability
+     - long-term team
+     - strong relationships
+     - high trust
+   - Low Stability
+     - temporary team
+     - project-based
+     - less bonding 
+
+
+Stages of group development (not all groups go through same stage)
+1. Forming (Orientation phase)
+   - Team members first come tgt
+   - Ppl are polite, cautious, and unsure of their roles
+   - Focus is on understanding goals and getting oriented
+   👉 Think: “We’re just getting to know each other.”
+
+2. Storming (onflict phase)
+   - Conflicts and disagreements start to appear
+   - Members challenge ideas, roles, or leadership
+   - This stage can feel uncomfortable but is important for growth
+   👉 Think: “We don’t all agree yet.”
+
+3. Norming (Emergence phase)
+   - The team begins to resolve conflicts
+   - Roles and rules become clearer
+   - Trust and cooperation increase
+   👉 Think: “We’re starting to work well together.”
+
+4. Performing (Reinforcement phase)
+   - The team functions effectively and efficiently
+   - Members collaborate smoothly toward shared goals
+   - High productivity and strong relationships
+   👉 Think: “We’re working as a solid team.”
+
+5. Adjourning (Disbanding phase)
+   - The team disbands after completing its task
+   - Members reflect on achievements and may feel a sense of closure or loss
+   - Destructive role-playing may become more prevalent 
+   👉 Think: “We’ve finished—time to wrap up.”
+
+
+* Not all groups go through the 5 stages due to
+ - Be ‘immortal’
+ - Move between different stages
+ - Self-destruct before reaching stages 3–5
+ - Have no storming phase at all
+
+
+Managing Team Conflict
+7 deadly INs
+- Intention (When someone deliberately tries to hurt others)
+- Incompetence (Lack of skills or ability)
+- Infidelity (Betrayal of trust)
+- Insensitivity (Lack of awareness of others’ feelings)
+- Intrusion (Invading personal space or boundaries)
+- Institutional forces (Conflict caused by system or org)
+- Inevitability (Conflict is unavoidable)
+
+How managers should respond?
+Instead of: 
+ – blaming individuals
+
+They should:
+– clarify roles
+– improve communication
+– manage expectations
+– support team members
+
+
