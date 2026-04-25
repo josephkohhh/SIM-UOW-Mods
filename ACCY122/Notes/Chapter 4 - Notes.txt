@@ -30,11 +30,11 @@ cash receipts or payments.
 
 
 1. Prepaid Expenses (You paid first, but haven’t used up the benefit yet.)
-   - Paid 1 year of rent
+   - Paid 1 year of rent for 12k (1mth used up)
      - DR Rent Expense +1,000
      - CR Prepaid Rent -1,000
 2. Unearned Revenue (You received cash first, but haven’t earned it yet.)
-   - Received 1 year pay of svc
+   - 1mth of unearned revenue becomes earned
      - DR Unearned Revenue -100
      - CR Service Revenue +100
 3. Accrued Expense (Expense incurred, but not yet paid)
@@ -44,12 +44,12 @@ cash receipts or payments.
 4. Accrued Income (Income earned, but not yet received.)
    - You provided consulting services worth $500, but the client hasn’t paid yet.
      - DR Accounts Receivable +500
-     - CR Income Revenue +500 
+     - CR Service Revenue +500 
 5. Depreciation 
    - DR Depreciation Expense +2,000
    - CR Accumulated Depreciation -2,000
 
 
 note:
-drawings is an contra-equity account so it behaves like an expense account dr + / cr -
-accum dep is an contra-asset account so it behaves like an expense account dr + / cr -
+drawings is an contra-equity account dr + / cr -
+accum dep is an contra-asset account dr - / cr +
