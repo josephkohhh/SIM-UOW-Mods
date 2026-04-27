@@ -13,6 +13,10 @@ economic benefit can be reliably measured.
 
 Accounting has adopted the Accrual Basis Assumption
 
+- Under the cash basis, profit is the excess of cash inflows from revenues over cash outflows for expenses.
+- Under accrual accounting, profit is the excess of recognised revenues over recognised expenses.
+
+
 The need for adjusting entries:
 – Period in which cash is paid or received does not coincide with 
 period in which expense and income are recognised.
