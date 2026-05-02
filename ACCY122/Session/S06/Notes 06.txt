@@ -1,0 +1,7 @@
+Sales journal
+Purchase Journal
+Cash Receipt Journal
+Cash Payment Journal
+General Journal
+
+internal control systems will be in final exams

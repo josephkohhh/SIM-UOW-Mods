@@ -1,0 +1,13 @@
+For bad debts write off adjusting entry:
+DR Allowance for Doubtful Debts dr - / cr +
+	CR Accounts Receivable  dr + / cr -
+
+
+- reduce the allowance (doubtful debts)
+- reduce accounts receivable (asset)
+
+
+Ex.
+Write off $500 from a customer:
+Dr Allowance for Doubtful Debts 500
+	Cr Accounts Receivable 500
