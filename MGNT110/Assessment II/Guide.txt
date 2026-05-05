@@ -25,16 +25,16 @@ Evaluation (What worked well or didn’t?)
 •	Identify your strengths 
 •	Identify areas where you struggled 
 
-Analysis (Why did things happen that way?)
-•	Select ONE specific challenge, conflict, or success from your experience 
-•	Apply ONE relevant management theory (choose from): 
-    - Team management (Week 3) 
-    - Motivation (Week 3) 
-    - Leadership (Week 4) 
-    - Conflict (Week 5) 
-    - Power and politics (Week 6) 
-•	Analyse the situation using the chosen theory 
-•	Explain your role in influencing the team’s outcome 
+    Analysis (Why did things happen that way?)
+    •	Select ONE specific challenge, conflict, or success from your experience 
+    •	Apply ONE relevant management theory (choose from): 
+        - Team management (Week 3) 
+        - Motivation (Week 3) 
+        - Leadership (Week 4) 
+        - Conflict (Week 5) 
+        - Power and politics (Week 6) 
+    •	Analyse the situation using the chosen theory   
+    •	Explain your role in influencing the team’s outcome  
 
 Conclusion (What did you learn?)
 •	Summarise key takeaways 
@@ -49,3 +49,30 @@ Action Plan (What will you do in future?)
     - Achievable 
 •	Link your plan to the chosen theory 
 •	Present your plan using SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound)
+
+
+
+
+
+
+Analysis (Why did things happen that way?)
+
+• Challenge from experience
+One key challenge in the team was the initial tendency toward groupthink, where members quickly agreed with ideas (e.g. presentation theme and decisions) without critical evaluation. This limited the diversity of perspectives and led to suboptimal decisions early on.
+
+• Chosen management theory
+This situation can be analysed using Self-Determination Theory.
+
+• Analysis using the theory
+According to Self-Determination Theory, effective team functioning depends on fulfilling three psychological needs: autonomy, competence, and relatedness.
+
+In this case, the team had strong relatedness due to shared goals, clear expectations, and a positive team environment. This explains the high level of cohesion and willingness to cooperate. However, this strong cohesion also contributed to groupthink, as members prioritised harmony over critical evaluation.
+At the same time, while I encouraged task sharing and equality, some members may not have fully exercised autonomy in decision-making, especially during the early stages. The quick agreement on ideas suggests that individuals were not fully expressing independent viewpoints, possibly due to a reliance on structure and leadership direction.
+Additionally, although the team demonstrated sufficient competence in completing tasks, the lack of critical discussion early on meant that this competence was not fully utilised. This explains why the team needed external feedback (from the lecturer) to improve the presentation quality.
+Overall, the imbalance—strong relatedness but relatively lower autonomy in discussions—helps explain why groupthink occurred initially, even though the team later improved.
+
+• My role in influencing the team’s outcome
+As the group leader, I played a significant role in shaping the team environment. My structured approach—setting expectations, deadlines, and reminders—helped build accountability and ensured timely completion of tasks.
+However, my leadership style may have also unintentionally reinforced early groupthink. By providing structure and direction, team members may have been more inclined to agree quickly rather than challenge ideas.
+As the project progressed, I shifted towards a more supportive leadership style, encouraging discussion and participation. This allowed team members to share ideas more openly, which improved collaboration during later stages such as rehearsal and presentation.
+Overall, my actions contributed positively to team organisation and performance, but a greater emphasis on encouraging diverse viewpoints earlier could have reduced groupthink and improved decision-making from the start.
