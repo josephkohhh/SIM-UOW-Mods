@@ -11,3 +11,6 @@ Ex.
 Write off $500 from a customer:
 Dr Allowance for Doubtful Debts 500
 	Cr Accounts Receivable 500
+
+
+*Exercise 12.2 similar qn will be in exam
