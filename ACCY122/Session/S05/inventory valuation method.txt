@@ -59,5 +59,6 @@ Quick memory trick
 FIFO = First In First Out → oldest cost
 LIFO = Last In First Out → newest cost
 WAVCO = Weighted Average → average cost
+SIM = Standard Inventory method -> uses predetermined standard costs
 
 If you’re doing POA exam questions, I can also show how these appear in inventory cards.
