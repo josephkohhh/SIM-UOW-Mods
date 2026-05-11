@@ -1,0 +1,52 @@
+Inventory
+
+2 Types of Inventory System
+- Periodic Inventory System
+- Perpetual Inventory System 
+
+Periodic Inventory System 
+- Inventory is only updated at end of accounting period 
+  - COGS is calculated at the end
+  - COGS = Beginning Inventory + Purchases - Ending Inventory 
+
+Typical Users: 
+- dont sell high vol everyday
+- dont need real-time stock tracking
+- rely on physical stock counts at intervals (monthly, quarterly, yearly)
+- Ex. Small retail shops, restuarants/cafes, hawkers
+
+Limitations:
+- U don't know each stock levels until u count everyth
+- Harder to detect theft or shrinkage quickly 
+
+
+Perpetual Inventory System
+- Inventory is updated continuously after every purchase and sale 
+  - COGS is recorded immediately after every purchase and sale 
+  
+Typical Users: 
+- sell freq or in high vol
+- need real-time stock tracking
+- rely on tech system like POS, Scanners, ERP 
+- Ex. Supermarkets, Uniqlo, Zara, Ecomm biz 
+
+Limitations:
+- More expensive to set up (software + systems)
+- Requires accurate data entry systems
+
+
+
+Inventory Valuation Method
+- FIFO (First-In-First-Out)
+- LIFO (Last-In-First-Out)
+- WAVCO (Weight Average Cost)
+- SIM (Standard Inventory Method)
+
+Inventory valuation methods are used to determine value of inventory
+and COGS in accounting and biz operation 
+- higher COGS -> lower profit
+- lower COGS -> higher profit 
+
+
+
+

@@ -12,9 +12,9 @@ Closing Inventory:
 = Cost of newest units left
 
 Summary:
-
 Sell old stock first
 Ending inventory uses latest prices
+
 2. LIFO (Last In, First Out)
 
 Newest goods are sold first.
@@ -26,21 +26,16 @@ COGS = Cost of newest units sold
 Closing Inventory:
 = Cost of oldest units left
 
-Summary:
-
+Summary:	
 Sell new stock first
 Ending inventory uses oldest prices
-3. WAVCO (Weighted Average Cost)
 
-(Also called Average Cost Method)
+3. WAVCO (Weighted Average Cost)
 
 All units are given an average cost.
 
 Formula:
-Average Cost per Unit=
-Total Units Available
-Total Cost of Goods Available
-	​
+Average Cost per Unit =  Total Cost of Goods Available / Total Units Available
 
 
 Then:
@@ -61,4 +56,3 @@ LIFO = Last In First Out → newest cost
 WAVCO = Weighted Average → average cost
 SIM = Standard Inventory method -> uses predetermined standard costs
 
-If you’re doing POA exam questions, I can also show how these appear in inventory cards.
