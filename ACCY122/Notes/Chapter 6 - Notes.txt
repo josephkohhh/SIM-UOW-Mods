@@ -1,0 +1,68 @@
+Types of Journals and ICS
+
+5 types of journal
+
+Sales journal - Records credit sales only
+Purchase Journal - Records credit purchases only
+Cash Receipt Journal - Records all cash coming IN
+Cash Payment Journal - Records all cash going OUT
+General Journal - Records everything else
+
+
+
+Internal Control Systems
+
+A system of internal control consists of all the measures used by a business:
+• to safeguard its resources against waste, fraud and inefficiency
+• to promote the reliability of accounting data
+• to encourage compliance with business policies and government regulations
+
+
+2 types of internal control
+- Administrative
+- Accounting
+
+Administrative Control
+- Focus on how the business is run efficiently and whether employees follow company policies
+
+Ex.
+- Hiring procedures (e.g. approval before hiring staff)
+- Sales and purchasing procedures
+- Performance reports (to monitor employee work)
+
+Accounting controls
+- Focus on protecting money and ensuring financial records are correct.
+
+Ex.
+- Only authorised people can approve payments
+- Different people handle cash and record transactions
+- Checks to prevent errors in accounting records
+
+Principles of a good internal control system
+• Clearly established lines of responsibility.
+• Separation of record keeping and custodianship.
+• Division of responsibility for related transactions.
+• Mechanical and electronic devices.
+• Adequate insurance.
+• Internal auditing.
+• Programming, physical and other controls.
+
+Limitations of internal control systems
+- Good controls can break down due to tiredness, indifference or carelessness
+- Heavy reliance on segregation of duties may lead to collusion
+
+
+Advantages of Computerized accounting
+- Speed in processing
+- Error reduction
+- Faster response time
+- Automatic posting 
+
+Disadvantages of Computerized accounting
+- Virus
+- Hackers
+- Fraud
+- Power failure (system down)
+
+
+*Internal control systems will be in final exams too

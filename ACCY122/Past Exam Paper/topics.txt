@@ -1,0 +1,11 @@
+1 Trial Balance, Income Statement, SOE, Balance Sheet, Cash flow statement
+2 Adjusting Entries (BDA)
+3 Closing Entries
+4 Perpetual Inventory System & Periodic Inventory System [Revised] - S5
+5 Internal Control Systems [Revised] - S6
+6 Matching Transaction type with Journals [Revised] - S6
+7 Bank Reconciliation Journal
+8 Petty Cash Fund Transaction
+9 Bad debts — direct write-off and allowance methods 
+10 Non Current Asset - Acquisition cost, depreciation
+11 APES 110 Code of Ethics for Professional Accountants
