@@ -1,0 +1,27 @@
+Bank Recon and Petty Cash
+
+Bank Recon 
+
+Bank reconciliation basically means
+- bank bal != book
+- so we need to adjust until they both balance 
+
+Step 1: Adjust the bank side 1st
+
+- not yet been processed by bank = outstanding checks (Not cleared yet)
+  so we will subtract from bank statement 
+
+- deposits not yet recorded by bank = add in the bank statement 
+
+Step 2: Adjust the book side
+
+- bank svc fee = subtract from book
+- interest earned = add in the book 
+- NSF cheque (customer bounced cheque) = subtract from book 
+- Check #841 was correctly processed by the bank as $1,962.54 but was mistakenly recorded
+  by you as $1,562.54 
+  - if u issue a check means cash go down
+    - if bank says u issue MORE than ur book states = subtract the difference from book
+    - if bank says u issue LESS than ur book states = add the difference in the book 
+
+
