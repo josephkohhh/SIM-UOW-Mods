@@ -8,20 +8,56 @@ Bank reconciliation basically means
 
 Step 1: Adjust the bank side 1st
 
-- not yet been processed by bank = outstanding checks (Not cleared yet)
-  so we will subtract from bank statement 
+  Outstanding checks
+  (Checks issued but not yet processed/cleared by bank)
+  Subtract from bank statement
+- cuz already recorded in books, Bank has not recorded yet
 
-- deposits not yet recorded by bank = add in the bank statement 
+  Deposits in transit
+  (Deposits recorded in books but not yet processed by bank)
+  Add to bank statement
+- cuz already recorded in books, Bank has not recorded yet
+
 
 Step 2: Adjust the book side
 
 - bank svc fee = subtract from book
+
 - interest earned = add in the book 
+
 - NSF cheque (customer bounced cheque) = subtract from book 
+
 - Check #841 was correctly processed by the bank as $1,962.54 but was mistakenly recorded
   by you as $1,562.54 
   - if u issue a check means cash go down
-    - if bank says u issue MORE than ur book states = subtract the difference from book
-    - if bank says u issue LESS than ur book states = add the difference in the book 
+    - if bank > book = subtract the difference from book (UNDERSTATED)
+    - if bank < book = add the difference in the book (OVERSTATED)
+
+
+
+
+Petty Cash
+
+Petty cash is a current asset as it is cash the company keeps on hand for small payments 
+(like stamps, taxi fares, office snacks, etc.)
+
+So when fund is created:
+DR Petty cash (cash on hand) increases 
+	CR Cash at bank decreases
+
+
+
+What is cash shortage?
+
+When spend money from petty cash fund 
+- after accounting all the receipts and it shd have this amt remaining
+- but a lesser amount is found
+- that cash shortage could be 
+  - lost money
+  - wrong change given
+  - no receipt given for that shortage amt 
+
+
+
 
 
