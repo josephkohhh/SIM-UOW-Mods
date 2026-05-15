@@ -1,16 +1,111 @@
-For bad debts write off adjusting entry:
-DR Allowance for Doubtful Debts dr - / cr +
-	CR Accounts Receivable  dr + / cr -
+Bad debts
 
+A biz sells goods on credit 
+- Customer buys now and pay later
+
+But sometimes customers never pay
+- That unpaid amount = Bad Debt
+
+Ex.
+
+Company sells $200 on credit:
+
+DR Account Receivable 200
+	CR Revenue 200
+
+Customer disappears or goes bankrupt
+The $200 becomes bad debt
+
+Using direct write off method:
+
+DR Bad debt expense 200
+	CR Accounts Receivable 200
+
+
+
+The direct write off method is weak cuz
+1. matching concept
+   - expenses shd be recorded in the SAME period as the revenue
+   - ex. revenue recorded in 2024, bad debt exp recorded in 2025 
+
+2. prudence concept
+   - accounting shd anticipate likely losses early 
+
+
+Allowance method 
+- considers matching concept and prudence concept
+- instead of waiting for bad debts to occur, we estimate bad debts earlier
+
+
+Ex.
+
+Company sells $200 on credit:
+
+DR Account Receivable 200
+	CR Revenue 200
+
+We think some debts may become bad 
+
+Allowance method:
+- suppose estimated bad debt = 125
+
+DR Bad debt expense 125
+	CR Allowance for Doubtful Debts 125
+
+Allowance for DD is a contra asset acc so dr - / cr +
+
+Net AR = AR - Allowance (we expect to only collect net account receivable)
+
+
+Customer officially defaulted
+
+Dr Allowance for Doubtful Debts     125
+    Cr Accounts Receivable               125
 
 - reduce the allowance (doubtful debts)
 - reduce accounts receivable (asset)
 
 
+How to calculate estimated allowance 
+
+1. income statement method
+   - credit sales x %
+
+Ex. 
+
+Based on past experience, 3% of credit sales may become bad debts.
+
+200k × 3% = 6000
+
+Dr Bad Debt Expense      6000
+    Cr Allowance for DD      6000
+
+
+2. bal sheet method
+   - use agewise analysis = older debts have higher chance of default
+
 Ex.
-Write off $500 from a customer:
-Dr Allowance for Doubtful Debts 500
-	Cr Accounts Receivable 500
+
+| Category   | Amount | % Uncollectible |
+| ---------- | ------ | --------------- |
+| Not due    | 12,000 | 1%              |
+| 1–15 days  | 9,000  | 3%              |
+| 16–30 days | 27,000 | 10%             |
+| 31–60 days | 11,000 | 20%             |
+| 61–90 days | 10,000 | 40%             |
+| Over 90    | 6,000  | 70%             |
+
+Add everyth up (credit sales x %)
+120 + 270 + 2700 + 2200 + 4000 + 4200 = 13490 
+
+Required allowance = 13490
+Existing allowance = 4000
+To increase allowance by 13490 - 4000 = 9490
+
+Dr Bad Debt Expense           9,490
+    Cr Allowance for Doubtful Debts     9,490
+
+
 
 
 *Exercise 12.2 similar qn will be in exam
