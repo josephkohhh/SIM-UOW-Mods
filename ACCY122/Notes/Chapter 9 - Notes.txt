@@ -1,0 +1,115 @@
+Non Current Asset - Acquisition cost, depreciation
+
+NCAs are assets used for long term 
+- tangible NCAs = physical existence
+  - land, vehicles, equipment
+- intangible NCAs = no physical existence
+  - patents, trademarks, goodwill 
+
+Acquisition Cost
+
+AC = Purchase price + all incidental expenses (transport + installation + test run)
+
+Depreciation
+
+Before calculating depreciation, 2 estimates are required:
+1. Useful (economic) life
+2. Residual/resale/disposal/scrap value 
+
+Ex. 
+
+Machinery total cost = 43k
+Residual value = 3k
+Total depreciable amount = 43k - 3k = 40k
+Useful life = 4 years 
+
+
+To calculate Depreciation, we use 4 common methods
+- Straight Line Method
+- Reducing Balance Method
+- Sum of Digits Method
+- Output/Unit of Production Method
+
+
+1. Straight Line Method (Furniture, buildings, phones)
+
+Annual dep = (Total Cost − Residual Value) ÷ Useful Life
+
+Ex. 
+
+(43k - 3k) / 4 = 10k/year
+ 
+*prorate: If bought on 1 Oct Year N, Year 1 gets only 3/12:
+- 10k × 3/12 = 2.5k
+
+
+
+2. Reducing Balance Method (Equipment, vehicles)
+
+A constant % is applied to the carrying amount each year
+
+Ex.
+
+Dep rate is 48.5%
+
+Year 1: 43k - (43k x 48.5%) = 22.145k
+Year 2: 22.145k - (22.145k x 48.5%) = 11.405k
+Year 3: 11.405k - (11.405k x 48.5%) = 5.873k
+Year 4: (5.873k - (5.873k x 48.5%)) + 25 = 3k
+
+*$25 adjustment in Year 4 ensures amount is exactly at the estimated residual value
+
+
+
+3. Sum of Digits Method
+
+Logic: Proportionate, front-loaded. Digits are summed (4+3+2+1 = 10) and used as weights.
+Suits: Assets with decreasing usefulness over time
+
+Ex.
+
+43k - 3k = 40k 
+
+year 1 rate is 4/10 so 40% of 40k = 16k (dep)
+year 2 rate is 1/10 so 10% of 40k = 10k (dep)
+...
+
+
+4. Output/Unit of Production Method (Mining assets, oil reserves)
+
+depreciate based on actual usage not time
+
+Ex.
+
+total units = 10k hours
+
+(43k - 3k) / 10k = 4/hour 
+
+each unit = 4
+
+year 1 = 2200 hours = 4 x 2200 = 8800 (dep)
+year 2 = 2460 hours = 4 x 2460 = 9840 (dep)
+...
+
+
+Accounting Entry for Depreciation
+
+Each year in journal:
+DR Depreciation Expense (income statement)
+	CR Accumulated Depreciation (bal sheet) *accum dep is contra asset account dr - / cr +
+
+
+In bal sheet:
+Equipment (at cost)              43k
+Less: Accumulated Depreciation   20.855k
+Carrying Amount / Book Value     22.145k
+
+
+Disposal of NCA
+1. Sold at book value = no gain/loss
+2. discarded the NCA = loss of 3k
+3. sold above book value (4k) = gain of 1k 
+4. sold below book value (1.5k) = loss of 1.5k 
+
+
+

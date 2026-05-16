@@ -2,10 +2,10 @@
 2 Adjusting Entries (BDA)
 3 Closing Entries
 4 Perpetual Inventory System & Periodic Inventory System [Revised] - S5
-5 Internal Control Systems [Revised] - S6
+5 Internal Control Systems [Revised] - S6 *
 6 Matching Transaction type with Journals [Revised] - S6
 7 Bank Reconciliation Journal [Revised] - S8 
-8 Petty Cash Fund Transaction [Revised - S8 
-9 Bad debts — direct write-off and allowance methods [Revised]- S7 
-10 Non Current Asset - Acquisition cost, depreciation
+8 Petty Cash Fund Transaction [Revised] - S8 
+9 Bad debts — direct write-off and allowance methods [Revised] - S7 *
+10 Non Current Asset - Acquisition cost, depreciation [Revised] - S9
 11 APES 110 Code of Ethics for Professional Accountants
