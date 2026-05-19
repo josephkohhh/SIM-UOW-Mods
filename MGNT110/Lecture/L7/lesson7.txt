@@ -1,0 +1,67 @@
+MGNT110 – Lecture 7: Managing Culture, Innovation & Change
+
+Why Combine Culture, Innovation & Change?
+The three concepts are deeply interconnected. A supportive culture encourages experimentation and drives innovation, while a poor culture resists change and kills creativity. Managers must understand how all three interact.
+
+Organisational Culture
+What is it?
+Schein defines culture as what a group has learned in its efforts to survive, grow, deal with its external environment, and organise itself. It shapes how people think, behave, and make sense of their work — going far deeper than slogans or mission posters. It includes basic assumptions, beliefs, and shared values that define membership and set expectations about what is normal, acceptable, and rewarded.
+Why does it matter?
+
+Influences communication, cooperation, and decision-making
+Frames what behaviours are rewarded, ignored, or punished
+Affects morale, belonging, and engagement
+Determines whether equity, diversity, and inclusion are genuinely practised or just policy
+A toxic culture can damage long-term performance even when short-term targets are met
+
+Case — Franklin Climate Systems (Gino, 2018):
+CFO Noelle Freeman discovers toxic culture (disengagement, low morale, negativity) at the Arkansas facility. CEO Cameron Koren considers layoffs; HR head Doug Lee advocates for cultural transformation instead. The key lesson: address root causes, not just symptoms. Balancing short-term financial concerns with long-term cultural transformation is essential.
+
+Three Levels of Organisational Culture (Schein's Iceberg Model)
+LevelNameDescription1ArtefactsVisible, tangible things — furniture, signage, uniforms, office layout2Espoused ValuesStated values — mission statements, speeches, written policies, staff language3Basic AssumptionsUnconscious, taken-for-granted beliefs — the hardest to see and change
+Examples of basic assumptions: "The boss should never be questioned," "Making mistakes is dangerous," "Working long hours shows commitment."
+
+Innovation
+Definition: The implementation of a new or significantly improved product, service, organisational process, or practice. It is both a process and an outcome.
+The Innovation Process (non-linear):
+
+Initiation — a problem, idea, or opportunity emerges
+Development — the idea is shaped, tested, and refined
+Implementation — the innovation is introduced into practice
+
+Employee-Driven (Internal) Innovation:
+Leadership roles include sponsors, mentors, critics, and leaders. Employees at all levels can generate and implement new ideas. Example: Watsons Singapore uses the KNOW app to gather real-time anonymous employee feedback.
+Open Innovation (External):
+Draws on knowledge from lead users, suppliers, competitors, and online communities. Example: HubSpot builds a customer community that shapes new features and product decisions.
+Social Innovation:
+Aims to meet social needs and create new social relationships — impact-driven rather than profit-driven. Six stages: Prompts → Proposals → Prototyping → Sustaining → Scaling → Systemic Change. Example: Singapore's CrowdTaskSG platform for citizen engagement.
+
+Key insight: Innovation is not only top-down. Managers must build structures that let ideas flow across teams, roles, and organisational boundaries.
+
+
+Organisational Change
+Definition: The transition from one state to another — constant and unavoidable.
+Two types:
+TypeDescriptionStruggle-basedDialectical (employee vs management conflict) or Life cycle (startup → growth → maturity → decline)Vision-basedEvolutionary/teleological — driven by leadership goals, planned and intentional
+
+Badham's 5M Framework of Change
+#MMeaning1MindfulnessChange is messy and may fail — be aware of complexity2MobilizingGain buy-in; change fails without people support3MappingPlan the route and identify obstacles4MasksCommunicate and perform change persuasively5MirrorsUse feedback and reflection; change requires learning
+
+How Managers Kill Creativity
+
+Being a know-it-all or micromanaging
+Excessive surveillance
+Turning creative staff into mere technicians
+Separating decision-makers from doers
+Being aloof or gatekeeping ideas
+Talking without action
+Being risk-averse or dismissive ("been there, done that")
+
+
+Key Takeaways
+
+Culture is embedded in deep assumptions, values, and everyday practices — not just visible symbols
+Innovation spans products, processes, relationships, and ways of working
+Ideas can and should come from everywhere — employees, customers, communities
+Change is political and relational, not just technical
+A healthy culture enables learning, inclusion, experimentation, and sustainable change

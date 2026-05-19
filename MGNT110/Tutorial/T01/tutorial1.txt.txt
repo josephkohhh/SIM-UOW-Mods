@@ -11,26 +11,52 @@ it helps with:
 - Feelings
 - Evaluation
 - Analysis
-- Conclusion
 - Action Plan
+- Conclusion
 
 
-Stage 1: Description
-State what happened in a simple, factual way. 
-Give context, mention who was involved, and describe what you did—without adding opinions or judgments
+Description (What happened?)
+- What the situation was
+- Who was involved
+- What you did (briefly)
+- What the outcome was
 
-Stage 2: Feelings
-Describe your thoughts and emotions before, during, and after the situation. 
-This shows self-awareness and helps deepen reflection.
 
-Stage 3: Evaluation
-Identify what went well and what didn’t. Highlight both strengths and weaknesses by looking at positive and negative aspects of the situation.
+Feelings (What were you thinking and feeling?)
+- How you felt before, during, after
+- Why you felt that way
+- Show how your feelings changed over time 
+- Link these changes to any issues or developments within the group 
 
-Stage 4: Analysis
-Explain why the situation happened. Explore underlying reasons, consider influencing factors, and connect to relevant theories for deeper understanding.
 
-Stage 5: Conclusion
-State what you’ve learned from the experience. Highlight key takeaways and what you would improve or do differently next time.
+Evaluation (What worked well or didn’t?)
+- What went well
+- What didn’t go well
+- Be balanced (both positives and negatives)
 
-Stage 6: Action Plan
-Outline what you will do next time. Suggest specific, practical actions to improve your performance or outcome.
+ Analysis (Why did things happen that way?)
+    •	Select ONE specific challenge, conflict, or success from your experience 
+    •	Apply ONE relevant management theory (choose from): 
+        - Team management (Week 3) 
+        - Motivation (Week 3) 
+        - Leadership (Week 4) 
+        - Conflict (Week 5) 
+        - Power and politics (Week 6) 
+    •	Analyse the situation using the chosen theory   
+    •	Explain your role in influencing the team’s outcome  
+
+
+Action Plan (What will you do in future?)
+•	Outline specific steps to improve based on your analysis 
+•	Ensure steps are: 
+    - Clear 
+    - Realistic 
+    - Achievable 
+•	Link your plan to the chosen theory 
+•	Present your plan using SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound)
+
+    
+Conclusion (What did you learn?) 
+- Summarise key takeaways 
+- What you learned from the experience
+- What you would do differently (briefly, not detailed yet)

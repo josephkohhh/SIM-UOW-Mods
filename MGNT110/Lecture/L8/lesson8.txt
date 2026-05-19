@@ -1,0 +1,62 @@
+MGNT110 – Lecture 8: Managing Knowledge and Learning
+
+Types of Knowledge
+
+Explicit
+
+What it is - Knowledge we consciously talk about
+How it's stored - Documented, recorded
+Key trait - Visible and shareable
+
+
+Tacit
+What it is - Embodied, intuitive, unconscious
+How it's stored - Experience-based, hard to transfer
+Key trait - "We know more than we can tell" (Polanyi)
+
+
+Knowledge Hierarchy (Tsoukas & Vladimirou, 2002)
+Data → Information → Knowledge → Practical Action
+
+
+Why Learning Matters
+
+Learning = adaptation, not memorisation
+Rogers (1969): the educated person is one who has learned how to learn
+Kolb (2015): humans survive by adapting reactively (fitting in) and proactively (shaping the world)
+
+
+
+Exploitation vs Exploration (March, 1995)
+
+Exploitation
+Focus - Refining what's known
+Keywords - Efficiency, repetition
+Risk - Low, short-term gains
+
+Exploration
+Focus - Discovering what's new
+Keywords - Innovation, risk, discovery
+Risk - High, long-term potential
+
+
+Netflix example:
+DVD improvements = Exploitation
+Shift to streaming (2007) = Exploration
+
+
+Dreyfus Model — 5 Stages of Skill Acquisition
+1. Novice — follows rules mechanically
+2. Advanced Beginner — gains real-world context
+3. Competence — overwhelmed; starts making plans
+4. Proficiency — intuition begins replacing rules
+5. Expertise — acts instinctively; can't always explain 
+
+Experts must still reflect critically to refine and maintain their expertise.
+
+
+Manager's Role in Learning
+- Foster emotional involvement in learning
+- Allow learners to voice ideas and challenge
+- Share own successes and failures
+- Use experts as role models for others

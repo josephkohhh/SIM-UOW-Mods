@@ -1,0 +1,82 @@
+MGNT110 — Power and Politics (Lecture 6)
+What is Power?
+
+The capacity of an individual or group to influence others and shape outcomes
+Fundamental to organisations — like oxygen to breathing (Clegg et al., 2006)
+The ability to make things happen, or influence what happens
+
+What is Politics?
+
+How power is used in practice — through techniques of influence and various tactics
+Not just having power, but how people influence others, get what they want, and shape decisions behind the scenes
+
+Tactics can be positive (collaboration, networking, persuasion) or negative (manipulation, withholding information, backstabbing)
+
+5 Types of Power (French & Raven, 1959)
+TypeDescriptionReward powerControl over resources; can give or withhold things others wantCoercive powerCompels others to behave in a certain wayLegitimate powerAuthority granted by the organisation through positionExpert powerBased on knowledge, skill, and expertise others defer toReferent powerBased on being respected, admired, or liked by others
+
+Case Study: Challenger Shuttle (1986)
+
+Engineers warned of a serious technical fault (O-ring failure)
+Management ignored warnings and proceeded with the launch
+Result: explosion and loss of lives
+Key lesson: this was a power and politics failure, not just a technical one — power can distort decisions, silence voices, and lead to catastrophic consequences
+
+
+The Four Faces of Power (Fleming & Spicer, 2014)
+Face 1 — Coercion (Dahl, 1957)
+
+Direct, visible power — A forces B to do something B would not otherwise do
+Example: boss orders an employee to stay late
+
+Face 2 — Manipulation / Hidden Power (Bachrach & Baratz, 1962)
+
+Power works by controlling the agenda — deciding what gets discussed and what gets ignored
+If something is never discussed, it can never be challenged
+
+Face 3 — Domination (Stephen Lukes)
+
+Shapes what people think and want, not just what they do
+People may accept or support outcomes that aren't in their own best interest
+
+Face 4 — Subjectification (Fleming & Spicer, 2014)
+
+The deepest form: power shapes your identity
+People internalise organisational expectations and come to see certain behaviours as normal, professional, or desirable
+
+
+Foucault's Governmentality & Bentham's Panopticon
+Bentham's Panopticon
+
+A prison design where inmates could be watched at any time but couldn't tell when they actually were being observed
+Result: people self-regulate continuously because surveillance might be happening
+Modern workplace equivalents: KPI systems, email monitoring, attendance tracking, CCTV, performance reviews, learning analytics
+
+Foucault's Governmentality
+
+Power works from the inside — people govern themselves through internalised norms
+Coercion = "I obey because I am forced"
+Governmentality = "I obey because this is what a good employee does"
+Modern organisations achieve compliance through culture, norms, and self-surveillance — without needing harsh visible control
+
+
+Soft Domination & Concertive Control
+Soft Domination
+
+Power can appear polite, participative, and empowering on the surface, while still guiding behaviour and limiting autonomy
+Example: no manager orders you to stay until 9pm, but team norms make leaving early feel disloyal
+
+Concertive Control
+
+Control comes not from a boss but from the team itself
+In self-managing teams, the group internalises organisational values and disciplines itself and each other
+Control is not absent — it is relocated from hierarchy to peers
+
+
+Key Takeaways
+
+Power is about influence, not just position
+Politics is how power operates in practice
+Power can be visible (coercion) or invisible (norms, culture, identity)
+Even "empowerment" and "flat" team structures can be subtle forms of control
+Understanding power helps explain how decisions are really made

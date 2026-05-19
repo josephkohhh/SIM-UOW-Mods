@@ -1,0 +1,49 @@
+MGNT110 – Lecture 9: Change and Innovation
+
+
+What is Change?
+- Transition from one stable state to another
+- In reality, organisations are never fully stable — always adjusting to market shifts, new technology, staff turnover, competitive pressure
+- Good change management = designing & communicating change people can understand, not forcing acceptance
+
+Three Types of Change
+Incremental - Small, gradual improvements, Less disruptive, Feels slow, Improving customer service step by step
+Punctuated Equilibrium - Long stability → sudden revolution, Explains major transformation, Highly disruptive, Apple iPhone launch
+Continuous - Change never stops, Suits fast-moving environments, Can cause fatigue, Google/Meta constant updates
+
+
+4 Approaches to Managing Change
+1. Lewin's Model (OD)
+Planned, structured — Unfreeze → Change → Refreeze
+
+Unfreeze: create need, reduce resistance
+Change: learn new behaviours
+Refreeze: reinforce and embed new practices
+
+2. Planned Approach — Kotter's 8 Steps
+Create urgency → Build coalition → Develop vision → Communicate vision → Empower employees → Short-term wins → Consolidate gains → Anchor in culture
+3. Processual Approach — Dawson's Framework
+Change is messy, political, and non-linear. Three dimensions:
+
+Context — internal (people, leadership) & external (market, politics)
+Politics — internal conflict/resistance & external lobbying/alliances
+Substance — type, scale, timing, attitudes toward change
+
+
+4. Situational Approach — Palmer's Images
+Managers play different roles depending on level of control and predictability of outcomes:
+
+Director — controlling, intended outcomes
+Coach — shaping, intended outcomes
+Navigator — controlling, partially intended outcomes
+Interpreter — shaping, partially intended outcomes
+Caretaker — controlling, unintended outcomes
+Nurturer — shaping, unintended outcomes
+
+
+Innovation
+Definition: Implementation of a new or significantly improved product, service, or organisational process — both a process and an outcome
+Process: Initiation → Development → Implementation
+Two views of innovation:
+Innovation as Material Techniques — structured, manager-controlled, follows clear processes. Like a recipe.
+Innovation as Emergence — unpredictable, context-driven, trial and error. Like growing a plant — you create conditions but cannot fully control the outcome.

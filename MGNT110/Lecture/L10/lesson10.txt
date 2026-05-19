@@ -1,0 +1,290 @@
+
+Lecture 10: Managing Ethically & Sustainably
+
+ 
+========================================================
+1. WHAT IS CSR?
+========================================================
+ 
+- CSR = Corporate Social Responsibility = responsibility beyond profit
+- Traditionally, businesses were seen as existing only to make profit for shareholders
+- CSR argues businesses also have responsibilities to:
+    > Society     - contributing positively to communities and social wellbeing
+    > Environment - reducing pollution, waste, and environmental harm
+    > Stakeholders - considering interests of everyone affected, not just shareholders
+ 
+ 
+========================================================
+2. WHY CSR MATTERS
+========================================================
+ 
+- Builds trust
+    > Responsible behaviour earns trust from customers, employees, and the public
+ 
+- Improves reputation
+    > Ethical behaviour attracts positive media, loyal customers, supportive investors
+ 
+- Long-term sustainability
+    > Ignoring social/environmental issues risks lawsuits, backlash, resource depletion,
+      and loss of customer loyalty — CSR supports long-term survival
+ 
+- Ethical responsibility
+    > Beyond business benefits, companies have a MORAL duty to avoid harm
+    > Do the right thing because it is right, not only because it is profitable
+ 
+ 
+========================================================
+3. CSR IN PRACTICE
+========================================================
+ 
+- Genuine CSR is NOT just donating money or sponsoring events once a year
+- It must be integrated into core operations:
+    > Ethical sourcing of materials
+    > Responsible waste management
+- CSR should be: internal, strategic, and ongoing
+- It should shape everyday decision-making, not just improve image
+ 
+CASE STUDY: Who Gives a Crap
+- Toilet paper brand that builds CSR into its business model
+- Donates 50% of profits to sanitation and clean water projects
+- Social purpose is part of the brand identity and value proposition
+- Example of CSR embedded in the business model, not an afterthought
+- Website: https://uk.whogivesacrap.org/
+ 
+ 
+========================================================
+4. CSR DIMENSIONS — THE TRIPLE BOTTOM LINE
+========================================================
+ 
+The Triple Bottom Line expands business success beyond profit alone.
+Three dimensions:
+ 
+PEOPLE (Social)
+- Social impact of the organisation
+- Includes: employee wellbeing, labour practices, human rights,
+  community support, customer welfare
+- Example: donations and sanitation initiatives help people live healthier, safer lives
+ 
+PLANET (Environmental)
+- Environmental sustainability
+- Includes: reducing pollution, conserving resources, lowering waste,
+  using eco-friendly practices
+ 
+PROFIT / SOCIETY (Economic + Community Impact)
+- Companies should CREATE value that benefits society, not just extract money
+- The Triple Bottom Line tells managers to evaluate success in a balanced way:
+    > Financial performance
+    > Social impact
+    > Environmental impact
+- This challenges the old idea that profit is the ONLY goal
+ 
+ 
+========================================================
+5. BENEFITS OF CSR
+========================================================
+ 
+- Employee engagement  : Staff feel motivated and proud when the org behaves responsibly
+- Recruitment          : Talented job seekers prefer employers whose values match their own
+- Brand reputation     : Responsible behaviour builds a resilient brand image
+- Customer value       : Consumers prefer ethical brands — strengthens loyalty
+ 
+ 
+========================================================
+6. SHAREHOLDER PRIMACY vs. STAKEHOLDER RESPONSIBILITY
+========================================================
+ 
+This is the CENTRAL DEBATE in business ethics.
+ 
+PROFIT (Shareholder Primacy)            RESPONSIBILITY (Stakeholder View)
+----------------------------------------|--------------------------------------------
+Main job = maximise profits             | Businesses affect many groups, not just shareholders
+Responsibility to shareholders first    | Companies should balance profit with ethical/social duties
+Measured by share price                 |
+Dominant since 1970s                    |
+ 
+Key point: Businesses need profit to survive, but if profit becomes the ONLY
+priority, harmful decisions may result.
+ 
+PROBLEMS WITH SHAREHOLDER PRIMACY:
+- Short-term focus    : Managers chase quick profits, harming long-term sustainability
+- Ignores stakeholders: Employees, communities, environment neglected
+- Encourages risky behaviour: Pressure to maximise returns leads to cutting corners,
+  hiding problems, reducing safety standards
+ 
+CRITICISMS:
+- Excludes ethical concerns (a decision can be profitable but still morally wrong)
+- Ignores environmental impact (e.g. pollution for short-term gain)
+- Leads to imbalance — ethical, social, ecological responsibilities pushed aside
+ 
+ 
+========================================================
+7. CORPORATE FAILURE CASE STUDY — BP DEEPWATER HORIZON
+========================================================
+ 
+Event: Explosion on the Deepwater Horizon oil rig — April 20, 2010
+- 11 workers killed
+- Massive oil spill in the Gulf of Mexico
+ 
+Management questions raised:
+- Were safety procedures ignored?
+- Was there pressure to save time or money?
+- Did leadership create a culture where risks were underestimated?
+- Were warnings overlooked?
+ 
+ENVIRONMENTAL IMPACT:
+- Marine life destruction
+- Widespread pollution
+- Long-term ecosystem damage (affecting ecosystems for years)
+- Consequences: clean-up costs, legal action, public outrage, lasting mistrust
+ 
+HUMAN IMPACT:
+- Workers killed and injured
+- Families suffered grief and financial hardship
+- Communities lost income, safety, and quality of life
+- When ethics fail, costs are often borne by ordinary workers, not just executives
+ 
+FINANCIAL IMPACT:
+- Job losses
+- Billions in financial losses
+- Economic disruption to coastal communities
+- Companies ignoring CSR may face: lawsuits, compensation claims, fines,
+  cleanup costs, falling investor confidence, operational disruptions
+ 
+REPUTATIONAL DAMAGE:
+- Loss of public trust
+- Stock price collapse
+- Long-term brand damage
+- Trust influences: customer loyalty, investor confidence, employee morale,
+  partnerships, regulator attitudes
+- Reputational damage often outlasts the immediate crisis
+ 
+KEY LESSON: Lack of CSR = long-term failure
+Even large, profitable, globally recognised companies can suffer enormous
+long-term damage from poor ethics and poor responsibility.
+ 
+ 
+========================================================
+8. IMPORTANCE OF CSR (SUMMARY)
+========================================================
+ 
+- Ethical responsibility  : Organisations should avoid harm and act fairly
+- Business sustainability : Responsible practices help firms survive long-term
+- Stakeholder trust       : Trust is essential for stable relationships with
+                            employees, customers, regulators, investors, and communities
+ 
+ 
+========================================================
+9. CARROLL'S CSR MODEL
+========================================================
+ 
+CSR has FOUR layers of responsibility (often shown as a pyramid):
+ 
+1. ECONOMIC (Base)
+   - A business must be profitable
+   - Without profit, it cannot survive, pay employees, or invest in the future
+ 
+2. LEGAL
+   - A business must obey the law
+   - Includes: labour law, environmental law, taxation, safety regulations
+ 
+3. ETHICAL
+   - A business should do what is right, fair, and just — even when not legally required
+   - Law sets the MINIMUM standard; ethics asks for HIGHER standards
+ 
+4. DISCRETIONARY / PHILANTHROPIC (Top)
+   - Voluntary contributions to society
+   - Examples: donations, community programmes, support for social causes
+ 
+Reference: Carroll, AB 1991, 'The pyramid of corporate social responsibility',
+Business Horizons, vol. 34, no. 4, pp. 39-48.
+ 
+ 
+========================================================
+10. ETHICS IN ORGANISATIONS
+========================================================
+ 
+- Values guide behaviour
+    > Values shape what is considered acceptable
+    > Influence hiring, communication, performance expectations, stakeholder treatment
+ 
+- Must align with strategy
+    > If a company says it values integrity but only rewards sales results,
+      employees may ignore ethics — strategy and values must align
+ 
+- Requires leadership commitment
+    > Leaders SET THE TONE
+    > If leaders behave unethically, employees learn values are not real
+    > Ethical culture starts from the top
+ 
+ 
+========================================================
+11. CODE OF ETHICS
+========================================================
+ 
+WHAT IS IT?
+- A written document explaining expected standards of conduct
+- May cover: honesty, conflicts of interest, workplace behaviour,
+  confidentiality, anti-bribery, fairness, legal compliance
+- Purpose: give employees clarity on what the organisation stands for
+  and what behaviour is unacceptable
+ 
+PURPOSE:
+- Set behaviour standards   — employees need clarity on expected conduct
+- Ensure compliance         — reduce misconduct, support legal compliance
+- Promote stakeholder trust — confidence in dealing with the organisation
+ 
+TYPES:
+- Corporate codes     : organisation-specific; reflects internal values and rules
+- Professional codes  : apply to professions (doctors, lawyers, accountants, teachers)
+- Industry codes      : apply across a sector; create shared standards
+ 
+ 
+========================================================
+12. WHISTLEBLOWING
+========================================================
+ 
+- Reporting unethical behaviour within an organisation
+- Risks: retaliation, job loss, career damage, isolation
+- Protections: legal protections, company whistleblower policies
+- Employees are often the FIRST to notice misconduct
+- Ethical organisations should create safe reporting channels
+  and protect those who speak up in good faith
+ 
+ 
+========================================================
+13. CORPORATE FAILURE CASE STUDY — ENRON
+========================================================
+ 
+Background:
+- Enron was an energy company that appeared highly successful
+- Was secretly hiding debt and overstating profits through deceptive accounting
+- When fraud was exposed: company collapsed, employees lost jobs and savings
+- Became a landmark case of corporate ethics failure
+ 
+Key lesson — Enron HAD formal systems and codes, but it still failed. Why?
+- Because organisational culture rewarded greed, secrecy, manipulation,
+  and excessive risk-taking — the written code became meaningless
+ 
+Lessons:
+- Ethics must be PRACTISED, not just written
+- Ethics cannot be reduced to paperwork
+- Leaders must MODEL ethical behaviour
+- Organisational incentives must SUPPORT ethical decisions
+- Culture is more powerful than written rules
+ 
+ 
+========================================================
+14. KEY TAKEAWAYS
+========================================================
+ 
+- Ethics and sustainability go beyond profit
+- CSR = responsibility to society, environment, and stakeholders
+- Good CSR builds trust, reputation, and long-term success
+- The Triple Bottom Line: people, planet, profit
+- CSR should be part of business strategy — not an afterthought
+- Shareholder primacy can create ethical and sustainability risks
+- BP: shows the cost of poor ethics and poor CSR
+- Enron: shows that culture matters more than written rules
+- Codes of ethics only work when leaders model ethical behaviour
+- Sustainable success depends on RESPONSIBLE LEADERSHIP
+ 
