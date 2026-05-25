@@ -25,8 +25,8 @@ Useful life = 4 years
 
 
 To calculate Depreciation, we use 4 common methods
-- Straight Line Method
-- Reducing Balance Method
+- Straight Line Method 
+- Reducing Balance Method (dont need deduct from residual value)
 - Sum of Digits Method
 - Output/Unit of Production Method
 
