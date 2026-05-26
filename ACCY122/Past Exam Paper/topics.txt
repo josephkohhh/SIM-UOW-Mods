@@ -1,7 +1,7 @@
 1 Trial Balance, Income Statement, SOE, Balance Sheet, Cash flow statement 
 2 Adjusting Entries (BDA)  - S4
 3 Closing Entries 
-4 Perpetual Inventory System & Periodic Inventory System - S5
+4 Perpetual Inventory System & Periodic Inventory System [Revised] - S5
 5 Internal Control Systems  - S6 *
 6 Matching Transaction type with Journals [Revised]- S6
 7 Bank Reconciliation Journal [Revised] - S8 
