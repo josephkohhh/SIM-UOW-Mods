@@ -1,0 +1,84 @@
+Topics
+
+1. Cloud Computing
+
+Cloud computing = delivering computing resources over the internet on-demand
+
+Service models
+IaaS → rent infrastructure (VMs, storage)
+e.g. AWS EC2
+PaaS → platform to deploy apps
+e.g. Heroku, Google App Engine
+SaaS → ready-made software
+e.g. Gmail, Microsoft 365
+
+2. Internet of Things (IoT)
+
+IoT = physical devices connected to internet collecting + sharing data
+
+Sensors (data collection)
+Network (transmission)
+Cloud (storage + processing)
+Application layer (user interface)
+
+3. DevOps
+
+DevOps = combining development + operations to deliver software faster.
+Plan → Code → Build → Test → Release → Deploy → Monitor
+
+Continuous Integration (CI)
+Continuous Deployment (CD)
+Automation everywhere
+
+4. Big Data / Data Systems
+
+Managing and analysing large-scale data sets.
+
+Data Warehouse
+- structured data
+- used for reporting
+
+Data Lake
+- raw data
+- flexible, large-scale storage
+
+5. Cybersecurity in Modern Systems
+
+Protecting systems, networks, and data from attacks.
+
+Threats: 
+Malware
+Phishing
+DDoS attacks
+Data breaches
+
+Protection methods:
+Encryption
+Firewalls
+Authentication (2FA)
+Access control
+
+6. System Architecture
+
+How different system components interact
+
+Client-server model
+Cloud-based architecture
+Microservices architecture
+
+
+7. 5G & Modern Networks
+
+5G = next-generation mobile network with high speed + low latency.
+
+Ultra-fast speed
+Low latency (real-time response)
+Supports massive IoT devices
+
+
+8. Emerging Technologies
+
+AI integration in systems
+Edge computing (processing near data source)
+Blockchain (secure distributed records)
+

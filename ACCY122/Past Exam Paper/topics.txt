@@ -2,7 +2,7 @@
 2 Adjusting Entries (BDA)  [Revised] - S4
 3 Closing Entries [Revised]
 4 Perpetual Inventory System & Periodic Inventory System [Revised] - S5
-5 Internal Control Systems  - S6 *
+5 Internal Control Systems [Revised] - S6 *
 6 Matching Transaction type with Journals [Revised]- S6
 7 Bank Reconciliation Journal [Revised] - S8 
 8 Petty Cash Fund Transaction [Revised] - S8 

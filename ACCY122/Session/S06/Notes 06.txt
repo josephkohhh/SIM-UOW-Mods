@@ -5,3 +5,44 @@ Cash Payment Journal
 General Journal
 
 internal control systems will be in final exams
+
+internal control systems consists of all measures used by a biz to
+- safeguard its resources against, fraud, waste and inefficiency
+- ensure reliability of accounting data
+- encourage compliance with biz policy and govt regulation
+
+2 TYPES OF ICS
+- administrative
+- accounting
+
+administrative control
+- focus on operation of biz and human resource follow biz policy
+  - performance report
+  - hiring procedure
+  
+accounting 
+- focus on protecting money ensuring financial records are correct
+  - diff ppl handle cash and record trans
+
+
+good principles of ICS
+- internal auditing
+- clear and defined lines of responsibility
+- adequate insurance
+
+
+limitations of ICS
+- heavy reliance of segregation of duties can lead to collusion
+- ICS may break down due to carelessness, tiredness or indifference
+
+Advantages of Computerized accounting
+- Speed in processing
+- Error reduction
+- Automatic posting 
+
+Disadvantages of Computerized accounting
+- Virus
+- Hackers
+- Fraud
+- Power failure (system down)
+
