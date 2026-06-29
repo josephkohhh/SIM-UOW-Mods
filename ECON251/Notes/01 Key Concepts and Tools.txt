@@ -1,0 +1,63 @@
+Lecture 1: Key Concepts and Tools
+
+Learning Objectives
+Describe the key characteristics of Asian economies and explain 
+the key economic concepts and tools used in the course
+
+
+Asia's Economies
+- East Asia (China, Japan, South Korea, etc.) — defined by shared language and culture
+- Central Asia (Afghan, Uzbekistan, etc.) — mountainous terrain
+- South Asia (India, Pakistan, Bangladesh, etc.) — agriculture-based economies
+- Southeast Asia (Singapore, Indonesia, Vietnam, etc.) — Multiracial, strong growth and development focus
+- West Asia (Saudi Arabia, UAE, Iran, etc.) — resource-rich economies: oil
+
+
+Theoretical / Economic Analysis Tools
+
+GDP & Output
+Real GDP (RGDP) = total value of goods and services, adjusted for inflation
+
+3 ways to measure RGDP
+- Income (add up everyone's earnings)
+- Spending (add up everything bought)
+- Output - value added (add up what each industry contributes)
+
+Spending method formulas:
+- Closed economy (no trade): GDP = C + I + G
+- Open economy (with trade): GDP = C + I + G + X − M
+
+C = household consumption
+I = business investment
+G = government spending
+X = exports
+M = imports
+
+Value Added avoids counting the same thing twice. 
+For ex, flour costs $2 and bread sells for $8, only the $6 diff counts as new value added by the baker
+
+
+Inputs of Production — "What goes into making things?"
+These are the building blocks firms use to produce goods:
+- Labour (L) — workers
+- Capital (K) — machines, buildings, equipment
+- Others — raw materials, technology, human capital (skills/education)
+
+Demand & Supply — "How are prices set in a market?"
+- Demand (Dd) = what consumers want to buy
+- Supply (Ss) = what producers want to sell
+- Equilibrium = where they meet (price P*, quantity Q*) — the "happy" market price
+
+The key thing to understand is what shifts the curves:
+- If oil supply drops due to war → supply curve shifts left → prices rise
+- If everyone wants to travel post-COVID → demand curve shifts right → airfares rise
+
+
+Trade & Exchange Rates — "How does currency affect trade?"
+- SGD 1 = USD 0.77 (i.e. 1 Singapore dollar buys 0.77 US dollars)
+
+What happens when SGD appreciates (gets stronger)?
+- Imports go up (SGD can buy more USD → foreign goods are cheaper)
+- Exports go down (Foreigners need more USD to buy SG goods → they buy less)
+
+Simple rule: Stronger currency = cheaper imports, more expensive exports
