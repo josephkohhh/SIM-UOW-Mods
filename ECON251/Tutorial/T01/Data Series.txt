@@ -1,0 +1,12 @@
+GDP (output) - GDP (constant 2015 US$)
+GDP growth - GDP growth (annual %)
+Capital (K) - Gross fixed capital formation (constant 2015 US$)
+Capital growth - Gross fixed capital formation (annual % growth)
+Labour force - Labor force, total
+Unemployment - Unemployment, total (% of total labor force) (modeled ILO estimate)
+Manufacturing output - Manufacturing, value added (% of GDP) + (annual % growth) + (constant 2015 US$)
+Primary sector - Agriculture, forestry & fishing, value added (% of GDP)
+Employment by sector - Employment in agriculture/industry/services (% of total)
+Human capital - Educational attainment, at least post-secondary, 25+, total (%)
+Natural resources - Total natural resources rents (% of GDP)
+Spending components - Household final consumption expenditure (% of GDP), General government final consumption expenditure (% of GDP), Gross fixed capital formation (% of GDP), External balance (all % of GDP)
