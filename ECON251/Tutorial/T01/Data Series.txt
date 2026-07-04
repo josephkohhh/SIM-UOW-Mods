@@ -20,6 +20,7 @@ Gross fixed capital formation (constant 2015 US$)
 Gross fixed capital formation (annual % growth)
 Labor force, total
 Unemployment, total (% of total labor force) (modeled ILO estimate)
+at least completed  upper seondary OR post-secondary, population 25+, total (%) 
 Manufacturing, value added (% of GDP)
 Manufacturing, value added (annual % growth)
 Manufacturing, value added (constant 2015 US$)
