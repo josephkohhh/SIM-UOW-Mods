@@ -55,3 +55,17 @@ Click OK.
 
 
 
+Choose alternate one that:
+- Measures human capital (H).
+- Has annual data (or at least enough years).
+
+School enrollment, tertiary (% gross)
+- Common proxy for human capital
+- Widely used in economic growth studies
+
+School enrollment, secondary (% gross)
+- Also a good proxy if tertiary data has gaps
+
+Government expenditure on education (% of GDP)
+- Education investment measure rather than educational attainment, 
+  but is sometimes used as a proxy for human capital
