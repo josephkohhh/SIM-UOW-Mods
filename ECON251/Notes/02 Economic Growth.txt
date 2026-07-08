@@ -1,0 +1,114 @@
+Lecture 2: Economic Growth Models and Sectors
+Learning Objectives
+Understand how to compute and interpret economic growth rates, explain the key models of economic growth (basic output model, Solow's model, AK model), and describe the role of economic sectors (primary, secondary, extraction) in growth and development.
+Part 1: Economic Growth
+Key Recap
+
+Industry = production of goods and services, measured as GDP (or more precisely, Real GDP/RGDP)
+Economic growth = the % change in RGDP over a period (usually a year, sometimes quarterly)
+
+Computing & Interpreting Growth Rates
+
+A high growth rate doesn't always mean a "better" economy — context matters:
+
+0% growth could just mean the economy is at a high base already
+A country with a low RGDP but 22% growth (e.g. Nepal) isn't necessarily doing "better" than a rich country with slower growth
+
+
+Case examples used in class:
+
+Singapore — one of Asia's most robust economies, yet has one of the lowest growth rates
+Japan — in recession for 20+ years, yet still a top-5 world economy
+
+
+Raises the question: what counts as a "decent" growth rate, and what other evidence (beyond the headline %) shows an economy is healthy?
+
+Basic Growth Model
+Y = A · F(K, L, H, N)
+
+Y = Real GDP
+A = level of technology (exogenous — not government-controlled)
+K = capital (equipment, machines, plants)
+L = labour
+H = human capital (knowledge/experience)
+N = land/natural resources
+
+Commonly simplified using the Cobb-Douglas production function: Y = A(K)^½(L)^½
+
+Labour productivity = Y/L
+
+Evidence & Causes of Growth
+
+Labour data: labour force size vs. population, employment/unemployment rate
+Capital data: capital accumulation, gross fixed capital formation
+In reality, K and L rarely grow at the same rate → regression analysis (linear/multiple) used to identify which input matters more (covered in Tutorial 2)
+
+Law of Diminishing Returns
+
+In the short run, increasing only one input (K or L) raises Y, but at a slowing rate beyond a certain point
+Example: fixed K = 4, rising L → Y rises, but % change in Y and Y/L both shrink as L increases (larger labour force competing over the same fixed capital)
+Proven mathematically via first-order differentiation (dY/dK falls as L rises)
+
+Solow's Growth Model
+
+Focuses on capital accumulation up to an ideal level; beyond that, diminishing returns kick in
+Suggests poor economies (e.g. Nepal) can "catch up" to richer ones (e.g. Singapore) by acquiring more capital — moving from point B to C
+Assumes the richer economy (Singapore) stays put at C
+Long-run growth needs technology applied to a given K/L ratio — this is exogenous (externally driven)
+Richer countries invest in R&D → technology (A) rises → they move from C to D, staying ahead even as poorer countries raise K
+Government's role: promote R&D, though it's costly/risky → links to Foreign Direct Investment (FDI) as a way to fund this
+
+The AK Model
+
+Production function: Y = AK
+Shows there is no diminishing returns in this setup (an "overcoming the odds" case)
+
+Role of Technology
+
+Y = A·F(K,L): raising A (technology) increases output without needing more K or L — called embodied technical progress
+Simple mathematically, but hard to achieve in the real world
+Types of technology: Information Technology, Transportation Technology, Manufacturing Technology (CAD, robotics, IT-managed production)
+Benefits of tech revolutions often stay concentrated within certain countries → uneven global growth/development (e.g. Industrial Revolution)
+Total Factor Productivity (TFP) captures output growth from sources beyond K and L; where TFP data isn't available, proxies like R&D expenditure, ICT growth, or the HCI index are used
+Open debate: pursuing more technology (A) has downstream effects on K, L, and human capital (H) — the "future of work" question
+
+Quick Summary (Part 1)
+
+Computing/interpreting growth rates
+Role of K and L in output
+Diminishing returns
+Solow's model and the role of K
+Role of technology
+(Regression analysis of these variables to be covered in Tutorial 2)
+
+Part 2: Economic Sectoral Growth
+Classifying Sectors
+
+Exercises in class: classifying goods (rice, insurance, electric cars, computer chips, oil, cotton, web hosting, natural gas, lab-grown corn) into sectors, identifying which inputs (K, L, N, H) matter most per sector, and ranking sectors by growth potential
+
+Primary Sector
+
+Supply increases rapidly, prices fall, and even though demand rises, total revenue can still fall (e.g. a 10% price drop with only a 2% quantity rise → revenue falls)
+Characteristics: unstable supply, perishable goods, complex storage/transport needs
+Implications for intra-national and international trade
+
+Secondary (Manufacturing) Sector
+
+The only sector that, in the long run: shows rising productivity as output expands, has inter-related branches of activity, produces capital goods used across sectors, has strong linkages, and acts as an "engine of growth"
+Linkages generate externalities/spillover effects:
+
+Backward linkages: industry → its suppliers
+Forward linkages: industry → its users
+Example chain: Cotton → Cloth → T-shirt (more backward linkages = more potential growth impact)
+
+
+Broad pattern: primary sector activity mainly by poor developing economies; secondary/manufacturing mainly by rich developed economies (with funding)
+
+Natural Resources / Extraction Sector
+
+Often mistakenly classified purely as "primary," but resources like crude oil and rare earth elements differ from crops — they require extensive processing, often classified under manufacturing
+Global demand for rare earths is rising; GDP contribution is often recorded separately
+
+Dependency Theory
+
+Summed up as "earn less but pay more" — motivates many developing economies to pursue industrialisation (secondary sector development), which is picked up in Topic 3
