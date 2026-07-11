@@ -1,0 +1,35 @@
+Lecture 1 - Advanced Database Overview
+
+Cloud Based Database System
+
+A Cloud-based Database stores data on remote cloud servers instead of on a local computer
+- Hyperscalers (AMZN, GOOGL, MSFT) - AWS, GCP, Azure
+
+User
+   │
+Internet
+   │
+Cloud Database
+
+Cloud databases consist of multiple servers (nodes)
+- each nodes stores part of the database
+- node maintains a map of the data it stores, making retrieval faster
+
+User
+↓
+Internet
+↓
+Cloud Node
+↓
+Retrieve Data
+↓
+Return Results
+
+
+Cloud Database has:
+- Elastic Scalability 
+  - auto increases or decreases resources based on workload
+- Multi-Tenancy
+ - multiple customers share the same cloud infra  while keeping their data isolated
+- Fault Tolerance
+ - fallback to backup nodes in the event main node fails 

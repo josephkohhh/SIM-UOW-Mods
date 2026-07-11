@@ -1,0 +1,111 @@
+Lecture 1 - Advanced Database Overview
+
+Unstructured dataset
+• Spatial data
+• Graph data
+• Text data
+
+What is Data?
+- A piece of info that can be stored electronically
+  - text, number, images, audio, etc
+
+Types of Data
+- Structured Data
+- Unstructured Data 
+
+Structured Data
+- Data that has no fixed structure
+  - Images, Videos, Audio recordings, PDF documents, Social media posts
+- Stored as files/documents and uses NoSQL or AI techniques to retrieve data
+
+Unstructured Data
+- Data that has fixed format
+  - csv file
+- Stored in tables and uses SQL to retrieve data
+
+
+Big Data
+- Refers to datasets too large/complex for traditional db to process efficiently
+- Big Data Technologies (ML, AI, Data mining)
+- Ex. watches billions of viewing records
+
+
+What is a Database?
+It is an organised collection of data stored electronically
+
+A database contains tables
+- rows = records (John, 12, boy)
+- columns = attributes (name, age, gender)
+
+Relational Database 
+- stores data in related tables
+- contains relational tables
+  - rows = records (John, 12, boy)
+  - columns = attributes (name, age, gender)
+- relationships connect tables together
+- uses SQL to perform CRUD 
+- Ex. PostgresSQL, MS Sql server, Oracle 
+
+
+Types of Database
+
+NoSQL database 
+- stores data in 
+  - documents 
+  - key-value pairs
+  - graphs
+  - column families 
+- MongoDB, Cassandra, Redis
+
+Modern apps generate huge amt of data using SQL relational db not ideal
+- Images, Videos, Audio recordings, PDF documents, Social media posts
+
+
+1. Document Database (MongoDB)
+- stores each record as document:
+{
+   "id":1,
+   "name":"John",
+   "age":25
+}
+
+2. Hierarchical Database 
+- stores data in a tree structure:
+- suited for banking, insurance, telecomm 
+
+Company
+│
+├── HR
+│     ├── Employee A
+│     └── Employee B
+│
+└── IT
+      ├── Employee C
+      └── Employee D
+
+3. Network Database
+- stores data as a network instead of a tree
+- suited for universities, airline reservations, supply chains
+- 1 student can enrol in many courses
+- 1 course contains many students
+This is called a many-to-many relationship
+
+   Student
+   /    \
+Course1 Course2
+
+
+4. Graph Database
+- Singaporetores data as nodes, edges, properties 
+- Suited for financial fraud detection 
+
+Node = object
+- person, product, bank acc
+Edge = relationshio
+- John ----Friend---- Mary
+Properties = additional info
+John
+Age = 25
+City = Singapore
+
+

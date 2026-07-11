@@ -1,0 +1,86 @@
+Lecture 1 - Advanced Database Overview
+
+Streaming Processing System
+- Processes data continuously as it is generated, instead of waiting for the data to be stored first
+
+Traditional Processing:
+Data Generated
+      ↓
+Store in Database
+      ↓
+Analyse Later
+
+
+Modern Streaming Processing:
+Data Generated
+      ↓
+Immediate Processing
+      ↓
+Instant Results
+
+Many modern app generate continuous streams of data every sec,
+waiting to process the data later may be too slow.
+- Stock market prices
+- Social media feeds
+- Credit card transactions
+- Smart city sensors
+
+Characteristics of Streaming Processing
+
+
+1. Real-Time Processing
+Processes data immediately after it arrives
+- A bank detects fraudulent transactions within sec instead of hours later
+
+2. Continuous Data Flow
+Data never stops arriving
+- Temperature sensors, CCTV cameras, Heart-rate monitors, Traffic cameras
+
+3. Low Latency 
+Latency = Delay between receiving data and producing results
+Lower latency = Faster responses
+
+Streaming systems aim for very low latency, often measured in milliseconds
+
+4. In-Memory Processing
+Instead of writing data to disk first, process data directly in memory (RAM)
+
+5. Distributed Processing
+Large streams are processed by multiple servers (nodes) working together
+
+Incoming Data
+        │
+ ┌──────┼──────┐
+ │      │      │
+Node 1 Node 2 Node 3
+
+6. Fault Tolerance
+Replicating data across multiple nodes
+- If one server fails, another server continues processing
+
+7. Scalability
+Streaming systems are designed to scale easily
+
+2 methods:
+
+1. Vertical Scaling
+Increase the power of one server
+- More RAM, Faster CPU
+
+2. Horizontal Scaling
+Add more servers
+- 1 server -> 5 servers 
+
+Horizontal scaling is preferred because it supports Big Data
+
+Example of Streaming Processing is Apache Kafka
+Common Uses = IoT, Smart Cities, Fraud Detection, Analytics
+
+Latest trend:
+Machine Learning Integration
+Modern streaming systems increasingly integrate with AI
+- Real-time recommendation systems
+  - Netflix recommends movies while users are watching
+  - Instagram recommends reels while users are watching  
+
+

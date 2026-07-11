@@ -1,0 +1,169 @@
+Lecture 2 - Spatial Data and Computing
+
+What is Spatial Data?
+Spatial data stores the location and shape of real-world objects
+- GPS coordinates
+- Roads, Buildings, Rivers, Countries, Parks
+
+Unlike normal databases that store only text or numbers,
+spatial databases also store where an object is located
+
+3 Types of Spatial Data
+
+1. Point
+- Represents a single location using coordinates
+- Ex. Taxi location, ATM, Restaurant, Bus stop
+- A point is represnted by (x, y) = (10,20)
+
+2. Line 
+- A sequence of connected points
+- Used for roads, railways, rivers, pipelines
+- Ex. A ------- B ------- C
+
+3. Region
+- Represents an enclosed area
+- County, State, Park, Lake, Shopping mall 
+- Usually represented using multiple boundary points
+
+
+3 Types of Spatial Relationships
+Spatial databases can determine relationships between objects
+
+1. Topological Relationships
+- Describes how two objects relate
+- Keywords: Adjacent, Contains, Intersects
+
+Ex. 
+Country contains city
+Park intersects road
+Two buildings are adjacent
+
+
+2. Direction Relationships
+- Describe relative positions
+- Keywords: North of, South of, Above, Below
+
+Ex.
+Singapore is south of Malaysia
+
+
+3. Metric Relationships
+- Based on measurable distance
+
+Ex.
+Restaurant is within 500 m
+Hospital is 2 km away
+
+
+3 Spatial Query Types
+Spatial databases answer location-based questions
+
+1. Window Query
+- Window = rectangular search area
+- Find all objects inside a rectangle
+
+ Ex.
+ Find all cafes in Orchard
+
+
+ 2. Range Query
+ - Range = circular search area
+ - Find all objects within a distance
+
+Ex. 
+Find all ATMs within 500 m
+
+
+ 3. k Nearest Neighbor (kNN)
+ - "k" means how many nearest results to return
+ - Find the k closest objects
+
+ Ex.
+ Find the nearest 3 taxis
+
+
+ Spatial Index Structures
+ Searching every object is slow. Instead, databases build spatial indexes to speed up queries
+ - Quad-tree
+ - R-tree
+
+ Quad-tree
+ A hierarchical tree. The space is divided into 4 equal regions repeatedly
+
+ Root
++-----+-----+
+|     |     |
++-----+-----+
+|     |     |
++-----+-----+
+
+Each square can be divided again
+
+Instead of searching every point, search only relevant regions
+
+
+Search process of Quad-tree:
+- Every query has 2 stages
+  - Filtering
+    - Find tree nodes that might contain the answer, ignore unrelated regions
+  - Refinement
+    - Check the actual objects inside those regions. Removes false matches
+
+
+
+R-tree
+- Instead of splitting space equally, It groups nearby objects. 
+- Each group is stored inside a Minimum Bounding Rectangle (MBR)
+
+Root
++-------------------------------+
+| MBR A | MBR B | MBR C |
++-------------------------------+
+
+Search process of R-tree
+- Every query has 2 stages
+  - Filtering
+    - Visit only the child nodes whose MBRs intersect the query
+    - Ignore MBRs that do not overlap with the query, reducing the search space
+  - Refinement
+    - Check the actual objects inside those MBRs. Removes false matches
+
+
+*R-tree indexing is faster
+
+
+Spatial-Textual Data 
+It stores both location and descriptive text while spatial data only stores location
+
+Ex.
+
+Location: (1.302,103.831), Text: (Japanese, Sushi, Ramen)
+
+
+What is an Inverted File?
+- it is a text index
+- instead of storing Document → Words, it stores Word → Documents (faster)
+
+Ex.
+
+coffee
+
+Restaurant1
+Restaurant4
+Restaurant8
+
+
+Spatial-Textual Index
+Spatial-textual queries must satisfy both Spatial index + Textual index
+- IR-tree (Inverted R-tree)
+  - Combines R-tree + Inverted File
+
+
+Applications of Spatial Computing:
+- Taxi Services (Uber, Grab, GoJek)
+  - Match passenger with nearest driver 
+  - Minimise waiting time
+
+- Food Delivery (GrabFood, Foodpanda)
+  - Assign nearest rider
+  - Plan efficient delivery routes
