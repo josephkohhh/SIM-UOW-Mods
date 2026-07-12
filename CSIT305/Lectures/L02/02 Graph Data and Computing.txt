@@ -1,1 +1,299 @@
 Lecture 2 - Graph Data and Computing
+
+What is Graph Data?
+It is a data structure used to model relationships between objects
+
+Consists of
+- Nodes (objects)
+- Edges (relationships between objects)
+
+Alice ----- Bob ----- Charlie
+
+Why use Graphs?
+- Traditional databases store data in tables
+- Graphs store connections directly
+
+Used for: 
+Social networks, Maps, Airline routes, Recommendation systems, 
+Citation networks & Computer networks
+
+
+Degree
+The degree of a node is the number of edges connected to it
+- Higher degree = more connections
+
+A ----- B ----- C
+       |
+       D        E
+
+A = 1
+B = 3
+C = 1
+D = 1
+E = 0
+
+
+7 Types of Graphs
+
+1. Undirected Graph
+Edges have no direction
+
+Alice ---- Bob
+
+Alice and Bob are friends
+
+2. Directed Graph (Digraph) - Web links, Citation networks, X
+Edges have direction
+
+A → B
+
+A follows B but does not mean B follows A
+
+3. Weighted Graph
+Each edge has a value (weight)
+
+Singapore ---- 5 km ---- Marina Bay
+
+Weight may represent:
+- Distance
+- Cost
+- Time
+
+4. Unweighted Graph
+Every edge is considered equal
+- Only need to know whether a connection exists
+
+5. Simple Graph
+Rules:
+- No duplicate edges
+- No self-loops
+
+A ---- B
+
+6. Multigraph
+Allows multiple edges between two nodes
+- Each connection is a different edge
+
+Ex. Two cities connected by
+- Flight
+- Train
+- Bus
+
+7. Self-loop
+An edge connects a node to itself
+
+A ↺
+
+
+Graph Representation
+Graphs can be stored in two main ways
+
+1. Adjacency Matrix
+Rows = Nodes & Columns = Nodes
+
+     A B C
+A    0 1 1
+B    1 0 0
+C    1 0 0
+
+A connected to B, A connected to C, B is connected to A, C is connected to A
+
+Fast lookup as only need one lookup 
+- Is A connected to B?
+But uses a lot of memory
+- Not suitable for sparse graphs
+
+2. Adjacency List
+Stores each node tgt with its neighbouring nodes
+- for every node, keep a list of nodes directly connected to it
+- each person's "friends list" is what an adjacency list stores for a graph
+
+A → B, C
+B → A
+C → A
+
+Uses lesser memory
+- Suitable for sparse graphs
+Checking whether an edge exists is slower
+- To check if A is connected to B, must search thru A's neighbour list
+
+
+Connected Components
+refers to a group of nodes where every node can reach every other node
+
+A — B — C 
+D — E
+
+2 connected components
+
+Giant Component
+- Largest connected component in a network
+- Many real-world networks have 1 giant component containing most nodes
+
+
+Connectivity in Directed Graphs
+
+1. Strongly Connected
+Every node can reach every other node following arrow directions
+- Must follow arrow direction
+- Every node reaches every node
+
+A → B → C
+↑       ↓
+←-------
+You can travel between any two nodes
+
+2. Weakly Connected
+Ignore edge directions and if graph becomes connected after ignoring arrows, it is weakly connected
+- Ignore arrow direction
+- Connected only after removing directions
+
+
+Real-World Network Examples:
+Facebook = Undirected, Unweighted
+Email = Directed Multigraph
+Citation Network = Directed, Acyclic
+Phone Calls = Directed, Weighted
+Collaboration = Undirected, Weighted
+Protein Interaction = Undirected
+
+
+4 Important Network Properties
+- Degree Distribution
+- Path Length
+- Clustering Coefficient
+- Connected Components
+
+1. Degree Distribution
+Shows how node degrees are distributed
+- Probability that a randomly selected node has degree k = P(k)
+
+| Degree | Number of Nodes |
+| ------ | --------------- |
+| 1      | 20              |
+| 2      | 10              |
+| 3      | 5               |
+
+Purpose is to nderstand whether a network has many highly connected nodes (hubs) 
+or mostly low-degree nodes
+
+
+2. Path 
+A path is a sequence of connected nodes
+- A path may revisit nodes or edges, and in directed graphs, 
+  it must follow the arrow direction
+
+A → C → D → E
+
+Distance (Shortest Path)
+- The min no of edges between two nodes
+
+A — B — C 
+A → B != B → A (In directed graph, dist may not be equal)
+
+distance = 2 edges
+
+
+Network Diameter
+The largest shortest-path distance between any pair of nodes
+
+Ex. Largest shortest path = 8, so diameter = 8
+
+A larger diameter means the network is more spread out
+
+
+Average Path Length
+Measures the avg shortest distance between all pairs of connected nodes
+- Small values indicate info can spread quickly
+
+
+
+3. Clustering Coefficient
+Measures how well a node's neighbours are connected to one another
+- Are my friends also friends with each other?
+
+1 → neighbours are fully connected
+0 → neighbours are not connected
+
+The network's clustering coefficient is the average of all node coefficients
+
+
+4. Finding Connected Components
+Use Breadth-First Search (BFS)
+
+step 1: Pick any node
+step 2: Visit all reachable nodes
+step 3: Mark them
+step 4: Repeat with an unvisited node
+step 5: Each search finds one connected component
+
+
+Strategy of applying Graph DB:
+Instead of advertising to everyone, companies identify influential customers
+Find a small group of influential people who can spread info to the largest no of users
+- Viral marketing
+- Political campaigns
+- Product advertising
+- Information diffusion
+
+To find influential people:
+
+Influence Maximization Problem
+
+Given
+- A graph
+- A value k
+
+Find the k best seed nodes that maximize the total number of influenced people
+
+k = 3
+
+Choose the 3 most influential users
+
+
+
+Propagation Models
+2 classical models describe how influence spreads
+- Linear Threshold Model (LTM) 
+- Independent Cascade Model (ICM)
+
+
+1. Linear Threshold Model (LTM) 
+Activated when total influence exceeds threshold
+
+Each node has:
+
+A threshold (resistance to influence)
+Neighbours with influence weights
+
+A node becomes active only when the combined influence from active neighbours 
+exceeds its threshold
+
+Ex
+
+Threshold = 0.6
+Friend A = 0.3
+Friend B = 0.4
+Total = 0.7
+
+Node becomes active
+
+
+2. Independent Cascade Model (ICM)
+One probabilistic activation attempt per edge
+
+When a node becomes active
+- It gets one chance to activate each neighbour
+- Every edge has its own activation probability
+- Success is random
+- Each edge is used only once
+
+Ex
+
+A → B
+
+Probability = 0.4
+
+40% chance that B becomes active.
+
+
