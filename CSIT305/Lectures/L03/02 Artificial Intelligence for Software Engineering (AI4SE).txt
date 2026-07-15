@@ -1,0 +1,123 @@
+Artificial Intelligence for Software Engineering (AI4SE)
+
+What is AI for Software Engineering (AI4SE)?
+Its the use of AI and Machine Learning techniques to assist software engineers in developing, 
+managing, testing, and maintaining software system
+- Estimating project effort
+- Scheduling project activities
+- Allocating developers
+
+
+Poor project management can lead to
+- Budget overruns
+- Poor software quality
+- Loss of customers
+
+
+4 applications of AI in software engineering
+- Software Project Scheduling (SPS)
+- Software Effort Estimation (SEE)
+- Requirements Engineering (RE)
+- Code Completion with Software Mining
+
+
+1. Software Project Scheduling (SPS)
+Software Project Scheduling (SPS) is the process of planning:
+- What tasks need to be completed
+- Who performs each task
+- When each task should be completed
+
+Traditional vs Agile Scheduling
+
+Traditional (Waterfall)
+- Detailed schedule created at the beginning
+- Adjusted as needed during development
+
+Agile
+- Initial schedule is more general
+- Detailed planning occurs in each iteration (Sprint)
+
+Scheduling Objectives:
+A project schedule usually aims to optimize:
+- Minimize project duration
+- Minimize project cost
+- Allocate employees efficiently
+
+Why Scheduling is Difficult
+Because of these complexities, finding the optimal schedule manually is difficult
+
+AI Solution: Evolutionary Algorithms
+- Generate random schedules
+- Evaluate each schedule (fitness)
+- Select the best schedules
+- Combine good schedules (crossover)
+- Apply small random changes (mutation)
+- Repeat until a good solution is found
+
+Advantages:
+- Finds near-optimal schedules
+- Handles large search spaces
+- Supports multiple objectives (cost & time)
+
+
+2. Software Effort Estimation (SEE)
+It predicts the amount of work required to complete a software project
+
+Why is SEE Important?
+Budget, Project cost, Development schedule, Resource allocation, Project risk
+
+
+AI-Based SEE
+AI learns from previous completed projects.
+
+Training data includes:
+Project size
+Team skills
+Project type
+Actual effort spent
+
+Machine learning predicts effort for new projects.
+
+Advantages:
+Objective
+Repeatable
+Faster
+Supports "What-if" analysis
+
+
+3. Requirements Engineering (RE)
+It identifies what a software system should do before development begins
+- It ensures the final software meets stakeholder needs
+- Ex. Increase online sales
+
+Types of Requirements
+- Business Requirements (Increase online sales)
+- User Requirements (Users should be able to reset passwords)
+- Functional Requirements (Allow users to upload files)
+- Non-Functional Requirements (Security, Performance, Scalability.)
+
+
+Requirement Elicitation
+Its the process of collecting requirements from stakeholders
+- user feedback is written in natural language, NLP is used
+
+NLP for Requirement Elicitation
+- Remove symbols and unecessary words
+- Identify speech acts
+- Request
+- Machine Learning classifies whether the feedback represents a useful software requirement
+
+
+4. Code Completion
+Code Completion automatically predicts and suggests code while programmers type
+- Copilot
+
+Done through Software Mining
+- It learns:
+  - Common coding patterns
+  - Frequently used APIs
+  - Developer behaviour
+
+Ex. APIRec
+Learns API usage from previous code changes and recommends the 
+most likely API for the current coding context
