@@ -1,0 +1,205 @@
+Lecture 3 - Text Data and Computing
+
+What is Text Data?
+- A sequence of characters such as phrases, sentences, paragraphs, or a whole document
+- Ex. emails, books, product reviews, chat msgs 
+
+
+Characteristics of Text Data
+- Unstructured data 
+- Written in natural language
+- No fixed rows/columns
+- Difficult for computers to understand directly
+- May contain tables or images, but text remains the primary content
+
+Because of this, text mining combines:
+- Natural Language Processing (NLP)
+- Machine Learning (ML)
+- Pattern Recognition
+
+
+Text Mining
+Its the process of discovering useful info hidden inside large collections of text
+
+Its purpose is to:
+- Discover patterns
+- Search information
+- Find hidden knowledge
+- Summarise large amounts of text
+
+The hidden info may not be obvious to either:
+- Humans
+- Computers
+
+
+
+Text Classification
+It automatically assigns documents into predefined categories
+
+News website articles can be classified into
+- Sports
+- Finance
+- Entertainment
+- Politics
+
+
+3 Stages of Text Classification
+
+1. Text Representation
+Convert text into numbers so computers can process it
+
+Bag-of-Words (BoW) model - Words become numerical features
+- Each document is represented by the words it contains
+- Document: "I love databases"
+- Vocabulary: "I love databases AI"
+- Vector: [1,1,1,0]
+
+
+2. Feature Selection
+A document may contain thousands of diff words
+- unnecessary, repeated, irrelevant
+
+Feature Selection removes unimportant words to:
+- reduce noise
+- improve speed
+- increase accuracy
+
+2 methods 
+- Feature Extraction
+  - Transforms original features into fewer features
+  - Examples of feature extraction:
+    - PCA = Preserve the most information (variance) while reducing dimensions
+    - ICA = Isolate independent signals from mixed data
+
+- Feature Selection
+  - Keeps only the most useful words 
+  - Remove words like "that, was, or" and keep impt words like "amazing, exciting"
+  - Feature Selection is more commonly used for text classification
+
+
+3. Classification
+The selected features are passed into a machine learning model
+
+Example models:
+- Neural Networks
+- Decision Trees
+- Naïve Bayes
+- Support Vector Machines (SVM)
+
+The model predicts the document category
+- Ex.  positive review or negative review
+
+
+
+Text Clustering
+It groups similar documents without predefined labels
+- The computer discovers the groups itself
+
+1000 news articles -> auto grouped into (Politics, Sports, Biz)
+without being told these categories beforehand
+
+
+| Classification           | Clustering                           |
+| ------------------------ | ------------------------------------ |
+| Categories already known | Categories discovered automatically  |
+| Supervised Learning      | Unsupervised Learning                |
+| Needs labelled data      | No labelled data                     |
+| Example: Spam detection  | Example: Group similar news articles |
+
+
+
+Text Similarity
+Before clustering, computers calculate how similar two documents are
+
+- Euclidean Distance 
+  - Measures straight-line distance between document vectors
+  - Smaller distance -> More similar documents
+
+- Cosine Similarity
+  - Measures the angle between vectors
+    - 1 → identical
+    - 0 → unrelated
+    - −1 → opposite direction
+
+Cosine Similarity is the most commonly used similarity measure for text because 
+it focuses on word usage rather than document length
+
+
+Clustering Algorithms
+- K-Means Clustering (Most popular clustering algorithm)
+- Hierarchical Clustering
+
+
+Natural Language Processing (NLP)
+NLP is the field that enables computers to understand and communicate using human language
+
+NLP Core Technologies
+Important NLP techniques include:
+- Language Modelling
+- Part-of-Speech (POS) Tagging
+- Syntactic Parsing
+- Named Entity Recognition (NER)
+- Word Sense Disambiguation
+- Semantic Role Labelling
+
+Challenges of NLP
+- Ambiguity
+  - words can have multiple meaning
+
+Syntactic Ambiguity
+Semantic Ambiguity
+Pragmatic Ambiguity
+
+- Sparsity
+  - Most words occur very rarely in a large dataset (Zipf’s Law)
+  - This makes learning harder because many words have limited training examples
+
+- Expressivity
+  - The same idea can be expressed in many different ways
+  - Both sentences have the same meaning but different structures
+
+Modern NLP
+Today's NLP uses Transformer-based Foundation Models
+- OpenAI GPT, Google Gemini, Anthropic Claude, Meta Llama
+
+
+
+
+Exam Summary:
+
+Text Mining
+- Extract hidden knowledge from text.
+
+Text Classification
+- Supervised learning.
+- Categories are predefined.
+
+Text Clustering
+- Unsupervised learning.
+- Categories are discovered automatically.
+
+Bag-of-Words
+- Converts text into vectors of word frequencies.
+
+Feature Selection
+- Removes unimportant words.
+- Improves efficiency and accuracy.
+
+K-Means
+- Popular clustering algorithm using centroids.
+
+NLP
+- Enables computers to understand and generate human language.
+
+Major NLP Applications
+- Machine Translation
+- Chatbots
+- Search Engines
+- Question Answering
+- Sentiment Analysis
+- Text Summarisation
+
+Main NLP Challenges
+- Ambiguity
+- Sparsity
+- Expressivity
