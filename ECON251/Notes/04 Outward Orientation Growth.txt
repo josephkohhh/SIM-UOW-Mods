@@ -1,193 +1,94 @@
-Learning Objectives
+Lecture 4: Outward-oriented Growth
 
-After this lecture, you should be able to:
-
-- Explain the Structuralist Approach.
-- Describe Import Substitution Industrialisation (ISI).
-- Evaluate the advantages and disadvantages of Inward-Oriented Growth.
-- Understand the role of:
-  - Trade protection
-  - Currency overvaluation
-  - Government assistance
-- Explain why many countries eventually abandoned inward orientation
+It is an economic development strategy where a country promotes exports 
+and integrates with the global economy instead of protecting domestic industries.
+- It is closely associated with the Neoclassical approach
+- Opposite from Structuralist Approach
 
 
-1. Background
-Developing Countries' Problem
-
-Most developing countries relied heavily on the primary sector.
-
-Ex:
-- Agriculture
-- Mining
-- Raw materials
-
-Characteristics:
-- Low GDP
-- Slow economic growth
-- Unstable export earnings
-- Dependence on world commodity prices
-- Low productivity
-
-Meanwhile, developed countries focused on manufacturing.
-
-Manufacturing provides:
-- Higher value-added products
-- Stable income
-- More employment
-- Better technology
-- Stronger economic growth
-
-Key Question:
-Should governments continue developing agriculture or build a manufacturing sector?
+Main Idea of Outward-oriented Growth
+- Produce goods for the world market
+- Encourage international trade
+- Compete globally
+- Promote efficiency through competition
 
 
-2. Problems When Building Manufacturing
-Manufacturing requires large investments (K)
-- Factories
-- Machinery
-- Equipment
-
-Countries often lacked:
-- Infrastructure
-  - roads, electricity, water supply, ports, communications
-- Knowledge
-  - few skilled workers, little industrial experience, weak technology
-- Labour
-  - workers need formal training before joining manufacturing industries
-
-Market Problem
-Even if local factories produced goods:
-- Would consumers still prefer imported products?
+Basis of Trade – Heckscher-Ohlin (HO) Theory
+Countries export goods that use their abundant production factors intensively 
+and import goods that use their scarce factors
 
 
-Structuralist Approach
-- Government should actively transform the economy from agriculture into manufacturing
+Factor Intensity
+How much of each production factor is required to produce a product
 
-Unlike free markets, the government would decide:
-- Which industries to develop
-- How much to protect industries
-- What policies to introduce
+Ex. 
+T-shirt requires (1 skilled worker, 2 unskilled workers) = Unskilled labour-intensive
+Computer Chips requires (3 skilled worker, 3 unskilled workers) = Skilled labour-intensive
 
-Government intervention is therefore very high
-
-2 Development Strategies:
-
-1. Inward Orientation
-- Trade protection
-- Focus on domestic market
-- High government intervention
+Formula is Ls divide by Lu (Ls/Lu) 
+- above Ex is computer chips more skilled intensive than tshirt (1 > 0.5)
 
 
-2. Outward Orientation
-- will discuss in lecture 4
+Factor Endowment
+Refers to a country's available resources
+
+Ex. 
+- Country A has more skilled workers = produce computer chips
+- Country B has more unskilled workers = produce t shirts
+- Hence Country A will import tshirt and export chips to country B 
+- Hence Country B will import chips and export tshirt to country A
 
 
-Inward-Oriented Growth aka Import Substitution Industrialisation (ISI)
-- Instead of importing manufactured goods, produce them domestically.
-- The goal is to reduce dependence on imports.
+But what if countries are new players in the international market who needs to compete?
 
 
-Main Policies
-Government uses:
-- Trade protection
-- Overvalued currency
-- Government assistance
-- Restrictions on imports
+Role of Government
+Govt help firms become internationally competitive through
+- Increase Export earnings
+
+export earnings = Price × Quantity
+
+Govt can increase:
+- selling price (charge higher price thru better quality&branding)
+- export quantity (increase qty sold)
+
+refer to slides 9 to 11
 
 
-Infant Industry Problem
-A new manufacturing industry that:
-- Is small
-- Is inexperienced
-- Cannot compete internationally
+Currency Devaluation 
+A deliberate reduction in the value of the domestic currency by the central bank
+- make Peso becomes weaker
 
-The industry needs time to grow
+Ex.
+Before:
+1 USD = 100 Peso
 
-Why Protect It?
-Protection allows firms to:
-- Learn production techniques
-- Improve efficiency
-- Gain experience
-- Eventually become internationally competitive
-
-Without protection,
-- foreign firms may drive local firms out of business
+After:
+1 USD = 200 Peso
 
 
-Trade Protection
-Trade protection limits imports, allow domestic firms to grow
-- Tariffs
-- Quotas
+Foreign buyers need fewer USD to buy Colombian goods
+- Exports become cheaper
+- Exports increase
+
+Currency devaluation leads to 
+- increase in exchange rate (E)
+- decrease in foreign price of exports
+- higher export demand 
+- higher export
 
 
-Trade protection 
-Pros:
-- Supports Local Industries, Encourages Manufacturing, Employment, Government Revenue, GDP
-Cons:
-- Firms become protected (inefficient, lazy, less innovative) leading to poor quality products
+Problems with Currency Devaluation
 
+Inflation
+- imports become more expensive
+  - Imported US beef costs more after the peso weakens
 
-Overvalued Currency
-Government deliberately increases the value of its currency
-- cheaper machinerys, equipments, help industrialization 
-
-However,
-Government must continuously buy its own currency.
-This requires large foreign exchange reserves.
-
-If reserves run out:
-- Currency crisis
-- Financial instability
-
-
-
-Government Assistance
-Government directly supports firms
-- Cash grants
-- Tax breaks
-- Low-interest loans
-- Government investment
-
-Reduce production costs and Encourage manufacturing
-
-However,
-Government spending increases leads to Tax revenue may fall which causes budget deficit
-
-
-Summary of Inward Orientation
-Government attempts to industrialise through:
-- Trade protection
-- Import substitution
-- Currency overvaluation
-- Government funding
-
-Goal:
-Develop domestic manufacturing.
-
-
-Why Did Inward Orientation Fail?
-Many countries (especially Latin America) experienced disappointing results
-- Inefficient firms
-- High production costs
-- Poor product quality
-- Lack of innovation
-- Reduced competition
-- Heavy government spending
-- Currency crises
-- Large budget deficits
-
-Overall economic performance remained weak.
-
-
-Inward Orientation (Import Substitution Industrialisation) is a Structuralist strategy where governments protect infant industries through tariffs, quotas, currency overvaluation, and financial support to develop domestic manufacturing. Although it encourages industrialisation and employment, excessive protection often leads to inefficiency, poor-quality goods, budget deficits, and slow economic growth, causing many countries to later adopt Outward-Oriented (export-led) growth strategies instead.
-
-Countries Shift Towards Outward Orientation
-
-
-
-
-
-
+Currency War
+- Other countries may also weaken their currencies
+- This creates:
+  - retaliation
+  - competitive devaluation
+  - instability
 
 
