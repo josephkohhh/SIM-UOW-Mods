@@ -1,4 +1,6 @@
 Lecture 2: Economic Growth Models and Sectors
+
+
 Learning Objectives
 Understand how to compute and interpret economic growth rates, explain the key models of economic growth (basic output model, Solow's model, AK model), and describe the role of economic sectors (primary, secondary, extraction) in growth and development.
 Part 1: Economic Growth
