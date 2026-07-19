@@ -51,7 +51,7 @@ Convert text into numbers so computers can process it
 Bag-of-Words (BoW) model - Words become numerical features
 - Each document is represented by the words it contains
 - Document: "I love databases"
-- Vocabulary: "I love databases AI"
+- Vocabulary database: "I love databases AI"
 - Vector: [1,1,1,0]
 
 
@@ -73,8 +73,9 @@ Feature Selection removes unimportant words to:
 
 - Feature Selection
   - Keeps only the most useful words 
-  - Remove words like "that, was, or" and keep impt words like "amazing, exciting"
-  - Feature Selection is more commonly used for text classification
+  - Remove words like "that, was, then" and keep impt words like "amazing, exciting"
+
+Feature Selection is more commonly used for text classification
 
 
 3. Classification
@@ -87,8 +88,8 @@ Example models:
 - Support Vector Machines (SVM)
 
 The model predicts the document category
-- Ex.  positive review or negative review
-
+- sports, history, culture, food 
+- positive review, negative review (sentiment category)
 
 
 Text Clustering
@@ -104,7 +105,7 @@ without being told these categories beforehand
 | Categories already known | Categories discovered automatically  |
 | Supervised Learning      | Unsupervised Learning                |
 | Needs labelled data      | No labelled data                     |
-| Example: Spam detection  | Example: Group similar news articles |
+| Usecase: Spam detection  | Usecase: Group similar news articles |
 
 
 

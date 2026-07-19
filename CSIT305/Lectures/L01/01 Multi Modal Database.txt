@@ -1,10 +1,5 @@
 Lecture 1 - Advanced Database Overview
 
-Unstructured dataset
-• Spatial data
-• Graph data
-• Text data
-
 What is Data?
 - A piece of info that can be stored electronically
   - text, number, images, audio, etc
@@ -14,14 +9,14 @@ Types of Data
 - Unstructured Data 
 
 Structured Data
-- Data that has no fixed structure
-  - Images, Videos, Audio recordings, PDF documents, Social media posts
-- Stored as files/documents and uses NoSQL or AI techniques to retrieve data
-
-Unstructured Data
 - Data that has fixed format
   - csv file
 - Stored in tables and uses SQL to retrieve data
+
+Unstructured Data
+- Data that has no fixed structure
+  - Images, Videos, Audio recordings, PDF documents, Social media posts
+- Stored as files/documents and uses NoSQL or AI techniques to retrieve data
 
 
 Big Data

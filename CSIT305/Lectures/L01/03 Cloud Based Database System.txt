@@ -30,6 +30,6 @@ Cloud Database has:
 - Elastic Scalability 
   - auto increases or decreases resources based on workload
 - Multi-Tenancy
- - multiple customers share the same cloud infra  while keeping their data isolated
+ - multiple customers share the same cloud infra while keeping their data isolated 
 - Fault Tolerance
  - fallback to backup nodes in the event main node fails 

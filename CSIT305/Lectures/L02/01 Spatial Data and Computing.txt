@@ -1,5 +1,14 @@
 Lecture 2 - Spatial Data and Computing
 
+Spatial Data 
+– Spatial Query Types 
+– Spatial Index Structure 
+– Spatial Query Processing
+
+Spatial Textual Data 
+– Spatial Textual Index Structure 
+– Spatial Textual Query Processing
+
 What is Spatial Data?
 Spatial data stores the location and shape of real-world objects
 - GPS coordinates
@@ -76,10 +85,10 @@ Find all ATMs within 500 m
 
  3. k Nearest Neighbor (kNN)
  - "k" means how many nearest results to return
- - Find the k closest objects
+ - Find the k closest objects from current location
 
  Ex.
- Find the nearest 3 taxis
+ Find the nearest 3 taxis from my current location
 
 
  Spatial Index Structures

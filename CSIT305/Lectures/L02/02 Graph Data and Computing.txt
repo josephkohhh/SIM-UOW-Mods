@@ -36,7 +36,7 @@ E = 0
 7 Types of Graphs
 
 1. Undirected Graph
-Edges have no direction
+Edges have no direction - friend list
 
 Alice ---- Bob
 
@@ -153,12 +153,12 @@ Real-World Network Examples:
 Facebook = Undirected, Unweighted
 Email = Directed Multigraph
 Citation Network = Directed, Acyclic
-Phone Calls = Directed, Weighted
-Collaboration = Undirected, Weighted
-Protein Interaction = Undirected
+Phone Calls = Directed Multigraph, Weighted (cost/time) Multigraph
+Collaboration networks = Undirected Multigraph, Weighted 
+Protein Interaction = Undirected, Unweighted
 
 
-4 Important Network Properties
+4 Important Network Properties (how to measure a network)
 - Degree Distribution
 - Path Length
 - Clustering Coefficient
@@ -174,7 +174,7 @@ Shows how node degrees are distributed
 | 2      | 10              |
 | 3      | 5               |
 
-Purpose is to nderstand whether a network has many highly connected nodes (hubs) 
+Purpose is to understand whether a network has many highly connected nodes (hubs) 
 or mostly low-degree nodes
 
 

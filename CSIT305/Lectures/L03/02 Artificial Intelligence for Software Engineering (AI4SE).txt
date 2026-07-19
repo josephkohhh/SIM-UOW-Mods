@@ -23,9 +23,9 @@ Poor project management can lead to
 
 1. Software Project Scheduling (SPS)
 Software Project Scheduling (SPS) is the process of planning:
-- What tasks need to be completed
-- Who performs each task
-- When each task should be completed
+- What tasks need to be completed (what)
+- Who performs each task (who)
+- When each task should be completed (when)
 
 Traditional vs Agile Scheduling
 
