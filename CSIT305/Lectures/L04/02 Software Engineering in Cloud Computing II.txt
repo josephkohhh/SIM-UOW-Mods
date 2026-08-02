@@ -1,0 +1,278 @@
+Lecture 4 - Software Engineering in Cloud Computing II
+
+
+Monolithic Architecture
+
+4 Challenges of Monolithic apps
+| Challenge         | Problem                           |
+| ----------------- | --------------------------------- |
+| Technology Stack  | Locked into one technology        |
+| Scalability       | Entire application must scale     |
+| Change Management | Small changes affect whole system |
+| Deployment        | Entire application redeployed     |
+
+
+MicroService Architecture
+App is made up of many small, loosely coupled svc
+- Performs one business capability
+- Owns its own data
+- Can be deployed independently
+- Can be scaled independently
+
+Microservices are considered a variant of Service-Oriented Architecture (SOA)
+
+Summary:
+| Monolithic            | Microservices                 |
+| --------------------- | ----------------------------- |
+| One large application | Many small services           |
+| Tightly coupled       | Loosely coupled               |
+| Shared database       | Each service owns its data    |
+| One deployment        | Independent deployment        |
+| Scale everything      | Scale only required services  |
+| Single technology     | Multiple technologies allowed |
+
+
+SOA vs Microservices
+
+| Aspect        | SOA                                                   | Microservices                            |
+| ------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Granularity   | Large services containing multiple business functions | Small services focused on one capability |
+| Communication | Enterprise Service Bus (ESB)                          | REST APIs, gRPC, Messaging               |
+| Deployment    | Services are more tightly coupled                     | Independently deployable                 |
+| Technology    | SOAP, XML, WS-* standards                             | REST, JSON, Event-driven, Polyglot       |
+
+Enterprise Service Bus (ESB)
+A central communication hub through which all services exchange messages
+Service A
+      \
+       \
+        ESB
+       /
+      /
+Service B
+
+Unlike modern svcs which can talk directly to each other
+
+
+API Gateway
+It is a router to direct client requests to a correct svc 
+
+Problems with Direct Client-to-Microservice Communication
+- A client may need to communicate with many different microservices
+
+Client
+   │
+   ├── User Service
+   ├── Product Service
+   ├── Order Service
+   ├── Payment Service
+
+- user svc, product svc, payment svc, delivery svc (too many connections, hard to maintain)
+- svc using diff comm protocol may not understand each other
+
+With API Gateway:
+
+          Client
+             │
+      API Gateway
+      ├──────────┐
+      │          │
+ User Service  Product Service
+      │
+ Order Service
+      │
+ Payment Service
+
+ - The client only communicates with one server
+ 
+ API Gateway is not just a router but can also perform:
+ - Authentication
+   - Login, token verification, user identity verification
+ - Monitoring
+   - Tracks Request, Errors, Performance, Usage statistics 
+ - Load Balancing
+   - Distributes requests across multiple service instances (Better performance, Higher availability)
+ - Caching
+   - Stores frequently requested data (faster response time)
+
+Benefits of an API Gateway
+
+Hides Internal Architecture 
+- Clients do not need to know how many svcs, where they are located
+
+Service Discovery
+- Gateway handles which svc instance to connect automatically
+- client dont need to know
+
+Optimized API for Clients
+- Different clients can receive different APIs
+  - mobile -> mobile API
+  - web -> web API
+  - desktop app -> desktop API
+ 
+
+Cons of API Gateway
+- Dependency
+  - Microservices frequently change and API Gateway must be updated
+- Reliability
+  - If the gateway fails, No client can access any microservice - Single Point of Failure (SPOF)
+  - therefore API Gateways should also be scalable and highly available
+
+Popular API Gateways
+- NGINX, AWS API Gateway
+
+
+Designing a Microservice Architecture
+
+Characteristics
+
+Dev teams are:
+- Small
+- Cross-functional
+- Loosely coupled
+- Teams follow DevOps practices
+- Continuous deployment is used
+- Each team is responsible for one or more business subdomains
+
+
+Assemblage: Microservice Architecture Definition Process
+1. Discover System Operations (user functions, login, payment, cart)
+2. Define Subdomains (A microservice is a collection of subdomains)
+3. Design Services and Their Collaborations (design how those services communicate)
+4. Evaluate the Architecture (After designing the architecture, evaluate it for problems)
+5. Refactor the Architecture (If problems are found, improve the design)
+
+
+Microservice Deployment
+
+Deployment Method 1 – Multiple Service Instances per Host
+- Multiple services run on the same physical server or virtual machine (host)
+- Each service uses a different port number so they don't conflict
+
+Ex. 
+Host (192.168.1.100)
+
+Port 8080 → Login Service
+Port 8081 → Payment Service
+Port 8082 → Inventory Service
+Port 8083 → Order Service
+
+
+Deployment Method 2 – Service Instance per Virtual Machine (VM)
+- In this deployment method, each service runs inside its own VM
+- Unlike Deployment Method 1, where multiple services share 1 host, here every service has its own VM
+
+Ex.
+Each service is deployed in a separate VM
+                  Cloud Server
+
+    ┌────────────────────────────────────┐
+    │  VM 1 → Login Service              │
+    ├────────────────────────────────────┤
+    │  VM 2 → Payment Service            │
+    ├────────────────────────────────────┤
+    │  VM 3 → Inventory Service          │
+    ├────────────────────────────────────┤
+    │  VM 4 → Order Service              │
+    └────────────────────────────────────┘
+
+
+Deployment Method 3 – Service Instance per Container
+- Each svc runs inside its own container instead of its own VM
+- A container packages everything the app needs to run
+  - app code, lib, dependencies, runtime, configuration
+- Unlike a VM, a container does not include its own OS
+  All containers share the host operating system's kernel
+
+Ex.
+
+Hardware
+     │
+Linux OS
+     │
+Docker (container manager)
+     │
+├── Container 1
+│      Login Service
+│
+├── Container 2
+│      Payment Service
+│
+└── Container 3
+       Inventory Service
+
+
+Deployment Method 4 – Serverless Deployment
+
+In serverless computing, developers deploy functions, not servers
+- serverless functions are stateless, it only runs when needed else idle
+
+The cloud provider auto manages:
+- Server provisioning
+- Scaling
+- Execution
+
+Ex.
+
+User uploads photo
+         │
+         ▼
+AWS Lambda Function
+         │
+         ▼
+Resize image
+         │
+         ▼
+Save resized image
+
+| Deployment Method          | Advantages                                            | Disadvantages                   |
+| -------------------------- | ----------------------------------------------------- | --------------------------------|
+| Multiple Service Instances | Fast, efficient resource usage                        | Poor isolation                  |
+| Virtual Machine (VM)       | Strong isolation, autoscaling support                 | Higher cost, slower deployment  |
+| Container                  | Lightweight, fast, good isolation                     | Less secure than VMs            |
+| Serverless (AWS Lambda)    | Automatic scaling, event-driven, no server management | Stateless execution             |
+
+
+Common Attacks on Cloud Computing
+
+Denial of Service (DoS) Attack
+- An attacker floods the cloud svc with excessive requests
+  - Make the svc unavailable to legitimate users
+  - Forces the cloud system to consume resources, 
+    increasing the victim's cloud bil (Fraudulent Resource Consumption (FRC))
+
+Hypervisor Attack
+- Gain unauthorized control over virtual machines
+  - Data theft
+  - Svc disruption
+
+Resource Freeing Attack
+- An attacker manipulates a VM so that resources are released
+  - freed resources are then used by the attacker's own VM
+
+Side-Channel Attack
+- Extract secret info from another tenant's virtual machine
+  - Instead of attacking software directly, the attacker observes hardware side effects such as:
+    - Cache usage
+    - Timing
+    - Power consumption
+
+Confidentiality Attack
+- Attackers attempt to obtain confidential info
+  - User data, Encryption keys, VM locations, OS 
+
+
+Securing Cloud Applications
+- Encrypt Data
+- Multi-Factor Authentication (MFA)
+- Multiple Storage / File Distribution
+- Segregate Virtual Machines
+- Migrate to Private Virtual Cloud (for highly sensitive data)
+
+
+Recommended Cloud Security Best Practices
+- User Access Management (RBAC, MAC, DAC)
+- Data Protection using firewall, Encryption
+- Monitoring and Control 
+  - Intrusion Detection Systems (IDS)
+  - Intrusion Prevention Systems (IPS)

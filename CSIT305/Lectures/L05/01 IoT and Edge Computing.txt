@@ -1,0 +1,90 @@
+Lecture 5 - IoT and Edge Computing
+
+
+Internet of Things (IoT)
+It is a network of physical devices connected to the Internet
+
+IoT = Physical Device + Sensors + Internet + Data Exchange
+- Smart homes
+- Wearables
+- Healthcare devices
+
+How to build an IoT system?
+Step 1: Define the Purpose and Requirements
+
+
+Step 2: Choose the Hardware Layer (Things)
+This layer includes sensors, actuators, and edge devices
+
+- Sensors -> Measure temperature, humidity, motion, GPS, etc
+- Actuators -> Perform actions (motors, relays, lights)
+- Microcontroller or SBC (Single-Board Computer): 
+  - Low-power: Arduino, ESP32, STM32
+  - More processing: Raspberry Pi, Jetson Nano
+
+Connectivity modules -> Wi-Fi, LoRa, Zigbee, Bluetooth, 4G/5G, NBIoT
+
+
+Step 3: Implement Connectivity & Communication
+IoT devices need to send data reliably and efficiently
+
+Options: 
+– Protocols (Device <-> Cloud):  
+  - MQTT -> Lightweight, good for low-bandwidth
+  - HTTP/HTTPS -> Common, but heavier
+  - CoAP -> Constrained devices
+– Network Types: 
+  - Short-range: Wi-Fi, Bluetooth, Zigbee
+  - Long-range: LoRaWAN, NB-IoT, 4G/5G
+
+Step 4: Data Processing Layer (Edge or Cloud)
+- You can process data locally (edge computing) or in the cloud.
+- Edge Computing: – Immediate response. – Less cloud dependency. – Examples: ESP32 doing local analytics, Raspberry Pi running AI
+models.
+- Cloud Processing: – Centralized storage and analytics. – Scalable. – Platforms: AWS IoT Core, Azure IoT Hub, Google Cloud IoT,
+ThingsBoard
+
+Step 5: Software & Integration 
+– Firmware -> Runs on IoT devices to collect data and send it
+– IoT Middleware -> Manages communication, authentication, anddata routing. 
+– APIs -> Connect IoT system with apps, dashboards, and third-partytools. – Data Storage -> SQL (structured) or NoSQL (time-series,
+unstructured) 
+– Visualization -> Grafana, Power BI, custom dashboards
+
+Step 6: Security
+- IoT systems are often the weakest cybersecurity link
+– Use TLS/SSL encryption for data in transit
+– Implement device authentication (certificates, tokens)
+– Keep firmware updated
+– Limit open network ports and unnecessary services
+
+
+Edge Computing
+It processes data close to where it is generated, instead of sending everything to the cloud
+
+Cloud computing has problems
+- High latency
+- Large bandwidth usage
+- Privacy concerns
+- Internet dependency
+
+Edge Computing solves these issues
+
+| Feature             | Cloud                 | Edge              | Fog                  |
+| ------------------- | --------------------- | ----------------- | -------------------- |
+| Processing Location | Remote Data Centre    | Near Device       | Between Edge & Cloud |
+| Latency             | High                  | Very Low          | Low                  |
+| Bandwidth           | High Usage            | Low Usage         | Moderate             |
+| Storage             | Very Large            | Small             | Medium               |
+| Real-time Support   | Poor                  | Excellent         | Very Good            |
+| Best For            | AI Training, Big Data | Real-time Control | Distributed Systems  |
+
+What is Fog Computing?
+Fog computing extends the concept of edge computing
+
+Fog nodes perform:
+- Local analytics
+- Filtering
+- Routing
+- Partial processing
+before sending important data to the cloud

@@ -1,0 +1,82 @@
+Lecture 5 - Digital Twin Technology
+
+A Digital Twin is a virtual representation (digital copy) of a physical object, system, 
+or process that is continuously updated using real-time data. It is used to monitor, 
+analyze, simulate, and predict the behaviour of its physical counterpart.
+
+Digital Twin = Physical Object + Virtual Model + Real-Time Data
+
+Digital Twin Model
+
+3 main components
+Data → Model → Software
+
+1. Data (Foundation)
+   - Sources include:
+     - Sensors
+     - IoT devices
+     - Historical records
+     - Operational data
+
+2. Model (Core)
+   - model represents the physical system
+     - Physical models, Mathematical models, AI / Data-driven models
+
+3. Software (Carrier)
+   - Software connects the physical system and digital world
+     - Visualization, Monitoring, Simulation and User interface
+
+
+Purpose of ISO 23247
+It is international standard for a Digital Twin framework for manufacturing
+The four parts of ISO 23247 are:
+1. General principles and requirements
+2. Reference architecture
+3. Information attributes
+4. Information exchange and networking
+
+
+Difference between DTP, DTI and DTA
+| Type    | Meaning                | Purpose                                                         | Example                           |
+| ------- | ---------------------- | --------------------------------------------------------------- | --------------------------------- |
+| **DTP** | Digital Twin Prototype | Used before production for design and testing                   | Testing a new electric vehicle    |
+| **DTI** | Digital Twin Instance  | Used after deployment for monitoring and predictive maintenance | Monitoring a customer's vehicle   |
+| **DTA** | Digital Twin Aggregate | Combines multiple DTIs to monitor an entire system              | Smart city transportation network |
+
+
+5 features of a Digital Twin
+1. Connectivity
+   - Connects physical systems and virtual models through sensors.
+
+2. Homogenization
+   - Standardizes and ensures data quality.
+
+3. Digital Traces
+   - Maintains historical records for troubleshooting and diagnosis.
+
+4. Modularity
+   - Allows systems to be customized and upgraded easily.
+
+5. Reprogrammable and Smart
+   - Uses sensors, AI, and predictive analytics to improve system performance automatically.
+
+
+Digital Twin framework
+
+Operation & Management
+- Digital modelling, Maintenance, Synchronization, Representation
+
+Application & Service
+- Simulation, Analytics, Reporting, Application support
+
+Resource Access & Interchange
+- Interoperability, Plug-and-play, Access control, Peer communication
+
+
+4 maturity levels of Digital Twins
+| Level                                                      | Description                                                                                                        |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Level 1 – Basic Reporting and Analysis**                 | Low-fidelity model with periodic updates, basic analytics and visualization, no autonomous decisions.              |
+| **Level 2 – Advanced Reporting, Analysis and Forecasting** | High-fidelity real-time model with predictive analytics and predefined decision-making.                            |
+| **Level 3 – Support for Strategic Decision Making**        | Real-time hybrid models with adaptive decision-making, advanced analytics, and recommendations.                    |
+| **Level 4 – Autonomous Decision Making**                   | Federated Digital Twins using AI to make autonomous decisions and perform actions with minimal human intervention. |

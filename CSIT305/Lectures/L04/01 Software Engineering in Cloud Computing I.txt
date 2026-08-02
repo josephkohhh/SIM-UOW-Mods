@@ -1,0 +1,265 @@
+Lecture 4 - Software Engineering in Cloud Computing I
+
+Common SDLC Phases
+Requirement -> Design -> Implementation -> Testing -> Maintenance
+
+| **Approach**    | **Models / Examples**           | **Key Characteristics** | 
+| --------------- | ------------------------------- | ----------------------- | 
+| **Traditional** | Waterfall, Spiral, V-Model      | • Sequential process    | 
+| **Agile**       | Scrum, Extreme Programming (XP) | • Iterative development | 
+
+Sequential = one phase after another
+Iterative = repeat, improve, and adapt continuously
+
+
+Evolution of Software Delivery
+- Originally software was delivered as desktop app and web app
+- Cloud computing introduced SaaS like google docs and msft365
+
+Cloud applications are more complex as they support
+- Multi-tenancy
+- Virtualization
+- Load balancing
+- Auto-scaling
+
+
+Cloud Computing
+Cloud computing allows users to access computing resources over the Internet 
+whenever required without owning the infrastructure
+
+It provides:
+- On-demand access
+- Shared computing resources
+- Rapid provisioning
+- Minimal management effort
+
+Characteristics of Cloud Computing
+
+1. On-demand Self-Service
+- Users can provision computing resources anytime without contacting the provider
+- Ex. Create an AWS server in minutes
+
+2. Pay-as-you-go (Metered Billing)
+- Only pay for resources used
+- Ex. Lower cost, Suitable for SMEs
+
+3. Broad Network Access
+- Cloud services can be accessed anywhere, anytime and any devices
+- Ex. laptop, tablet and smartphone
+
+4. Resource Pooling
+- Physical resources are shared among multiple customers
+
+5. Multi-tenancy
+- Many customers share the same cloud infrastructure securely
+
+6. Rapid Elasticity
+- Resources automatically increase or decrease according to demand
+- Ex. Shopping app's resources scale up during Black Friday
+
+7. Reliability
+- Cloud providers manage Backup, Redundancy, Availability
+
+
+Traditional Computing vs Cloud Computing
+
+Traditional systems:
+- Own hardware, Own servers, Install OS, Install apps manually
+
+Cloud Computing
+- Introduces an additional layer: Virtualization
+
+Virtualization
+- Creates virtual versions of hardware & software that operate independently 
+  on the same physical machine (never use local machine resource)
+  - Ex. Msft R2012 Server
+    - Better resource utilization, Isolation, Supports cloud computing
+
+Types of Virtualization
+
+Storage Virtualization
+- Multiple storage devices appear as 1 storage system
+
+Server Virtualization
+- 1 physical server becomes many virtual servers
+
+Network Virtualization
+- Creates logical networks from physical networks
+
+Operating System Virtualization
+- Multiple OS run independently on 1 machine
+
+Hypervisors
+AKA Virtual Machine Monitor (VMM), is software that allows multiple virtual machines (VMs)
+to run on a single physical computer.
+- A manager that shares  computer's resources (CPU, RAM, storage, and network)
+ among different VM
+
+Ex.
+
+Imagine 1 physical computer with:
+- 16 GB RAM
+- 8 CPU cores
+- 1 TB storage
+
+A hypervisor can create:
+VM 1 → Windows Server
+VM 2 → Ubuntu Linux
+VM 3 → Kali Linux
+
+Each VM behaves like a separate computer, even though they all share the same hardware
+
+Types of Hypervisor
+1. Type 1 Hypervisor (Bare Metal)
+   - installs directly on physical hardware, without a host OS
+   - no Windows or Linux host OS underneath
+
+When the server starts:
+- Hardware powers on
+- Hypervisor loads first
+- Hypervisor controls CPU, memory, storage, and networking
+- It creates and manages virtual machines
+
+Faster Performance - since no host OS, there is less overhead. (Hardware -> Hypervisor -> VM)
+
+Better Security - since no host OS that attackers can target 
+
+Better Resource Management - as esources go direct to the VMs
+
+
+2. Type 2 Hypervisor (Hosted)
+   - runs on top of an existing OS (Windows, Linux, MacOS)
+
+When the server starts:
+- Windows starts
+- Install VirtualBox
+- VirtualBox creates virtual machines
+- Ubuntu runs inside VirtualBox
+
+(Hardware -> Windows -> VirtualBox -> Ubuntu VM)
+
+Ex:
+
+Type 1 Hypervisor:
+Server
+│
+├── VM 1 (Web Server)
+├── VM 2 (Database)
+├── VM 3 (Email Server)
+└── VM 4 (File Server)
+
+Type 2 Hypervisor:
+Laptop
+│
+├── Windows
+│     └── VirtualBox
+│            └── Ubuntu
+
+
+Cloud Computing Service Models
+
+Software as a Service (SaaS)
+- software applications over the Internet 
+- Workday, SAP SuccessFactors, Salesforce (CRM)
+
+Platform as a Service (PaaS)
+- cloud platform for developers to build, test, and deploy apps
+- AWS, MS Azure, GCP
+
+Infrastructure as a Service (IaaS)
+- provides virtual infrastructure (servers for rent) through the cloud
+- NBIS, Meta 
+
+
+Software Ecosystem
+It is the interaction of multiple developers, organizations, and users on a common technology platform, 
+resulting in software products and services.
+
+It consists of 3 aspects:
+- Organization
+- Business
+- Software
+
+Types of Software Ecosystems
+
+1. Operating System-Centric
+Developers create app for an OS
+- Windows, Android, iOS
+
+2. End-User Programming
+Designed for users without a CS background
+- Drag-and-drop app builders, Low-code / no-code platforms
+
+3. Application-Centric
+Built around 1 successful application
+- Built around 1 successful app (facebook -> meta)
+
+
+Service-Oriented Architecture (SOA)
+Architectural approach where apps are built using reusable services
+
+Ex. 
+Payment Service
+
+Used by:
+✔ Website
+✔ Mobile App
+✔ Self-service kiosk
+
+
+Service Composition
+A single service usually cannot satisfy all business requirements
+Instead, multiple simple services work together to perform a complex task
+- Combining services creates complete applications
+
+
+Cloud Applications
+Processing happens on remote cloud servers while users interact through a web browser
+- Client-server architecture
+- Internet connection required
+
+Cloud Application Qualities
+- Reliability, Scalability, Security, Cost-effectiveness
+
+Key Drivers of Cloud Applications
+- Lower Capital Cost
+- Higher Adoption
+- Easier Upgrades
+- Easier Upgrades
+- Better Technical Support
+- Higher Availability
+
+
+Requirement Engineering (RE)
+- Requirements Elicitation
+  - Collect requirements from stakeholders (Interviews, Surveys)
+
+- Requirements Specification
+  - Document the requirements clearly 
+
+- Requirements Validation
+  - Check whether the documented requirements are feasible 
+
+
+Types of Requirements
+- Functional Requirements (system functions/features)
+- Non-Functional Requirements (Performance, Security, Scalability)
+- Cloud Application Requirements (Backup, Auto Scaling, Disaster Recovery)
+
+
+Cloud Application Qualities
+- Off-Premise (hosted in remote server)
+- Pay-per-use (only pay for what user use)
+- Portability (can migrate between cloud providers)
+- Monitoring (continously monitor performance, erors, availability)
+- Backup and Recovery (data corruption)
+- Disaster Recovery (restores cloud svc after major failures)
+- Automation (auto deploy, scale, backup)
+- Fault Tolerance (if 1 server failes, another server continue providing svc)
+- Self-Healing (auto restart a failed VM)
+- Live Update 
+- Reusability
+- Interoperability (can integrate tgt even with diff tech (diff prog lang))
+- Accessibility (Cloud apps should be accessible to users worldwide)
+- Security and Privacy
+- Compliance (ISO, GDPR)
