@@ -1,0 +1,181 @@
+Lecture 6 - Emerging Cyber-Attacks
+
+Due to digitization, cyber-attacks have become more frequent and more damaging
+- AI improves both cybersecurity and cyber-attacks
+
+Common Cyber-Attack Types
+- Ransomware
+- Botnet attacks (IoT)
+- Cryptojacking
+
+
+Ransomware
+It is a malware that locks or encrypts a victim's system or files 
+and demands payment (ransom) for recovery
+
+Ransomware can be classified in several ways
+- Cryptographic Ransomware
+  - Encrypts files until ransom is paid
+- Locker Ransomware
+  - Locks UI, OS until ransom is paid
+
+Ransomware Attack Procedure
+Step 1. Initial Access
+Attacker enters the victim's system via 
+- phishing
+- password spraying
+- stolen credentials 
+- brute force
+
+Step 2. Post Exploitation
+Attacker installs tools like 
+- Remote Access Tool (RAT) 
+- Malware
+
+Step 3. Reconnaissance
+Attacker performs reconnaissance to collect sensitive cred 
+- usernames, password 
+
+Step 4. Data Theft
+Attacker steals data  
+
+Step 5. Ransomware Deployment
+Attacker encrypts files/ lock OS and demands for payment 
+
+
+Botnet Attacks
+IoT devices are targeted as 
+- small processors, limited memory, weak security
+- Smart cameras, Smart TVs, Sensor 
+
+Bot = A compromised IoT device
+Botnet = A collection of infected devices
+
+Botnet launch DoS/DDoS attacks against target servers
+
+Types of Botnet Architecture
+A. Centralized Command & Control (C&C)
+Botmaster -> C&C Server -> Bots -> Victim Server
+
+If C&C server is shut down, entire botnet fails
+
+B. Decentralized (Peer-to-Peer)
+Bot A (Node) ──┐
+Bot B (Node) ──├── Victim Server
+Bot C (Node) ──┤
+
+No central server, harder shut down but harder to manage 
+
+
+Cryptojacking
+It is the unauthorized use of someone else's computer to mine cryptocurrency
+
+The victim pays:
+- electricity
+- CPU usage
+- hardware wear
+
+The attacker receives:
+- cryptocurrency rewards
+
+Types of Cryptojacking
+A. Host-Based
+Victim computer infected directly
+
+Phishing -> Malware Installed -> Connect to Mining Pool
+-> Mine Cryptocurrency -> Rewards sent to attacker
+
+B. Website-Based
+Victim visits infected website
+
+Visit Website -> Hidden Script Runs 
+-> Computer Mines Cryptocurrency -> Rewards go to attacker
+
+
+Cyber-Attack Defence Systems
+- IDS
+- Firewalls
+- DMZ
+- TLS
+- WPA2
+- SSH
+
+
+Intrusion Detection System (IDS)
+An IDS monitors network activity and detects suspicious behaviour
+Alerts are sent to:
+- Network administrator
+- SIEM
+
+Types 
+- Host IDS (HIDS) protects PCs, laptops, smartphones
+- Network IDS (NIDS) protects routers, switches, gateways 
+
+Detection Methods
+- Signature-Based IDS looks for known attack signatures like malware 
+- Anomaly-Based IDS looks for Abnormal behaviour 
+
+
+Firewall
+It monitors and controls incoming and outgoing network traffic
+
+Types
+Host Firewall protects individual computers (windows firewall)
+Network Firewall protects routers, switches, gateways 
+
+
+Demilitarized Zone (DMZ)
+A secure buffer network placed between the Internet and the internal network
+
+Internet -> Perimeter Firewall -> DMZ -> Internal Firewall -> LAN
+
+Prevent attackers from directly reaching internal systems
+- Extra security layer
+- Better monitoring
+- Limits attacker access
+
+
+Transport Layer Security (TLS)
+A cryptographic protocol that secures data transmitted over a network
+by providing encryption, authentication, and data integrity, 
+preventing eavesdropping and tampering during communication
+- HTTP + TLS = HTTPS 
+
+
+WPA2
+Wireless security protocol for Wi-Fi
+- AES encryption
+- CCMP protocol
+
+Used by almost all modern Wi-Fi networks. More secure than WEP and WPA.
+
+
+Secure Shell (SSH)
+A network protocol that allows users to securely access and 
+manage remote computers over an encrypted connection
+- Remote login
+- Remote command execution
+- Secure file transfer (SCP/SFTP)
+
+
+Client
+   │
+   ▼
+SSH Connection Request
+   │
+   ▼
+Authentication (Password / SSH Key)
+   │
+   ▼
+Encrypted Communication Established
+   │
+   ├──► Remote Login
+   ├──► Run Commands
+   └──► Transfer Files (SCP/SFTP)
+   │
+   ▼
+Disconnect
+
+OpenSSH – the most widely used open-source implementation of SSH
+
+
