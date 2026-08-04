@@ -19,8 +19,8 @@ Evolution of Software Delivery
 Cloud applications are more complex as they support
 - Multi-tenancy
 - Virtualization
-- Load balancing
-- Auto-scaling
+- Load balancing (distribute load evenly to servers)
+- Auto-scaling (scale servers based on demand)
 
 
 Cloud Computing
@@ -47,10 +47,10 @@ Characteristics of Cloud Computing
 - Cloud services can be accessed anywhere, anytime and any devices
 - Ex. laptop, tablet and smartphone
 
-4. Resource Pooling
+4. Resource Pooling (multiple biz use shared physical resources)
 - Physical resources are shared among multiple customers
 
-5. Multi-tenancy
+5. Multi-tenancy (multiple biz use aws cloud)
 - Many customers share the same cloud infrastructure securely
 
 6. Rapid Elasticity
@@ -90,7 +90,7 @@ Operating System Virtualization
 - Multiple OS run independently on 1 machine
 
 Hypervisors
-AKA Virtual Machine Monitor (VMM), is software that allows multiple virtual machines (VMs)
+AKA Virtual Machine Monitor (VMM), a software that allows multiple virtual machines (VMs)
 to run on a single physical computer.
 - A manager that shares  computer's resources (CPU, RAM, storage, and network)
  among different VM
@@ -160,7 +160,7 @@ Cloud Computing Service Models
 
 Software as a Service (SaaS)
 - software applications over the Internet 
-- Workday, SAP SuccessFactors, Salesforce (CRM)
+- Workday, SAP SuccessFactors, Salesforce (CRM), Xero
 
 Platform as a Service (PaaS)
 - cloud platform for developers to build, test, and deploy apps
