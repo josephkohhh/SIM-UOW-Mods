@@ -25,7 +25,7 @@ Japan — in recession for 20+ years, yet still a top-5 world economy
 
 Raises the question: what counts as a "decent" growth rate, and what other evidence (beyond the headline %) shows an economy is healthy?
 
-Basic Growth Model
+Basic Growth Model (Cobb Douglas production function)
 Y = A · F(K, L, H, N)
 
 Y = Real GDP
@@ -82,6 +82,12 @@ Diminishing returns
 Solow's model and the role of K
 Role of technology
 (Regression analysis of these variables to be covered in Tutorial 2)
+
+Solow Model says that economic growth initially comes from accumulating capital K (machines, factories, infrastructure, etc.), 
+but capital has diminishing returns.
+
+AK Model says Y=AK, So if you keep increasing capital K, output can keep increasing proportionally. 
+
 
 Part 2: Economic Sectoral Growth
 Classifying Sectors
