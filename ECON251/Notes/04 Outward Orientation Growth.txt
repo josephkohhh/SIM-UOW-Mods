@@ -16,31 +16,46 @@ Main Idea of Outward-oriented Growth
 Basis of Trade – Heckscher-Ohlin (HO) Theory
 Countries export goods that use their abundant production factors intensively 
 and import goods that use their scarce factors
+- if they have abundant resources for that goods/svc, they shd export it
+- if they have limited resources for that goods/svc, they shd import it
 
 
 Factor Intensity
-How much of each production factor is required to produce a product
+How much of each production factor is required to produce a goods/svc
+- Formula:
+  - (Ls/Lu) to measure skilled labour ratio
+  - (Lu/Ls) to measure unskilled labour ratio
 
-Ex. 
+Ex 1. 
 T-shirt requires (1 skilled worker, 2 unskilled workers) = Unskilled labour-intensive
 Computer Chips requires (3 skilled worker, 3 unskilled workers) = Skilled labour-intensive
 
-Formula is Ls divide by Lu (Ls/Lu) 
-- above Ex is computer chips more skilled intensive than tshirt (1 > 0.5)
+Computer chips more skilled intensive than tshirt (1 > 0.5)
+
+Ex 2.
+Country A = 72m unskilled & 60 skilled (60/72 = 0.83)
+Country B = 540m unskilled & 300m skilled (300/540 = 0.56)
+
+Country A has relatively more skilled labour than country B
 
 
 Factor Endowment
-Refers to a country's available resources
+Refers to a country's available resources (the amt of inputs (K,L,N,H) in a country)
 
 Ex. 
 - Country A has more skilled workers = produce computer chips
 - Country B has more unskilled workers = produce t shirts
 - Hence Country A will import tshirt and export chips to country B 
 - Hence Country B will import chips and export tshirt to country A
+- Win-Win solution
+
+But how? 
+- Factor intensity of a goods/svc (need more skilled or unskilled labour?)
+- Factor abundance (country have more skilled or unskilled labour?)
+- Opportunity Cost (to produce that goods/svc, country can easily find a skilled/unskilled labour = lower opp cost)
 
 
 But what if countries are new players in the international market who needs to compete?
-
 
 Role of Government
 Govt help firms become internationally competitive through
