@@ -52,8 +52,9 @@ Ex.
 But how? 
 - Factor intensity of a goods/svc (need more skilled or unskilled labour?)
 - Factor abundance (country have more skilled or unskilled labour?)
-- Opportunity Cost (to produce that goods/svc, country can easily find a skilled/unskilled labour = lower opp cost)
-
+- Opportunity Cost (to produce that goods/svc, country can easily 
+  find a skilled/unskilled labour = lower opp cost) -> Ricardo comparative advantage
+  
 
 But what if countries are new players in the international market who needs to compete?
 
