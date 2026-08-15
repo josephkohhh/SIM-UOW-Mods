@@ -1,0 +1,28 @@
+Slide 09
+
+So this is one of the core function of FloodWatch which uses AI to predict flooding events. 
+
+It also performs risk analysis on potentially affected areas. 
+
+So the AI models first need to be trained with historical records obtained from NEA REST API. 
+
+And the real time sensor data is constantly feed to the AI prediction engine to predict flooding events. 
+
+So once the AI prediction engine flags out high probability flooding events or areas, it will send out this data to the GIS database to do object mapping overlay. 
+
+Object refers to the infrastructure in Singapore. 
+
+Once the mapping overlay is successfully completed, the gis data will map with aws iot twin maker entities (components, relationships, properties) to produce a visualization dashboard. 
+
+And subsequently , this funciton will generate report and send to downstream agencies  
+
+
+Slide 10 
+
+The last function for FloodWatch is mainly to send out notifications to the general public to alert them of potential flooding events 
+
+So we can send out notifications in several ways such as through mobile app, text messages or on digital signboard
+
+And this function also tells the public of flood severity with the help of the AI prediction engine. 
+
+Also, it will do loggings for tracking and auditing purposes 
