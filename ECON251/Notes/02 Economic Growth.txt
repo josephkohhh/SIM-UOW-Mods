@@ -54,6 +54,7 @@ Proven mathematically via first-order differentiation (dY/dK falls as L rises)
 Solow's Growth Model
 
 Focuses on capital accumulation up to an ideal level; beyond that, diminishing returns kick in
+
 Suggests poor economies (e.g. Nepal) can "catch up" to richer ones (e.g. Singapore) by acquiring more capital — moving from point B to C
 Assumes the richer economy (Singapore) stays put at C
 Long-run growth needs technology applied to a given K/L ratio — this is exogenous (externally driven)
@@ -118,5 +119,7 @@ Often mistakenly classified purely as "primary," but resources like crude oil an
 Global demand for rare earths is rising; GDP contribution is often recorded separately
 
 Dependency Theory
-
-Summed up as "earn less but pay more" — motivates many developing economies to pursue industrialisation (secondary sector development), which is picked up in Topic 3
+- Developed countries import from poor developed countries at cheap prices 
+- Developed countries manufactures and export to poor developed countries at expensive prices 
+- GDP per capita of the rich and the poor economies may widen as they trade with each other (exploitation)
+— motivates many developing economies to pursue industrialisation (secondary sector development), which is picked up in Topic 3

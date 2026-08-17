@@ -1,0 +1,129 @@
+Lecture 7: Global Value Chain 
+
+A Global Value Chain (GVC) is when the different stages of producing a product/service are located across different countries
+
+R&D → Design → Raw materials → Components → Production → Assembly → Marketing → Distribution → After-sales service
+
+Traditional trade vs GVC
+
+| Traditional trade                    | GVC                                      |
+| ------------------------------------ | ---------------------------------------- |
+| Production mainly within one country | Production fragmented across countries   |
+| Country produces finished product    | Countries specialise in different stages |
+| Less international interdependence   | High international interdependence       |
+| Trade mainly in final goods          | Large trade in intermediate goods        |
+
+
+4 Key Characteristics of GVC
+
+1. Fragmentation of Production
+Production is broken into different tasks/stages and each stage can be located where it is most efficient.
+- It is beneficial for:
+  - Lower labour costs
+  - Raw materials
+  - Specialised expertise
+  - Other advantages
+
+2. International Division of Labour
+Different countries/firms specialise in particular tasks based on their comparative advantages.
+- links to Heckscher-Ohlin theorem (the no. of skilled vs unskilled labours)
+
+3. Interdependence
+Different countries and firms depend on one another because each performs part of the overall production process
+
+4. Value Addition Across Borders
+Each country adds value as the product moves through the production chain
+
+Formula: Value Added (VA) = Output Value − Input Value
+
+Services in GVCs
+GVCs arent only about manufacturing, services do form a large part of the GVC
+including activities such as:
+- Data processing
+- Data analysis
+- Design
+- Marketing
+- Distribution
+- After-sales services
+
+
+Apple Smartphone Example to demostrate GVC:
+
+1. Start with the $179 export value
+China assembles iphone and sells/export to US for $179
+
+2. China imported most of the components
+To make the phone, China had to import components from other countries — chips, memory, displays, etc
+
+Suppose these imported components are worth: $172 (foreign added value cuz created in other countries)
+
+VA = Output Value − Input Value = 179 - 172 = 7
+$179 = $172 foreign value + $7 Chinese domestic value
+
+3. Where does China's $7 come from?
+- assembling the iPhone
+- factory labor
+- packaging
+- etc 
+
+4. Chinese domestic value added
+- China Share: (7/179) x 100% = 4%
+
+Approx 4% of the phone's export value is actually Chinese domestic value added.
+The other 96% comes from value created elsewhere.
+
+
+GVC Participation Index
+- Backward GVC Participation
+- Forward GVC Participation
+
+Backward GVC Participation (I IMPORT inputs)
+Formula: (Foreign Input Value / Local Export Value) × 100%
+
+China Iphone Example:
+Foreign inputs = $172
+Exports = $179
+
+172/179 x 100% = 96.1% (high backward participation rate)
+
+Forward GVC Participation (Others IMPORT my inputs)
+Formula: (Domestic Value Added in Foreign Exports / Relevant exports) × 100%
+
+China Iphone Example:
+Foreign inputs = $172
+Exports = $179
+
+7/179 x 100% = 3.9% ~ 4% (low forward participation rate)
+
+Backward vs Forward Participation
+|                  | Backward                     | Forward                               |
+| ---------------- | ---------------------------- | ------------------------------------- |
+| Measures         | Foreign inputs in my exports | My domestic inputs in others' exports |
+| Direction        | I depend on others           | Others depend on me                   |
+| Key idea         | Imported content             | Domestic value-added                  |
+| High value means | High foreign dependency      | Important intermediate supplier       |
+
+
+What Does High Backward Participation Mean?
+- High dependence on foreign suppliers → greater vulnerability to supply-chain shocks (such as Memory/CPO)
+- To reduce risk:
+  1. Nearshoring / regionalisation
+  2. Diversify suppliers
+  3. Hold larger buffer stocks
+
+
+Why is Asia Important in GVCs?
+Asia contains heterogeneous (diverse) economies with different comparative advantages
+- Japan → advanced technology and manufacturing
+- Singapore → finance and services
+- Vietnam → manufacturing and exports
+- Indonesia → natural resources and commodities
+
+Asia has developed strong participation in manufacturing and intermediate goods, particularly electronics.
+
+
+Challenges of GVC Participation
+1. Global business-cycle shocks such as 2008 GFC
+2. Supply-chain disruptions such as COVID-19, Geopolitical tensions (US-Iran War)
+3. Other Risk such as Relocation/investment risk
+
