@@ -1,0 +1,145 @@
+Lecture 8: China and India Economy 
+
+China and India are 2 "Asian giants" - huge land mass and huge population but their 
+growth paths diverged sharply.  
+
+Reasons of path diversion
+- GDP per capita / labour productivity
+- Human Capital Index (HCI)
+- Tariff levels, esp on agriculture
+- Economic structure (share of manufacturing vs agriculture)
+
+HCI = How productive could this child be in the future compared with if they had the best education and health?
+- High HCI = higher future productivity of the workforce
+- Low HCI = low future productivity of the workforce
+
+
+5 Factors of Divergence
+
+1.  Political System, Language & the State
+China's 1 party political system → centralised state planning and faster, more uniform implementation of policy.
+India's multi party democratic system -> decision-making is more decentralised and contested, slowing implementation.
+
+China's system gives the central government stronger direct control over industrialisation and production
+but India's democratic, federal structure disperses power to state/local level
+
+
+2. State-Owned Enterprises (SOE vs PSU)
+
+China — State Owned Enterprises (SOEs), companies owned or controlled by the government.
+- Banking, Energy, Telecommunications, Transportation
+
+SOEs have cheap access to credit which is breeding ground for corruption
+
+Reform direction: 
+Restructuring SOEs with greater autonomy over production scale, 
+and moving toward mixed ownership (opening to private, local and foreign capital)
+
+India — Public Sector Undertakings (PSUs) / Central Public Sector Undertakings (CPSUs)
+
+PSU (Public Sector Undertaking) = a company or organization owned or controlled by the government.
+CPSU (Central Public Sector Undertaking) = a PSU owned or controlled by the Central (federal) Government of India.
+
+PSUs/CPSUs in India are similar to SOEs in China but when comparing the scale:
+- Many of China's largest firms are state-owned — dominant
+- Only ~58 listed SOEs — much smaller footprint
+
+
+3. Capital Accumulation & Financial Markets
+
+Sustained growth requires an established, vibrant financial market (e.g. Hong Kong, Shanghai for China).
+
+China's high household savings rate fed capital accumulation and investment-led growth.
+
+Harrod–Domar growth model: growth rate g = s / v, where s = savings rate and v = capital-output ratio. 
+Higher domestic savings (channelled into investment) supports faster growth.
+
+
+4. Rate of Industralisation 
+
+China: a significantly larger manufacturing sector relative to agriculture 
+— manufacturing share has been large while agriculture's GDP share steadily shrank 
+(2004–2019 data).
+
+India: manufacturing and agriculture are of a more similar (identical-ish) size, 
+with a comparatively larger and still-growing agriculture sector.
+
+India's Agriculture Sector Reform — "a difficult decision"
+FOOD SECURITY — feeding a large, growing population takes priority over 
+export-led industrialisation of this sector
+
+Government provides large financing (subsidies, buffer-stock support) to 
+expand domestic food production
+
+Trade-off: this financing has bred complacency and lower productivity in the sector, 
+rather than efficiency gains.
+
+
+5. Trade Liberalisation
+
+Trade Openness (trade as % of GDP)
+Even though India joined the WTO earlier than China but China traded much higher
+but now the openness gaps narrowed down 
+
+Tariff Rates
+Both China and India cut tariffs substantially since the early 1990s, 
+but China's tariffs fell faster and to a lower level than India's over the same period.
+
+Why India liberalised trade more slowly — agriculture as the sticking point
+- Food-security risk
+- Poor infrastructure
+- Excessive regulation
+- Unstable export earnings
+
+6. FDI Inflows
+Average net FDI inflow (% of GDP): China ≈ 2.82% vs India ≈ 0.9% 
+— China attracted far more FDI overall.
+
+India's FDI weakness: minimal impact from reform efforts; the democratic system 
+concentrates FDI-attraction control at the central government level without 
+devolving power to local/state authorities.
+— leading to red tape and bureaucracy at the state level that deters investors
+
+7. Improving Connectivity (China)
+Belt and Road Initiative (BRI) — extends connectivity from within China outward 
+to "all the ends of the world".
+
+Tools of connectivity/trade liberalisation: Special Economic Zones (SEZs), 
+export processing zones, port development, and container shipping
+
+China's SEZs were established along the eastern/coastal region from 1979;
+by 2014 there were 6 SEZs, 14 open coastal cities, 4 pilot free-trade areas, 
+and 5 financial-reform pilot areas.
+
+8. Financial Market & Exchange Rate (China)
+
+The RMB was pegged to the US dollar — i.e. a fixed exchange rate system
+
+The Rupee is not pegged to the US dollar
+
+
+Path of Convergence — Can India Catch Up?
+- China's government is increasingly focused on domestic issues — a widening income gap and rising youth unemployment — shifting attention toward the domestic market.
+- India's government has been focusing more on the international market.
+- New wave of FDI diversification:
+  - MNCs (e.g. Boeing, Apple) are diversifying supply chains away from, 
+    or reducing reliance on, China — a "China+1" trend that can benefit India.
+  - Emergence of the digital economy as a new growth driver
+
+
+The Digital Era and the ICT industry are central to this story.
+
+Services comprise mainly IT-related services and R&D services; 
+- the computer software sector grew at roughly 30% per annum.
+
+ICT service exports (% of total service exports):
+- India has consistently and substantially outpaced China 
+  (e.g. India ~41–52% vs China's low single digits through the 2000s, 
+  rising to low double digits by 2018) — services, especially ICT, 
+  are a genuine Indian comparative advantage.
+
+Rationale: greater global connectivity and shifting technology increase demand for services, 
+making service-led growth potentially sustainable for India.
+
+
+
