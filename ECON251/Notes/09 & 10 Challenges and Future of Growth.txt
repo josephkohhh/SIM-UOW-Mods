@@ -1,0 +1,127 @@
+L09 & L10: Challenges and Future of Growth
+
+1. Income Inequality
+
+GDP per capita hides inequality — averages can be misleading
+
+Ex.
+Island of 10 people, total GDP = $1,000 → GDP per capita = $100
+
+Reality: 
+20% of population (2 people) own 60% of income ($600) → $300 each
+Remaining 8 people share $400 → ~$50 or less each
+
+
+Measurement: Gini Coefficient
+- Widely used measure of income inequality
+- Range: 0 (perfect equality) to 100 (perfect inequality)
+- Higher Gini = greater inequality
+
+Common Myths About Inequality
+- Occurs mainly in large, populous countries (Indonesia, India, China)
+- Occurs where there's a significant urban–rural divide
+- Seen as a "rich countries' problem"
+- Seen as "inevitable"
+
+Why It Occurs / Why Hard to Measure
+As infrastructure and education improve, governments collect more taxes to help displaced populations
+
+Open question: does tackling inequality slow down trade and industrialisation?
+
+
+Why It Matters
+- Growth-focused economies often ignore poverty/inequality, expecting income to "trickle down"
+- Policy focus: move more people into middle-income status
+- The poor and middle class can be a driving force for growth through interrelated economic, 
+  social, and political channels — especially important for populous Asian economies
+
+
+2. Aging Population
+
+Dependency Ratio = Non-working age population : Working age population
+
+Aging population + declining birth rates → dependency ratio rises
+
+Economic Implications of Aging Population / Rising Dependency Ratio
+- Labour shortages
+- Younger generation pays higher taxes
+- People work longer hours
+- Greater government spending on healthcare and infrastructure for the elderly
+- Lower tax collection (fewer working-age taxpayers)
+
+Ways to Lower the Dependency Ratio
+- Increase retirement age
+- Increase labour force participation (e.g., ASEAN regional collaboration)
+- Use of AI/automation to offset labour shortages
+
+
+3. Energy, Environment & Climate Change
+
+Asia is a major contributor to global CO₂ emissions in absolute terms
+- China
+- India
+- Japan
+
+Climate Change Risks
+- Floods, storms, forest fires, droughts
+- Costs are increasing, particularly for South, East, and Southeast Asia
+- Risk of GDP loss and potential financial crisis
+
+Economic Costs of Climate Change
+- Food Security
+  - Agriculture is the most vulnerable sector to climate risk
+  - Disruption to crop yields and crop quality
+
+- Infrastructure
+  - Flooding threatens/damages infrastructure (Loss of asset value)
+  - Disruption to communication systems (e.g., optic fiber networks)
+  - Affects flows of FDI (Foreign Direct Investment)
+
+- Market Distortions
+  - Production and supply chain disruptions increase operational costs
+  - Government policies (e.g., carbon tax) distort prices to mitigate climate change
+  - Government resources rechanneled toward climate mitigation
+
+Regional Responses
+- Asian collaboration: cross-border flows of renewable energy (e.g., ASEAN Power Grid — cross-border HVDC links like Thailand–Malaysia)
+- Key regional institutions: Asian Development Bank (ADB), Asian Infrastructure Investment Bank (AIIB)
+
+
+4. The Future of Asia: Collaborate or Compete
+
+Changing Trade Patterns
+- "China +1" Strategy
+  - Corporations diversify away from single-source manufacturing in China
+  - Redirect investment to ASEAN (Vietnam, Indonesia, Malaysia) to mitigate geopolitical risk
+
+- RCEP Integration (Regional Comprehensive Economic Partnership)
+  - Streamlines rules of origin across 15 nations
+  - Cuts transaction friction, anchors pan-Asian supply chains
+
+- Decentralized Value Networks
+  - Shift from linear final-assembly lines to complex regional value chains (RVCs)
+  - Scales intermediate goods exchange across Southeast Asia
+
+
+The Geopolitical Race for Minerals and Energy
+
+1. Critical Minerals Hub
+- ASEAN economies (esp. Indonesia — nickel) hold raw materials vital for EV batteries and high-tech electronics
+
+2. Energy Security
+- Industrialization + AI-driven data centers require massive power scaling
+- Nations must secure reliable, green, and transitional energy grids
+
+3. Resource Nationalism
+- Export bans on raw ores + industrial policy push for domestic refining
+- Goal: convert mineral wealth into higher-value domestic manufacturing leverage
+
+
+Summary: 
+| **Challenge**             | **Key Concept**                                           | **Key Metric/Term**                          |
+| ------------------------- | --------------------------------------------------------- | -------------------------------------------- |
+| **Income Inequality**     | Wealth not evenly distributed; GDP per capita can mislead | **Gini Coefficient (0–100)**                 |
+| **Aging Population**      | Fewer workers, more dependents                            | **Dependency Ratio**                         |
+| **Environment / Climate** | Asia = major CO₂ emitter; rising climate costs            | **CO₂ emissions** (China ~8.3bn tons, 2010)  |
+| **Trade Realignment**     | Diversification away from China; regional integration     | **China+1, RCEP, RVCs**                      |
+| **Resources**             | Competition over critical minerals & energy security      | **Nickel (Indonesia), Resource Nationalism** |
