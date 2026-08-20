@@ -1,0 +1,7 @@
+Regression Table
+
+R² — how much variation is explained overall?
+Significance F — is the whole model meaningful?
+Individual p-values — which specific predictors matter?
+Coefficient sign & size — direction and magnitude of each effect
+Confidence intervals — does the interval avoid crossing zero? (if it crosses zero, the effect is not reliably different from "no effect")
