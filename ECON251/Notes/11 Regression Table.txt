@@ -1,15 +1,144 @@
-Regression Table
+Charts & Regression Table
+
+Recap: 
+Y axis = vertical axis
+X axis = horizontal axis 
+
+
+Charts 
+
+When reading trendlines in a chart,
+- Slope (direction & magnitude)
+  - is the variable rising or falling over time, and how steeply?
+
+- R² (reliability of that trend)
+  - R² close to 1 means the data hugs the line tightly (trend is a strong, consistent pattern). 
+  - R² close to 0 means the line is basically meaningless — the points are scattered and you should not build an argument on that slope
+
+- Axis
+  - Understand the axis (% of GDP, annual % growth, US$, year)
+
+
+R² <= 0.5 (weak or moderate relationship)
+R² >= 0.5 (moderate to strong relationship)
+
+
+A trend with low R² is weak or no evidence 
+
+A trend with high R² is strong evidence 
+
+
+Regression
 
 Regression qn is always abt FDI
-- Y var = FDI
+- Y var = FDI 
 - X vars = GDP per capita, Gross fixed capital formation, unemp rate, trade openess 
 
-R² — how much variation is explained overall?
-Significance F — is the whole model meaningful?
-Individual p-values — which specific predictors matter?
-Coefficient sign & size — direction and magnitude of each effect
-Confidence intervals — does the interval avoid crossing zero? (if it crosses zero, 
-the effect is not reliably different from "no effect")
+Y var = dependent variable
+X vars = independent variables (predictors)
+
+X variables → explain/predict → Y variable
+
+
+Step 1: Regression Statistics block (top)
+It tells you how good the model is overall, before you even look at individual variables
+
+Multiple R: Closer to 1 = better fit 
+
+R²: Closer to 1 = better fit *most impt number*
+- Ex. R² of 0.706
+  - 70.6% of the variation in FDI inflows is explained by the x-variables tgt
+  - Remaining ~29% is due to other factors not in the model 
+
+But R² has a weakness, adding more X variables will never make R² go down, even if those variables are useless.
+- You start with GDP per capita → R² = 0.50
+- Add unemployment → R² = 0.60
+- Add trade openness → R² = 0.65
+- Add a useless variable → R² might still increase slightly.
+
+
+Adjusted R²: More cautious version of R²
+
+Adjusted R² penalizes you for adding extra X variables that don't provide enough useful info
+
+Ex. 
+R² of 70.6% → Adjusted R² of 53.8%
+It is indicating your R² may be somewhat inflated. 
+It could be due to:
+- Small sample size (12 observations)
+- Many independent variables relative to observations
+  - ratio of observations (n) to predictors (k) (n/k)
+  - n = 12 observations and k = 4 vars 
+  - ratio = 12/4 = 3 observations per var 
+
+Thats quite low 
+
+| Observations per X variable | General interpretation        |
+| --------------------------: | ----------------------------- |
+|                     **< 5** | 🔴 Very small / risky         |
+|                    **5–10** | 🟠 Somewhat small             |
+|                   **10–20** | 🟢 Better                     |
+|                     **20+** | 🟢 Generally more comfortable |
+
+
+Observation = years 
+12 observations = 12 data points (ex. 12 years of data) 
+
+
+Step 2: ANOVA block
+Tests whether the model as a whole is statistically meaningful/significant 
+
+Significance F
+- “Do my X variables, as a group, have a statistically significant relationship with Y (FDI)?”
+- compare to 0.05
+  - < 0.05 (regression model is statistically significant)
+  - > 0.05 (regression model is NOT statistically significant)
+
+Ex. 
+Significance F of 0.047680067 < 0.05 concludes that overall regression model is statistically significant
+
+This means independent x vars 
+- GDP per capita
+- gross fixed capital formation
+- unemployment rate
+- trade openness 
+taken together, significantly explain variation in FDI
+
+But it doesn't tell you which individual X variable is significant.
+For that, you look at the P-value in the coefficients section for each X variable.
+
+
+Step 3: Coefficients table (bottom) — this is where most marks live
+Tells you what each individual X variable does to FDI.
+
+Coefficient = direction + size
+The coefficient tells you how FDI changes when that X variable increases by 1 unit, 
+holding the other X variables constant.
+
++ve coefficient = When X increases, Y tends to increase, holding the other X variables constant.
+-ve coefficient = When X increases, Y tends to decrease, holding the other X variables constant.
+
+Ex.
+
+| Variable                      |        Coefficient | Meaning                     |
+| ----------------------------- | -----------------: | --------------------------- |
+| GDP per capita                |    **−629,287.69** | GDP per capita ↑ → FDI ↓    |
+| Gross fixed capital formation |         **+0.499** | Capital formation ↑ → FDI ↑ |
+| Unemployment                  |  **−3.68 billion** | Unemployment ↑ → FDI ↓      |
+| Trade openness                | **+54.43 million** | Trade openness ↑ → FDI ↑    |
+
+
+But u need the P-value to tell u if the r/s is statistically meaningful
+
+
+P value 
+Whether that coefficient is statistically trustworthy 
+- 0.05 (5% significance level) 
+5% significance level is basically your cut-off point for 
+deciding whether a result is statistically significant 
+
+p < 0.05 → significant (trust the coefficient)
+p >= 0.05 → not significant (the true effect could be zero — don't build a strong claim on it)
 
 
 
