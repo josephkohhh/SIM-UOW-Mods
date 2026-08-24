@@ -1,0 +1,130 @@
+Case Study B Answer
+
+Observation for chart 1, 2, 3, 4 & 5
+
+key evidence of a country moving to industrialisation
+
+Chart 1 (Sectoral share of GDP)
+
+- Manufacturing shows a rising trendline (0.3788x) suggesting increased its contribution to GDP over the years
+  while Agriculture shows a slightly rising/flat trendline (0.0009x) suggesting it has 
+  maintained a relatively stable contribution to GDP.
+
+- Trendline for Manufacturing is reliable as R² >= 0.5 (0.709) 
+  while trendline for Agriculture is not reliable as R² < 0.5 (0.0234) = not a strong evidence 
+   
+- % Share of GDP for Manufacturing is much larger compared to Agriculture (13.312% > 0.2906%)
+  
+- Overall, the rising contribution of Manufacturing, alongside the relatively stable contribution 
+  of Agriculture, may suggest a shift towards greater industrialisation in the economy
+
+
+Chart 2 (Sectoral growth of GDP)
+
+- Growth rate for Manufacturing above 0% (5.9758%) but showing a falling trend (-0.2992x). However, 
+  the trendline is unreliable as R² < 0.5 (0.463) = not a strong evidence 
+
+- Growth rate for Agriculture above 0% (0.3752%) and showing a rising trend (0.2557x). However, 
+  the trendline is unreliable as R² < 0.5 (0.0283). Also, there are occurences of below 0% 
+  growth rate. 
+
+
+Chart 3 (Relationship of Manufacturing output vs GDP) - Scatterplot graph
+
+- Scatterplot shows a positive relationship between manufacturing output and GDP.
+  
+- The relationship is very reliable as the R² > 0.5 (0.9625) (strong manufacturing growth = strong GDP)
+  
+- This suggests manufacturing is very beneficial for the economy 
+
+
+Chart 4 (fixed capital formation - K)
+
+- Fixed capital formation (k) shows a rising trendline (2E+08x), this is expected as firms acquire
+  more equipment and machines for industrial production. 
+
+- However the R² is < 0.5 (0.2508) suggesting this trendline is not reliable = not a strong evidence 
+
+
+Chart 5 (The labour market) 
+
+- Labour productivity shows a falling trendline (-338.16x). 
+  But the R² is < 0.5 (0.3479) = not a strong evidence.
+  Suggests labour productivity is not falling most of the time. 
+
+- GDP per capita shows a rising trendline (125.05x).
+  But the R² is < 0.5 (0.4315) = not a strong evidence. 
+  
+- Unemployment rate shows a slight rising trendline (0.015x). 
+  The R² is > 0.5 (0.5725) thus the trendline is reliable.
+  Suggest that economy is experiencing rising unemployment which is not beneficial for economy 
+  Rising unemployment can lead to deflation and in severe case lead to depression 
+  Possible causes of rising unemployment due to tighter labour market
+  - low FDI 
+  - interest rate hikes
+  - hiring freeze 
+  - poor GDP growth 
+   
+
+Chart 6 (FDI)
+
+- Trade openness above 50% (orange line) suggests very trade dependent country - 
+  High imports and exports flowing into the economy. 
+
+- The trendline is falling (-0.914x) but the R² is < 0.5 (0.1128) suggest it is not reliable
+
+- R² for FDI Inflow is essentially 0 suggesting no meaningful trend reflecting inconsistent investor flow
+
+
+
+
+1. What are the key evidence we can gather that there is signs of industrialisation in Bahrain [4 marks]
+
+
+Data in chart 1 shows manufacturing sector contribute more to Bahrain's GDP and the 
+sector’s share of GDP is also rising with a reliable trendline.
+
+Data in chart 2 shows the output growth of manufacturing is rising throughout the
+period given the growth rates are all >0. Albeit a falling trendline but it is
+unreliable and also suggest output by this sector is still growing.
+
+Data in chart 1 and 2 of agriculture shows its more volatile (as seen in chart
+2) and a smaller contribution to the GDP but this indicator is not
+falling as given in the traditional way. 
+
+Thus it is conclusive that Bahrain is experiencing industrialisation in the
+studied period based on the manufacturing data
+
+
+
+2. What are the key evidence we can gather that on the key benefits of industrialisation in
+Bahrain [5 marks]
+
+Benefits of industrialisation are in terms of
+1. Rising GDP as given in chart 3. Strong evidence of rising GDP due to rising manufacturing Growth (very high R²)
+
+2. Other benefits: 
+- Increased in Fixed Capital Formation (K) (chart 4)
+- GDP per Capita (chart 5)
+- Labour Productivity (chart 5)
+
+But all these have weak evidence as their R² are low 
+
+This suggests the benefits of industrialisation are not passed on to the labour market in Bahrain
+
+
+3. Explain using the data in the following chart why Bahrain is considered an open economy (i.e. adopting
+outward oriented growth path)
+
+State 2 other indicators that we will need to further justify the country is an open economy [6 marks]
+
+Data in chart 6 shows Bahrain is open to trade and thus an open economy . Despite a weak
+evidence of a falling trend, the very high trade openness of > 50% shows the large volume
+of exports and import flowing
+
+The evidence of FDI inflow serves as a weaker evidence moderate level in most periods.
+Thus funds are still flowing into the economy suggest, a fairly open economy
+
+1. Falling tariff rate suggest imports are taxed lesser and thus can flow more easily into the economy
+2. GVC rate esp. backward participation to show Bahrain is a participant in the global value chain where 
+   she process the semi finished goods for intermediate parts from the other countries

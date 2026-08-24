@@ -8,12 +8,14 @@ X axis = horizontal axis
 Charts 
 
 When reading trendlines in a chart,
-- Slope (direction & magnitude)
-  - is the variable rising or falling over time, and how steeply?
+- Trendline (direction & magnitude)
+  - Look at the equation, y = ax + b 
+    - if a = positive (rising trendline) | if a = negative (falling trendline)
+    - b = % of y var (it can be % share of gdp or others)
 
-- R² (reliability of that trend)
+- R² (reliability of the trendline)
   - R² close to 1 means the data hugs the line tightly (trend is a strong, consistent pattern). 
-  - R² close to 0 means the line is basically meaningless — the points are scattered and you should not build an argument on that slope
+  - R² close to 0 means the line is basically meaningless 
 
 - Axis
   - Understand the axis (% of GDP, annual % growth, US$, year)
@@ -23,9 +25,19 @@ R² <= 0.5 (weak or moderate relationship)
 R² >= 0.5 (moderate to strong relationship)
 
 
-A trend with low R² is weak or no evidence 
+A trend with low R² is weak or no evidence (not reliable)
 
-A trend with high R² is strong evidence 
+A trend with high R² is strong evidence (reliable)
+
+
+Scatterplot
+- Look at the equation, y = ax + b 
+  - if a = positive (rising trendline) | if a = negative (falling trendline)
+  - b = % of y var (it can be % share of gdp or others)
+
+- R² (reliability of the trendline)
+  - R² close to 1 means the data hugs the line tightly (trend is a strong, consistent pattern). 
+  - R² close to 0 means the line is basically meaningless 
 
 
 Regression
