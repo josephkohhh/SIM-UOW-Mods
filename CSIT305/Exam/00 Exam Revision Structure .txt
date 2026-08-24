@@ -1,0 +1,23 @@
+Exam Revision Structure 
+
+8 essay questions in total
+
+6 questions each worth 5 marks, which require short answers [30 marks]
+
+2 questions each worth 10 marks, which require long answers [20 marks]
+
+
+
+Sample Questions
+
+Both Quadtrees and R-trees may experience performance degradationunder certain data distributions. 
+Explain the underlying reasons for thisissue and propose appropriate mitigation strategies for each 
+case.
+
+
+You work for a transportation company that manages a large fleet of
+vehicles and needs to track routes, schedules, and maintenance histories.
+Explain how a multi modal database could be used to store and managethis data, 
+and how it would improve performance and efficiencycompared to a traditional relational database. 
+Your answer shouldreference at least two types of data, at least three queries related to thedata, 
+and the relevant processing techniques for each query

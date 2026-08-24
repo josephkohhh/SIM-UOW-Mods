@@ -1,5 +1,19 @@
 Lecture 1 - Advanced Database Overview
 
+Introduction to Database Systems 
+- Structured/unstructured data
+- High-quality/low quality data, 
+- Big data
+- Relational database
+- Non-relational database
+
+Types of Databases 
+– Hierarchical database
+- network database
+- NoSQL database
+- graph database
+- document database
+
 What is Data?
 - A piece of info that can be stored electronically
   - text, number, images, audio, etc
@@ -91,7 +105,7 @@ Course1 Course2
 
 
 4. Graph Database
-- Singaporetores data as nodes, edges, properties 
+- Stores data as nodes, edges, properties 
 - Suited for financial fraud detection 
 
 Node = object

@@ -1,0 +1,61 @@
+Lecture 1 mock qn and ans:
+
+1. Explain the difference between structured and unstructured data, and give 1 example of each in the context of a business database.
+
+Structured data is organized in a predefined format (rows/columns) that fits neatly into tables, 
+like a spreadsheet of customer names, IDs, and purchase amounts. Unstructured data has no fixed format 
+— e.g., emails, images, videos, or free-text reviews — and requires different tools to process and analyze.
+
+2. Compare relational and non-relational (NoSQL) databases in terms of schema flexibility, scalability, and typical use cases.
+
+Relational databases organize data into predefined tables with fixed schemas and relationships, 
+using SQL for querying — good for consistent, structured data (e.g., financial records). NoSQL databases use flexible, schema-less models (key-value, document, graph, etc.), 
+making them better suited to large volumes of varied or unstructured data and horizontal scalability, though often at the cost of some consistency guarantees.
+
+3. Describe the structure of a hierarchical database model. State 1 advantage and 1 disadvantage.
+
+A hierarchical database organizes data in a tree-like structure, where each child record has exactly one parent 
+(e.g., organization chart, file system). Advantage: fast and efficient for one-to-many relationships since navigation follows a clear path. 
+Disadvantage: difficult to represent many-to-many relationships, and restructuring the hierarchy is costly and inflexible.
+
+4. Explain how a network database model differs from a hierarchical database model in representing relationships between records.
+
+Unlike a hierarchical model where each record has only one parent, a network database allows a record to have multiple parent and child 
+relationships, modeled as a graph of interconnected records/sets. This makes it more flexible for representing complex, many-to-many relationships, 
+but it's also more complex to design, query, and maintain than a hierarchical model.
+
+5. What is a graph database, and why is it particularly well-suited to applications like fraud detection or social network analysis?
+
+A graph database stores data as nodes (entities) and edges (relationships), making relationships first-class citizens rather than something computed via joins.
+This makes it ideal for fraud detection or social networks, where the key insight comes from traversing connections (e.g., "who is connected to whom") — 
+queries that would require expensive multi-table joins in a relational database.
+
+6. Describe the key characteristics of a document database (e.g., MongoDB-style) and give one example application.
+
+A document database (e.g., MongoDB) stores data as semi-structured documents (commonly JSON/BSON), where each document can have 
+a different set of fields, unlike rigid relational rows. This makes it well suited to applications like content management systems, 
+where records (e.g., articles or user profiles) naturally vary in structure and need to evolve over time without a fixed schema.
+
+7. What are streaming processing systems, and how do they differ from traditional batch data processing?
+
+Streaming processing systems ingest and process data continuously, in near real-time, as it arrives, 
+rather than waiting to collect and process it in scheduled batches. This is essential for applications like 
+social media analysis or fraud detection, where decisions need to be made on data as it's generated, not hours or days later.
+
+8. Explain 2 key challenges of cloud-based database systems (e.g., internet speed dependency, security).
+
+2 key challenges are 
+(1) dependency on internet speed and connectivity — since data must travel to 
+and from remote servers, performance can suffer with poor connections 
+
+(2) security concerns, since sensitive data is stored and transmitted outside the
+ organization's direct physical control, raising risks around unauthorized access.
+
+9. Distinguish between "big data" and "high-quality vs. low-quality data" as discussed in the database overview 
+— why does an organisation need to consider both dimensions?
+
+"Big data" refers to the volume, variety, and velocity of data that traditional methods struggle to 
+process, requiring specialized tools (e.g., distributed processing, ML). 
+Data quality (high vs. low quality) is a separate dimension concerning accuracy, completeness, and 
+reliability of that data — an organization needs both dimensions because large volumes of 
+poor-quality data can actually reduce the value and trustworthiness of insights, regardless of how well the "big data" infrastructure scales.
