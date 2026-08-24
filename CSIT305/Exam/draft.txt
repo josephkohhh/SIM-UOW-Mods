@@ -1,0 +1,72 @@
+1. Explain the difference between structured and unstructured data, and give 1 example of each in the context of a business database.
+
+Structured Data have fix structure format. For ex, a SQL db ingesting a csv file containing emp info (emp_id, emp_name, emp_salary)
+Unstructured Data have NO fix structure format. For ex, AWS S3 bucket storing audio file, video file, and image in same folder
+
+2. Compare relational and non-relational (NoSQL) databases in terms of schema flexibility, scalability, and typical use cases.
+
+a relational db has fixed schema and stores data in structured tables with columns and rows.
+They are suitable for apps that require consistent, predictable and reliable transc and r/s between data.
+For ex. banking system storing bank acc and transc data for auditing, logging purposes
+
+no SQL db has high flexibility that can store data in diff format (document, key-value, graph structures)
+it is designed for high flexibility (can alter data type easily) and high scalability (horizontal scaling across multiple servers)
+For ex. a ecomm app storing product info in document db where diff products have diffrent types of attributes
+
+3. Describe the structure of a hierarchical database model. State 1 advantage and 1 disadvantage.
+
+A hierarchical databse stores data in a tree-like structure. each node will have 1 parent only. 
+For ex, a file system
+Pros: easy to navigate data as data traverse in a single direction 
+Cons: difficult to represent data with many to many relationships and restructuring hierachies is costly and inflexible 
+
+
+4. Explain how a network database model differs from a hierarchical database model in representing relationships between records.
+
+Network db allows data to represnet many to many r/s. unlike hierarchical model. 
+For ex. 
+   Student
+   /    \
+Course1 Course2
+
+a student can take many course. a course can have many students. 
+For ex, universities and airline booking system
+it makes it flexible to represent complex data relationships 
+However, it can be complex to design and query thaan  hierarchical database model
+
+
+5. What is a graph database, and why is it particularly well-suited to applications like fraud detection or social network analysis?
+
+A graph db stores data in nodes (objects) and edges (relationships).
+it is used to store and analyse relationships between nodes.
+well suited for apps like fraud and social network as it can identify complex connections between each nodes  
+
+6. Describe the key characteristics of a document database (e.g., MongoDB-style) and give one example application.
+
+document db stores data in semi-structured data usually in (json/bson) format. 
+ex, content management system where product info with image is stored and regularly 
+updated with varying attributes without a fixed schema  
+
+
+7. What are streaming processing systems, and how do they differ from traditional batch data processing?
+
+stream processing system ingest and process data in near real time rather than traditional batch data processing where
+data are collected in scheduled batches. Stream processing are used when apps need real time analysis.
+For ex, banking system stream process transcational data and data is analyse for fraud detection.
+
+
+8. Explain 2 key challenges of cloud-based database systems (e.g., internet speed dependency, security).
+
+internet connection is required for cloud based db systems since it is connected to remote servers,
+a low internet speed will affect the performance and user experience.
+
+since sensitive data is stored and transimitedd outside or organisations's direct control, it raises risk of unathorusized access 
+
+9. Distinguish between "big data" and "high-quality vs. low-quality data" as discussed in the database overview 
+— why does an organisation need to consider both dimensions?
+
+Big data are datasets that are very large, complex and generated at high speeds. 
+High quality data are data that are accurate, consistent, up to date
+Poor quality data are data that have duplicates, inconsistants, inaccurate, outdated 
+An org need to consider both dimension as they need to analyse the data to make decision making and poor quality data is not useful.
+to convert poor quality data to high quality, org can consider building an elt pipeline to cleanse and transform data before analysing

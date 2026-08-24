@@ -10,8 +10,8 @@ Exam Revision Structure
 
 Sample Questions
 
-Both Quadtrees and R-trees may experience performance degradationunder certain data distributions. 
-Explain the underlying reasons for thisissue and propose appropriate mitigation strategies for each 
+Both Quadtrees and R-trees may experience performance degradation under certain data distributions. 
+Explain the underlying reasons for this issue and propose appropriate mitigation strategies for each 
 case.
 
 

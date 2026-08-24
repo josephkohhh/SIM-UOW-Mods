@@ -2,33 +2,52 @@ Lecture 1 mock qn and ans:
 
 1. Explain the difference between structured and unstructured data, and give 1 example of each in the context of a business database.
 
-Structured data is organized in a predefined format (rows/columns) that fits neatly into tables, 
-like a spreadsheet of customer names, IDs, and purchase amounts. Unstructured data has no fixed format 
-— e.g., emails, images, videos, or free-text reviews — and requires different tools to process and analyze.
+Structured data have fixed data structure format. 
+For Ex, business records in CSV file (biz_id, biz_name, biz_category, etc) and ingest to a SQL DB
+
+Unstructured data have no fixed data structure format. 
+For Ex, business store product images and video in AWS S3 bucket. 
+
 
 2. Compare relational and non-relational (NoSQL) databases in terms of schema flexibility, scalability, and typical use cases.
 
-Relational databases organize data into predefined tables with fixed schemas and relationships, 
-using SQL for querying — good for consistent, structured data (e.g., financial records). NoSQL databases use flexible, schema-less models (key-value, document, graph, etc.), 
-making them better suited to large volumes of varied or unstructured data and horizontal scalability, though often at the cost of some consistency guarantees.
+Relational Db have fixed schema and stores data in structured tables with rows and columns. 
+They are suitable for apps that require predictable, consistent, reliable trans and r/s between data. 
+For ex, banking system storing customer acc and transc data in relational db for logging and auditing purposes.
+
+NoSQL Db have flexible schema and can store data in different format (document, key-value, graph).
+They are generally designed for high flexibility (adding/removing/changing attributes) and 
+scalability (scale horizontally across multiple servers)
+For ex, An ecomm app can use document db to store product info where diff products have diff attributes
+
 
 3. Describe the structure of a hierarchical database model. State 1 advantage and 1 disadvantage.
 
 A hierarchical database organizes data in a tree-like structure, where each child record has exactly one parent 
-(e.g., organization chart, file system). Advantage: fast and efficient for one-to-many relationships since navigation follows a clear path. 
+For Ex, a file system.
+Advantage: fast and efficient for one-to-many relationships since navigation follows a clear path. 
 Disadvantage: difficult to represent many-to-many relationships, and restructuring the hierarchy is costly and inflexible.
+
 
 4. Explain how a network database model differs from a hierarchical database model in representing relationships between records.
 
 Unlike a hierarchical model where each record has only one parent, a network database allows a record to have multiple parent and child 
-relationships, modeled as a graph of interconnected records/sets. This makes it more flexible for representing complex, many-to-many relationships, 
-but it's also more complex to design, query, and maintain than a hierarchical model.
+relationships, modeled as a graph of interconnected records/sets. 
+For Ex.
+   Student
+   /    \
+Course1 Course2
+
+This makes it more flexible for representing complex, many-to-many relationships, 
+but it's also more complex to design, query, and maintain than a hierarchical model.  
+
 
 5. What is a graph database, and why is it particularly well-suited to applications like fraud detection or social network analysis?
 
-A graph database stores data as nodes (entities) and edges (relationships), making relationships first-class citizens rather than something computed via joins.
-This makes it ideal for fraud detection or social networks, where the key insight comes from traversing connections (e.g., "who is connected to whom") — 
-queries that would require expensive multi-table joins in a relational database.
+Graph databases are a type of NoSQL database designed to store and analyze relationships between data.
+They represent entities as nodes and relationships as edges.
+They are well suited for fraud detection or social network analysis as they can identify complex connections between customers, accounts, transactions, and other entities.
+They are also useful for social network analysis because they can efficiently find relationships, connections, and patterns between users.
 
 6. Describe the key characteristics of a document database (e.g., MongoDB-style) and give one example application.
 
@@ -36,11 +55,13 @@ A document database (e.g., MongoDB) stores data as semi-structured documents (co
 a different set of fields, unlike rigid relational rows. This makes it well suited to applications like content management systems, 
 where records (e.g., articles or user profiles) naturally vary in structure and need to evolve over time without a fixed schema.
 
+
 7. What are streaming processing systems, and how do they differ from traditional batch data processing?
 
 Streaming processing systems ingest and process data continuously, in near real-time, as it arrives, 
 rather than waiting to collect and process it in scheduled batches. This is essential for applications like 
 social media analysis or fraud detection, where decisions need to be made on data as it's generated, not hours or days later.
+
 
 8. Explain 2 key challenges of cloud-based database systems (e.g., internet speed dependency, security).
 
@@ -49,13 +70,15 @@ social media analysis or fraud detection, where decisions need to be made on dat
 and from remote servers, performance can suffer with poor connections 
 
 (2) security concerns, since sensitive data is stored and transmitted outside the
- organization's direct physical control, raising risks around unauthorized access.
+organization's direct physical control, raising risks around unauthorized access.
+
 
 9. Distinguish between "big data" and "high-quality vs. low-quality data" as discussed in the database overview 
 — why does an organisation need to consider both dimensions?
 
-"Big data" refers to the volume, variety, and velocity of data that traditional methods struggle to 
-process, requiring specialized tools (e.g., distributed processing, ML). 
-Data quality (high vs. low quality) is a separate dimension concerning accuracy, completeness, and 
-reliability of that data — an organization needs both dimensions because large volumes of 
-poor-quality data can actually reduce the value and trustworthiness of insights, regardless of how well the "big data" infrastructure scales.
+Big data refers to datasets that are very large, complex, and generated at high speed, often described using the 3Vs: volume, velocity, and variety.
+High-quality data is data that is accurate, complete, consistent, relevant, and up to date.
+Low-quality data may contain errors, missing values, duplicates, outdated information, or inconsistencies.
+Big data does not necessarily mean high-quality data. An organisation can have a huge amount of data, but if the data is low quality, it may not be useful.
+
+An organisation needs to consider both dimensions because it needs good data to support analysis and decision-making, 
