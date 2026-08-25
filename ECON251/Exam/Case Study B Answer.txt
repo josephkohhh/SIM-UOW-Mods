@@ -76,6 +76,16 @@ Chart 6 (FDI)
 - R² for FDI Inflow is essentially 0 suggesting no meaningful trend reflecting inconsistent investor flow
 
 
+Regression (FDI)
+
+- Positive factors
+  - Gross fixed capital formation increasing will increase FDI inflows but P > 0.05 (r/s is not statistically significant)
+  - Trade openness increasing will increase FDI inflows with P < 0.05 (thus a strong driver of FDI) 
+
+- Negative factors
+  - Increase in GDP per capita and unemployment rate with will REDUCE FDI inflow but P > 0.05 (r/s is not statistically significant)
+
+
 
 
 1. What are the key evidence we can gather that there is signs of industrialisation in Bahrain [4 marks]
@@ -128,3 +138,46 @@ Thus funds are still flowing into the economy suggest, a fairly open economy
 1. Falling tariff rate suggest imports are taxed lesser and thus can flow more easily into the economy
 2. GVC rate esp. backward participation to show Bahrain is a participant in the global value chain where 
    she process the semi finished goods for intermediate parts from the other countries
+
+
+
+a. Explain the role of rising unemployment (as seen in chart 5), in affecting the level of FDI inflow in Bahrain 
+and explain if the government should be worried about this development. [4marks]
+
+Chart 5 shows rising unemployment in Bahrain, and this may occur as the economy moves rapidly to the manufacturing sector
+This suggest workers are not equipped or skilled to find jobs in the new sector.
+This suggest government should be worried about this development.
+
+However, the evidence of it reducing FDI is weak as this variable’s p value (unemployment rate) > 0.05, so we cannot
+fully deduce this rising unemployment will have a strong impact in Bahrain's FDI inflow. Perhaps a much
+longer duration of studies, a more detailed variable [e.g. unemployment in the manufacturing
+sector] will provide a more robust study.
+
+
+b. With reference to Chart 6 and the regression results, Bahrain's FDI inflows are highly volatile.
+Identify the most important positive x variable driving this relationship, and explain 1
+economic reason for its impact. [7 marks] 
+
+The most important positive x variable that will drive FDI inflow into Bahrain is trade openness.
+The regression results suggest a rise in trade openness by 1% will bring in about $54m of FDI
+into the economy.
+
+The economy with trade openness of > 50 % ( as seen in chart 6) suggest an ease of flow of
+imports and exports. This suggest the foreign companies face lesser difficulties if bringing in
+foreign parts and inputs for the production. At the same time, export volume may be high
+suggesting Bahrain a reputable and reliable export partner. This will thus lure foreign firms to
+set up operation in Bahrain.
+
+But a high trade openness may also suggest she is more prone to global crisis , affecting
+supply chain, and/or global demand, thus making its FDI flow volatile as given in chart 6.
+
+
+c. Explain one policy tool the government can use to further increase the 𝑥 variable
+identified in part (b) (trade openess) to boost long-term FDI.
+
+1 policy tool the Bahrain government can use is to reduce import tariffs and other trade barriers. 
+
+This would further increase trade openness by making it easier and cheaper for firms to import raw materials, 
+machinery and other production inputs. Lower trade costs would make Bahrain more attractive to foreign firms 
+seeking to establish long-term operations, as they can access imported inputs more efficiently and export their products more easily. 
+This could therefore encourage greater long-term FDI inflows into Bahrain.
