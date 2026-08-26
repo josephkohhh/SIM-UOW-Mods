@@ -2,12 +2,17 @@ Lecture 2 - Spatial Data and Computing
 
 Spatial Data 
 – Spatial Query Types 
-– Spatial Index Structure 
+  - Window query, range query, k nearest neighbour query
+– Spatial Index Data 
+  - Quad-tree, R-tree
 – Spatial Query Processing
+  - Best first search
 
 Spatial Textual Data 
 – Spatial Textual Index Structure 
+  - IR-tree
 – Spatial Textual Query Processing
+  - Best first search with spatial textual score
 
 What is Spatial Data?
 Spatial data stores the location and shape of real-world objects
@@ -138,7 +143,43 @@ Search process of R-tree
     - Check the actual objects inside those MBRs. Removes false matches
 
 
-*R-tree indexing is faster
+*R-tree indexing is generally faster for uneven distribution of nodes
+- With a quad-tree:
+  - Fixed 4-way division
+  - Space is repeatedly divided into 4.
+  - You may get many empty or sparsely populated regions. (does region intersect query? prune/search)
+  - The tree can become unnecessarily deep.
+
+- With a R-tree:
+  - Variable grouping
+  - Nearby objects are grouped together into a MBR
+  - MBR that dont intersect a query is pruned 
+  - Avoids creating unnecessary subdivisions 
+
+
+Spatial Query Processing — Best-First Search
+- BFS is a search strategy used in spatial indexes such as R-trees to find nearest objects first
+  
+Ex. Nearest Neighbor Query 
+
+Algo cals the minimum possible distance (MINDIST) from point Q to each MBR
+MBR A → MINDIST = 20
+MBR B → MINDIST = 5 (search B first since MINDSIT is nearest to point Q)
+
+Priority Queue
+
+        MBR B → distance 5   ← explore first
+        MBR A → distance 20
+        MBR C → distance 35
+
+Process:
+1. calc MINDIST of each MBR from point Q
+2. put each MBR node in priority queue order by ascending dist
+3. remove the 1st node and search that node
+4. if couldnt find, repeat the process of 3. until find 
+
+BFS can avoid exploring irrelevant/far-away regions early, making it particularly useful for nearest-neighbor 
+and k-nearest-neighbor (k-NN) spatial queries
 
 
 Spatial-Textual Data 
@@ -153,13 +194,19 @@ What is an Inverted File?
 - it is a text index
 - instead of storing Document → Words, it stores Word → Documents (faster)
 
+Normal index:
+Document → Words
+
+Inverted index:
+Word → Documents
+
 Ex.
 
 coffee
 
-Restaurant1
-Restaurant4
-Restaurant8
+Restaurant A that sells coffee
+Restaurant B that sells food
+Restaurant C that sells coffee
 
 
 Spatial-Textual Index
@@ -167,6 +214,36 @@ Spatial-textual queries must satisfy both Spatial index + Textual index
 - IR-tree (Inverted R-tree)
   - Combines R-tree + Inverted File
 
+Search process of IR-tree
+- Every query has 2 stages
+  - Filtering
+    - Visit only the child nodes whose MBRs intersect the query
+    - Ignore MBRs that do not overlap with the query, reducing the search space
+  - Textual filtering
+    - Use inverted index associated with the R-tree nodes to determine 
+      whether the relevant objects/nodes contain the keyword such as “sushi.”
+  - Refinement
+    - Check the actual objects inside those MBRs. Removes false matches
+    - Check the actual text to make sure it contains the keyword
+
+
+
+Spatial Query Processing — Best-First Search with textual score
+- Instead of ranking candidates only by spatial distance, we rank them using a combination of
+  - Spatial relevance score (How close is the object?)
+  - Textual relevance score (How well does the object match the keywords?)
+
+The higher the score, the better the object
+ 
+                 Root
+              /    |    \
+             A     B     C
+           score  score  score
+            0.7    0.9    0.4
+                    ↑
+               explore first 
+
+Especially useful for queries such as "coffee near me"
 
 Applications of Spatial Computing:
 - Taxi Services (Uber, Grab, GoJek)
@@ -176,3 +253,6 @@ Applications of Spatial Computing:
 - Food Delivery (GrabFood, Foodpanda)
   - Assign nearest rider
   - Plan efficient delivery routes
+
+
+  
