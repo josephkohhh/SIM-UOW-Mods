@@ -1,0 +1,118 @@
+Question 1: Spatial Query Types
+Describe the three types of spatial queries, giving an example for each. (5 marks)
+
+Window Query – Uses a rectangular search area to find all objects inside that rectangle. 
+Ex: Find all cafes in Orchard. (1.5 marks)
+
+Range Query – Uses a circular search area to find all objects within a specified distance. 
+Ex: Find all ATMs within 500m. (1.5 marks)
+
+k-Nearest Neighbour (kNN) Query – Finds the k closest objects to a given location, where k is the number of results requested. 
+Ex: Find the nearest 3 taxis from my current location. (2 marks)
+
+
+Question 2: Quad-tree vs R-tree
+Compare the Quad-tree and R-tree spatial index structures, and explain why R-tree is generally faster for unevenly distributed data. (5 marks)
+
+Quad-tree divides space into 4 equal regions repeatedly (fixed division), regardless of where objects actually are. (1 mark)
+
+R-tree groups nearby objects together into Minimum Bounding Rectangles (MBRs) instead of splitting space equally (variable grouping). (1 mark)
+
+Both use a 2-stage search process: Filtering (identify relevant regions/MBRs that intersect the query, ignoring the rest) and Refinement 
+(check actual objects within those regions to remove false matches). (1.5 marks)
+
+Why R-tree is faster for uneven distribution: Quad-tree's fixed 4-way division can create many empty or sparsely populated regions, 
+making the tree unnecessarily deep. R-tree avoids this by grouping only nearby objects, pruning non-intersecting MBRs 
+and avoiding unnecessary subdivisions. (1.5 marks)
+
+
+Question 3: Best-First Search (Spatial)
+Explain how Best-First Search (BFS) is used to process a Nearest Neighbor query in an R-tree. (5 marks)
+
+Calculate the MINDIST (minimum possible distance) from the query point Q to each MBR. (1.5 marks)
+Place each MBR node into a priority queue, ordered by ascending MINDIST. (1.5 marks)
+Remove the node at the front of the queue (smallest distance) and search that node first. (1 mark)
+If the answer is not found, repeat the process with the next node in the queue until the nearest object is found. (1 mark)
+
+
+Question 4: Spatial-Textual Data and IR-tree
+What is spatial-textual data? Explain how the IR-tree processes a spatial-textual query. (5 marks)
+
+Spatial-textual data stores both location and descriptive text, unlike pure spatial data which stores only location 
+(e.g. Location: (1.302, 103.831), Text: Japanese, Sushi, Ramen). (1.5 marks)
+
+The IR-tree (Inverted R-tree) combines an R-tree (spatial index) with an Inverted File (textual index) 
+to answer queries that need both. (1 mark)
+
+Search process (3 stages):
+Filtering – Visit only child nodes whose MBRs intersect the query, ignoring non-overlapping ones. (0.75 marks)
+Textual filtering – Use the inverted index at R-tree nodes to check if the node/object contains the required keyword (e.g. "sushi"). (0.75 marks)
+Refinement – Check the actual objects to confirm they fall within the MBR and genuinely contain the keyword, removing false matches. (1 mark)
+
+
+Question 5: Inverted File / Ranking with Textual Score
+Explain what an inverted file is and why it is used, and describe how Best-First Search ranks candidates when using both spatial and textual relevance. (5 marks)
+
+An Inverted File is a text index that stores Word → Documents instead of Document → Words, allowing faster lookup of which documents contain a given keyword 
+(e.g. finding all restaurants that mention "coffee" without scanning every restaurant's full text). (2 marks)
+
+In spatial-textual Best-First Search, candidates are ranked using a combined score of:
+Spatial relevance – how close the object is to the query location
+Textual relevance – how well the object matches the query keywords (2 marks)
+
+The object/node with the higher combined score is explored first (rather than ranking by distance alone), which is especially useful 
+for queries like "coffee near me." (1 mark)
+
+
+
+Question 6: Adjacency Matrix vs Adjacency List
+Compare the Adjacency Matrix and Adjacency List representations of a graph. When would each be preferred? (5 marks)
+
+Adjacency Matrix – Stores connections in a grid (rows = nodes, columns = nodes); 
+a 1 indicates a connection exists, 0 means no connection. Allows fast lookup (checking if A is connected to B takes only one lookup), 
+but uses a lot of memory, making it unsuitable for sparse graphs. (2 marks)
+
+Adjacency List – Stores each node together with a list of its neighbouring nodes (like a "friends list"). 
+Uses less memory and is suitable for sparse graphs, but checking whether an edge exists is slower, since it requires searching through a node's neighbour list. (2 marks)
+
+When to use: Adjacency Matrix is preferred for dense graphs (alot of edges) where fast edge lookups matter; 
+Adjacency List is preferred for sparse graphs (few edges) where memory efficiency matters. (1 mark)
+
+
+Question 7: Strongly Connected vs Weakly Connected
+Explain the difference between a Strongly Connected and a Weakly Connected directed graph, with reference to edge direction. (5 marks)
+
+Strongly Connected – Every node can reach every other node while following arrow directions. 
+You must be able to travel from any node to any other node respecting direction. (2 marks)
+
+Weakly Connected – The graph becomes connected only if edge directions are ignored. 
+It is not necessarily possible to travel between all nodes while respecting arrow direction,
+but if you disregard direction, the graph is connected as an undirected graph. (2 marks)
+Key distinction: Strong connectivity respects direction; weak connectivity ignores it. (1 mark)
+
+
+Question 8: Network Properties
+Describe any four properties used to measure and describe a network. (5 marks)
+
+Degree Distribution – Shows how node degrees are spread across the network (probability P(k) that a random node has degree k); reveals whether the network has hubs (highly connected nodes) or mostly low-degree nodes.
+Path Length – Includes Distance (shortest path/min edges between two nodes), Network Diameter (largest shortest-path distance in the network — larger = more spread out), and Average Path Length (average shortest distance across all pairs — smaller = info spreads faster).
+Clustering Coefficient – Measures how well a node's neighbours are connected to each other (i.e. "are my friends also friends with each other?"); ranges from 0 (not connected) to 1 (fully connected).
+Connected Components – Groups of nodes where every node can reach every other node; found using Breadth-First Search (BFS), which picks a node, visits all reachable nodes, marks them, then repeats with unvisited nodes.
+
+
+Question 9: Influence Maximization
+What is the Influence Maximization Problem? Explain how it is used in real-world applications. (5 marks)
+
+The Influence Maximization Problem is defined as: given a graph and a value k, find the k best seed nodes that maximize the total number of people influenced across the network. (2 marks)
+Rather than advertising to everyone, this identifies a small group of influential people who can spread information to the largest number of users, making the process more efficient. (1.5 marks)
+Applications: Viral marketing, political campaigns, product advertising, and information diffusion — e.g. choosing the 3 most influential users (k=3) to spread a marketing message. (1.5 marks)
+
+
+Question 10: Linear Threshold Model vs Independent Cascade Model
+Compare the Linear Threshold Model (LTM) and Independent Cascade Model (ICM) for influence propagation, using an example for each. (5 marks)
+
+Linear Threshold Model (LTM) – Each node has a threshold (resistance to influence) and neighbours with influence weights. A node becomes active only when the combined influence from active neighbours exceeds its threshold.
+Example: Threshold = 0.6, Friend A = 0.3, Friend B = 0.4 → Total influence = 0.7 > 0.6, so the node becomes active. (2.5 marks)
+
+Independent Cascade Model (ICM) – Uses one probabilistic activation attempt per edge. When a node becomes active, it gets one chance to activate each neighbour, with each edge having its own activation probability; success is random, and each edge is used only once.
+Example: A → B with probability 0.4 → there is a 40% chance B becomes active. (2.5 marks)

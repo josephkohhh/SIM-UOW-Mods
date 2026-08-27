@@ -1,0 +1,89 @@
+Question 1: Text Classification vs Text Clustering
+Differentiate between Text Classification and Text Clustering. Support your answer with an example use case for each. (5 marks)
+
+Text Classification is a supervised learning technique where documents are assigned to predefined categories using labelled training data. 
+Ex: Spam detection, where emails are labelled "spam" or "not spam" beforehand. (2 marks)
+
+Text Clustering is an unsupervised learning technique where the computer automatically discovers groups of similar documents without any predefined labels or prior knowledge. 
+Ex: Grouping 1000 news articles into Politics, Sports, and Business without being told these categories exist. (2 marks)
+
+Key difference: Classification requires labelled data and known categories; Clustering requires no labelled data and discovers categories on its own. (1 mark)
+
+
+Question 2: Stages of Text Classification
+Explain the three main stages involved in text classification. (5 marks)
+
+Text Representation – Converts text into numerical form so computers can process it, 
+e.g. using the Bag-of-Words (BoW) model, where a document is represented as a vector based on word occurrence/frequency. (2 marks)
+
+Feature Selection – Reduces the number of features by removing unimportant, repeated, or irrelevant words (e.g. "that", "was", "then") 
+to reduce noise, improve speed, and increase accuracy. Can be done via Feature Extraction (e.g. PCA, ICA) or Feature Selection (keeping only useful words). (2 marks)
+
+Classification – The selected features are fed into a machine learning model (e.g. Naïve Bayes, SVM, Decision Trees, Neural Networks) 
+which predicts the category of the document. (1 mark)
+
+
+Question 3: Text Similarity Measures
+Compare Euclidean Distance and Cosine Similarity as methods of measuring text similarity, and explain why one is preferred for text data. (5 marks)
+
+Euclidean Distance measures the straight-line distance between two document vectors; a smaller distance indicates more similar documents. (1.5 marks)
+Cosine Similarity measures the angle between two document vectors, ranging from 1 (identical direction/meaning), 0 (unrelated), to −1 (opposite direction). (1.5 marks)
+Cosine Similarity is preferred for text because it focuses on the pattern of word usage (direction) rather than document length (magnitude), making it more robust when comparing documents of different lengths. (2 marks)
+
+
+Question 4: NLP Core Technologies
+List and briefly explain four core technologies used in Natural Language Processing. (5 marks)
+
+Part-of-Speech (POS) Tagging – Assigning grammatical categories (noun, verb, adjective, etc.) to each word in a sentence.
+
+Syntactic Parsing – Analysing the grammatical structure of a sentence to understand how words relate to each other.
+
+Word Sense Disambiguation – Determining which meaning of a word is intended based on context, when a word has multiple meanings.
+
+Semantic Role Labelling – Identifying the semantic role each word/phrase plays in a sentence (e.g. who did what to whom).
+
+
+Question 5: Challenges of NLP
+Discuss the three main challenges faced in Natural Language Processing, giving a brief explanation of each. (5 marks)
+
+Ambiguity – Words or sentences can have multiple meanings. This includes syntactic ambiguity (structure), semantic ambiguity (meaning), and pragmatic ambiguity (context/intent). (2 marks)
+Sparsity – Most rare words occur rarely in large datasets (governed by Zipf's Law), which makes it difficult for models to learn well since many words have very few training examples. (1.5 marks)
+Expressivity – The same idea or meaning can be expressed using many different sentence structures/wordings, making it harder for computers to recognise equivalent meaning. (1.5 marks)
+
+
+Question 6: Overview of AI4SE
+Define AI for Software Engineering (AI4SE) and explain four applications of AI in software engineering. (5 marks)
+
+AI4SE is the use of AI and ML techniques to assist software engineers in developing, managing, testing, and maintaining software systems.
+
+4 applications: (1 mark each)
+- Requirements Engineering (RE) – Identifying what the system should do before development.
+- Software Effort Estimation (SEE) – Predicting the amount of work required for a project.
+- Software Project Scheduling (SPS) – Planning what tasks, who does them, and when.
+- Code Completion with Software Mining – Predicting/suggesting code as programmers type (e.g. Copilot).
+
+
+Question 7: Traditional vs Agile Scheduling
+Differentiate between Traditional (Waterfall) and Agile approaches to software project scheduling. (5 marks)
+
+Traditional (Waterfall) Scheduling – A detailed schedule is created at the beginning of the project, and adjusted as needed as development progresses. (2 marks)
+
+Agile Scheduling – The initial schedule is more general/high-level, with detailed planning happening incrementally in each iteration (Sprint). (2 marks)
+
+Key difference: Traditional front-loads detailed planning before work starts, while Agile spreads detailed planning across the project in short cycles, allowing more flexibility to changing requirements. (1 mark)
+
+
+Question 8: Requirements Engineering and NLP
+What is Requirements Engineering? Describe the four types of requirements, and explain how NLP supports Requirement Elicitation. (5 marks)
+
+Requirements Engineering (RE) identifies what a software system should do before development begins, ensuring the final software meets stakeholder needs. (1 mark)
+
+4 types of requirements: (2 marks)
+- Business Requirements – e.g. increase online sales
+- User Requirements – e.g. users should be able to reset passwords
+- Functional Requirements – e.g. allow users to upload files
+- Non-Functional Requirements – e.g. security, performance, scalability
+
+- Requirement elicitation = asking stakeholders what they want the system to do.
+- NLP for Requirement Elicitation: Since stakeholder feedback is written in natural language, NLP is used to remove symbols/unnecessary words,
+  identify speech acts (e.g. requests), and ML then classifies whether the feedback represents a useful software requirement. (2 marks)
