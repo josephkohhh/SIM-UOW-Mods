@@ -1,0 +1,74 @@
+Question 1: Cloud Computing Definition & Characteristics
+Define Cloud Computing and explain any 4 of its key characteristics. (5 marks)
+
+Cloud computing allows users to access computing resources over the Internet whenever 
+required, without owning the infrastructure, and minimal management effort. (1.5 marks)
+
+4 characteristics 
+- On-demand Self-Service (provision resources anytime, e.g. create an AWS server in minutes)
+- Pay-as-you-go (only pay for resources used);
+- Broad Network Access (accessible on any device, anywhere); 
+- Rapid Elasticity (auto scale with demand, e.g. Black Friday); 
+
+
+Question 2: Cloud Service Models
+Describe the 3 cloud service models (SaaS, PaaS, IaaS) with an example of each. (5 marks)
+
+SaaS – Software apps delivered over the Internet. E.g. Workday, Salesforce, Xero.
+PaaS – A cloud provider platform for developers to build, test, and deploy apps. E.g. AWS, Azure, GCP.
+IaaS – Provides virtual infrastructure (servers for rent) via the cloud. E.g. NBIS, Meta. 
+
+
+Question 3: Requirements Engineering Process & Requirement Types
+Describe the 3 stages of the Requirements Engineering process, and the 3 types of requirements relevant to cloud applications. (5 marks)
+
+3 RE stages
+Requirements Elicitation - collecting requirements via interviews/surveys
+Requirements Specification - documenting requirements clearly
+Requirements Validation - checking feasibility of documented requirements
+
+3 requirement types
+Functional Requirements - system functions/features
+Non-Functional Requirements - performance, security, scalability
+Cloud Application Requirements - backup, auto-scaling, disaster recovery
+
+
+Question 4: Microservices vs Monolithic Architecture
+Compare Microservices architecture with Monolithic architecture across four dimensions. (5 marks)
+
+Monolithic Architecture
+- The application is built as a single, tightly coupled unit.
+- The entire app must usually be deployed together, even if only one part is changed.
+- Scaling usually requires scaling the whole app, which can waste resources.
+
+Microservices Architecture
+- The app is divided into small, independent services, each handling a specific function.
+- Each service can be developed, deployed, and updated independently.
+- Individual services can be scaled independently according to their workload.
+
+
+Question 5: Microservice Deployment Methods
+Describe any 3 microservice deployment methods, with 1 advantage and 1 disadvantage of each. (5 marks)
+
+1. Multiple Service Instances per Host 
+Multiple services run on the same host using different ports. 
+Advantage: fast, efficient resource usage. Disadvantage: poor isolation.
+
+2. Service Instance per VM – Each service runs in its own VM. 
+Advantage: strong isolation, supports autoscaling. 
+Disadvantage: higher cost, slower deployment.
+
+3. Serverless Deployment – Developers deploy functions, not servers; the cloud provider manages provisioning, scaling, and execution automatically (e.g. AWS Lambda). 
+Advantage: automatic scaling, event-driven, no server management. Disadvantage: stateless execution.
+
+
+Question 6: Designing a Microservice Architecture
+Describe the 5-step process for defining a microservice architecture (the "Assemblage" process). (5 marks)
+
+Discover System Operations – Identify user functions (e.g. login, payment, cart).
+Define Subdomains – A microservice is formed as a collection of related subdomains
+- user subdomain (login, manage account)
+- cart subdomain (add/remove items, view cart)
+Design Services and Their Collaborations – Design how the services will communicate with each other.
+Evaluate the Architecture – After designing, assess the architecture for problems.
+Refactor the Architecture – If problems are found, improve the design.
