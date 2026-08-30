@@ -1,0 +1,64 @@
+Question 1: Cloud vs Edge vs Fog Computing
+Compare Cloud, Edge, and Fog Computing in terms of processing location, latency, and best use case. (5 marks)
+
+Cloud processes data at a remote data centre, offering large storage and scalability but suffering from high latency, 
+high bandwidth usage, and internet dependency. (1.5 marks)
+
+Edge processes data close to where it's generated, giving very low latency and excellent real-time support 
+(e.g. Raspberry Pi running AI models locally), reducing cloud dependency. (2 marks)
+
+Fog sits between edge and cloud, performing local analytics, filtering, and routing before sending only 
+important data to the cloud — offering moderate bandwidth use and good real-time support. (1.5 marks)
+
+
+Question 2: Building an IoT System
+Describe the key steps involved in building an IoT system, from hardware to security. (5 marks)
+
+Define Purpose and Requirements – Establish what the IoT system needs to achieve.
+
+Choose the Hardware Layer – Select sensors (measure temperature, motion, etc.), actuators (perform actions), 
+and microcontrollers/SBCs (e.g. Arduino, Raspberry Pi).
+
+Implement Connectivity & Communication – Choose protocols (MQTT, HTTP/HTTPS, CoAP) and network types 
+(short-range: Wi-Fi/Bluetooth; long-range: LoRaWAN, 4G/5G).
+
+Data Processing Layer – Decide between Edge Computing (local, immediate response) or Cloud Processing (centralized, scalable).
+
+Software & Integration – Firmware, IoT middleware, APIs, data storage (SQL/NoSQL), and visualization tools (e.g. Grafana).
+
+Security – Use TLS/SSL encryption, device authentication, firmware updates, and limit open network ports, 
+since IoT is often the weakest cybersecurity link.
+
+
+Question 3: Digital Twin — Definition and Core Components
+Define a Digital Twin and explain its three main components. (5 marks)
+
+A Digital Twin is a virtual representation (digital copy) of a physical object, system, or process, continuously updated using real-time data, used to monitor, analyze, simulate, and predict the behaviour of its physical counterpart (Digital Twin = Physical Object + Virtual Model + Real-Time Data). (2 marks)
+Three components: (1 mark each)
+
+Data (Foundation) – Sourced from sensors, IoT devices, historical records, and operational data.
+Model (Core) – Represents the physical system using physical, mathematical, or AI/data-driven models.
+Software (Carrier) – Connects the physical and digital worlds through visualization, monitoring, simulation, and user interfaces.
+
+
+Question 4: DTP vs DTI vs DTA
+Differentiate between Digital Twin Prototype (DTP), Digital Twin Instance (DTI), 
+and Digital Twin Aggregate (DTA), with an example of each. (5 marks)
+
+DTP (Digital Twin Prototype) – Used before production for design and testing. 
+Example: Testing a new electric vehicle design. (1.7 marks)
+
+DTI (Digital Twin Instance) – Used after deployment for monitoring and predictive maintenance of a specific unit. 
+Example: Monitoring a customer's vehicle. (1.7 marks)
+
+DTA (Digital Twin Aggregate) – Combines multiple DTIs to monitor an entire system. 
+Example: A smart city transportation network. (1.6 marks)
+
+
+Question 5: Digital Twin Maturity Levels
+Describe the four maturity levels of Digital Twins. (5 marks)
+
+Level 1 – Basic Reporting and Analysis – Low-fidelity model with periodic updates, basic analytics/visualization, no autonomous decisions.
+Level 2 – Advanced Reporting, Analysis and Forecasting – High-fidelity real-time model with predictive analytics and predefined decision-making.
+Level 3 – Support for Strategic Decision Making – Real-time hybrid models with adaptive decision-making, advanced analytics, and recommendations.
+Level 4 – Autonomous Decision Making – Federated Digital Twins using AI to make autonomous decisions with minimal human intervention.
