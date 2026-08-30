@@ -1,70 +1,87 @@
-1. What is a blockchain, and what makes it different from a normal database?
+Q1. Explain how a blockchain uses hashing to detect tampering.
 
-It's a distributed ledger that stores transactions across a network of nodes, 
-with data grouped into blocks that are cryptographically linked. Unlike a normal database, 
-it's decentralized (no single controlling authority) and immutable (confirmed records can't be altered).
+Every block contains transaction data, a timestamp, its own hash, and the previous block's hash — this chaining is what links blocks 
+together. Each hash is a unique digital fingerprint (a 256-bit output) such that even a tiny change in the underlying data produces a completely different hash.
 
-
-2. How do hashes secure the blockchain?
-
-Each block stores its own hash plus the previous block's hash. 
-If someone tampers with a transaction in Block 1, its hash changes — which breaks the link to Block 2 
-(since Block 2's stored "previous hash" no longer matches). 
-This invalidates Block 2, Block 3, and every block after it, so the tampered chain is automatically rejected.
+If someone modifies a transaction in an earlier block (e.g., Block 1), that block's hash changes. 
+Because Block 2 stores the original hash of Block 1 as its "previous hash," the stored value no longer matches 
+Block 1's new hash — creating a mismatch. This invalidates Block 2, and in turn Block 3 and all subsequent blocks, 
+since each one's stored "previous hash" was based on the old, unmodified chain. 
+The network can therefore detect unauthorized changes and reject the tampered chain, which is how the blockchain enforces immutability.
 
 
-3. What are the 8 steps of a blockchain transaction, in order?
+Q2. Compare Proof of Work (PoW) and Proof of Stake (PoS) as consensus mechanisms. (5 marks)
 
-Create transaction → digitally sign → broadcast to network → nodes validate → valid transactions grouped into a 
-block → consensus reached → block added permanently → ledger updated on every node.
+Proof of Work (PoW) = Bitcoin
+- Miners compete to solve mathematical puzzles; first to solve wins
+- Winning miner adds the block and receives bitcoins
+- Very secure/immutable
+- Network is slow and consumes a lot of energy
+- Requires Computational power
 
-
-4. Compare Proof of Work and Proof of Stake.
-
-PoW (used by Bitcoin): miners compete to solve puzzles; very secure but slow and energy-intensive. 
-PoS (used by Ethereum): validators stake ETH and are chosen to validate blocks; faster and more energy-efficient, 
-but requires locking up capital.
-
-
-5. What is a smart contract, and what are its key features?
-
-A self-executing program stored on the blockchain that runs automatically when predefined conditions are met. 
-Key features: self-executing, autonomous, transparent, immutable, and requires no third party (e.g., banks or lawyers).
+Proof of Stake (PoS) = Ethereum
+- Validators lock up (stake) ETH; the network chooses validators to validate blocks
+- Successful validators receive ETH rewards
+- Faster and more energy efficient
+- Requires staking ETH
 
 
-6. What's a major disadvantage of smart contracts?
+Q3. What is a smart contract, and how does it differ from a blockchain? (5 marks)
 
-They're vulnerable to hacking and coding bugs/errors — since the code executes automatically and immutably, 
-a flaw can't easily be patched after deployment.
+A smart contract is a program stored on the blockchain that automatically executes when predefined conditions are met — 
+for example, an agreement that automatically transfers money once conditions are satisfied, with no bank or lawyer needed. 
 
+A blockchain is a distributed ledger that stores transactions across a network of computers
 
-7. Walk through the 5 stages of a ransomware attack.
+Its key features are that it is 
+- self-executing, 
+- autonomous, 
+- transparent, 
+- immutable, 
+and requires no third party. 
 
-Initial access (phishing, password spraying, stolen credentials, brute force) 
-→ post-exploitation (installing RATs/malware) 
-→ reconnaissance (harvesting credentials) 
-→ data theft
-→ ransomware deployment (encrypting files/locking OS and demanding payment).
-
-
-8.  Why are IoT devices common botnet targets, and what's the difference between centralized and P2P botnet architectures?
-
-IoT devices are targeted because they have small processors, limited memory, and weak security. 
-In a centralized botnet, a botmaster controls bots through a C&C server — if that server is taken down, 
-the whole botnet fails. In a decentralized (P2P) botnet, there's no central server, making it harder to shut 
-down but also harder for the attacker to manage.
+Building one involves: parties creating a legal agreement, 
+defining every possible condition (e.g., delivery, payment, deadlines), 
+coding the contract (e.g., in Solidity), uploading it to the blockchain, 
+executing it automatically, and recording the completed transaction permanently.
 
 
-9. What's the difference between host-based and website-based cryptojacking?
+Q4. Describe the ransomware attack procedure and the two main types of ransomware. (5 marks)
 
-Host-based: the victim's computer is directly infected with malware (often via phishing) that 
-connects to a mining pool to mine cryptocurrency. Website-based: the victim simply visits an infected site, 
-which runs a hidden script that mines cryptocurrency using the victim's browser/CPU — no malware installation needed.
+Ransomware is malware that locks or encrypts a victim's system or files and demands payment for recovery. 
+It comes in two main forms:
+- Cryptographic Ransomware (encrypts files until the ransom is paid)
+- Locker Ransomware (locks the UI/OS until payment is made)
+
+The attack procedure
+- Initial Access - attacker enter systems via password spraying, stolen cred, phishing attacks, brute force
+- Post Exploitation – attacker installs tools like Remote Access Tool (RAT) or other malware.
+- Reconnaissance – attacker collects sensitive cred (usernames, passwords)
+- Data Theft – attacker steals data.
+- Ransomware Deployment – attacker encrypts files or locks the OS and demands payment.
 
 
-10. What role does a DMZ play in network defense, and how does traffic flow through it?
+Q5. Compare centralized and decentralized (peer-to-peer) botnet architectures. (5 marks)
 
-A DMZ is a buffer network between the Internet and an internal network. Traffic flows: Internet 
-→ perimeter firewall → DMZ → internal firewall → LAN. It prevents attackers from directly reaching 
-internal systems, adds an extra security layer, improves monitoring, and limits how far an attacker 
-can get even if they breach the outer layer.
+A bot is a compromised IoT device (targeted because such devices have small processors, limited memory, and weak security
+e.g., smart cameras, smart TVs, sensors), and a botnet is a collection of infected devices used to launch DoS/DDoS attacks 
+against a target server.
+
+All bots take instructions from a single C&C server, so if that server is shut down, 
+the entire botnet fails — making it easier to disable but simpler to manage/coordinate.
+
+Decentralized (Peer-to-Peer): Bots (Node A, B, C, …) communicate among themselves with no central server,
+directing traffic at the victim server. This makes the botnet harder to shut down (no single point of failure) 
+but also harder for the attacker to manage and coordinate.
+
+
+Q6. Explain the role of a Demilitarized Zone (DMZ) in network defense. (5 marks)
+
+A DMZ is a secure buffer network placed between the Internet and an organization's internal network. 
+Traffic flows as: Internet → Perimeter Firewall → DMZ → Internal Firewall → LAN.
+
+By placing publicly accessible services in this buffer zone rather than directly on the internal network,
+prevents attackers from directly reaching internal systems even if they compromise something in the DMZ.
+
+Its benefits include acting as an extra security layer, enabling better monitoring of traffic passing through, 
+and limiting how far an attacker can penetrate if they breach the outer perimeter.
