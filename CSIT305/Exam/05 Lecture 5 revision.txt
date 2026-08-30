@@ -3,18 +3,20 @@ Compare Cloud, Edge, and Fog Computing in terms of processing location, latency,
 
 Cloud processes data at a remote data centre, offering large storage and scalability but suffering from high latency, 
 high bandwidth usage, and internet dependency. (1.5 marks)
+- social media analytics 
 
 Edge processes data close to where it's generated, giving very low latency and excellent real-time support 
 (e.g. Raspberry Pi running AI models locally), reducing cloud dependency. (2 marks)
+- smart iot devices like (floodwatch)
 
 Fog sits between edge and cloud, performing local analytics, filtering, and routing before sending only 
 important data to the cloud — offering moderate bandwidth use and good real-time support. (1.5 marks)
-
+- system who need local processing before sending data to the cloud (smart factories)
 
 Question 2: Building an IoT System
 Describe the key steps involved in building an IoT system, from hardware to security. (5 marks)
 
-Define Purpose and Requirements – Establish what the IoT system needs to achieve.
+Define Purpose and Requirements – Establish what he IoT system needs to achieve.
 
 Choose the Hardware Layer – Select sensors (measure temperature, motion, etc.), actuators (perform actions), 
 and microcontrollers/SBCs (e.g. Arduino, Raspberry Pi).
@@ -33,7 +35,9 @@ since IoT is often the weakest cybersecurity link.
 Question 3: Digital Twin — Definition and Core Components
 Define a Digital Twin and explain its three main components. (5 marks)
 
-A Digital Twin is a virtual representation (digital copy) of a physical object, system, or process, continuously updated using real-time data, used to monitor, analyze, simulate, and predict the behaviour of its physical counterpart (Digital Twin = Physical Object + Virtual Model + Real-Time Data). (2 marks)
+A Digital Twin is a virtual representation (digital copy) of a physical object, system, or process, 
+continuously updated using real-time data, used to monitor, analyze, simulate, and predict the behaviour of its physical counterpart 
+(Digital Twin = Physical Object + Virtual Model + Real-Time Data). (2 marks)
 Three components: (1 mark each)
 
 Data (Foundation) – Sourced from sensors, IoT devices, historical records, and operational data.
