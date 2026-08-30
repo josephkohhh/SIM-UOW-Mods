@@ -1,0 +1,70 @@
+1. What is a blockchain, and what makes it different from a normal database?
+
+It's a distributed ledger that stores transactions across a network of nodes, 
+with data grouped into blocks that are cryptographically linked. Unlike a normal database, 
+it's decentralized (no single controlling authority) and immutable (confirmed records can't be altered).
+
+
+2. How do hashes secure the blockchain?
+
+Each block stores its own hash plus the previous block's hash. 
+If someone tampers with a transaction in Block 1, its hash changes — which breaks the link to Block 2 
+(since Block 2's stored "previous hash" no longer matches). 
+This invalidates Block 2, Block 3, and every block after it, so the tampered chain is automatically rejected.
+
+
+3. What are the 8 steps of a blockchain transaction, in order?
+
+Create transaction → digitally sign → broadcast to network → nodes validate → valid transactions grouped into a 
+block → consensus reached → block added permanently → ledger updated on every node.
+
+
+4. Compare Proof of Work and Proof of Stake.
+
+PoW (used by Bitcoin): miners compete to solve puzzles; very secure but slow and energy-intensive. 
+PoS (used by Ethereum): validators stake ETH and are chosen to validate blocks; faster and more energy-efficient, 
+but requires locking up capital.
+
+
+5. What is a smart contract, and what are its key features?
+
+A self-executing program stored on the blockchain that runs automatically when predefined conditions are met. 
+Key features: self-executing, autonomous, transparent, immutable, and requires no third party (e.g., banks or lawyers).
+
+
+6. What's a major disadvantage of smart contracts?
+
+They're vulnerable to hacking and coding bugs/errors — since the code executes automatically and immutably, 
+a flaw can't easily be patched after deployment.
+
+
+7. Walk through the 5 stages of a ransomware attack.
+
+Initial access (phishing, password spraying, stolen credentials, brute force) 
+→ post-exploitation (installing RATs/malware) 
+→ reconnaissance (harvesting credentials) 
+→ data theft
+→ ransomware deployment (encrypting files/locking OS and demanding payment).
+
+
+8.  Why are IoT devices common botnet targets, and what's the difference between centralized and P2P botnet architectures?
+
+IoT devices are targeted because they have small processors, limited memory, and weak security. 
+In a centralized botnet, a botmaster controls bots through a C&C server — if that server is taken down, 
+the whole botnet fails. In a decentralized (P2P) botnet, there's no central server, making it harder to shut 
+down but also harder for the attacker to manage.
+
+
+9. What's the difference between host-based and website-based cryptojacking?
+
+Host-based: the victim's computer is directly infected with malware (often via phishing) that 
+connects to a mining pool to mine cryptocurrency. Website-based: the victim simply visits an infected site, 
+which runs a hidden script that mines cryptocurrency using the victim's browser/CPU — no malware installation needed.
+
+
+10. What role does a DMZ play in network defense, and how does traffic flow through it?
+
+A DMZ is a buffer network between the Internet and an internal network. Traffic flows: Internet 
+→ perimeter firewall → DMZ → internal firewall → LAN. It prevents attackers from directly reaching 
+internal systems, adds an extra security layer, improves monitoring, and limits how far an attacker 
+can get even if they breach the outer layer.
