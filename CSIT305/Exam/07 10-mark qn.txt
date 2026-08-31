@@ -1,0 +1,83 @@
+Scenario A — Food Delivery Platform (10 marks)
+
+General principle for full marks: the question explicitly asks for (1) data structures used, (2) at least 3 queries, (3) processing technique for each. Structure your answer around exactly these 3 asks — don't blend them into one narrative, or markers can't tell what's earning marks where.
+
+1. Data Types Used (2 marks)
+
+Spatial data (points): Rider locations and customer locations are stored as points (x, y coordinates), continuously updated as riders move.
+Spatial-textual data: Restaurants are stored with both a location (point) and descriptive text (menu items, cuisine tags like "Japanese, Sushi, Ramen") — since a pure spatial index cannot answer keyword-based queries like "sushi."
+
+2. Query 1 — Nearest Rider (kNN Query) (2.5 marks)
+
+Query: Find the k nearest available riders to a customer's pickup location.
+Structure used: R-tree, where nearby riders are grouped into Minimum Bounding Rectangles (MBRs).
+Processing technique — Best-First Search:
+Calculate MINDIST (minimum possible distance) from the customer's location to each MBR.
+Place MBRs into a priority queue ordered by ascending MINDIST.
+Explore the MBR with the smallest distance first.
+Repeat until k nearest riders are found.
+Why it's efficient: This avoids scanning every rider's location; it prunes MBRs that are clearly too far away early.
+
+3. Query 2 — Restaurants Within a Range (Range Query) (2 marks)
+
+Query: Find all restaurants within, say, 3km of the customer.
+Structure used: R-tree (or Quad-tree).
+Processing technique: Two-stage — Filtering (only visit MBRs that intersect the 3km circular search area, ignoring non-overlapping ones) then Refinement (check actual restaurant points within those MBRs to confirm they truly fall within 3km, removing false positives from the MBR approximation).
+
+4. Query 3 — "Sushi Near Me" (Spatial-Textual Query) (2.5 marks)
+
+Query: Find restaurants that are both nearby and match a keyword like "sushi."
+Structure used: IR-tree (Inverted R-tree) — combines the R-tree (spatial index) with an Inverted File (Word → Documents/Restaurants), which is faster than a normal index since it directly maps a keyword to the restaurants containing it.
+Processing technique — Best-First Search with textual score:
+Filtering: visit only MBRs that intersect the search area.
+Textual filtering: use the inverted index to check if restaurants within those MBRs contain the keyword "sushi."
+Refinement: verify the actual restaurant matches both the location and keyword.
+Rank candidates by a combined score of spatial relevance (distance) + textual relevance (keyword match) — the highest-scoring restaurant is explored/returned first.
+
+5. Why This Beats a Relational Database (1 mark, ties it together)
+
+A relational database would need to calculate distance for every row via a full table scan, 
+and separately run a LIKE '%sushi%' text search — both are slow at scale. 
+Spatial and spatial-textual indexes prune irrelevant candidates early (via MBR filtering), 
+making queries scale far better as the number of riders/restaurants grows.
+
+Common ways to lose marks here: forgetting to name the actual structure (R-tree/IR-tree) and just describing the query in plain English; not mentioning the 2-stage filter→refine process; treating "nearest rider" and "sushi near me" as the same technique when they use different indexes.
+
+
+
+
+Scenario B — Social Media Influence Campaign (10 marks)
+
+1. Data Types Used (2 marks)
+
+Graph data: The social network itself — users are nodes, follow/friend relationships are edges. Likely a directed graph (e.g. "follows," since A following B doesn't mean B follows A) 
+Best represented via an Adjacency List, since social networks are typically sparse (most users aren't connected to most others) — an adjacency list uses less memory than an adjacency matrix in this case.
+
+Text data: User posts, stored as unstructured natural language text, need to be converted into a usable format for classification.
+
+2. Query/Task 1 — Finding Influential Seed Users (Influence Maximization) (3 marks)
+
+Task: Given the graph and a value k, find the k best seed nodes that maximize the total number of people influenced (for viral marketing).
+Processing technique — choose ONE propagation model and explain it fully:
+
+Linear Threshold Model (LTM): Each node has a threshold (resistance to influence) and neighbours have influence weights.
+A node activates only when the combined influence from its active neighbours exceeds its threshold.
+Example: Threshold = 0.6; Friend A = 0.3, Friend B = 0.4 → total 0.7 > 0.6 → node becomes active.
+OR Independent Cascade Model (ICM): Each edge has its own activation probability; when a node becomes active it gets one random chance to activate each neighbour.
+Example: A → B with probability 0.4 → 40% chance B activates.
+(Mentioning both models briefly, but explaining one in depth with its example, is the safest way to get full marks without running out of time.)
+
+3. Query/Task 2 — Sentiment Classification of Posts (Text Classification) (3.5 marks)
+
+Task: Classify each post as positive/negative sentiment — this is Text Classification (supervised learning, predefined categories).
+Processing technique — the 3 stages:
+Text Representation: Convert posts into numeric vectors using Bag-of-Words (BoW) — e.g. "I love this ramen" → vector based on vocabulary word counts.
+Feature Selection: Remove unimportant/common words (e.g. "that," "was") to reduce noise and keep meaningful words (e.g. "amazing," "terrible") — improves speed and accuracy.
+Classification: Feed selected features into a model like Naïve Bayes or SVM, which predicts the sentiment category (positive/negative).
+
+4. Tying It Together (1.5 marks)
+Combining both data types allows the company to not just find who to target (via graph-based influence maximization) 
+but also understand what customers are saying about the campaign in real time (via text classification) — 
+enabling a feedback loop where sentiment results could even inform which seed nodes to prioritize next.
+
+Common ways to lose marks here: describing LTM/ICM or BoW only in the abstract without a concrete example (the examples are often where partial marks hide); forgetting to justify why adjacency list over adjacency matrix (sparsity is the key justification your notes give); not explicitly stating "supervised" vs "unsupervised" for the classification part, since that's a definitional anchor point graders look for.
