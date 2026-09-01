@@ -123,3 +123,30 @@ Dependency Theory
 - Developed countries manufactures and export to poor developed countries at expensive prices 
 - GDP per capita of the rich and the poor economies may widen as they trade with each other (exploitation)
 — motivates many developing economies to pursue industrialisation (secondary sector development), which is picked up in Topic 3
+
+
+Impt***
+Solow Model
+- Capital accumulation — machines, factories, infrastructure (K)
+- Population/labour growth (L)
+- Technological progress — the most impt source of long-run growth in income per person
+
+The key idea is diminishing returns to capital
+
+For ex, if a country keeps building more machines but technology stays unchanged, 
+each additional machine adds less output than the previous one.
+
+
+Main conclusion:
+Saving and investment can raise the level of income, 
+but technological progress is necessary for sustained long-run growth in income per capita.
+
+
+Domar Model 
+- Investment and Growth
+
+For the economy to maintain full employment, investment must grow at an appropriate rate
+
+Main conclusion:
+Investment is both a source of demand and a source of productive capacity, 
+so investment growth is crucial for maintaining economic growth and full employment.
