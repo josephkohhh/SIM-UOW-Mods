@@ -4,8 +4,7 @@ Short Desc: Online platform that matches customers with interior designers
 
 Project Deliverable: Agile using Taiga software
 
-Tech Stack:
-Repo: github
+Tech Stack:???
 
 Requirements:
 1. Complete list of user stories, each with a complete list of tasks
