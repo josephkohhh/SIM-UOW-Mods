@@ -2,9 +2,17 @@ Project Name: FindMyID
 Short Desc: Online platform that matches customers with interior designers
 
 
-Project Deliverable: Agile using Taiga software
+Project Deliverable: Agile Methodology 
 
-Tech Stack:???
+Tech Stack:
+Frontend: ???
+Backend: ???
+Database: ???
+Version Control: Git + Github
+CI/CD: Github actions
+Agile software: Taiga
+UML: 
+
 
 Requirements:
 1. Complete list of user stories, each with a complete list of tasks
@@ -27,3 +35,56 @@ An online platform matching renovation customers to interior designers
 - Customers can search, view, and save IDPs to a favourites list
 - ID can track interest metrics on their IDPs (views, times shortlisted)
 - Platform management can manage IDP categories and generate reports (daily/weekly/monthly)
+
+
+
+Example:
+FindMyID
+│
+├── EPIC: Authentication
+│   ├── US-01 Customer Registration
+│   │   ├── Task: Registration UI
+│   │   ├── Task: Registration API
+│   │   ├── Task: Database model
+│   │   ├── Task: Validation
+│   │   └── Task: Tests
+│   │
+│   ├── US-02 Customer Login
+│   │   ├── Task: Login UI
+│   │   ├── Task: Login API
+│   │   ├── Task: JWT
+│   │   └── Task: Tests
+│   │
+│   └── US-03 Designer Registration
+│
+├── EPIC: Designer Profiles
+│   ├── US-07 Create Designer Profile
+│   ├── US-08 Upload Portfolio
+│   └── US-09 Edit Designer Profile
+│
+├── EPIC: Projects
+│   ├── US-10 Create Project
+│   ├── US-11 Edit Project
+│   └── US-12 Delete Project
+│
+├── EPIC: Matching
+│   ├── US-13 Search Designers
+│   ├── US-14 Filter Designers
+│   └── US-15 Recommended Designers
+│
+├── EPIC: Requests
+│   ├── US-16 Send Enquiry
+│   ├── US-17 View Requests
+│   └── US-18 Accept/Reject
+│
+├── EPIC: Messaging
+│   ├── US-19 Send Message
+│   └── US-20 View Conversation
+│
+├── EPIC: Reviews
+│   ├── US-21 Review Designer
+│   └── US-22 View Reviews
+│
+└── EPIC: Administration
+    ├── US-23 Manage Users
+    └── US-24 Manage Designers
