@@ -38,6 +38,57 @@ An online platform matching renovation customers to interior designers
 
 
 
+                         ┌──────────────────────┐
+                         │     IDP PLATFORM     │
+                         └──────────┬───────────┘
+                                    │
+          ┌─────────────────────────┼─────────────────────────┐
+          │                         │                         │
+          ▼                         ▼                         ▼
+    ┌───────────┐             ┌───────────┐             ┌───────────┐
+    │ CUSTOMER  │             │    ID     │             │   ADMIN   │
+    └─────┬─────┘             └─────┬─────┘             └─────┬─────┘
+          │                         │                         │
+          └────────────┐    ┌───────┘                         │
+                       ▼    ▼                                 │
+                ┌─────────────────┐                           │
+                │ EPIC 1          │                           │
+                │ AUTHENTICATION  │                           │
+                │ & ROLE MGMT     │                           │
+                └────────┬────────┘                           │
+                         │                                    │
+          ┌──────────────┴──────────────┐                     │
+          │                             │                     │
+          ▼                             ▼                     ▼
+ ┌─────────────────┐          ┌─────────────────┐    ┌─────────────────┐
+ │ EPIC 3          │          │ EPIC 2          │    │ EPIC 6          │
+ │ SEARCH          │          │ ID MANAGEMENT   │    │ REPORTING       │
+ │                 │          │                 │    │ MANAGEMENT      │
+ │ Search / Filter │          │ Company Profile │    │ Categories      │
+ │ View Details    │          │ Projects        │    │ Statistics      │
+ └────────┬────────┘          └────────┬────────┘    │ Reports         │
+          │                            │             └─────────────────┘
+          ▼                            │
+ ┌─────────────────┐                   │
+ │ EPIC 4          │                   │
+ │ FAVOURITES      │                   │
+ │                 │                   │
+ │ Add / Remove    │                   │
+ │ View Favourites │                   │
+ └────────┬────────┘                   │
+          │                            │
+          └──────────────┬─────────────┘
+                         ▼
+                ┌─────────────────┐
+                │ EPIC 5          │
+                │ INTEREST        │
+                │ ANALYTICS       │
+                │                 │
+                │ Views           │
+                │ Shortlists      │
+                │ ID Metrics      │
+                └─────────────────┘
+
 Example:
 FindMyID
 │
