@@ -11,7 +11,7 @@ Database: ???
 Version Control: Git + Github
 CI/CD: Github actions
 Agile software: Taiga
-UML: 
+UML: https://www.umletino.com/umletino.html
 
 
 Requirements:
@@ -88,6 +88,69 @@ An online platform matching renovation customers to interior designers
                 │ Shortlists      │
                 │ ID Metrics      │
                 └─────────────────┘
+
+
+
+Database: 
+                         ┌───────────────┐
+                         │    USERS      │
+                         │───────────────│
+                         │ PK user_id    │
+                         │ email         │
+                         │ password_hash │
+                         │ role          │
+                         │ status        │
+                         └───────┬───────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    │                         │
+                    ▼                         ▼
+             ┌──────────────┐          ┌──────────────┐
+             │  COMPANIES   │          │  FAVOURITES  │
+             │──────────────│          │──────────────│
+             │ company_id  │          │ favourite_id │
+             │ owner_user_id│         │ user_id      │
+             │ company_name │          │ project_id   │
+             │ location     │          │ created_at   │
+             └──────┬───────┘          └──────┬───────┘
+                    │                         │
+                    │                         │
+                    ▼                         │
+             ┌──────────────┐                 │
+             │   PROJECTS   │◄────────────────┘
+             │──────────────│
+             │ project_id   │
+             │ company_id   │
+             │ category_id  │
+             │ project_name │
+             │ description  │
+             │ location     │
+             └──────┬───────┘
+                    │
+            ┌───────┴────────┐
+            │                │
+            ▼                ▼
+ ┌──────────────────┐  ┌─────────────────┐
+ │ PROJECT_IMAGES    │  │ PROJECT_VIEWS   │
+ │──────────────────│  │─────────────────│
+ │ image_id         │  │ view_id         │
+ │ project_id       │  │ project_id      │
+ │ image_url        │  │ user_id         │
+ │ display_order    │  │ viewed_at       │
+ └──────────────────┘  └─────────────────┘
+                    
+                    ▲
+                    │
+             ┌──────┴───────┐
+             │  CATEGORIES  │
+             │──────────────│
+             │ category_id  │
+             │ category_name│
+             │ description  │
+             │ status       │
+             └──────────────┘
+
+
 
 Example:
 FindMyID
