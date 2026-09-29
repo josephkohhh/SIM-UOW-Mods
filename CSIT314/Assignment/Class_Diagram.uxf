@@ -1,0 +1,140 @@
+<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><element><id>UMLClass</id><coordinates><x>741</x><y>0</y><w>299</w><h>247</h></coordinates><panel_attributes>User (Parent)
+--
+- user_id : int
+- email : str
+- password_hash : str
+- role : Role
+- first_name : str
+- last_name : str
+- phone : str
+- status : Status
+-
++ login() : bool
++ logout() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>741</x><y>312</y><w>273</w><h>169</h></coordinates><panel_attributes>Customer (Child)
+-
+-
++ register() : User
++ search() : List[Project]
++ filter() : List[Project]
++ get_project_details() : Project
++ add_to_fav() : Favourite
++ delete_from_fav() : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>442</x><y>312</y><w>273</w><h>182</h></coordinates><panel_attributes>Admin (Child)
+-
+-
++ add_user_account() : User
++ edit_user_account() : User
++ delete_user_account() : bool
++ add_categories() : Category
++ edit_categories() : Category
++ delete_categories() : bool
++ generate_report() : Report</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1040</x><y>312</y><w>299</w><h>208</h></coordinates><panel_attributes>Interior Designer (Child)
+-
+-
++ register() : User
++ add_company_profile() : Company
++ edit_company_profile() : Company
++ delete_company_profile() : bool
++ add_project() : Project
++ edit_project() : Project
++ delete_project() : bool
++ get_project_metrics() : ProjectMetrics
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>572</x><y>234</y><w>299</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-
+inherits</panel_attributes><additional_attributes>210;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>871</x><y>234</y><w>91</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-
+inherits</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>897</x><y>234</y><w>312</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-
+inherits</panel_attributes><additional_attributes>10;10;220;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1222</x><y>637</y><w>299</w><h>260</h></coordinates><panel_attributes>Company
+--
+- company_id : int
+- owner_user_id : int
+- company_name : str
+- location : str
+- description : str
+- website : str
+- email : str
+- phone : str
+- logo_url : str
+- created_at : datetime
+- updated_at : datetime
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>65</x><y>780</y><w>299</w><h>169</h></coordinates><panel_attributes>Category
+--
+- category_id : int
+- category_name : str
+- description : str
+- status : Status
+- created_at : datetime
+- updated_at : datetime
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>793</x><y>624</y><w>299</w><h>247</h></coordinates><panel_attributes>Project
+--
+- project_id : int
+- company_id : int
+- category_id : int
+- project_name : str
+- description : str
+- location : str
+- completion_year : int
+- status : Status
+- created_at : datetime
+- updated_at : datetime
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>793</x><y>1014</y><w>299</w><h>143</h></coordinates><panel_attributes>ProjectImage
+--
+- image_id : int
+- project_id : int
+- image_url : str
+- display_order : int
+- created_at : datetime
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>403</x><y>949</y><w>299</w><h>143</h></coordinates><panel_attributes>ProjectView
+--
+- view_id : int
+- project_id : int
+- user_id : int
+- viewed_at : datetime
+- session_id : str
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>377</x><y>624</y><w>299</w><h>130</h></coordinates><panel_attributes>Favorite
+--
+- favourite_id : int
+- user_id : int
+- project_id : int
+- created_at : datetime
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>273</y><w>299</w><h>260</h></coordinates><panel_attributes>Report
+--
+- report_id : int
+- report_type : ReportType
+- start_date : date
+- end_date : date
+- generated_at : datetime
+- generated_by : int
+- total_users : int
+- total_companies : int
+- total_projects : int
+- total_views : int
+- total_favourites : int
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1196</x><y>507</y><w>195</w><h>156</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..1
+belongs to a </panel_attributes><additional_attributes>10;10;130;100</additional_attributes></element><element><id>Relation</id><coordinates><x>507</x><y>468</y><w>390</w><h>182</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+can add</panel_attributes><additional_attributes>280;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1079</x><y>741</y><w>169</w><h>78</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+can have</panel_attributes><additional_attributes>10;20;110;30</additional_attributes></element><element><id>Relation</id><coordinates><x>351</x><y>754</y><w>468</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+can have</panel_attributes><additional_attributes>340;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>923</x><y>858</y><w>104</w><h>182</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+contains</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>546</x><y>468</y><w>351</w><h>507</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+can view</panel_attributes><additional_attributes>250;10;10;370</additional_attributes></element><element><id>Relation</id><coordinates><x>689</x><y>858</y><w>208</w><h>182</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+can receive</panel_attributes><additional_attributes>140;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>286</x><y>377</y><w>182</w><h>65</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+can generate</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element></diagram>
