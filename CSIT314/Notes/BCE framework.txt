@@ -1,0 +1,44 @@
+In UML/software design, B-C-E means:
+B = Boundary
+C = Control
+E = Entity
+
+Boundary 
+It represents the interface between an actor and your system
+- User interface / system interface
+  - LoginPage, RegistrationPage, ProjectDetailsPage, etc
+
+Control
+It handles the logic of a use case
+- Customer searches for Interior Designer (SearchIDController)
+  - receives search req -> tells entity/db what info is needed -> applying search logic 
+    -> return results back to Boundary
+
+Entity
+It represent the important objects/data in your system
+- User (parent), ID (child), Customer (child), Company, Project, etc
+
+
+Putting BCE framework tgt:
+Ex:
+
+             Customer 
+                 |
+                 ↓
+        ┌─────────────────┐
+        │   SearchPage    │
+        │   <<boundary>>  │
+        └────────┬────────┘
+                 |
+                 ↓
+        ┌────────────────────┐
+        │ SearchController   │
+        │    <<control>>     │
+        └─────────┬──────────┘
+                  |
+             ┌────┴────┐
+             ↓         ↓
+       ┌──────────┐ ┌──────────┐
+       │ Project  │ │ Category │
+       │ <<entity>>│ │ <<entity>>│
+       └──────────┘ └──────────┘

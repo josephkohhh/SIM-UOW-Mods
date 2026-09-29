@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>1970</w>
+      <h>1019</h>
+    </coordinates>
+    <panel_attributes>Domain Model (entities, inheritance and relationships)
+layer=-1
+transparency=0
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>10</x>
+      <y>1079</y>
+      <w>2800</w>
+      <h>769</h>
+    </coordinates>
+    <panel_attributes>Persistence Layer (repositories and database access)
+layer=-1
+transparency=0
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>20</y>
+      <w>280</w>
+      <h>139</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+&lt;&lt;MappedSuperclass&gt;&gt;
+BaseEntity
+--
+#createdAt: LocalDateTime
+#updatedAt: LocalDateTime
+--
+#onCreate(): void
+#onUpdate(): void
+bg=#e6e6e6
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>410</y>
+      <w>345</w>
+      <h>274</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+&lt;&lt;Entity&gt;&gt; table = users
+User
+--
+-userId: Long {PK, auto-inc}
+-email: String {UNIQUE, NOT NULL}
+-passwordHash: String {NOT NULL}
+-role: Role {NOT NULL, discriminator}
+-firstName: String
+-lastName: String
+-phone: String {optional}
+-status: Status = ACTIVE
+--
++getFullName(): String
++isActive(): boolean
++activate(): void
++deactivate(): void
++authenticate(rawPassword: String): boolean
+bg=#e6e6e6
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>740</y>
+      <w>140</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Role
+--
+CUSTOMER
+ID
+ADMIN
+bg=#ffe6cc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>740</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Status
+--
+ACTIVE
+INACTIVE
+bg=#ffe6cc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>330</y>
+      <w>320</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; role = 'ID'
+InteriorDesigner
+--
++createProject(p: Project): void
++updateProject(p: Project): void
++updateCompanyProfile(c: Company): void
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>600</y>
+      <w>320</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; role = 'CUSTOMER'
+Customer
+--
++addFavourite(p: Project): Favourite
++removeFavourite(p: Project): void
++viewProject(p: Project): ProjectView
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>880</y>
+      <w>320</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; role = 'ADMIN'
+Admin
+--
++generateReport(type: String): Report
++manageCategory(c: Category): void
++deactivateUser(u: User): void
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>270</y>
+      <w>300</w>
+      <h>229</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = companies
+Company
+--
+-companyId: Long {PK}
+-ownerUserId: Long {FK, UNIQUE}
+-companyName: String {NOT NULL}
+-location: String
+-description: String
+-website: String {optional}
+-email: String
+-phone: String
+-logoUrl: String {optional}
+--
++addProject(p: Project): void
++getProjects(): List&lt;Project&gt;
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>510</y>
+      <w>300</w>
+      <h>129</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = favourites
+Favourite
+--
+-favouriteId: Long {PK}
+-userId: Long {FK}
+-projectId: Long {FK}
+-createdAt: LocalDateTime
+{UNIQUE(userId, projectId)}
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>665</y>
+      <w>300</w>
+      <h>129</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = project_views
+ProjectView
+--
+-viewId: Long {PK}
+-projectId: Long {FK}
+-userId: Long {FK, nullable}
+-viewedAt: LocalDateTime
+-sessionId: String {optional}
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>830</y>
+      <w>300</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = reports
+Report
+--
+-reportId: Long {PK}
+-generatedBy: Long {FK -&gt; users}
+-reportType: String
+-parameters: String
+-generatedAt: LocalDateTime
+(fields assumed - not in Data Fields)
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1210</x>
+      <y>470</y>
+      <w>390</w>
+      <h>229</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = projects
+Project
+--
+-projectId: Long {PK}
+-companyId: Long {FK}
+-categoryId: Long {FK}
+-projectName: String {NOT NULL}
+-description: String
+-location: String
+-completionYear: Integer {optional}
+-status: Status
+--
++addImage(url: String, order: int): ProjectImage
++getViewCount(): int
++getFavouriteCount(): int
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1210</x>
+      <y>740</y>
+      <w>390</w>
+      <h>129</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = project_images
+ProjectImage
+--
+-imageId: Long {PK}
+-projectId: Long {FK}
+-imageUrl: String {NOT NULL}
+-displayOrder: int
+-createdAt: LocalDateTime
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1670</x>
+      <y>470</y>
+      <w>290</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt; table = categories
+Category
+--
+-categoryId: Long {PK}
+-categoryName: String {UNIQUE}
+-description: String {optional}
+-status: Status
+--
++activate(): void
++deactivate(): void
+bg=#dae8fc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1242</x>
+      <y>1159</y>
+      <w>340</w>
+      <h>159</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Repository&lt;T, ID&gt;
+--
++findById(id: ID): Optional&lt;T&gt;
++findAll(): List&lt;T&gt;
++save(entity: T): T
++update(entity: T): void
++deleteById(id: ID): void
++existsById(id: ID): boolean
++count(): long
+bg=#e1d5e7
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1202</x>
+      <y>1389</y>
+      <w>420</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+BaseJdbcRepository&lt;T, ID&gt;
+--
+#tableName: String
+#idColumn: String
+#connectionManager: ConnectionManager
+--
++ implements all Repository&lt;T, ID&gt; operations
+#mapRow(rs: ResultSet): T {abstract}
+#toParams(entity: T): Object[] {abstract}
+#executeQuery(sql: String, params: Object[]): List&lt;T&gt;
+#executeUpdate(sql: String, params: Object[]): int
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1712</x>
+      <y>1389</y>
+      <w>330</w>
+      <h>214</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;singleton&gt;&gt;
+ConnectionManager
+--
+-instance: ConnectionManager
+-dataSource: DataSource
+-jdbcUrl: String
+-poolSize: int
+--
++getInstance(): ConnectionManager
++getConnection(): Connection
++beginTransaction(): void
++commit(): void
++rollback(): void
++close(): void
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=User, ID=Long
+UserRepository
+--
+-tableName = "users"
+--
++findByEmail(email: String): Optional&lt;User&gt;
++existsByEmail(email: String): boolean
++findByRole(role: Role): List&lt;User&gt;
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>109</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=Company, ID=Long
+CompanyRepository
+--
+-tableName = "companies"
+--
++findByOwner(userId: Long): Optional&lt;Company&gt;
++search(keyword: String): List&lt;Company&gt;
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>109</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=Category, ID=Long
+CategoryRepository
+--
+-tableName = "categories"
+--
++findByName(name: String): Optional&lt;Category&gt;
++findAllActive(): List&lt;Category&gt;
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1075</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>139</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=Project, ID=Long
+ProjectRepository
+--
+-tableName = "projects"
+--
++findByCompany(companyId: Long): List&lt;Project&gt;
++findByCategory(categoryId: Long): List&lt;Project&gt;
++search(keyword: String, categoryId: Long,
+location: String): List&lt;Project&gt;
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1420</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>109</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=ProjectImage, ID=Long
+ProjectImageRepository
+--
+-tableName = "project_images"
+--
++findByProject(id: Long): List&lt;ProjectImage&gt;
++deleteByProject(id: Long): void
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1765</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=Favourite, ID=Long
+FavouriteRepository
+--
+-tableName = "favourites"
+--
++findByUser(userId: Long): List&lt;Favourite&gt;
++exists(userId: Long, projectId: Long): boolean
++countByProject(projectId: Long): long
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2110</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=ProjectView, ID=Long
+ProjectViewRepository
+--
+-tableName = "project_views"
+--
++countByProject(projectId: Long): long
++countByCategory(): Map&lt;Long, Long&gt;
++findBetween(from, to): List&lt;ProjectView&gt;
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2455</x>
+      <y>1669</y>
+      <w>330</w>
+      <h>109</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Repository&gt;&gt; &lt;&lt;bind&gt;&gt; T=Report, ID=Long
+ReportRepository
+--
+-tableName = "reports"
+--
++findByAdmin(adminId: Long): List&lt;Report&gt;
++findByType(type: String): List&lt;Report&gt;
+bg=#d5e8d4
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1670</x>
+      <y>650</y>
+      <w>290</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>Category seed values
+Residential
+Commercial
+Hospitality
+Retail
+Office
+Interior Design
+Landscape
+bg=#fff2cc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>40</x>
+      <y>1159</y>
+      <w>780</w>
+      <h>164</h>
+    </coordinates>
+    <panel_attributes>Persistence design decisions
+* Repository pattern: one repository per aggregate/table, sharing generic CRUD in BaseJdbcRepository.
+* Single-table inheritance: User, Customer, InteriorDesigner and Admin all persist to 'users';
+  discriminator column = role (CUSTOMER / ID / ADMIN).
+* BaseEntity is a mapped superclass: created_at / updated_at are copied into each child table.
+* companies.owner_user_id is UNIQUE, which enforces the 1:1 InteriorDesigner-Company rule.
+* favourites has UNIQUE(user_id, project_id) so a project is favourited once per customer.
+* project_views.user_id is nullable: anonymous views are tracked via session_id.
+* Project -&gt; ProjectImage is a composition: images are removed together with their project.
+* All DB access goes through ConnectionManager (pooled connections, explicit transactions).
+bg=#fff2cc
+fontsize=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>202</x>
+      <y>135</y>
+      <w>598</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>588.0;24.0;588.0;10.0;10.0;10.0;10.0;275.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>135</y>
+      <w>210</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;24.0;10.0;10.0;200.0;10.0;200.0;135.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>135</y>
+      <w>635</w>
+      <h>345</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;24.0;10.0;10.0;625.0;10.0;625.0;335.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>135</y>
+      <w>1045</w>
+      <h>345</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;24.0;10.0;10.0;1035.0;10.0;1035.0;335.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>375</x>
+      <y>342</y>
+      <w>75</w>
+      <h>215</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;205.0;35.0;205.0;35.0;10.0;65.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>375</x>
+      <y>537</y>
+      <w>75</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;35.0;10.0;35.0;85.0;65.0;85.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>375</x>
+      <y>537</y>
+      <w>75</w>
+      <h>375</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;35.0;10.0;35.0;365.0;65.0;365.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>674</y>
+      <w>20</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;66.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>674</y>
+      <w>20</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;66.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>370</y>
+      <w>90</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+owns
+m1=1
+m2=1
+r1=owner
+r2=companyProfile</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>610</y>
+      <w>90</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+adds
+m1=1
+m2=0..*
+r1=customer
+r2=favourites</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>670</y>
+      <w>90</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+views
+m1=0..1
+m2=0..*
+r1=viewer
+r2=views</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>920</y>
+      <w>90</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+generates
+m1=1
+m2=0..*
+r1=admin
+r2=reports</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>475</y>
+      <w>100</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+manages
+m1=1
+m2=0..*
+r2=projects</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>570</y>
+      <w>100</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+favourited by
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>670</y>
+      <w>100</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+recorded in
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1395</x>
+      <y>689</y>
+      <w>20</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=images</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;51.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1590</x>
+      <y>530</y>
+      <w>90</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+classifies
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1402</x>
+      <y>1308</y>
+      <w>20</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;81.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>1563</y>
+      <w>1227</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>1217.0;10.0;1217.0;56.0;10.0;56.0;10.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>1563</y>
+      <w>882</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>872.0;10.0;872.0;56.0;10.0;56.0;10.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>885</x>
+      <y>1563</y>
+      <w>537</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>527.0;10.0;527.0;56.0;10.0;56.0;10.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>1563</y>
+      <w>192</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>182.0;10.0;182.0;56.0;10.0;56.0;10.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1402</x>
+      <y>1563</y>
+      <w>193</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;56.0;183.0;56.0;183.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1402</x>
+      <y>1563</y>
+      <w>538</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;56.0;528.0;56.0;528.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1402</x>
+      <y>1563</y>
+      <w>883</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;56.0;873.0;56.0;873.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1402</x>
+      <y>1563</y>
+      <w>1228</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;56.0;1218.0;56.0;1218.0;106.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1612</x>
+      <y>1439</y>
+      <w>110</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>975</x>
+      <y>1009</y>
+      <w>20</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;persists&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+</diagram>
