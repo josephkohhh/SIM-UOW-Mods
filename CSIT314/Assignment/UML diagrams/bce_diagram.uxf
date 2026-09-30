@@ -1,0 +1,283 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>210</x><y>189</y><w>112</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Login/RegisterGUI
+--
+
+--
++ login()
++ register()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>371</x><y>189</y><w>112</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+LoginController
+--
+
+--
++ auth_login()
++ get_user_role()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>826</x><y>126</y><w>105</w><h>189</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;130;250</additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>301</y><w>112</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+RegisterController
+--
+
+--
++ validate_fields()
++ add_user()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>413</y><w>112</w><h>126</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+User
+--
+- user_id : int
+- email : str
+- password_hash : str
+- role : Role
+- first_name : str
+- last_name : str
+- phone : str
+- status : Status
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>532</x><y>315</y><w>112</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+AdminGUI
+--
+
+--
++ manage_user_account()
++ manage_category()
++ generate_report()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>532</x><y>70</y><w>112</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+CustomerGUI
+--
+
+--
++ view_project()
++ manage_fav()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>595</x><y>189</y><w>112</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+InteriorDesignerGUI
+--
+
+--
++ manage_company_profile()
++ manage_projects()
++ get_project_metrics()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>371</x><y>315</y><w>112</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+UserController
+--
+
+--
++ get_user()
++ add_user()
++ update_user()
++ delete_user()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>371</x><y>539</y><w>112</w><h>105</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Category
+--
+- category_id : int
+- category_name : str
+- description : str
+- status : Status
+- created_at : datetime
+- updated_at : datetime
+-
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>371</x><y>434</y><w>112</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+CategoryController
+--
+
+--
++ get_category()
++ add_category()
++ update_category()
++ delete_category()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>532</x><y>434</y><w>112</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+ReportController
+--
+
+--
++ export_report()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>532</x><y>518</y><w>112</w><h>154</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Report
+--
+- report_id : int
+- report_type : ReportType
+- start_date : date
+- end_date : date
+- generated_at : datetime
+- generated_by : int
+- total_users : int
+- total_companies : int
+- total_projects : int
+- total_views : int
+- total_favourites : int
+-
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>259</x><y>245</y><w>21</w><h>70</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>259</x><y>357</y><w>21</w><h>70</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>210</y><w>70</w><h>28</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>511</y><w>21</w><h>42</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>476</x><y>336</y><w>70</w><h>28</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>Relation</id><coordinates><x>476</x><y>210</y><w>133</w><h>28</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>476</x><y>217</y><w>70</w><h>147</h></coordinates><panel_attributes>lt=-
+m1= 
+m2=
+</panel_attributes><additional_attributes>10;10;80;190</additional_attributes></element><element><id>Relation</id><coordinates><x>581</x><y>385</y><w>21</w><h>63</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>581</x><y>483</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>350</y><w>70</w><h>147</h></coordinates><panel_attributes>lt=-
+m1= 
+m2=
+</panel_attributes><additional_attributes>10;190;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>476</x><y>343</y><w>70</w><h>154</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;200;80;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>266</y><w>119</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+ProjectController
+--
+
+--
++ get_project_profile()
++ add_project_profile(()
++ update_project_profile()
++ delete_project_profile(()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>371</y><w>119</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+CompanyController
+--
+
+--
++ get_company_profile()
++ add_company_profile(()
++ update_company_profile()
++ delete_company_profile(()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>189</y><w>119</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+ProjectMetricsController
+--
+
+--
++ get_project_metrics()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>210</y><w>70</w><h>28</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>217</y><w>70</w><h>210</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;80;280</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>217</y><w>70</w><h>105</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;80;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>483</y><w>112</w><h>154</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Company
+--
+- company_id : int
+- owner_user_id : int
+- company_name : str
+- location : str
+- description : str
+- website : str
+- email : str
+- phone : str
+- logo_url : str
+- created_at : datetime
+- updated_at : datetime
+-
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>917</x><y>238</y><w>112</w><h>147</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
+- project_id : int
+- company_id : int
+- category_id : int
+- project_name : str
+- description : str
+- location : str
+- completion_year : int
+- status : Status
+- created_at : datetime
+- updated_at : datetime
+-
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>805</x><y>441</y><w>21</w><h>56</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>917</x><y>133</y><w>112</w><h>91</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+ProjectView
+--
+- view_id : int
+- project_id : int
+- user_id : int
+- viewed_at : datetime
+- session_id : str
+-
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>868</x><y>175</y><w>63</w><h>56</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;60;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>868</x><y>210</y><w>63</w><h>105</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;70;130</additional_attributes></element><element><id>Relation</id><coordinates><x>868</x><y>287</y><w>63</w><h>28</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>476</x><y>98</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>80;10;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>882</x><y>0</y><w>112</w><h>91</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Favorite
+--
+- favourite_id : int
+- user_id : int
+- project_id : int
+- created_at : datetime
+- total_favourites : int
+-
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>14</y><w>119</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+FavController
+--
+
+--
++ add_fav()
++ delete_fav()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>98</y><w>119</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Control&gt;&gt;
+ViewProjectController
+--
+
+--
++ get_project_details()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>637</x><y>98</y><w>91</w><h>49</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>110;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>637</x><y>42</y><w>91</w><h>77</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>110;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>826</x><y>35</y><w>70</w><h>28</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>Relation</id><coordinates><x>826</x><y>42</y><w>105</w><h>273</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;130;370</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>217</y><w>70</w><h>280</h></coordinates><panel_attributes>lt=-
+m1= 
+m2=
+</panel_attributes><additional_attributes>10;380;80;10</additional_attributes></element></diagram>
