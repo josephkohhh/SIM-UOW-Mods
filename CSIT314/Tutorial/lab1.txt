@@ -1,0 +1,329 @@
+CSIT314 - lab1 
+
+Sure Thing Insurance Pte Ltd 
+- brick & mortar insurance biz for over 100 years
+- wants to go online for customer to lodge insurance claims
+
+they have many types of insurance avail:
+- car 
+- home
+- contents
+- farm
+- general
+- public liability 
+
+*wish to offer car insurance online 1st, the rest will offer next time
+
+customer aka policyholders can hold a portfolio of insurance policies
+- relationship is 1 : M 
+
+Main actors:
+1. Policyholder (Customer)
+2. Assessor
+3. Investigator
+4. Insurance System
+5. Police / external parties 
+
+
+Biz Logic:
+
+Insurance policy
+Each policy contains:
+- Policy number
+- Coverage type
+  - Third Party Only (Damage/injury to other party)
+  - Third Party, Fire & Theft (Third party + fire + theft)
+  - Comprehensive (Virtually all costs involving the insured car)
+- Coverage value
+- Inclusions
+- Exceptions
+- Risk level
+- Premium
+- Excess
+
+
+What is excess?
+It is the amt of money the policyholder has to pay themselves when making a claim
+
+Every claim has a basic excess
+
+Ex. 
+Basic excess = $500
+Your approved claim = $5,000
+
+The insurance company doesn't pay the full $5,000.
+$5,000 − $500 excess = $4,500 payout
+
+In this case, 
+Excess increases when:
+- Driver is under 25
+- Driver has held licence for less than 1 year
+
+If claim is approved -> Excess is deducted from payout
+If claim is rejected -> Policyholder receives a bill
+
+***to be clear:
+2 kinds of payment:
+1. policyholder pays for the annual insurance policy 
+2. policyholder also pay for the excess only if making a claim 
+
+
+
+What is No-claim bonus?
+It is a discount on your insurance premium for not making claims
+- think of it as a reward for having a claim-free history
+
+In this case, 
+Policyholder who made no claims for at least 2 years:
+- qualify for a no-claim bonus that gives 10% discount on the annual premium
+
+But if after make a claim:
+- disqualify for the no-claim bonus
+
+
+
+What is Driver rating?
+a score that represents the driver's claim/accident record and 
+can affect how much premium they pay for insurance in the future
+
+In this case,
+- If the driver is at fault in an accident → driver rating decreases by 1.
+- Also, the act of making a claim itself affects next year's insurance premium as well
+
+
+
+Organise the case into these 8 major epics:
+Epic 1 — Policyholder & Policy Management
+Epic 2 — Online Claim Lodgement
+Epic 3 — Stolen Vehicle Claims
+Epic 4 — Damaged/Accident Claims
+Epic 5 — Claim Assessment & Investigation
+Epic 6 — Claim Decision & Payment
+Epic 7 — Claim Cancellation/Withdrawal
+Epic 8 — Policy & Premium Updates
+Epic 9 — Claim History & Tracking
+
+
+EPIC 1 — Policyholder & Policy Management
+Manage and access policyholder insurance policies and their coverage details.
+
+US1 — View policies
+As a policyholder, I want to view my insurance policies so that I can select the policy for which I want to make a claim.
+
+US2 — View policy details
+As a policyholder, I want to view my policy number, coverage type, coverage value, inclusions and exclusions so that I know what my insurance covers.
+
+US3 — Select policy
+As a policyholder, I want to select a specific car insurance policy so that I can lodge a claim against the correct vehicle.
+
+US4 — Verify policy eligibility
+As the system, I want to verify that a policy is valid so that claims can only be made against valid policies.
+
+
+EPIC 2 — Online Claim Lodgement
+Allow policyholders to create, complete, submit, and cancel car insurance claims online.
+
+US5 — Start claim
+As a policyholder, I want to start a new car insurance claim online so that I do not need to lodge it manually.
+
+US6 — Select claim type
+As a policyholder, I want to specify whether my car was stolen or damaged so that I can provide the appropriate information.
+
+US7 — Enter incident date/time
+As a policyholder, I want to enter the date and time of the incident so that the insurer knows when it occurred.
+
+US8 — Enter incident location
+As a policyholder, I want to enter where the incident occurred so that the assessor can investigate the incident.
+
+US9 — Save claim information
+As a policyholder, I want to save my claim information so that I can continue the lodgement process later.
+
+US10 — Review claim
+As a policyholder, I want to review my claim details before submitting it so that I can correct errors.
+
+US11 — Submit claim
+As a policyholder, I want to submit my completed claim so that Sure Thing can begin processing it.
+
+US12 — Cancel claim lodgement
+As a policyholder, I want to cancel my claim during lodgement so that I can stop the claim process if I change my mind.
+
+
+EPIC 3 — Stolen Vehicle Claims
+Handle claims involving stolen vehicles, including theft details, police reports, and recovery.
+
+US13 — Provide stolen vehicle details
+As a policyholder, I want to provide details about the stolen vehicle so that Sure Thing can assess my claim.
+
+US14 — State whether car was locked
+As a policyholder, I want to indicate whether the car was locked when it was stolen so that the assessor can assess the circumstances.
+
+US15 — State whether car was garaged
+As a policyholder, I want to indicate whether the car was garaged when it was stolen so that the assessor has relevant information.
+
+US16 — State whether alarmed
+As a policyholder, I want to indicate whether the car's alarm was activated so that the assessor can evaluate the claim.
+
+US17 — State whether steering was locked
+As a policyholder, I want to indicate whether the steering was locked so that the assessor can evaluate the circumstances.
+
+US18 — Submit police report
+As a policyholder, I want to provide the required physical police report so that Sure Thing can verify my stolen vehicle claim.
+
+US19 — Track stolen vehicle waiting period
+As an assessor, I want to track how long the vehicle has been missing so that payment can be processed after two weeks if the claim is approved.
+
+US20 — Withdraw stolen vehicle claim
+As a policyholder, I want to withdraw my claim if my stolen vehicle is recovered so that the claim does not proceed unnecessarily.
+
+US21 — Continue recovered vehicle claim
+As an assessor, I want to continue processing a recovered vehicle as a damaged-car claim if the vehicle is damaged.
+
+
+EPIC 4 — Damaged / Accident Claims
+Handle claims involving vehicle damage or accidents, including incident and third-party details.
+
+US22 — Describe damage
+As a policyholder, I want to describe how the damage occurred so that the assessor can understand the incident.
+
+US23 — Identify person at fault
+As a policyholder, I want to state who was at fault so that the insurer can determine liability.
+
+US24 — Provide third-party details
+As a policyholder, I want to provide the details of the other person or company involved so that Sure Thing can investigate the incident.
+
+US25 — Provide third-party insurer
+As a policyholder, I want to provide the other party's insurance company details so that Sure Thing can communicate with the relevant insurer.
+
+US26 — Describe accident
+As a policyholder, I want to provide a description of the accident so that the assessor can understand what happened.
+
+US27 — Provide accident diagram
+As a policyholder, I want to provide a diagram showing the positions of vehicles and objects so that the assessor can understand the accident.
+
+US28 — Provide weather conditions
+As a policyholder, I want to provide the weather conditions at the time of the accident so that the assessor has all relevant information.
+
+US29 — Provide lighting conditions
+As a policyholder, I want to provide the lighting conditions at the time of the accident so that the assessor can evaluate the incident.
+
+US30 — Provide police report
+As a policyholder, I want to provide a police report when one exists so that the assessor can use it during the assessment.
+
+
+EPIC 5 — Claim Assessment & Investigation
+Allow assessors to review claims, investigate incidents, gather evidence, and record their actions.
+
+US31 — Add claim to assessor queue
+As the system, I want to add a newly lodged claim to an assessor's queue so that it can be assessed.
+
+US32 — View assigned claims
+As an assessor, I want to view my assigned claims so that I can manage the claims I need to assess.
+
+US33 — View claim information
+As an assessor, I want to view all information provided by the policyholder so that I can assess the claim.
+
+US34 — View policy information
+As an assessor, I want to view the policy associated with a claim so that I can determine whether the incident is covered.
+
+US35 — Inspect damaged vehicle
+As an assessor, I want to inspect a damaged vehicle so that I can assess the extent of the damage.
+
+US36 — Interview police
+As an assessor, I want to record information obtained from police interviews so that relevant evidence is retained.
+
+US37 — Interview involved drivers
+As an assessor, I want to record information obtained from other drivers so that relevant evidence is retained.
+
+US38 — Interview witnesses
+As an assessor, I want to record information obtained from witnesses so that relevant evidence is retained.
+
+US39 — Record assessment actions
+As an assessor, I want to record my actions during an assessment so that there is a history of how the claim was investigated.
+
+US40 — Record assessment decision
+As an assessor, I want to record my decision about a claim so that the outcome is stored in the system.
+
+
+EPIC 6 — Fraud Investigation
+Identify suspicious claims and refer them to the investigations branch for further investigation.
+
+US41 — Flag suspicious claim
+As an assessor, I want to flag a claim as suspicious when I identify possible fraud so that it can receive further investigation.
+
+US42 — Refer claim to investigations branch
+As an assessor, I want to refer suspicious claims to the investigations branch so that potential fraud can be investigated.
+
+US43 — Investigate suspicious claim
+As an investigator, I want to investigate suspicious claims so that Sure Thing can determine whether fraud may have occurred.
+
+US44 — Record investigation
+As an investigator, I want to record investigation activities and findings so that there is a record of the investigation.
+
+
+EPIC 7 — Claim Decision & Payment
+Process claim approvals or rejections, calculate excess, and issue payments or bills
+
+US45 — Approve claim
+As an assessor, I want to approve a valid claim so that the policyholder can receive their entitlement.
+
+US46 — Reject claim
+As an assessor, I want to reject an invalid claim so that Sure Thing does not pay claims that are not covered.
+
+US47 — Calculate excess
+As the system, I want to calculate the applicable excess so that the correct amount can be deducted from the payout.
+
+US48 — Apply young-driver excess
+As the system, I want to increase the excess when a driver is under 25 so that the correct excess is applied.
+
+US49 — Apply inexperienced-driver excess
+As the system, I want to increase the excess when the driver has held their licence for less than one year so that the correct excess is applied.
+
+US50 — Calculate stolen vehicle payout
+As the system, I want to calculate the stolen vehicle payout as the insured value minus the excess after the required two-week period so that the policyholder receives the correct amount.
+
+US51 — Make electronic payment
+As Sure Thing, I want to pay approved claims electronically so that the cost of issuing cheques can be reduced.
+
+US52 — Issue rejected claim bill
+As the system, I want to issue a bill when a claim is rejected so that the policyholder is notified of the required payment.
+
+US53 — Notify policyholder
+As the system, I want to notify the policyholder of the claim outcome so that they know whether their claim was approved or rejected.
+
+
+EPIC 8 — Policy & Premium Updates
+Update driver ratings, no-claim bonuses, and future premiums based on claim history
+
+US54 — Record claim outcome
+As the system, I want to record the outcome of every claim so that it can be considered in future premium calculations.
+
+US55 — Record claim regardless of outcome
+As the system, I want to record claims even when they are rejected so that future premium calculations accurately reflect the policyholder's claim history.
+
+US56 — Remove no-claim bonus
+As the system, I want to remove the policyholder's no-claim bonus after a claim is made so that the next premium is calculated correctly.
+
+US57 — Update driver rating
+As the system, I want to reduce a driver's rating by one when they are at fault in an accident so that their future premium reflects their updated risk.
+
+US58 — Calculate future premium
+As the system, I want to use the policyholder's claim history and driver rating when calculating the next premium so that the premium reflects their current risk.
+
+US59 — Apply no-claim bonus
+As the system, I want to apply the no-claim bonus when a policyholder has made no claims for at least two years so that their annual premium receives the appropriate deduction.
+
+
+EPIC 9 — Claim History & Tracking
+Allow policyholders and staff to track claim status and maintain a history of claims and actions.
+
+US60 — View claim status
+As a policyholder, I want to view the status of my claim so that I know how it is progressing.
+
+US61 — View claim history
+As a policyholder, I want to view my previous claims so that I can keep track of my insurance history.
+
+US62 — Track claim assessment
+As an assessor, I want to see the status and history of a claim so that I know what actions have already been performed.
+
+US63 — Maintain claim audit trail
+As Sure Thing, I want all assessor actions and decisions to be recorded so that there is an auditable history of each claim.
