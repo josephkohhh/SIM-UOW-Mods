@@ -150,5 +150,88 @@ Database:
              │ status       │
              └──────────────┘
 
+BCE
+┌──────────────────────────────┐
+│           React              │
+│        Frontend/UI            │
+└──────────────┬───────────────┘
+               │ HTTP
+               ▼
+┌──────────────────────────────┐
+│          Boundary            │
+│     FastAPI API Routes       │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│           Control            │
+│   Services / Business Logic  │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│           Entity             │
+│ User, Report, ID, etc.       │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│         PostgreSQL           │
+│         Persistence          │
+└──────────────────────────────┘
 
 
+FindMyID/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   │
+│   │   ├── routers/
+│   │   │   ├── auth.py
+│   │   │   ├── users.py
+│   │   │   └── ...
+│   │   │
+│   │   ├── models/
+│   │   │   └── ...
+│   │   │
+│   │   ├── schemas/
+│   │   │   └── ...
+│   │   │
+│   │   ├── database/
+│   │   │   └── database.py
+│   │   │
+│   │   └── services/
+│   │       └── ...
+│   │
+│   ├── requirements.txt
+│   └── .env
+│
+├── frontend/
+│   ├── pages/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   ├── dashboard.html
+│   │   └── ...
+│   │
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── login.css
+│   │   └── dashboard.css
+│   │
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── auth.js
+│   │   └── dashboard.js
+│   │
+│   └── assets/
+│       ├── images/
+│       └── icons/
+│
+├── tests/
+│   ├── backend/
+│   └── frontend/
+│
+├── docs/
+│
+├── .gitignore
+├── README.md
+└── LICENSE
