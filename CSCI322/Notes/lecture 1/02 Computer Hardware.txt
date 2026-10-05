@@ -303,3 +303,20 @@ CLI (Command-Line Interface)
  $ mkdir new_folder
  $ cd new_folder
 
+
+Summary:
+CPU → executes instructions
+Architecture → instruction set/behavior the CPU understands
+Program Counter PC → address of the next instruction
+Registers → tiny, extremely fast storage inside CPU
+RISC → simpler instructions
+CISC → more complex instructions
+Pipelining → overlaps instruction stages
+Superscalar → multiple instructions can execute in parallel
+Task-level parallelism → multiple programs/tasks
+Context switching → save one process's state, load another
+Cache → keeps frequently used data close to CPU
+Buses → Data = WHAT, Address = WHERE, Control = HOW
+RAM → volatile working memory
+Disk → long-term storage
+HDD structure → Platter → Track → Sector
