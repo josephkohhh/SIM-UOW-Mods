@@ -1,0 +1,25 @@
+What is an OS?
+It is an executive manager that manages all of the hardware and software
+
+Types of OS:
+- Windows
+- UNIX family 
+  - Linux
+  - MacOS 
+
+UNIX 
+It is 1 of the foundational OS families that influenced modern systems like macOS and Linux
+
+                    UNIX
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+    Unix-based systems      Unix-like systems
+          │                     │
+        macOS                 Linux
+                              │
+                    ┌─────────┼─────────┐
+                  Ubuntu     Debian    Fedora
+
+*Linux has a very developer-friendly environment and gives u more control over
+other OS such as Windows 
