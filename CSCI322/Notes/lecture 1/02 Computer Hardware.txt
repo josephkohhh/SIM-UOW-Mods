@@ -1,0 +1,305 @@
+Computer Hardware Fundamentals
+Main components: CPU, memory, cache, buses, disk (secondary storage)
+
+                 ┌───────────────────┐
+                 │       CPU         │
+                 │  Control Unit     │
+                 │       ALU         │
+                 └─────────┬─────────┘
+                           │
+                    ┌──────▼──────┐
+                    │    Cache    │
+                    │ L1 / L2 / L3│
+                    └──────┬──────┘
+                           │
+              ═════════════╪═════════════
+              ║          BUSES          ║
+              ║  Data | Address | Ctrl  ║
+              ═════════════╪═════════════
+                    ┌──────┴──────┐
+                    │             │
+            ┌───────▼───────┐   ┌─▼──────────────┐
+            │  Main Memory  │   │ Disk / Storage │
+            │     (RAM)     │   │  (Secondary)   │
+            └───────────────┘   └────────────────┘
+
+
+1. CPU = brain
+2. Cache = short term fast memory storage
+3. Bus = roads that connects to everyth and move info around
+4. Memory (RAM) = short term slower-than-cache memory storage 
+5. Disk/storage = long-term slow memory storage
+
+
+---------------------------
+1. Central Processing Unit (CPU) 
+---------------------------
+It is responsible for executing instructions
+- retrieves instruction, understand and execute it
+- Ex. add 5 + 10
+
+
+CPU Architecture
+- it describes what the CPU is capable of understanding 
+  - x86, SPARC, PowerPC, ARM
+
+Architecture = the language the CPU understands
+
+
+CPU Implementation 
+- how the actual physical CPU is built to implement that architecture
+  - x86 architecture = Intel Core i7, AMD Ryzen
+
+Architecture defines the instruction set and behaviour visible to software, 
+while implementation refers to the physical/internal design used to implement that architecture
+
+
+Instruction Cycle
+The CPU repeatedly performs
+- FETCH -> DECODE -> EXECUTE
+- FETCH -> DECODE -> EXECUTE
+
+
+Program Counter (PC)
+The Program Counter holds the address of the next instruction
+- PC = address of next instruction
+
+Ex.
+PC → 0x1000
+
+Memory:
+0x1000 → instruction 1
+0x1004 → instruction 2
+0x1008 → instruction 3
+
+After executing instruction 1:
+PC → 0x1004 (instruction 2)
+
+
+Registers
+They are very small, very fast storage locations inside the CPU.
+- Extremely fast because they're inside the CPU 
+
+They temporarily hold:
+- data
+- instructions
+- addresses
+- intermediate results
+
+Ex.
+
+RAM -> Cache -> Registers -> CPU execution
+
+
+RISC vs CISC
+2 different ways CPUs are designed to execute instructions
+
+Reduced Instruction Set Computer (RISC) 
+- Uses fewer, simpler instructions
+- Each instruction does a small/basic task
+- Relies more on the compiler to combine instructions efficiently
+- Ex: ARM, RISC-V
+
+Complex Instruction Set Computer (CISC) 
+- Uses many, more complex instructions
+- 1 instruction can perform several operations
+- Often uses microcode to break complex instructions into smaller internal steps
+- Ex: x86 (Intel/AMD)
+
+RISC = simple instructions + more steps
+CISC = complex instructions + fewer steps
+
+
+Instruction-Level Parallelism
+- Pipelining (fetch, decode and execute overlap) 
+  - Instead of waiting for instruction A to completely finish before starting B, 
+    different stages can overlap. This is to increase throughput
+  - Instruction A: FETCH → DECODE → EXECUTE
+    Instruction B:         FETCH → DECODE → EXECUTE
+    Instruction C:                  FETCH → DECODE → EXECUTE
+
+***modern CPUs overlap work
+
+
+Superscalar CPUs
+It has multiple execution units, allowing it to execute multiple 
+instructions in parallel when possible.
+
+             CPU
+              │
+       ┌──────┼──────┐
+       ↓      ↓      ↓
+      ALU    ALU    FPU
+       │      │      │
+    instruction instruction
+
+Instead of having only one execution path, the CPU can potentially 
+process multiple instructions simultaneously
+
+Pipelining = overlap stages
+Superscalar = multiple instructions/execution units
+
+
+Task-Level Parallelism
+Different from instruction-level parallelism, it is running multiple programs/tasks,
+rather than multiple instructions from the same program
+- Ex. Chrome, Spotify, Discord, etc 
+
+The OS manages the programs by giving each one some CPU time
+
+Ex.
+
+Time →
+─────────────────────────────>
+Chrome → Spotify → Word → Chrome → Terminal → Spotify
+
+The CPU quickly switches between them, so it looks like everything is running at the same time
+
+Context switching
+When switching from one process to another, the OS:
+- Saves the current process's state
+- Loads the next process's state
+- CPU continues running the new process
+
+The saved state includes things like the process's register values and program position, 
+so it can continue later - registers are saved to control structures
+
+
+32-bit vs 64-bit
+A 64-bit CPU can handle larger values and addresses (memory) than a 32-bit CPU
+- 64-bit CPU can generally run 32-bit software
+- A 32-bit CPU CANNOT natively run 64-bit software
+
+
+---------------------------
+2. Cache
+---------------------------
+CPU is extremely fast, but main RAM is slower. 
+So the CPU needs somewhere to keep frequently used data - cache
+
+Purpose: keep frequently used data close, reducing trips across the bus to main memory
+
+Different level of cache: 
+- L1: built into the CPU, split into instruction and data caches.
+- L2: sits between the CPU and main memory (256 KB-8 MB).
+- L3: sits between the motherboard and CPU.
+
+
+---------------------------
+3. Bus
+---------------------------
+A communication pathway connecting computer components
+
+3 types of data bus:
+- Data bus (carries actual data)
+- Address bus (where the data should go / come from)
+- Control bus (control signals: read, write, interrupt)
+ 
+Data    = WHAT?
+Address = WHERE?
+Control = HOW?
+
+Peripheral buses
+- used to connect peripherals/devices (PCIe = PCI Express)
+  - graphics cards, network cards, etc
+
+
+---------------------------
+4. Memory (RAM)
+---------------------------
+It is where programs and data are kept while they're actively being used
+
+Volatile
+- Data disappears when power is removed
+  - DRAM, SRAM (cache)
+
+Non-volatile
+- Data remains after power is removed
+  - ROM, PROM, EPROM, EEPROM, magnetic storage
+
+
+---------------------------
+5. Disk & Storage 
+---------------------------
+Disk structure:
+
+Traditional hard disks contains Platters - Circular disks where data is stored
+Multiple platters can exist inside 1 Hard disk drive (HDD)
+       _________
+     /           \
+    |   platter   |
+     \___________/
+
+Tracks - circular paths on the platter
+
+     ┌─────────────┐
+     │   ┌─────┐   │
+     │   │track│   │
+     │   └─────┘   │
+     └─────────────┘
+
+Sectors - Tracks are divided into smaller pieces called sectors
+
+Platter -> Tracks -> Sectors
+
+Cylinder - multiple platters stacked vertically
+
+Platter 1 → Track X
+Platter 2 → Track X
+Platter 3 → Track X
+
+
+Disk performance factors:
+- transfer speed
+- seek time
+- rotational latency
+
+Partitions/slices: 
+1 physical disk can be split into many logical disks (file systems, swap, raw data)
+
+
+Operating Systems (OS)
+OS manages memory, CPU, devices, and files so programs can share the computer's resources
+
+OS Examples:
+- Unix-like:
+  - Linux, macOS
+
+- Windows:
+  - Windows NT, Windows Server
+
+4 essential managers
+- Memory Manager
+- Processor Manager
+- Device Manager
+- File Manager
+
+Memory Manager
+- Manages RAM and decides which programs get memory
+- Ex. Gives Chrome memory
+
+Processor Manager
+- Manages the CPU and decides which process gets CPU time
+- Ex. Decides which process runs
+
+Device Manager
+- Manages hardware devices connected to the computer
+- Ex. Manages printer/keyboard
+
+File Manager
+- Manages files and folders and controls who can access them
+- Ex. Opens/saves files
+
+***Networked systems add a 5th, the Network Manager, + the User Command Interface
+
+Network Manager
+- Manages comm between computers over a network
+- Computer A → Network → Computer B
+
+GUI (Graphical User Interface)
+- Click → Folder → Open file
+
+CLI (Command-Line Interface) 
+ $ mkdir new_folder
+ $ cd new_folder
+

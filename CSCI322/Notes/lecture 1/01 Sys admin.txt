@@ -1,0 +1,46 @@
+What is a sys admin?
+A person who manages 1 or more computer systems, often working alongside database, network, 
+security and web administrators and computer operators. 
+
+
+7 goals of a sys admin:
+
+1. Reliability
+- Percentage of time a system or service is usable. Linked to SLAs.
+- Measured by uptime and monitoring tools (Nagios, Cacti, SNMP)
+- 99.99% (4 9s) = 52min downtime per yr
+- 99.999% (5 9s) = 5min downtime per yr
+
+2. Integrity
+- Data can be trusted not to be lost or damaged
+- Affected by storage design, backup procedures and protocol/hardware design
+- Tools: Bacula, Amanda, Tripwire
+
+3. Security
+- Data is not destroyed, altered or disclosed to unauthorised parties.
+- Tools: Snort (IDS), Nessus (vulnerability scanning)
+- Tools are useless without procedure and policy. High security usually means lower usability.
+
+4. Performance
+- Systems should run as fast and efficiently as possible. 
+- Influenced by hardware, OS, software bugs, tuning and user practices. 
+- Don't assume "a bigger box" fixes everything
+
+5. Efficiency
+- Maximise the productivity of admin staff.
+- Often conflicts with other goals: 
+  - centralising eases admin but may hurt performance
+  - automating accounts may hurt security
+
+6. Ease of use
+- Users can do tasks the way they want. 
+- Conflicts with security, performance and integrity. 
+
+7. Order
+- Compliance with laws, regulations and policies:
+  - copyright law
+  - ethics
+  - equal opportunity
+  - harassment policies
+
+

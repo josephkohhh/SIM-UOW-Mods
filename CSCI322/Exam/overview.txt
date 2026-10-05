@@ -1,0 +1,18 @@
+CSCI322 — Exam Notes
+
+Format:
+– Part A: MCQ (20 questions worth 20 marks)
+– Part B: short answer (10 questions worth 20 marks)
+– Part C: planning and design 2 questions worth 10 marks
+
+
+Example Qn:
+
+Write a shell command to display all files in /etc
+
+What is the difference between the absolute path and
+relative path in UNIX? How do you differentiate an
+absolute path with a relative path?
+
+Compare and contrast LVM with disk partitioning.
+Outline the strengths and advantages of using LVM
