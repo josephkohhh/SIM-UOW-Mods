@@ -1,0 +1,65 @@
+- 7 lab exercises worth 20% overall 
+- assignment 1, 2 & 3 worth 30% overall 
+
+Ubuntu Server (ip = 10.0.2.3/24)
+Ubuntu Desktop
+
+username: csci322
+password: p@ssw0rd1234
+
+             NatNetwork
+                  │
+          ┌───────┴───────┐
+          │               │
+          ▼               ▼
+       Server           Desktop
+       Ubuntu           Ubuntu
+
+
+Desktop VM
+     │
+     │ HTTP request
+     ▼
+10.0.2.3
+     │
+     ▼
+Server VM
+     │
+     ▼
+Apache
+
+
+                     MacOS
+                       │
+                    VirtualBox
+                       │
+              ┌────────┴────────┐
+              │                 │
+              ▼                 ▼
+       Ubuntu Server      Ubuntu Desktop
+              │                 │
+              │                 │
+           Apache              Firefox
+              │                 │
+              │                 │
+              └──── NatNetwork ─┘
+                       │
+                       │
+              Server IP: 10.0.2.x
+                       │
+                       ▼
+                 /var/www/html
+                       │
+              ┌────────┴────────┐
+              │                 │
+           index.html        info.php
+              │                 │
+              ▼                 ▼
+       Apache default       PHP info page
+            page
+
+
+
+
+
+
