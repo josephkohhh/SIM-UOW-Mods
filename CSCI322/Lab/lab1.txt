@@ -7,6 +7,11 @@ Ubuntu Desktop
 username: csci322
 password: p@ssw0rd1234
 
+
+Lab 1: 
+Ubuntu Server = No GUI only CLI
+Ubuntu Desktop = GUI called GNOME + apps 
+
              NatNetwork
                   │
           ┌───────┴───────┐

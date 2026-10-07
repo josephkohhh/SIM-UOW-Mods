@@ -1,0 +1,16 @@
+Lab 2:
+
+to add/delete a user:
+
+sudo useradd testuser
+sudo userdel testuser
+
+to add 50 or 100+ users, need to automate it with bash scripting:
+
+cd /tmp  # go to tmp folder
+
+pico testaddusers.sh  # pico is a text editor and creates a shell script file 
+
+inside the editor:
+
+#!/bin/bash  # called a shebang - telling linux to run this script using bash
