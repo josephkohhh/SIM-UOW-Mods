@@ -1,16 +1,49 @@
 Lab 2:
 
-to add/delete a user:
+Linux Server
+     │
+     ├── Install software
+     │      └── DokuWiki
+     │
+     ├── Find documentation
+     │      └── man pages
+     │
+     ├── Manage users
+     │      ├── useradd
+     │      └── userdel
+     │
+     ├── Manage groups
+     │      ├── addgroup
+     │      └── usermod
+     │
+     ├── Automate commands
+     │      └── Bash script
+     │
+     └── Schedule automation
+            └── cron
 
-sudo useradd testuser
-sudo userdel testuser
 
-to add 50 or 100+ users, need to automate it with bash scripting:
+type: man man 
+search: /library calls and press enter  
+section 3 shows library calls 
 
-cd /tmp  # go to tmp folder
 
-pico testaddusers.sh  # pico is a text editor and creates a shell script file 
+cron format
+┌──── minute (0-59)
+│ ┌── hour (0-23)
+│ │ ┌ day of month (1-31)
+│ │ │ ┌ month (1-12)
+│ │ │ │ ┌ day of week (0-7)
+│ │ │ │ │
+* * * * *
 
-inside the editor:
 
-#!/bin/bash  # called a shebang - telling linux to run this script using bash
+u want 9.00am every monday
+
+0   9   *   *   1
+│   │   │   │   │
+│   │   │   │   └── Monday
+│   │   │   └────── Every month
+│   │   └────────── Every day
+│   └────────────── 9 AM
+└────────────────── 00 minutes
