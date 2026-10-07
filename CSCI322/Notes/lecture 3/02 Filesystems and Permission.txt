@@ -1,0 +1,70 @@
+Filesystem and Permission
+
+                 LINUX FILESYSTEM
+                        │
+          ┌─────────────┴─────────────┐
+          │                           │
+      Organisation                 Access
+          │                           │
+     directories                  permissions
+     mount points                     │
+     files                            │
+     inodes                    ┌──────┼──────┐
+     data blocks               │      │      │
+     links                     r      w      x
+                              read   write execute
+                                     │
+                              ┌──────┴──────┐
+                              │             │
+                             ACL      special permissions
+                                      SUID / SGID / Sticky
+
+Summary:
+1. / is the root of the filesystem tree
+2. Absolute vs relative paths
+3. What mounting means
+4. The first character of ls -l
+5. Superblock → inode → data blocks
+6. Hard link shares an inode; symbolic link has its own inode and points to a pathname
+7. r=4, w=2, x=1 and how chmod 644/755 works
+8. Directory r/w/x have different meanings from file r/w/x
+9. umask removes permissions from defaults
+10. SUID, SGID and sticky bit
+
+
+---------------------------------
+The Filesystem
+---------------------------------
+A filesystem is the system Linux uses to organise and store files on storage devices
+
+                    /
+                  root
+              /    |    \
+            home  etc    usr
+             |          /   \
+           joseph      bin   lib
+             |
+           file.txt
+
+
+Absolute vs relative paths
+
+Ex.
+/
+├── usr
+│   ├── bin
+│   │   └── ls
+│   └── local
+│       └── bin
+
+Absolute path:
+/usr/bin/ls - always start at the root /
+
+Relative path:
+../bin/ls - start from current directory 
+
+A relative path is useful as user dont have to type the whole path while
+accessing a file or dir, can just specify the path from current dir 
+
+
+Mounting

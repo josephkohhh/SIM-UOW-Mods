@@ -1,0 +1,244 @@
+Users and Groups 
+
+                    Linux Security
+                         │
+        ┌────────────────┼────────────────┐
+        ↓                ↓                ↓
+      Users            Groups         Privileges
+        │                │                │
+        ↓                ↓                ↓
+ /etc/passwd       /etc/group        root / sudo
+ /etc/shadow       groupadd          su
+ useradd           groupmod          RBAC
+ usermod           newgrp
+ userdel
+        │
+        ↓
+ Authentication
+        │
+ ┌──────┼──────────┐
+ ↓      ↓          ↓
+PAM    LDAP     Kerberos
+
+
+Files:
+/etc/passwd → public/basic account information
+/etc/shadow → protected password hashes + ageing
+/etc/group   → group information
+/etc/gshadow → protected group information
+/etc/skel    → default files for new users
+/etc/login.defs → account/password defaults
+/etc/sudoers → sudo permissions
+
+Commands:
+useradd   → create user
+usermod   → modify user (username, home dir, shell, pri grp, supp grp, etc)
+userdel   → delete user
+
+groupadd  → create group
+groupmod  → modify group
+groupdel  → delete group
+
+passwd    → change password
+chage     → password ageing
+pwck      → check passwd information
+grpck     → check group information
+
+su        → switch to another user
+sudo      → execute with elevated privileges
+visudo    → safely edit sudoers
+id        → show UID/GID/groups
+groups    → show groups
+newgrp    → temporarily change group
+
+
+Options
+-a → append
+-c → Comment/GECOS
+-d → Home directory
+-g → Primary group
+-G → Supplementary groups
+-m → Create home directory
+-s → Login shell
+-u → Specify UID 
+-e → Account expiration date
+-f → Inactivity period
+-k → Specify skeleton directory
+
+
+------------------------
+Users and Authentication
+------------------------
+Every linux user account has:
+- username 
+- UID (user id)
+- primary group GID (user's main grp)
+- supplementary groups (additional grp users belong to)
+
+Ex.
+Username: alice
+UID:      1001
+Primary GID: 1001
+
+- Linux uses UIDs and GIDs when checking ownership
+- The file can still belong to user UID 1001 even if user is deleted
+- If create new user that inherits UID 1001 then assume new ownership
+
+
+/etc/passwd (local user account info stored here)
+
+Ex.
+alice:x:1001:1001:Alice:/home/alice:/bin/bash
+username:password:UID:GID:GECOS:home dir:login shell 
+
+password = x is just placeholder, the password is stored in /etc/shadow
+GECOS = optional info about user
+home dir = directory user starts in / owns as their home
+login shell = the program that lets user interact with Linux through commands
+bin = a folder where all executable programs/commands are stored (ls,cp,mv,bash,etc)
+
+
+/etc/shadow (stores sensitive password info)
+- unlike /etc/passwd, it should be readable only by privileged users, normally root
+- Linux dont store actual password but stores password hash 
+- When user login, Linux compares the hash with actual hash 
+
+
+Disabled Accounts
+- If the password field contains !!, the account is disabled/inactive 
+- If an account have /sbin/nologin as its login shell, the account 
+  cannot normally obtain an interactive login shell
+
+Ex.
+Normal user:
+alice → /bin/bash
+
+Restricted/service account:
+service → /sbin/nologin
+
+
+/etc/login.defs (contains default account and password policies used by tools like useradd)
+├── PASS_MAX_DAYS (max pass lifetime)
+├── PASS_MIN_DAYS (min time bfore pass can be changed agn)
+├── PASS_MIN_LEN (min pass length)
+├── PASS_WARN_AGE (how early to warn abt expiration)
+├── UID_MIN/MAX (range for normal user UIDs)
+├── GID_MIN/MAX (range for normal group GIDs)
+├── CREATE_HOME (whether to create home dir)
+└── MAIL_DIR (location of user mailboxes)
+
+Network authentication and directories
+- Linux does not have to store all user accounts and auth info locally
+- Linux can obtain authentication/account information from services such as
+  - LDAP, NIS, NIS+, Active Directory, PAM
+
+In large organizations, linux can get account info from a central server over a network
+
+
+Creating a user locally: 
+Policy
+(decide username, uid, gid, pass, etc)
+  ↓
+Create account 
+(sudo useradd alice)
+  ↓
+Set password
+(sudo passwd alice)
+  ↓
+Create home (when user logins, start here)
+(sudo useradd -m alice)
+  ↓
+Config environment (default shell, env var, permissions, etc)
+(sudo usermod -s /bin/bash alice)
+  ↓
+Verify account
+(id alice / getent passwd alice)
+
+
+Creating bulk users locally:
+- usually need to write a script 
+
+
+------------------------
+Groups
+------------------------
+Groups allow Linux to manage permissions for multiple users at once instead of assigning individually
+But the individual user account still need to exist first if you want to add them as members
+
+Individual:
+Alice → permission
+Bob   → permission
+Charlie → permission
+
+Group:
+ Developers
+        │ permission
+ ┌──────┼─────────┐
+ ↓      ↓         ↓
+Alice   Bob    Charlie
+
+
+/etc/group (local group info stored here)
+
+Ex.
+developers:x:1002:alice,bob,charlie
+name:password:GID:members
+
+name = group name
+GID = group ID 
+password = x is just placeholder, the group password is stored in /etc/gshadow
+- a * indicates that the group cannot be accessed using a group password
+
+
+Creating a group locally: 
+Policy
+  ↓
+Create group
+(sudo groupadd developers)
+  ↓
+Add users to group
+sudo usermod -aG developers alice
+sudo usermod -aG developers bob
+...
+  ↓
+Verify group
+(getent group developers)
+  ↓
+Verify account
+(id alice / getent passwd alice) - should see alice added to developers 
+
+output:
+Alice
+ │
+ ├── Primary group: alice
+ │
+ └── Supplementary groups:
+       ├── developers
+       ├── docker
+       └── sudo
+
+*Unlike creating a user, u don't normally set a password for a group
+
+
+
+---------------------------------
+Privileges
+---------------------------------
+Recap: # root user is most powerful
+
+RBAC is all about defining and assigning roles
+- User → Role → Permission
+
+***su vs sudo
+|  su                                     | sudo                                    |
+| --------------------------------------- | --------------------------------------- |
+| Switches identity                       | Runs a command with elevated privileges |
+| Usually requires target user's password | Usually requires your own password      |
+| Often gives a shell                     | Usually runs one command                |
+| Root password may need to be shared     | Root password doesn't need to be shared |
+| Less granular                           | More granular                           |
+| Weaker accountability                   | Better accountability                   |
+| Can create long-lived root sessions     | Encourages limited privilege            |
+
+su    → "Switch User"
+sudo  → "Temporarily get permission to do sth"
