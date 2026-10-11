@@ -1,0 +1,59 @@
+lab3:
+
+username: csci322
+password: p@ssw0rd1234
+
+the goal is to: 
+- config the server's time zone
+- capture network packets
+- use Wireshark to inspect network traffic
+
+hostname -I  # to find ip addr 
+
+Desktop VM IP: 10.0.2.15 
+Server VM IP: 10.0.2.3
+
+1. timeozne 
+
+Commands: 
+timedatectl status  # check time, imezone, etc
+
+
+2. Capture packets using tcpdump
+The server listens for ARP and ICMP packets while the desktop tries to contact it. 
+You then examine the captured packets to identify the desktop's MAC address.
+
+2 protocols:
+ARP: Finds the MAC address associated with a local IP address
+ICMP: Carries messages used by tools such as ping
+
+on serverVM:
+sudo tcpdump -c 4 -e "icmp or arp"  # starts listening for network packets and captures them
+
+on DesktopVM:
+ing -c 1 10.0.2.3  # sends 1 ping request to the server
+
+on ServerVM:
+Output:
+15:22:18.693867 08:00:27:75:46:55 (oui Unknown) > 08:00:27:81:45:60 (oui Unknown), ethertype IPv4 (0x0800), length 98: 10.0.2.15 › Ubuntuserwer: ICP echo reque...
+08:00:27:75:46:55 > 08:00:27:81:45:60 (10.0.2.15 › Ubuntuserwer)
+
+mac address for desktop is 08:00:27:75:46:55
+
+
+3. Capture traffic in Wireshark
+
+packet no. = 29 (echo ping req)
+
+source -> 08:00:27:a1:45:6d
+dest -> 08:00:27:75:46:55 
+
+51.495630640 | source = 10.0.2.3 | dest = 10.0.2.15 (server -> desktop)
+51.495681512 | source = 10.0.2.15 | dest = 10.0.2.3 (desktop -> server)
+
+(51.495681512 - 51.495630640) x 1000 = 0.050872ms = 50.872 microseconds 
+
+4. google ip address = 142.251.152.119
+
+5. apache
+version: Apache/2.0.40 (Red Hat Linux)

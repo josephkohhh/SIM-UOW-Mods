@@ -1,5 +1,8 @@
 Lab 2:
 
+username: csci322
+password: p@ssw0rd1234
+
 Linux Server
      │
      ├── Install software
