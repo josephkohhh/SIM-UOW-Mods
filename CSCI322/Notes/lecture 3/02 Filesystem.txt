@@ -1,0 +1,216 @@
+Filesystem and Permission
+
+                 LINUX FILESYSTEM
+                        │
+          ┌─────────────┴─────────────┐
+          │                           │
+      Organisation                 Access
+          │                           │
+     directories                  permissions
+     mount points                     │
+     files                            │
+     inodes                    ┌──────┼──────┐
+     data blocks               │      │      │
+     links                     r      w      x
+                              read   write execute
+                                     │
+                              ┌──────┴──────┐
+                              │             │
+                             ACL      special permissions
+                                      SUID / SGID / Sticky
+
+Summary:
+1. / is the root of the filesystem tree
+2. Absolute vs relative paths
+3. What mounting means
+4. The first character of ls -l
+5. Superblock → inode → data blocks
+6. Hard link shares an inode; symbolic link has its own inode and points to a pathname
+7. r=4, w=2, x=1 and how chmod 644/755 works
+8. Directory r/w/x have different meanings from file r/w/x
+9. umask removes permissions from defaults
+10. SUID, SGID and sticky bit
+
+
+---------------------------------
+The Filesystem
+---------------------------------
+A filesystem is the system Linux uses to organise and store files on storage devices
+
+                    /
+                  root
+              /    |    \
+            home  etc    usr
+             |          /   \
+           joseph      bin   lib
+             |
+           file.txt
+
+
+Absolute vs relative paths
+
+Ex.
+/
+├── usr
+│   ├── bin
+│   │   └── ls
+│   └── local
+│       └── bin
+
+Absolute path:
+/usr/bin/ls - always start at the root /
+
+Relative path:
+../bin/ls - start from current directory 
+
+A relative path is useful as user dont have to type the whole path while
+accessing a file or dir, can just specify the path from current dir 
+
+
+Important Linux directories
+/ = Root of the entire filesystem
+/bin = Essential user commands
+/sbin = Essential system/admin commands
+/etc = System configuration files
+/home = Normal users' home directories
+/root = Root user's home directory
+/dev = Device files
+/lib = Essential libraries
+/tmp = Temporary files
+/mnt = Common mount point
+
+Ex.
+/home/joseph = a user's home dir
+
+
+Mounting
+In Linux, mounting allows you to attach a filesystem to a specific location 
+in the directory tree so that you can access its files
+
+Ex.
+Partition = dev/sda4 (containing file/dir, such as alice/ bob/ john/)
+Directory = /users (empty directory)
+
+run: sudo mount /dev/sda4 /users
+
+now files stored on /dev/sda4 accessible through the directory /users
+/
+└── users/ (mounting point)
+    ├── alice/
+    ├── bob/
+    └── john/
+
+ls /users  # output: alice  bob  john
+
+/users is the mounting point as it is the dir where linux attaches the filesystem
+
+***Mounting does not move the files into /users. Instead, Linux makes the 
+files on the partition accessible through that directory
+
+umount /users  # disconnects a mounted filesystem from its mount point
+
+***If a process is currently using files on that filesystem, unmounting will fail. 
+   Kill the process 1st. Can investigate by inputting lsof or fuser
+
+
+File types
+The first character tells you the type
+
+Ex. 
+ls -l
+
+Output:
+-rw-r--r--  file.txt
+drwxr-xr-x  documents
+lrwxrwxrwx  shortcut
+
+
+| Symbol | Meaning         |
+| `-`    | Regular file    |
+| `d`    | Directory       |
+| `c`    | Character device|
+| `b`    | Block device    |
+| `s`    | Socket          |
+| `p`    | Named pipe      |
+| `l`    | Symbolic link   |
+
+
+Filesystem internals
+How the filesystem stores info internally
+
+Filesystem
+│
+├── Superblock
+├── Inode table
+└── Data blocks
+
+Superblock
+It contains general info about the filesystem
+- filesystem size
+- filesystem-level metadata
+
+Inode 
+It represents a file or directory. It stores metadata but not the filename itself.
+- permissions
+- owner
+- group
+- size
+- timestamps
+- locations of data blocks
+
+Data blocks
+It contain the actual file contents
+
+file.txt / filename 
+   ↓
+inode #1234
+   ↓
+data blocks
+   ↓
+"Hello World"
+
+
+Hard links vs symbolic links
+
+Hard link
+Its another filename that points to the same inode as the original file. 
+Both filenames access the same file data
+
+Ex.
+ln file1 file2
+
+file1 ──┐
+        ├──> inode 1234 ──> data (Both filenames point to the same inode)
+file2 ──┘
+
+- file1 and file2 share the same inode and data
+- Editing the file through either name affects the same underlying data
+- Deleting file1 does not delete the data because file2 still refers to the same inode
+- The data is removed only when no hard links remain and no process is still holding the file open
+
+rm file1  # the inode/data still exists because file2 still points to it
+
+
+Symbolic link
+It is a separate file with its own inode that stores the pathname of the target
+
+Ex. ln -s file1 file2
+
+file1 ──> inode 1234 ──> data
+file2 ──> inode 4567 ──> "file1" (pathname)
+
+- file1 and file2 have different inodes
+- file2 points to the target by its pathname
+- If you edit the target through file2, you modify the target's data
+- If you delete file1, file2 becomes a broken (dangling) symbolic link because 
+  its target no longer exists meaning cant point to file1 anymore but file2 still exists
+
+rm file1  # file2 becomes a broken (dangling) symbolic link
+
+
+ls -i  # to check inode numbers: This displays inode numbers for files and links
+
+Hard link: 2 names, 1 inode
+Symbolic link: A separate link that remembers the target's path
+
+

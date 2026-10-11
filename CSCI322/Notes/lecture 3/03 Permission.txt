@@ -1,0 +1,181 @@
+Filesystem and Permission
+
+                 LINUX FILESYSTEM
+                        │
+          ┌─────────────┴─────────────┐
+          │                           │
+      Organisation                 Access
+          │                           │
+     directories                  permissions
+     mount points                     │
+     files                            │
+     inodes                    ┌──────┼──────┐
+     data blocks               │      │      │
+     links                     r      w      x
+                              read   write execute
+                                     │
+                              ┌──────┴──────┐
+                              │             │
+                             ACL      special permissions
+                                      SUID / SGID / Sticky
+
+Summary:
+1. / is the root of the filesystem tree
+2. Absolute vs relative paths
+3. What mounting means
+4. The first character of ls -l
+5. Superblock → inode → data blocks
+6. Hard link shares an inode; symbolic link has its own inode and points to a pathname
+7. r=4, w=2, x=1 and how chmod 644/755 works
+8. Directory r/w/x have different meanings from file r/w/x
+9. umask removes permissions from defaults
+10. SUID, SGID and sticky bit
+
+
+
+Permissions
+Who can access these files, and what can they do?
+
+User     Group        Others
+ ↓         ↓            ↓
+owner   group members everyone else
+
+3 basic permissions:
+r = read
+w = write
+x = execute
+
+Ex. 
+ls -l file.txt # -rwxr-xr--
+
+-     = regular file
+rwx   = owner can read/write/execute
+r-x   = group can read/execute
+r--   = others can only read
+
+
+Numeric permissions:
+r = 4
+w = 2
+x = 1
+
+Read + write = 4 + 2 = 6
+Read + execute = 4 + 1 = 5
+Read + write + execute = 4 + 2 + 1 = 7
+
+Ex. 
+chmod 644 file.txt   # 6 (rw-) = user , 4 (r--) = group, 4 (r--) = others  
+chmod u+w file.txt   # add write permission to user/owner 
+chmod g=r file.txt   # set group permission to read 
+chmod o-x file.txt   # remove execute permission from others 
+
+
+Directory permissions
+For directory,  
+r = list (Can I see what's there?)
+w = modify directory entries (Can I change what's there?)
+x = enter/access (Can I enter/access it?)
+
+
+Unmask
+Umasking removes permissions; it doesn't add them
+
+Ex. 
+- Suppose Linux creates a new file
+- The maximum starting permissions are usually: 666 = rw-rw-rw- (everyone can read/write)
+- But you might not want everyone to be able to modify your files
+- umask to remove certain permissions automatically
+
+umask 022  
+- Remove nothing from the owner's permissions
+- Remove write permission from the group
+- Remove write permission from others
+
+For a file:
+Starting permissions:  666 = rw-rw-rw-
+umask:                 022
+Result:                644 = rw-r--r--
+
+For a directory:
+Starting permissions:  777 = rwxrwxrwx
+umask:                 022
+Result:                755 = rwxr-xr-x (can read files and access dir, but cannot write them)
+
+
+ACLs 
+Normal Linux permissions give you: owner, group, others 
+
+Ex.
+But sometimes you want sth more specific like: 
+- Give Lisa read access, even though Lisa isn't the owner or part of the normal group
+- Use an Access Control List (ACL)
+
+setfacl -m u:lisa:r file  # giver user lisa perm to read file 
+getfacl file              # displays the ACL perm of a file
+setfacl -x u:lisa file    # Remove Lisa's specific ACL entry
+
+
+Special permissions
+3 types of special permission
+- SUID
+- SGID
+- Sticky bit
+
+SUID (set userID)
+The program runs with the file owner's privileges
+rwx = Read, write, execute (default perm)
+rws = Read, write, execute, with SUID enabled (can perform specific privleged tasks on behalf of
+                                               the user)
+
+Ex.
+- root user can change pass
+- alice user cannot change own pass 
+- The SUID-enabled program runs with root's effective user ID, 
+- allowing Alice to change her own pass
+
+-rwxr-xr--  →  -rwsr-xr-x
+
+
+SGID (set groupID)
+The program runs with the file group's privileges instead of file owner's privileges
+
+Ex 1. (SGID on executable files)
+- The root user owns the program's group, for ex, staff
+- Alice does not belong to the staff group
+- The SGID-enabled program runs with the effective group ID of the file's group
+- allowing Alice to access resources from group staff 
+
+Ex 2. (SGID on directories)
+- The /shared directory belongs to the developers group and has SGID enabled
+- Alice and Bob have permission to access /shared
+- Alice creates a file inside /shared
+- The new file inherits the developers group, rather than Alice's usual group
+- This makes it easier for Alice and Bob to share files within the same group
+
+-rwxr-xr--  →  -rwxr-sr-x
+
+
+Sticky bit
+Its commonly used on shared directories such as /tmp.
+Restricts who can delete or rename files in shared directories.
+
+Ex.
+- Everyone needs permission to create files in /tmp
+- Without the sticky bit, users with w and x perm on the dir could 
+  generally delete or rename other users' files
+- With the sticky bit enabled, users can generally delete or rename only files they own,
+  files owned by the directory owner, or files they have sufficient privileges to manage
+
+drwxrwxrwx  →  drwxrwxrwt
+
+Summary:
+| Permission | Enable           | Disable          |  Numeric example  |
+| SUID       | `chmod u+s file` | `chmod u-s file` | `chmod 4755 file` |
+| SGID       | `chmod g+s file` | `chmod g-s file` | `chmod 2755 file` |
+| Sticky bit | `chmod +t dir`   | `chmod -t dir`   | `chmod 1777 dir`  |
+
+
+***
+SUID = User 
+SGID = Group
+Sticky bit = Protect shared files
