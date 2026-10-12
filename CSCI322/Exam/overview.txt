@@ -8,6 +8,7 @@ Format:
 
 Example Qn:
 
+Part B:
 Write a shell command to display all files in /etc
 
 What is the difference between the absolute path and
@@ -16,3 +17,23 @@ absolute path with a relative path?
 
 Compare and contrast LVM with disk partitioning.
 Outline the strengths and advantages of using LVM
+
+Part C:
+Design a script that checks disk usage daily and records a warning whenever usage 
+exceeds 80%. Explain how to automate its execution.
+
+A company needs a Linux server with 500 GB of storage. 
+The system must support future storage expansion without major downtime. 
+Design a suitable storage layout and explain why you chose it.
+
+A university Linux server is shared by students, lecturers and administrators. 
+Design a user and group permission scheme so users can access their own files 
+but cannot modify other users' private files
+
+Design a backup plan for a company server containing important user files and 
+application data. Explain how the system can recover after disk failure or 
+accidental deletion.
+
+A department needs a Linux server that users can access by hostname rather than IP address.
+Plan the required network configuration and explain how you would troubleshoot 
+connection failures.
