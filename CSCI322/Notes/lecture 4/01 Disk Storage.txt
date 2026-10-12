@@ -1,0 +1,256 @@
+Disk Storage
+
+     STORAGE & PROCESSES             
+      ┌──────┴──────────┐
+      │                 │
+    STORAGE         PROCESSES
+      │                 │
+  Store data       Run programs
+      │                  │
+  ┌───┼───┐      ┌───────┼─────────┐
+  │   │   │      │        │        │
+Disk RAID LVM   Manage Signals Schedule
+  │   │   │      │        │        │
+  └───┴───┘     ps/top   kill    cron/at
+      │
+  Filesystems
+      │
+  Mounting
+
+
+Disk Basics
+
+Surface analysis
+- Checks the disk for defects. It can be destructive or non-destructive
+
+Partitioning
+- Divides 1 physical disk into logical sections called partitions
+
+Bad sectors
+- Damaged areas of a disk
+- Some are detected at the factory and replaced with reserved sectors
+
+Filesystem creation
+- newfs: Creates a filesystem on a partition so files can be stored
+
+Donts:
+- Do not reformat new drives unnecessarily
+- Changing partitions can destroy data
+- Never alter a partition that is currently in use
+
+
+Storage Software Stack
+
+             STORAGE SOFTWARE STACK
+                       │
+                 Storage Devices
+              HDD / SSD / Flash Drive
+                       │
+                Device Drivers
+                       │
+                  Partitions
+                       │
+                     RAID
+          Combines multiple devices
+             into 1 virtual device
+                       │
+                      LVM
+          ┌────────────┴────────────┐
+          │                         │
+    Physical Volumes (PV)     Physical Volumes (PV)
+          └────────────┬────────────┘
+                       │
+                Volume Group (VG)
+                 Storage Pool
+                       │
+              ┌────────┴────────┐
+              │                 │
+       Logical Volume 1   Logical Volume 2
+             (LV)              (LV)
+              │                 │
+         Filesystem          Swap Space
+              │
+          Mounting
+              │
+       Files & Directories
+
+Device Drivers  = Communicate with hardware
+Partitions      = Divide a storage device
+RAID            = Combine devices for speed/redundancy
+PV              = Storage made available to LVM 
+VG              = Pool of storage
+LV              = Allocated storage from the pool (VG)
+Filesystem      = Organizes files and directories
+Mounting        = Makes a filesystem accessible
+
+Ex.
+A 750 GB disk + a 250 GB disk = a 1 TB volume group.
+The volume group can be divided into two 500 GB logical volumes
+
+***a physical volume can be a whole disk OR a partition
+
+
+Device Naming in Linux
+
+/dev/sda      # 1st registered disk
+└──/dev/sda1  # 1st partition on that disk
+
+/dev/sdb      # 2nd registered disk 
+
+***device names can change hence UUIDs are preferred
+
+/dev/disk/    # contains stable device-name links: c2t1d0s1
+
+c — Controller
+t — SCSI target
+d — Logical unit number (LUN)
+s — Partition or slice
+
+fdisk -l     # Lists disks and partitions
+parted -l    # Lists disk sizes, partition tables, models and manufacturers
+
+
+Why Partition a Disk?
+- Seperate the OS from user data
+- Allow OS updates without affecting user data partitions 
+- Prevent user data, logs or temp files from filling root filesystem 
+
+
+Adding a Disk
+1. Attach the disk and reboot
+2. Identify the disk 
+    sudo fdisk -l
+3. Create partitions 
+    fdisk or parted
+4. Create a filesystem
+    sudo mkfs -t ext4 /dev/sdb1
+5. Create a mount point and mount the filesystem
+    sudo mkdir /disk1
+    sudo mount /dev/sdb1 /disk1
+6. Add an entry to /etc/fstab for automatic mounting at startup
+
+
+RAID (Redundant Array of Independent Disks)
+It combines multiple disks into 1 virtual device to improve performance and reliability
+- reduces downtime caused by certain disk failures
+
+RAID Techniques:
+Striping - Distributes data across disks so they can work in parallel
+Mirroring - Copies identical data to multiple disks for redundancy
+Parity - Stores calculated info that can help reconstruct lost data. XOR is commonly used
+
+RAID Levels
+| RAID          | Description                            | Key Points                                       |
+| ------------- | -------------------------------------- | ------------------------------------------------ |
+| RAID 0        | Striping                               | High performance; no fault tolerance             |
+| RAID 1        | Mirroring                              | At least two disks; faster reads may be possible |
+| RAID 4        | Block striping with dedicated parity   | Dedicated parity disk can become a bottleneck    |
+| RAID 5        | Block striping with distributed parity | Survives 1 disk failure                        |
+| RAID 6        | Double parity                          | Survives 2 disk failures   
+
+RAID 4 vs RAID 5
+- RAID 4 uses a dedicated parity disk
+- RAID 5 distributes parity across all disks, balancing the I/O workload
+
+
+Logical Volume Management (LVM)
+LVM provides more flexible storage management than ordinary partitions
+
+                      LVM
+          ┌────────────┴────────────┐
+          │                         │
+    Physical Volumes (PV)     Physical Volumes (PV)
+          └────────────┬────────────┘
+                       │
+                Volume Group (VG)
+                 Storage Pool
+                       │
+              ┌────────┴────────┐
+              │                 │
+       Logical Volume 1   Logical Volume 2
+             (LV)              (LV)
+              │                 │
+         Filesystem          Swap Space
+              │
+          Mounting
+              │
+       Files & Directories
+
+Ex. 
+PV1 = 100GB, PV2 = 200GB 
+VG = 300GB (combined storage pool)
+LV1 = 100GB, LV2 = 150GB, 50GB unallocated for future use 
+
+
+Important LVM Commands:
+| Object          | Create     | Inspect     | Modify / Other                           |
+| --------------- | ---------- | ----------- | ---------------------------------------- |
+| Physical volume | `pvcreate` | `pvdisplay` | `pvchange`, `pvck`                       |
+| Volume group    | `vgcreate` | `vgdisplay` | `vgchange`, `vgextend`, `vgck`, `vgscan` |
+| Logical volume  | `lvcreate` | `lvdisplay` | `lvchange`, `lvresize`                   |
+
+
+pvcreate /dev/sdb                      # Create a physical volume
+
+vgcreate vg_data /dev/sdb              # Create a volume group
+
+lvcreate -L 10G -n lv_files vg_data    # Create a 10 GB logical volume
+
+vgextend vg_data /dev/sdc              # Add another PV to an existing VG
+
+lvresize -L +5G /dev/vg_data/lv_files  # Resize a logical volume
+
+
+Partition = Fixed-size section of a disk
+Logical volume = More flexible allocation from a volume group
+
+
+
+ZFS (Zettabyte File System)
+It is a system that manages disks, stores files, and protects data from corruption.
+Instead of managing disks and filesystems separately, ZFS combines them into one system.
+
+ZFS Features:
+- checksums (detects data corruption in ZFS)
+- self healing (repair corrupted data when redundancy provides a valid copy)
+- snapshots (captures a read-only point-in-time view of a dataset)
+- clones (creates a writable dataset based on a snapshot)
+- copy-on-write (CoW) (Writes changed data to new blocks before updating metadata)
+- RAID-Z and RAID-Z2 (provides data redundancy using parity)
+
+
+ZFS Commands:
+sudo zpool create demo /dev/sdb /dev/sdc
+sudo zpool create demo mirror /dev/sdb /dev/sdc
+sudo zpool create demo raidz /dev/sdb /dev/sdc /dev/sdd
+
+1st command — Striped pool
+2nd command — Mirrored pool
+3rd command — RAID-Z pool
+
+Inspect and destroy pools:
+sudo zpool status
+sudo zpool list demo
+sudo zpool destroy demo
+
+Create and list filesystems:
+sudo zfs create demo/fs1
+sudo zfs list demo
+
+Set quota, reservation and mount point:
+sudo zfs set quota=500m demo/fs1
+sudo zfs set reservation=200m demo/fs1
+sudo zfs set mountpoint=/test demo/fs1
+
+Snapshots and rollback:
+sudo zfs snapshot demo/fs1@version1 
+sudo zfs list -t snapshot
+sudo zfs rollback demo/fs1@version1
+
+Create a clone:
+sudo zfs clone demo/fs1@version1 demo/subclone
+
+
+RAID-Z
+- RAID-Z — Can tolerate one disk failure
+- RAID-Z2 — Double parity; can tolerate two disk failures

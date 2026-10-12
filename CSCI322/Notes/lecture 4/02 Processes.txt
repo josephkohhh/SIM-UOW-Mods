@@ -1,0 +1,101 @@
+Processes 
+
+     STORAGE & PROCESSES             
+      ┌──────┴──────────┐
+      │                 │
+    STORAGE         PROCESSES
+      │                 │
+  Store data       Run programs
+      │                  │
+  ┌───┼───┐      ┌───────┼─────────┐
+  │   │   │      │        │        │
+Disk RAID LVM   Manage Signals Schedule
+  │   │   │      │        │        │
+  └───┴───┘     ps/top   kill    cron/at
+      │
+  Filesystems
+      │
+  Mounting
+
+
+Process Basics
+
+Program - An executable file on disk
+Process - A program running in memory and using the CPU
+User process - A process started by a user, such as ls, grep or find
+Daemon - A background service without a terminal
+PID - Unique process ID
+PPID - Parent process ID
+
+Processes can create child processes
+
+Viewing Processes:
+ps               # show processes associated with the current terminal
+ps -ef           # Show processes in full-format listing
+ps aux           # Show a detailed process listing
+top              # Display live process and resource (cpu, memory) usage info
+
+
+Process state: 
+R	Running or runnable
+S	Interruptible sleep; waiting for an event
+D	Uninterruptible sleep, often waiting for I/O
+T	Stopped or suspended
+Z	Zombie; process has exited but its parent has not yet collected its exit status
+
+
+Killing Processes: 
+kill -l            # Lists available signals
+kill PID           # Kill a process ID
+kill -9 PID        # Forces termination and cannot be caught (SIGKILL)
+kill -15 PID       # Requests termination; normally the preferred first attempt (SIGTERM)
+
+Foreground and Background Processes
+Foreground processes normally keep the shell waiting until completion
+
+&        # runs a command in the background
+fg       # brings a job to the foreground
+Ctrl+Z   # suspends a foreground job
+bg       # resumes a suspended job in the background 
+
+
+Process Priorities:
+PRI - Process priority value. Lower PRI means higher priority in the notes
+NI  - (nice value): Influences priority indirectly
+nice - Sets NI for a new process (start)
+renice - Changes NI for an existing process (modify)
+
+Ex.
+nice -n 10 myscript   # Start a new process with nice value 10
+renice 10 -p 1234     # Change existing PID 1234 to nice value 10
+
+
+
+Scheduling: cron, crontab and at
+
+cron/crontab:    Manages recurring scheduled tasks
+at:              Schedules a one-time task for later execution
+
+
+cron format
+┌──── minute (0-59)
+│ ┌── hour (0-23)
+│ │ ┌ day of month (1-31)
+│ │ │ ┌ month (1-12)
+│ │ │ │ ┌ day of week (0-7)
+│ │ │ │ │
+* * * * *
+
+Ex.
+20 17 * * 1-5 /myscript             # Runs /myscript at 5:20 PM, Monday to Friday
+*/10 * * * * /home/user/backup.sh   # Run the backup script every 10 minutes
+
+
+Commands:
+crontab -e   # Edits the current user's scheduled tasks
+crontab -l   # Lists the current user's scheduled tasks
+crontab -r   # Removes the current user's crontab
+
+at 15:00     # Schedule a command
+atq          # Check pending jobs
+atrm 2       # Remove job number 2
