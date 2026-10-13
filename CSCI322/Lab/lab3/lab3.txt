@@ -16,7 +16,7 @@ Server VM IP: 10.0.2.3
 1. timeozne 
 
 Commands: 
-timedatectl status  # check time, imezone, etc
+timedatectl status  # check time, timezone, etc
 
 
 2. Capture packets using tcpdump

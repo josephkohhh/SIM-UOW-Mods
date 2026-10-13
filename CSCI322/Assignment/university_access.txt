@@ -1,0 +1,17 @@
+lab01.uow.edu.au - - [10/Sep/2026:08:15:10 +1000] "GET /index.html HTTP/1.1" 200 1520
+student01.sim.edu.sg - - [10/Sep/2026:08:20:15 +1000] "GET /courses/CSCI322 HTTP/1.1" 200 2450
+student02.sim.edu.sg - - [10/Sep/2026:08:21:30 +1000] "GET /courses/CSIT321 HTTP/1.1" 200 2510
+host1.nus.edu.sg - - [10/Sep/2026:09:00:10 +1000] "DELETE /temp/file1 HTTP/1.1" 200 0
+host2.nus.edu.sg - - [10/Sep/2026:09:05:45 +1000] "GET /downloads/course-guide.pdf HTTP/1.1" 200 50420
+staff01.uow.edu.au - - [10/Sep/2026:09:10:42 +1000] "GET /courses/CSCI235 HTTP/1.1" 200 1880
+host3.sim.edu.sg - - [10/Sep/2026:10:11:22 +1000] "DELETE /archive/old.zip HTTP/1.1" 200 0
+lab02.uow.edu.au - - [10/Sep/2026:10:30:59 +1000] "GET /courses/ITCS102 HTTP/1.1" 200 1712
+student03.sim.edu.sg - - [10/Sep/2026:11:12:03 +1000] "POST /login HTTP/1.1" 302 0
+research.uow.edu.au - - [10/Sep/2026:11:15:49 +1000] "GET /downloads/course-guide.pdf HTTP/1.1" 200 50420
+host4.sim.edu.sg - - [10/Sep/2026:12:16:34 +1000] "GET /courses/CSCI322 HTTP/1.1" 200 2450
+host5.sim.edu.sg - - [10/Sep/2026:12:55:18 +1000] "DELETE /tmp/test HTTP/1.1" 200 0
+host6.sim.edu.sg - - [10/Sep/2026:13:35:44 +1000] "GET /courses/INFO111 HTTP/1.1" 200 1960
+host7.sim.edu.sg - - [10/Sep/2026:14:18:03 +1000] "GET /downloads/software.iso HTTP/1.1" 200 950000
+host8.sim.edu.sg - - [10/Sep/2026:15:00:01 +1000] "GET /courses/MATH121 HTTP/1.1" 200 1120
+host9.sim.edu.sg - - [10/Sep/2026:15:45:55 +1000] "DELETE /cache/item HTTP/1.1" 200 0
+client1.uow.edu.au - - [10/Sep/2026:16:22:13 +1000] "GET /downloads/course-guide.pdf HTTP/1.1" 200 50420

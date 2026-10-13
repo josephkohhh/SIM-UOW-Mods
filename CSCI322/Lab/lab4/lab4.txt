@@ -1,0 +1,81 @@
+lab 4:
+
+username: csci322
+password: p@ssw0rd1234
+
+dig <<domain name>> = ask a dns server for info of a domain name
+dns server = a svc that looks up domain names
+forward lookup = finds the IP address associated with a hostname (name → IP address)
+reverse lookup = finds the hostname associated with an IP address (IP address → name)
+
+Goal:
+- setting up your own DNS server using BIND9 on Ubuntu Server
+- testing whether your Ubuntu Desktop can use hostnames instead of IP addresses
+
+       DNS SERVER SETUP AND HOSTNAME TESTING
+       =====================================
+
+       +-------------------------+
+       |    Ubuntu Desktop       |
+       |       (Client)          |
+       +-------------------------+
+                  |
+                  |  DNS Request
+                  |  "Find server hostname"
+                  v
+       +-------------------------+
+       |    Ubuntu Server        |
+       |       (BIND9)           |
+       |     DNS Server          |
+       +-------------------------+
+                  |
+                  |  Looks up hostname
+                  v
+       +-------------------------+
+       |    DNS Records          |
+       |  Hostname -> IP Address |
+       +-------------------------+
+                  |
+                  |  Returns IP Address
+                  v
+       +-------------------------+
+       |    Ubuntu Desktop       |
+       |  Tests using hostname   |
+       +-------------------------+
+
+       RESULT:
+       Ubuntu Desktop can access
+       servers using hostnames
+       instead of IP addresses
+
+Progress:
+1. Install BIND9
+   Install DNS server and lookup tools on Ubuntu Server
+
+2. Configure caching DNS
+   Set up forwarders and test whether repeated queries become faster
+
+3. Configure static IP addresses
+   Server: 10.0.2.100; Desktop: 10.0.2.200
+
+4. Configure forward and reverse zones
+   Create the csci322.test domain and its DNS records
+
+5. Validate and restart BIND9
+   Check configuration syntax and zone files
+
+6. Test DNS lookups
+   Test hostname-to-IP and IP-to-hostname resolution
+   - demo forward lookups, on server: dig desktop.csci322.test
+   - demo reverse lookups, on server: dig -x 10.0.2.200 @10.0.2.100
+
+
+7. Access DokuWiki by hostname
+   Open www.csci322.test/dokuwiki in the Desktop browser
+   - on server type dig @10.0.2.100 www.csci322.test
+   - look at ANSWER section
+
+8. Document your work
+   Record commands, configurations, screenshots and results in your CSCI322 wiki
+
+
