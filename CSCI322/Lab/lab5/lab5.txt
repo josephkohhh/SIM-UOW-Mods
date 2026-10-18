@@ -1,0 +1,177 @@
+Lab5:
+
+Goal: explore the RAID array and create network shares using NFS.
+
+
+                 NatNetwork
+                      │
+          ┌───────────┴───────────┐
+          │                       │
+          ▼                       ▼
+       Server                  Desktop
+       Ubuntu                  Ubuntu
+          │                       ▲
+          │                       │
+          ▼                       │
+    ┌───────────────┐             │
+    │  myDisk1      │             │
+    │  myDisk2      │             │
+    │  myDisk3      │             │
+    │  (3 × 1 GB)   │             │
+    └───────┬───────┘             │
+            │                     │
+            ▼                     │
+      ┌─────────────┐             │
+      │   mdadm     │             │
+      │   RAID 5    │             │
+      │  /dev/md0   │             │
+      │ ~ 2 GB      │             │
+      └──────┬──────┘             │
+             │                    │
+             ▼                    │
+      ┌─────────────┐             │
+      │   Mounted   │             │
+      │  /mnt/md0   │             │
+      │   (Server)  │             │
+      └──────┬──────┘             │
+             │                    │
+             ▼                    │
+      ┌─────────────┐             │
+      │     NFS     │─────────────┘
+      │   Export    │
+      └─────────────┘
+                                  │
+                                  ▼
+                            ┌─────────────┐
+                            │ NFS Client  │
+                            │ /share/md0  │
+                            │  (Desktop)  │
+                            └─────────────┘
+
+After creating and verifying the 3 disks, install the RAID ARRAY:
+sudo mdadm --create --verbose /dev/md0 --level=5 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
+
+
+After creating RAID level 5 array, verify:
+cat /proc/mdstat                    # Displays current status of RAID arrays
+sudo mdadm --detail /dev/md0        # Displays detailed info about RAID array /dev/md0
+
+
+output:
+| Item            | Result                                |
+| --------------- | ------------------------------------- |
+| RAID Device     | `/dev/md0`                            |
+| RAID Level      | RAID 5                                |
+| Disks           | `/dev/sdb`, `/dev/sdc`, `/dev/sdd`    |
+| RAID Status     | Clean                                 |
+| Active Devices  | 3 of 3                                |
+| Failed Devices  | 0                                     |
+| Usable Capacity | Approximately 2 GB                    |
+| Array State     | `[UUU]` — All three disks operational |
+
+/dev/md0 is the RAID 5 array created using those 3 disks
+
+
+Now, format and mount the array:
+
+sudo mkfs.ext4 /dev/md0         # Format the RAID array with ext4 
+sudo mkdir -p /mnt/md0          # Create the mount directory
+sudo mount /dev/md0 /mnt/md0    # Mount the RAID array (mount on /mnt/md0)
+                                  /dev/md0 = your RAID 5 block device (the storage)
+                                  /mnt/md0 = the dir where you access that storage
+
+to verify mounted:
+df -h /mnt/md0
+
+
+Now it looks like this:
+
+               Ubuntu Server
+                     │
+                     │
+       ┌─────────────┼─────────────┐
+       │             │             │
+       ▼             ▼             ▼
+  ┌─────────┐   ┌─────────┐   ┌─────────┐
+  │ myDisk1 │   │ myDisk2 │   │ myDisk3 │
+  │ /dev/sdb│   │ /dev/sdc│   │ /dev/sdd│
+  │  1 GB   │   │  1 GB   │   │  1 GB   │
+  └────┬────┘   └────┬────┘   └────┬────┘
+       │             │             │
+       └─────────────┼─────────────┘
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │        mdadm        │
+          │   Software RAID 5   │
+          │                     │
+          │   /dev/md0          │
+          │   ~ 2 GB usable     │
+          └──────────┬──────────┘
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │     Filesystem      │
+          │       ext4          │
+          └──────────┬──────────┘
+                     │
+                     ▼
+              Mount Point
+               /mnt/md0
+
+Follow the lab5 to create a readme txt file in /mnt/md0
+
+
+Now, save the RAID configuration:
+sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
+sudo update-initramfs -u
+
+This records the array config so the system can reassemble it during startup
+
+Now, configure automatic mounting:
+echo '/dev/md0 /mnt/md0 ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab
+
+This tells Linux to mount the RAID filesystem at /mnt/md0 during boot
+
+Now, we will setup and config the Network File System (NFS) server 
+- a NFS server allows file sharing between server and desktop VM
+
+And, it looks like this:
+
+        UBUNTU SERVER                    UBUNTU DESKTOP
+       (NFS Server)                     (NFS Client)
+
+        /mnt/md0/                         /share/md0/
+     (Actual RAID 5)                   (Mount point)
+             │                                ▲
+             │                                │
+             └────────── NFS ─────────────────┘
+                   Network connection
+
+- The Desktop mounts the Server's /mnt/md0 onto its own /share/md0 directory
+- Desktop VM: cat /share/md0/fromdesktop.txt 
+- Server: cat /mnt/md0/fromdesktop.txt
+- NFS allows both VMs to access the same filesystem
+
+
+Simulate a disk failure and replace the disk
+
+we stimulate disk failure by detaching disk2 from controller
+
+
+
+
+
+
+---------------------------------
+
+Qn1: Display ur RAID config:
+cat /etc/mdadm/mdadm.conf 
+
+Qn2: Displays the server's automatic filesystem mount config:
+cat /etc/fstab 
+
+Qn3: Show files in /share/md0
+ls -l /share/md0     
+
+Qn4: Show disk4 is attached to the controller in VirtualBox 

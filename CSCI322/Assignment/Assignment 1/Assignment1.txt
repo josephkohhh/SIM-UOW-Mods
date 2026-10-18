@@ -1,0 +1,87 @@
+Assignment 1 
+
+setupAccounts.sh
+
+
+#!/bin/bash
+
+# Create groups if they do not already exist
+if ! getent group students > /dev/null; then
+    if groupadd students; then
+        logger "Created group: students"
+    else
+        echo "Failed to create group: students"
+        exit 1
+    fi
+fi
+
+if ! getent group tutors > /dev/null; then
+    if groupadd tutors; then
+        logger "Created group: tutors"
+    else
+        echo "Failed to create group: tutors"
+        exit 1
+    fi
+fi
+
+# Read Accounts.txt line by line
+while IFS=, read -r username account_type || [[ -n "$username" ]]; do
+
+    # Skip empty lines
+    [[ -z "$username" ]] && continue
+
+    # Select the correct group
+    case "$account_type" in
+        student)
+            group="students"
+            ;;
+        tutor)
+            group="tutors"
+            ;;
+        *)
+            echo "Invalid account type for $username"
+            continue
+            ;;
+    esac
+
+    # Create the user if they do not already exist
+    if ! id "$username" > /dev/null 2>&1; then
+
+        if useradd -m -s /bin/bash -g "$group" "$username"; then
+            logger "Created user: $username in group $group"
+
+            # Set the initial password
+            if echo "$username:Welcome123" | chpasswd; then
+                echo "Created user: $username ($group)"
+            else
+                logger "Failed to set password for user: $username"
+                echo "User created, but password setting failed: $username"
+            fi
+
+        else
+            echo "Failed to create user: $username"
+        fi
+
+    else
+        echo "User already exists: $username"
+    fi
+
+done < Accounts.txt
+
+
+reportTutors.sh
+
+#!/bin/bash
+
+# Create /tmp/tutors.txt containing tutor usernames
+while IFS=, read -r username account_type || [[ -n "$username" ]]; do
+    if [[ "$account_type" == "tutor" ]]; then
+        echo "$username"
+    fi 
+done < Accounts.txt > /tmp/tutors.txt
+
+
+
+crontab 
+
+0 7,19 * * 1-5 /bin/bash /home/csci322/reportTutors.sh

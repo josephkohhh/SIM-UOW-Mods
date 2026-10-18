@@ -1,12 +1,16 @@
 - 7 lab exercises worth 20% overall 
 - assignment 1, 2 & 3 worth 30% overall 
 
-Ubuntu Server (ip = 10.0.2.3/24)
-Ubuntu Desktop
-
 username: csci322
 password: p@ssw0rd1234
 
+ssh from macos terminal to ubuntu server 
+ssh -p 2222 csci322@127.0.0.1
+exit 
+
+
+ NAT network (Network Address Translation) = it allows multiple devices to 
+ share one public IP address to access the internet
 
 Lab 1: 
 Ubuntu Server = No GUI only CLI

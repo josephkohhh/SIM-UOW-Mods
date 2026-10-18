@@ -26,10 +26,19 @@ Linux Server
             └── cron
 
 
-type: man man 
-search: /library calls and press enter  
-section 3 shows library calls 
+Qn2:
+Command: 
+man man        # will be able to see sect 3 
+man 3 printf
 
+Qn: What kind of documentation does Section 3 of Linux man pages typically contain? 
+Ans: section 3 shows library calls (functions from prog libraries)
+
+man 3 printf  # Prints formatted output
+man 3 strlen  # Gets the length of a string
+man 3 malloc  # Allocates memory
+man 3 fopen   # Opens a file
+ 
 
 cron format
 ┌──── minute (0-59)
@@ -50,3 +59,27 @@ u want 9.00am every monday
 │   │   └────────── Every day
 │   └────────────── 9 AM
 └────────────────── 00 minutes
+
+
+Qn3:
+command: 
+crontab -l    # list current crontab entries 
+
+output: 
+ 0 9 * * 1 grep shark /etc/group 2>&1 > /tmp/sharks
+- 0 9 * * 1              # scheduling 9.00am every monday
+- grep shark /etc/group  # searches /etc/group for lines containing shark.
+- 2>&1                   # redirects standard error (file descriptor 2) to wherever standard output 
+                           (file descriptor 1) currently points which is terminal screen.
+- > /tmp/sharks          # redirects standard output (file 1) to /tmp/sharks, overwriting that file but
+                           only file 1 get redirects to overwrite file in /tmp/sharks but file 2 stays on terminal screen
+
+
+Qn4:
+command:
+grep shark /etc/group 2>&1 > /tmp/sharks       # run this job immediately 
+cat /tmp/sharks                                # to print contents of /tmp/sharks 
+
+output:
+shark:x:1006:test3,test4                       
+└─ groupname:grouppassword:groupID:members of the group
