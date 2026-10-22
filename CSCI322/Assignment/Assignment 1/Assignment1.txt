@@ -82,6 +82,53 @@ done < Accounts.txt > /tmp/tutors.txt
 
 
 
-crontab 
+crontab entry: 
 
 0 7,19 * * 1-5 /bin/bash /home/csci322/reportTutors.sh
+
+
+# Task 1(a): `setupAccounts.sh`
+
+
+
+---
+
+1. Read account information
+
+while IFS=, read -r username account_type || [[ -n "$username" ]]; do
+
+The while loop reads Accounts.txt one line at a time. IFS=, sets the comma as the field separator, allowing the username and account type to be stored in separate variables. The additional condition handles a final line that does not end with a newline character.
+
+2. Filter tutor accounts
+
+if [[ "$account_type" == "tutor" ]]; then
+
+The if statement checks whether the account type is tutor. Only users with this account type are selected.
+
+3. Output tutor usernames
+
+echo "$username"
+
+The echo command prints the username of each matching tutor, with each username on a separate line.
+
+4. Read from the input file and save the output
+
+done < Accounts.txt > /tmp/tutors.txt
+
+< Accounts.txt redirects the contents of Accounts.txt into the loop.
+
+> /tmp/tutors.txt redirects the output into /tmp/tutors.txt, creating the file if it does not exist or overwriting it if it already exists.
+
+How to Execute the Script
+
+Run these commands from the directory containing reportTutors.sh and Accounts.txt:
+
+chmod +x reportTutors.sh
+bash -n reportTutors.sh
+./reportTutors.sh
+
+chmod +x makes the script executable.
+
+bash -n checks for Bash syntax errors without executing the script.
+
+./reportTutors.sh runs the script to generate /tmp/tutors.txt.

@@ -1,5 +1,35 @@
-awk '$6 == "\"GET" && $7 == "/downloads/course-guide.pdf" {host=$1; timestamp=$4" "$5} END {if (host != "") print host, timestamp}' university_access.log
+Task 1:
 
+crontab entry: 
 
-awk '$6 == "\"GET" && $7 ~ /^\/courses\/[^/]+$/ {sub(/^\/courses\//, "", $7); print $7}' university_access.log | sort -u > courses.txt
+0 7,19 * * 1-5 /bin/bash /home/csci322/reportTutors.sh
+
+Explanation:
+
+Task 2 
+
+Qn. Determine how many DELETE requests appear in the log. Show the command used. 
+Ans. 4 DELETE request. grep -c '"DELETE ' university_access.log
+
+Explanation:
+The grep -c command counts the no. of lines in university_access.log 
+containing the pattern "DELETE. This identifies HTTP DELETE requests, 
+and the log contains 4 DELETE requests.
+
+Qn.  Determine how many DELETE requests appear in the log. Show the command used. 
+Ans. awk '$6 == "\"GET" && $7 == "/downloads/course-guide.pdf" {host=$1; timestamp=$4" "$5} END {if (host != "") print host, timestamp}' university_access.log
+
+Explanation: 
+The grep -c command counts the number of lines in university_access.log that contain the pattern "DELETE . 
+This identifies HTTP DELETE requests. The output 4 indicates that there are four DELETE requests in the log.
+
+Qn. Write a one-line command to find the most recent GET request for /downloads/courseguide.pdf. Display the hostname and timestamp. 
+Ans. awk '$6 == "\"GET" && $7 ~ /^\/courses\/[^/]+$/ {sub(/^\/courses\//, "", $7); print $7}' university_access.log | sort -u > courses.txt
+
+Explanation: 
+The awk command checks each log entry for a GET request to /downloads/courseguide.pdf. 
+It stores the hostname in field $1 and the timestamp in fields $4 and $5. 
+As the log is processed, each matching request replaces the previous match, 
+so the command displays the hostname and timestamp of the last matching request in the file. 
+This identifies the most recent request if the log entries are in chronological order.
 
