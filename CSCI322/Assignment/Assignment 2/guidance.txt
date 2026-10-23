@@ -1,0 +1,90 @@
+Task 1:
+Your domain is techcollege.edu.au, and its network is 172.16.20.0/24.
+
+need 2 DNS zone files (forward dns file & reverse dns file)
+- db.techcollege.edu.au (Converts hostnames into IP addresses) Ex. www.techcollege.edu.au → 172.16.20.10
+- db.172.16.20 (Converts IP addresses back into hostnames) Ex. 172.16.20.10 → www.techcollege.edu.au
+
+
+When typed in a domain, it get send to the dns server and based on its config 
+from the db file, it will return the relevant ip address
+
+SOA (Start of Authority) - To tell other DNS servers important info about ur domain and its zone file
+MX (Mail Exchange) - To tell other mail servers which hostname is the mail server in our domain
+CNAME:
+
+www.techcollege.edu.au
+        |
+        | CNAME
+        v
+app2.techcollege.edu.au
+        |
+        | A
+        v
+172.16.20.11
+
+
+MX records do not need to be reversed cuz MX records point to a hostname, not an IP address
+Likewise, DNS records do not need to be reversed but Reverse DNS when you know the IP but want the name
+
+
+
+Task 2:
+HQ supports up to 8000 devices
+Branch supports up to 500 devices
+
+private block of 10.10.0.0/16 (IPv4 address)
+
+an IPv4 has 32 bits, so to find host bits:
+
+    32 bits - 16 network bits = 16 host bits
+
+To calculate how many usable IP addresses a subnet provides: 
+
+    Usable hosts = 2^h - 2
+
+    2^13 - 2 = 8190 (supports more than 8000 devices for HQ)
+    2^9 - 2 = 510 (supports more than 500 devices for branch)
+
+To find network bits, subtract from 32 bits:
+
+    32 bits - 13 host bits = /19 (HQ)
+    32 bits - 9 host bits = /23 (branch)
+
+IPv4 has 4 octets (32 bits) so each octet = 8 bits: 
+
+    /19 takes up 2 octets + 3 bits of 3rd octet = 224 
+    /23 takes up 2 octets + 7 bits of 3rd octet = 254
+
+Hence subnet masks are:
+
+   /19 = 255.255.224.0 
+   /23 = 255.255.254.0
+
+To calculate block size: 
+
+    256 - 224 = 32 
+    256 - 254 = 2 
+
+So HQ range:
+- network: 10.10.0.0
+- first usable: 10.10.0.1
+- last usable: 10.10.31.254
+- broacast: 10.10.31.255
+
+So branch range:
+- network: 10.10.32.0
+- first usable: 10.10.32.1
+- last usable: 10.10.33.254
+- broacast: 10.10.33.255
+
+
+
+Network Diagram
+
+
+Routing table explanation: 
+- 10.10.0.0/19: Headquarters network directly connected through eth1.
+- 10.10.32.0/23: Branch network reached through RouterBR at 10.10.0.2.
+- 172.20.1.0/24: Internet-facing network directly connected through eth0.
+- default: Other destinations are forwarded to the Internet gateway at 172.20.1.1.

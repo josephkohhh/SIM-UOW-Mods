@@ -1,0 +1,27 @@
+
+$TTL 86400
+@   IN  SOA ns1.techcollege.edu.au. admin.techcollege.edu.au. (
+        2026102301 ; Serial: YYYYMMDDSS
+        3600       ; Refresh
+        1800       ; Retry
+        604800     ; Expire
+        86400      ; Negative cache TTL
+)
+
+; Name servers
+@       IN  NS      ns1.techcollege.edu.au.
+
+; Mail exchanger
+@       IN  MX  20  mail.techcollege.edu.au.
+
+; Address records
+ns1     IN  A       172.16.20.2
+app1    IN  A       172.16.20.10
+app2    IN  A       172.16.20.11
+lab1    IN  A       172.16.20.30
+lab2    IN  A       172.16.20.31
+
+; Canonical name aliases
+www     IN  CNAME   app2.techcollege.edu.au.
+dns     IN  CNAME   ns1.techcollege.edu.au.
+mail    IN  CNAME   app1.techcollege.edu.au.

@@ -1,0 +1,19 @@
+
+$TTL 86400
+@   IN  SOA ns1.techcollege.edu.au. admin.techcollege.edu.au. (
+        2026102301 ; Serial: YYYYMMDDSS
+        3600
+        1800
+        604800
+        86400
+)
+
+; Name server
+@   IN  NS  ns1.techcollege.edu.au.
+
+; Pointer records
+2   IN  PTR ns1.techcollege.edu.au.
+10  IN  PTR app1.techcollege.edu.au.
+11  IN  PTR app2.techcollege.edu.au.
+30  IN  PTR lab1.techcollege.edu.au.
+31  IN  PTR lab2.techcollege.edu.au.
