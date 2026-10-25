@@ -4,3 +4,50 @@ Goal:
 - To turn your Server VM into a NAT router, 
 - Connect your Desktop VM through an internal network
 - Update DNS, and configure port forwarding so your physical computer can access DokuWiki
+
+
+      Desktop VM
+      192.168.1.2
+           │
+           ▼
+    ┌──────────────┐
+    │ Internal     │
+    │ Network      │
+    │   intnet1    │
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │  Server VM   │
+    │  NAT Router  │
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │  Internet    │
+    └──────────────┘
+    
+
+Set up the internal network
+Server VM — connects to the internet and acts as the router.
+Desktop VM — connects to the Server VM through an internal network.
+
+- config the Server VM - intnet1
+- config the Desktop VM - intnet1
+
+Set up the IP addresses using netplan
+Start both VMs and check the interfaces:
+ip -br addr
+ip link
+
+Test the connection
+
+Configure NAT on the Server VM
+
+Configure DNS
+
+Enable port forwarding
+
+
+
+
