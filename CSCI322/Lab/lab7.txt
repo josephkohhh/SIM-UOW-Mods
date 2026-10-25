@@ -1,0 +1,6 @@
+lab7:
+
+Goal: 
+- To turn your Server VM into a NAT router, 
+- Connect your Desktop VM through an internal network
+- Update DNS, and configure port forwarding so your physical computer can access DokuWiki
