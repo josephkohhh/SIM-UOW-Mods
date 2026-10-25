@@ -1,0 +1,191 @@
+lab 6:
+
+Goal: explore how to manage disks using Zettabyte File System (ZFS)
+
+You'll add virtual disks to your existing Server VM, 
+combine them into a storage pool, test compression, 
+and learn how to recover deleted files using snapshots
+
+
+          User creates a file
+                   │
+                   ▼
+          ┌─────────────────┐
+          │  ZFS Dataset    │
+          │ /myZpool/test1  │
+          └────────┬────────┘
+                   │
+                   ▼
+          ┌─────────────────┐
+          │    ZFS Pool     │
+          │    myZpool      │
+          └────────┬────────┘
+                   │
+                   ▼
+          ┌─────────────────┐
+          │   RAID-Z1 Vdev  │
+          │ Calculates data │
+          │   and parity    │
+          └────────┬────────┘
+                   │
+          ┌────────┼────────┐
+          ▼        ▼        ▼
+      ┌───────┐┌───────┐┌───────┐
+      │ Disk 1││ Disk 2││ Disk 3│
+      │ Data  ││ Data  ││Parity │
+      └───────┘└───────┘└───────┘
+
+
+1. Add 4 virtual disks
+2. Create a ZFS storage pool
+3. Create datasets
+4. Test compression
+5. Create snapshots and recover files
+6. Expand the pool and test reliability
+
+To demo:
+Show the datasets in your ZFS pool	
+Show the compression ratios of all datasets	
+Demonstrate snapshot creation and recovery	
+Show the pool with two mirrored VDEVs
+
+
+2. Create a ZFS storage pool
+Commands:
+lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT             # to check disk status
+sudo zpool create myZpool mirror /dev/sde /dev/sdf    # to create mirror pool
+sudo zpool status                                     # to check the zpool status
+zpool get health myZpool
+df -h                                                 # to check mount point 
+zpool get size,free,allocated myZpool
+
+
+3. Create datasets
+# create 3 filesystems inside the pool
+sudo zfs create myZpool/test1                         # we'll enable compression here
+sudo zfs create myZpool/test2                         # we'll keep compression off here for comparison
+sudo zfs create myZpool/test3                         # we'll use this to create random test files
+
+zfs list                                              # list the zfs pools and datasets 
+
+# create 10 files with random data in myZpool/test3 dir
+cd /myZpool/test3
+for i in {1..10}; do dd if=/dev/urandom of=file$i.dat bs=1024 count=$RANDOM; done
+
+ls -lh        # list the files created
+zfs list
+
+
+4. Test compression
+Commands: 
+sudo zfs set compression=lz4 myZpool/test1       # enable LZ4 compression for test1
+sudo zfs set compression=off myZpool             # turn off compression for the rest
+sudo zfs set compression=off myZpool/test2       # turn off compression for the rest
+sudo zfs set compression=off myZpool/test3       # turn off compression for the rest
+
+zfs get -r compression myZpool                   # verify the settings
+
+
+# create a text file with 1 million lines in test1
+cd /myZpool/test1
+sudo bash -c 'for i in {1..1000000}; do echo "Line $i: This is a line of text."; done > /myZpool/test1/textfile.txt'
+
+ls -lh /myZpool/test1/textfile.txt                # check file size (36mb)
+sudo wc -l /myZpool/test1/textfile.txt            # check no. of lines
+
+
+# create a text file with 1 million lines in test2
+cd /myZpool/test2
+sudo bash -c 'for i in {1..1000000}; do echo "Line $i: This is a line of text."; done > /myZpool/test2/textfile.txt'
+
+ls -lh /myZpool/test2/textfile.txt                # check file size (36mb)
+sudo wc -l /myZpool/test2/textfile.txt            # check no. of lines
+
+
+# Now we need to compare how much space ZFS actually uses for the compressed and uncompressed datasets
+
+zfs list -o name,used,refer,compressratio myZpool                                # lists the ZFS pool and its datasets
+
+output:
+NAME      USED  REFER  RATIO
+myZpool   218M    24K  1.14x
+
+
+zfs get compression,compressratio,used,referenced myZpool/test1 myZpool/test2    # lists specific properties for the 2 datasets comparing
+
+output:
+NAME           PROPERTY       VALUE           SOURCE
+myZpool/test1  compression    lz4             local
+myZpool/test1  compressratio  7.07x           -
+myZpool/test1  used           5.01M           -
+myZpool/test1  referenced     5.01M           -
+myZpool/test2  compression    off             local
+myZpool/test2  compressratio  1.00x           -
+myZpool/test2  used           35.3M           -
+myZpool/test2  referenced     35.3M           -
+
+conclusion:
+myZpool/test1
+Uses 5.01 MB of storage for the text file's data.
+
+myZpool/test2
+Uses 35.3 MB of storage for the text file's data.
+
+
+5. Create snapshots and recover files
+
+cd /myZpool/test1
+sudo bash -c 'echo "This is my original file." > /myZpool/test1/myfile.txt'
+cat /myZpool/test1/myfile.txt
+
+sudo zfs snapshot myZpool/test1@snapshot1                                           # create zfs snapshot 
+zfs list -t snapshot
+
+sudo bash -c 'echo "This line was added after the snapshot." >> /myZpool/test1/myfile.txt'
+cat /myZpool/test1/myfile.txt
+
+sudo cat /myZpool/test1/.zfs/snapshot/snapshot1/myfile.txt                          # see snapshot1's version
+sudo cp /myZpool/test1/.zfs/snapshot/snapshot1/myfile.txt /myZpool/test1/myfile.txt # restore snapshot1
+cat /myZpool/test1/myfile.txt
+
+
+6. Expand the pool and test reliability
+- Add a second mirrored vdev to your pool
+  - You already used /dev/sde and /dev/sdf for the 1st mirror
+  - Now we'll add /dev/sdg and /dev/sdh as a 2nd mirror
+
+/dev/sde — 1 GB, already in the 1st mirror
+/dev/sdf — 1 GB, already in the 1st mirror
+/dev/sdg — 2 GB, intended for the 2nd mirror
+/dev/sdh — 2 GB, intended for the 2nd mirror
+
+
+# add 2nd mirror 
+sudo zpool add myZpool mirror /dev/sdg /dev/sdh
+sudo zpool status
+zfs list                             # we can see avail capacity increased to 2.47 GB and prev was 655 MB
+
+
+Now we'll test whether the pool stays online when 1 disk is detached from the 1st mirror.
+
+sudo zpool detach myZpool /dev/sde   # detaches /dev/sde from the mirror
+sudo zpool status                    # /dev/sdf is the remaining disk in that vdev
+
+Notice the 1st mirror (mirror-0) has become a single disk
+
+sudo cat /myZpool/test1/myfile.txt   
+sudo wc -l /myZpool/test1/textfile.txt
+
+The data is still accessible thru /dev/sdf
+
+sudo zpool attach myZpool /dev/sdf /dev/sde  # reattach /dev/sde to restore the mirror
+sudo zpool status                            # mirror-0 is back
+
+
+zfs list                                     # confirms all 3 datasets remains 
+
+output:
+myZpool         218M  2.47G    24K  /myZpool
+myZpool/test1  5.02M  2.47G  5.01M  /myZpool/test1
+myZpool/test2  35.3M  2.47G  35.3M  /myZpool/test2
+myZpool/test3   177M  2.47G   177M  /myZpool/test3
