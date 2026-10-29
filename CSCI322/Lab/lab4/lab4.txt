@@ -82,8 +82,8 @@ Progress:
 
 Demo:
 1. Caching/forwarder nameserver 
-dig uow.edu
-dig uow.edu
+dig uow.edu.au
+dig uow.edu.au
 
 2. Forward DNS lookup
 dig desktop.csci322.test @10.0.2.100
