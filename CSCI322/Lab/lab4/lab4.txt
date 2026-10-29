@@ -79,3 +79,18 @@ Progress:
    Record commands, configurations, screenshots and results in your CSCI322 wiki
 
 
+
+Demo:
+1. Caching/forwarder nameserver 
+dig uow.edu
+dig uow.edu
+
+2. Forward DNS lookup
+dig desktop.csci322.test @10.0.2.100
+
+3. Reverse DNS lookup
+dig -x 10.0.2.200 @10.0.2.100
+
+4. Access DokuWiki using the server's hostname
+http://www.csci322.test/dokuwiki/
+

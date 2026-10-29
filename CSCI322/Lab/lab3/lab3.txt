@@ -31,7 +31,7 @@ on serverVM:
 sudo tcpdump -c 4 -e "icmp or arp"  # starts listening for network packets and captures them
 
 on DesktopVM:
-ing -c 1 10.0.2.3  # sends 1 ping request to the server
+ping -c 1 10.0.2.3  # sends 1 ping request to the server
 
 on ServerVM:
 Output:
@@ -56,4 +56,50 @@ dest -> 08:00:27:75:46:55
 4. google ip address = 142.251.152.119
 
 5. apache
+version: Apache/2.0.40 (Red Hat Linux)
+
+
+
+
+
+
+Desktop VM IP: 10.0.2.200 
+Server VM IP: 10.0.2.100
+Demo:
+
+1. server vm:
+cat /etc/timezone
+timedatectl status
+
+2. server vm:
+sudo tcpdump -c 4 -e "icmp or arp"
+
+desktop vm:
+ping -c 4 10.0.2.100 
+
+08:00:27:75:46:55 > 08:00:27:a1:45:6d
+desktop mac addr > server mac addr 
+
+3.
+Open Wireshark on your Desktop VM
+- Select and double click the active Ethernet interface, likely enp0s3
+- it will start capturing packets
+- On your Server VM, ping -c 2 10.0.2.200
+- On your Desktop VM, open browser and visit https://www.google.com
+- Wait for page to load, then return to Wireshark and click red Stop button
+- Save the capture file using File → Save As.
+- In Wireshark's display filter bar, enter: icmp
+- Find an Echo (ping) request packet and select it. Expand Ethernet II in the Packet Details pane.
+- Record these fields:
+    - Source MAC address
+    - Destination MAC address
+    - Packet number 
+    - Ping response time (Ping response time: 10.59 ms)
+
+4.
+Packet 159 
+google ip address = 142.251.152.119
+
+
+5.
 version: Apache/2.0.40 (Red Hat Linux)
