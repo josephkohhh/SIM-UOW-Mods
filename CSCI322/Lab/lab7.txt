@@ -27,7 +27,7 @@ Goal:
     │  Internet    │
     └──────────────┘
     
-
+Task 1:
 Set up the internal network
 Server VM — connects to the internet and acts as the router.
 Desktop VM — connects to the Server VM through an internal network.
@@ -35,19 +35,57 @@ Desktop VM — connects to the Server VM through an internal network.
 - config the Server VM - intnet1
 - config the Desktop VM - intnet1
 
-Set up the IP addresses using netplan
+VM	 Adapter	Connection
+Server	 Adapter 1	NAT (need for connection to internet)
+Server	 Adapter 2	Internal Network (intnet1)
+Desktop Adapter 1	Internal Network (intnet1)
+
+
+Task 2:
+Set up/change the IP addresses using netplan
 Start both VMs and check the interfaces:
 ip -br addr
 ip link
 
+Based on lab7, the internal network is 192.168.1.0/24
+DNS server: 10.0.2.100
+The desktop's default gateway will be 192.168.1.1
+
+Device	       Interface	       IP address
+Server	       Adapter 1 (NAT)	10.0.2.100
+Server	       Adapter 2 (Internal)	192.168.1.1
+Desktop	Adapter 1 (Internal)	192.168.1.2
+
 Test the connection
 
+Task 3: 
 Configure NAT on the Server VM
 
+- Configure the Server as a NAT Router
+  - Allow your Desktop VM to access the internet through your Server VM.
+
+1. Enable IPv4 packet forwarding on the Server VM: net.ipv4.ip_forward=1
+2. Configure IP masquerading using iptables: sudo iptables -t nat -A POSTROUTING -o enp0s8 -j MASQUERADE
+3. Make IP forwarding persistent through /etc/sysctl.conf.
+4. Install iptables-persistent and save the NAT rules.
+5. Test internet connectivity from the Desktop VM using ping.
+
+Task 4:
 Configure DNS
 
+We need to update two things:
+1. Forward DNS: Map hostnames to the new IP addresses.
+2. Reverse DNS: Map the new IP addresses back to hostnames.
+
+
+Task 5:
 Enable port forwarding
 
-
+Add a port forwarding rule for the VMs 
+- This forwards requests from your Mac's port 80 to Apache on your Server VM's port 80.
+  - When typed  http://localhost/dokuwiki
+  - Port forwarding: VirtualBox forwarded req from your Mac's port 80 to the Server VM's port 80.
+  - Apache: Received the HTTP request and served the website
+  - DokuWiki: Apache delivered the DokuWiki page to your browser
 
 
