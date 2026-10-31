@@ -1,0 +1,20 @@
+username: ehjk465
+password: password
+
+ssh -p 2223 ehjk465@127.0.0.1 (router)
+ssh -p 2224 ehjk465@127.0.0.1 (app)
+ssh -p 2225 ehjk465@127.0.0.1 (backup)
+exit 
+
+
+Stage	Task	                                     VM
+1	    Create four VMs	                             All
+2	    Configure VirtualBox network adapters	     All
+3	    Configure router IPs, NAT and forwarding	 Router
+4	    Configure DNS (BIND9)	                     Router
+5	    Configure mirrored ZFS pool	                 App
+6	    Configure Nginx and homepage	             App
+7	    Configure RAID-Z1, ZFS and NFS	             Backup
+8	    Configure automatic NFS mounting	         Workstation
+9	    Testing, screenshots and PDF report          All
+
