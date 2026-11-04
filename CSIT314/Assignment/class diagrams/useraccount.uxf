@@ -1,0 +1,23 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>374</x><y>132</y><w>297</w><h>143</h></coordinates><panel_attributes>UserAccountEntity
+--
+
+--
++login(login_data: dict)
++get_by_email(email: str)
++create(user_data: dict)
++update(email: str, updates: dict)
++suspend(email: str)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>264</y><w>88</w><h>132</h></coordinates><panel_attributes>lt=&lt;.
+manages</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>374</x><y>374</y><w>297</w><h>220</h></coordinates><panel_attributes>UserAccount
+--
+-user_id: int
+-email: str
+-password_hash: str
+-role: RoleEnum
+-name: str
+-surname: str
+-phone_no: str
+-status: StatusEnum
+-created_at: datetime
+-updated_at: datetime
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

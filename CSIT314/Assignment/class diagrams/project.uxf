@@ -1,0 +1,22 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>350</x><y>130</y><w>270</w><h>140</h></coordinates><panel_attributes>ProjectEntity
+--
+
+--
++get_all()
++get_by_name(project_name: str, user_id: int)
++create(project_data: dict)
++update(project_name: str, updates: dict)
++delete(project_name: str)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>260</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;.
+manages</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>350</y><w>270</w><h>180</h></coordinates><panel_attributes>Project
+--
+-project_id: int
+-user_id: int
+-companyprofile_id: int
+-project_name: str
+-description: Text
+-category_code: str
+-status: StatusEnum
+-created_at: datetime
+-updated_at: datetime
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

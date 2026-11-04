@@ -1,0 +1,21 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>350</x><y>130</y><w>270</w><h>130</h></coordinates><panel_attributes>CompanyProfileEntity
+--
+
+--
++get_by_id(user_id: int)
++create(company_data: dict)
++update(user_id: int, update_data: dict)
++suspend(user_id: int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>250</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;.
+manages</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>350</y><w>270</w><h>190</h></coordinates><panel_attributes>CompanyProfile
+--
+-companyprofile_id: int
+-user_id: int
+-company_name: str
+-description: str
+-phone_no: str
+-address: str
+-status: CompanyProfileStatusEnum
+-created_at: datetime
+-updated_at: datetime
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

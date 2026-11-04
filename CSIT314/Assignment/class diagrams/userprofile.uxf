@@ -1,0 +1,17 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>374</x><y>132</y><w>297</w><h>165</h></coordinates><panel_attributes>UserProfileEntity
+--
+
+--
++get_all()
++get_by_id(profile_id: int)
++get_by_role(role: str)
++create(profile_data: dict)
++update(role: str, update_data: dict)
++delete(role: str)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>286</y><w>88</w><h>110</h></coordinates><panel_attributes>lt=&lt;.
+manages</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>374</x><y>374</y><w>297</w><h>99</h></coordinates><panel_attributes>UserProfile
+--
+-profile_id: int
+-role: str
+-description: Text
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

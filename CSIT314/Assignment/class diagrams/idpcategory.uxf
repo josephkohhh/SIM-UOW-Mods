@@ -1,0 +1,17 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>350</x><y>130</y><w>270</w><h>150</h></coordinates><panel_attributes>IdpCategoryEntity
+--
+
+--
++get_all()
++get_by_code(category_code: str)
++get_by_category_code(category_code: str)
++create(category_data: dict)
++update(category_code: str, updates: dict)
++delete(category_code: str)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>270</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+manages</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>350</y><w>270</w><h>100</h></coordinates><panel_attributes>IdpCategory
+--
+-category_id: int
+-category_code: str
+-description: Text
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
