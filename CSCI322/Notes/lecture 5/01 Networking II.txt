@@ -1,0 +1,77 @@
+Networking II
+
+5. IPv4
+IPv4 is an addressing system used to identify devices on an IP network
+- uses 32 bits
+- divided into 4 octets
+- each octet contains 8 bits
+- each octet has a decimal value between 0 and 255
+
+
+An IPv4 address has 2 parts:
+- Network portion: Identifies the network  
+- Host portion: Identifies a device within that network
+
+
+Ex. 192.168.1.10/24
+- Network address: 192.168.1.0 (0 always reserved for network address)
+- Host portion: 10
+
+each octet = 8 1s (128+64+32+16+8+4+2+1=255)
+/24 = 3 octets = 255.255.255.0 (subnet mask)
+
+subnet mask tells ur device which devices are in its local network
+
+
+6. Subnetting
+Subnetting means dividing a larger network into smaller networks
+
+To calculate how many usable IP addresses a subnet provides: 
+
+    Usable hosts = 2^h - 2
+
+Ex 1. Given 192.168.1.0/24. Find the number of usable hosts.
+
+Step 1: host bits = 32 − 24 = 8
+Step 2: use formula = 2^8 -2 = 254 usable hosts
+
+Ex 2. Given 10.10.0.0/16. Find the number of usable hosts.
+
+Step 1: host bits = 32 − 16 = 16
+Step 2: use formula = 2^16 -2 = 65,534 usable hosts
+
+Ex 3. Given 192.168.1.0/24. Find block size and blocksizes and suitable addresses
+
+Step 1: 
+each octet = 8 1s (128+64+32+16+8+4+2+1=255)
+/24 = 3 octets = 255.255.255.0 (subnet mask)
+
+Step 2: block size = 256 - 0 = 256
+
+Step3:
+Purpose	          IP address
+Network	          192.168.1.0
+First usable	  192.168.1.1
+Last usable	      192.168.1.254
+Broadcast	      192.168.1.255
+
+Ex4. Given 192.168.1.0/26. Find block size and blocksizes and suitable addresses
+
+Step 1: 
+each octet = 8 1s (128+64+32+16+8+4+2+1=255)
+/26 = 3 octets + 2bits = 255.255.255.192 (subnet mask)
+
+Step 2: block size = 256 - 192 = 64 (so just keep adding 64)
+
+Step3:
+Network	          First usable    Last usable	Broadcast
+192.168.1.0	          .1	         .62	      .63
+192.168.1.64       	 .65	        .126	     .127
+192.168.1.128	    .129	        .190	     .191
+192.168.1.192	    .193	        .254	     .255
+
+
+
+7. Supernetting
+Supernetting combines multiple smaller networks into one larger network.
+It is also called route aggregation or route summarisation.

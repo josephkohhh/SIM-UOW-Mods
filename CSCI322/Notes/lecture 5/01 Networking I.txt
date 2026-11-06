@@ -1,0 +1,57 @@
+Networking I
+
+1. OSI Model (7 Layers)
+Layer	Name	    Responsibility
+7	Application	    Provides network services to users (HTTP, FTP, DNS).
+6	Presentation	Handles data formatting, encryption and compression.
+5	Session	        Establishes, manages and terminates communication sessions.
+4	Transport	    Provides end-to-end delivery using TCP or UDP.
+3	Network	        Handles logical addressing and routing using IP.
+2	Data Link	    Handles MAC addresses and Ethernet frames.
+1	Physical	    Transmits raw bits through cables, fibre or wireless signals.
+
+Layer 1 = Bits
+Layer 2 = Frames
+Layer 3 = Packets
+Layer 4 = Segments (TCP) / Datagrams (UDP)
+Layer 5–7 = Application-related functions
+
+
+2. Encapsulation vs Decapsulation
+
+Encapsulation
+Process of adding headers and trailers to data as it travels down the OSI layers
+
+Ex.
+When data is sent:
+1. Application creates the data.
+2. Transport layer adds a TCP/UDP header.
+3. Network layer adds an IP header.
+4. Data Link layer adds an Ethernet header and trailer.
+5. Physical layer transmits the data as bits.
+
+Decapsulation
+Process of removing the headers and trailers to recover the original data
+
+
+3. MAC Address vs IP Address
+MAC = Identifies a network interface on the local link.
+IP = Identifies a device's network location for routing. 
+
+MAC Address
+- Physical (hardware) address 
+- Used at layer2 under OSI Model
+- 48 Bits
+- Ex. 00:1A:2B:3C:4D:5E
+
+IP Address
+- Logical address
+- Used at layer2 under OSI Model
+- IPv4 is 32 bits
+- Ex. 192.168.1.10
+
+
+4. Ethernet
+It is used in wired local area networks (LANs).
+
+
