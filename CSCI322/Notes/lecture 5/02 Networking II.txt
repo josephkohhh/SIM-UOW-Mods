@@ -1,0 +1,171 @@
+Networking II
+
+8. Network Address Translation (NAT)
+NAT is used to allow devices on a private network to communicate with the internet using a public IP address
+
+Ex.
+
+ PC 1                  Phone                 PC 2
+192.168.1.10         192.168.1.11         192.168.1.12
+    │                    │                    │
+    └────────────────────┼────────────────────┘
+                         │
+                    Router (NAT)
+                    192.168.1.1
+                         │ translate private ip to public ip
+                  Public IP: 203.0.113.5
+                         │
+                      INTERNET
+                         │
+            Websites and External Servers
+
+
+How does NAT work?
+
+Let's say PC 1 wants to access Google.
+
+Step 1: PC 1 sends a packet.
+Step 2: The router receives the packet and translate the private source IP with its public IP.
+Step 3: Google receives the request and sends a response to the router's public IP.
+Step 4: The router reverse translate from public dest ip to private ip and forwards the response to PC 1.
+
+3 Types of NAT:
+Type	                        Explanation
+Static NAT	                    1 private IP maps to one public IP permanently.
+Dynamic NAT	                    Private IPs are mapped to public IPs from a pool.
+PAT (Port Address Translation)	Multiple private devices share one public IP using different port numbers.
+
+
+9. Routing and Routing Tables
+A router connects different networks and forwards packets towards their dest.
+
+When PC A wants to communicate with the server in Network B:
+1. PC A sends a packet to its default gateway.
+2. The router receives the packet.
+3. The router checks its routing table.
+4. The router determines the appropriate outgoing interface or next hop.
+5. The packet is forwarded towards Network B.
+
+What is a routing table?
+It is a list of routes that tells a router where to forward packets.
+
+Destination       Gateway        Genmask
+192.168.1.0       0.0.0.0        255.255.255.0
+192.168.2.0       10.0.0.2       255.255.255.0
+0.0.0.0           10.0.0.1       0.0.0.0
+
+Destination = Target network
+Gateway = Next-hop router
+Genmask = Subnet mask
+Interface = Network interface used
+
+
+192.168.1.0 Gateway: 0.0.0.0
+This means the network is directly connected. No other router is needed to reach it.
+
+192.168.2.0 Gateway: 10.0.0.2
+This means packets destined for 192.168.2.0/24 should be forwarded to the next-hop router 10.0.0.2
+
+0.0.0.0 Gateway: 10.0.0.1
+This is the default route 
+If the router doesn't know where to send a packet using its existing routing table, it sends the packet to the default gateway.
+
+
+10. TCP vs UDP
+TCP and UDP are 2 transport-layer protocols (Layer 4 of the OSI model).
+- Both are used to transfer data between devices, but they work differently.
+
+| Feature        | TCP                 | UDP                         |
+| -------------- | ------------------- | --------------------------- |
+| Connection     | Connection-oriented | Connectionless              |
+| Reliability    | Reliable            | No delivery guarantee       |
+| Speed          | Generally slower    | Generally faster            |
+| Ordering       | Maintains order     | No ordering guarantee       |
+| Error checking | Yes                 | Yes (checksum)              |
+| Retransmission | Yes                 | No automatic retransmission |
+| Examples       | HTTPS, FTP, SSH     | DNS, VoIP, gaming           |
+
+
+TCP 3-Way Handshake
+| Step | Flag    | Meaning                   |
+| ---- | ------- | ------------------------- |
+| 1    | SYN     | Synchronise               |
+| 2    | SYN-ACK | Synchronise + Acknowledge |
+| 3    | ACK     | Acknowledge               |
+
+Order:
+SYN → SYN-ACK → ACK
+The client requests → the server responds → the client confirms
+
+
+Ports 
+It is a number used to identify which app or service should receive network data on a device.
+- IP address = identifies the device.
+- Port number = identifies the application or service on that device
+
+Ex.
+Imagine your computer has IP address 192.168.1.10
+Several services can run on that same computer:
+| Service                      | Port   |
+| ---------------------------- | ------ |
+| HTTP (websites)              | 80     |
+| HTTPS (secure websites)      | 443    |
+| SSH (remote login)           | 22     |
+| FTP (file transfer)          | 21     |
+| DNS (domain name lookup)     | 53     |
+| SMTP (sending email)         | 25     |
+| DHCP (IP address assignment) | 67, 68 |
+
+
+10. ARP (Address Resolution Protocol)
+ARP is used to find the MAC address associated with an IPv4 address on a local network.
+- MAC address = identifies a network interface physically.
+
+Imagine your computer wants to send data to another computer on the same LAN.
+- Your computer knows the destination IP address: 192.168.1.20
+- But it needs the destination MAC address to send an Ethernet frame.
+  -  Ethernet frame is a container that carries data
+- So, it uses ARP to discover that MAC address.
+
+How ARP works:
+Step 1: ARP Request
+Computer A asks everyone on the local network: Who has IP address 192.168.1.20? Tell me your MAC address."
+
+Step 2: ARP Reply
+Computer B replies: "192.168.1.20 is mine. My MAC address is BB:BB:BB:BB:BB:BB."
+
+Step 3: ARP Cache
+Computer A stores the IP-to-MAC mapping in its ARP cache so it doesn't need to ask again immediately.
+
+
+11. DHCP (Dynamic Host Configuration Protocol)
+DHCP automatically assigns IP addresses and network settings to devices when they join a network.
+- DHCP uses UDP, not TCP
+
+Without DHCP, need to manually configure your device's 
+- IP address
+- subnet mask
+- default gateway
+- DNS server
+
+With DHCP, it provides all of them 
+
+How DHCP works — DORA
+- 1. Discover = Client broadcasts: "Is there a DHCP server available?"
+- 2. Offer = Server offers an IP address, e.g. 192.168.1.100.
+- 3. Request = Client requests to use the offered IP address.
+- 4. 4. Acknowledge = Server confirms the assignment. Client can now use the IP address.
+
+
+12.ICMP (Internet Control Message Protocol)
+It is a protocol to send error messages and diagnostic info about network communication
+
+What is ICMP used for?
+- 2 common uses:
+  - Ping (checks whether another device is reachable over a network)
+    - ping -c 4 8.8.8.8
+
+  - Traceroute (helps identify network path packets take to reach a destination)
+    - traceroute google.com
+
+ICMP does not use TCP or UDP ports.

@@ -55,3 +55,111 @@ IP Address
 It is used in wired local area networks (LANs).
 
 
+5. IPv4
+IPv4 is an addressing system used to identify devices on an IP network
+- uses 32 bits
+- divided into 4 octets
+- each octet contains 8 bits
+- each octet has a decimal value between 0 and 255
+
+
+An IPv4 address has 2 parts:
+- Network portion: Identifies the network  
+- Host portion: Identifies a device within that network
+
+
+Ex. 192.168.1.10/24
+- Network address: 192.168.1.0 (0 always reserved for network address)
+- Host portion: 10
+
+each octet = 8 1s (128+64+32+16+8+4+2+1=255)
+/24 = 3 octets = 255.255.255.0 (subnet mask)
+
+subnet mask tells ur device which devices are in its local network
+
+
+6. Subnetting
+Subnetting means dividing a larger network into smaller networks
+
+To calculate how many usable IP addresses a subnet provides: 
+
+    Usable hosts = 2^h - 2
+
+Ex 1. Given 192.168.1.0/24. Find the number of usable hosts.
+
+Step 1: host bits = 32 − 24 = 8
+Step 2: use formula = 2^8 -2 = 254 usable hosts
+
+Ex 2. Given 10.10.0.0/16. Find the number of usable hosts.
+
+Step 1: host bits = 32 − 16 = 16
+Step 2: use formula = 2^16 -2 = 65,534 usable hosts
+
+Ex 3. Given 192.168.1.0/24. Find block size and blocksizes and suitable addresses
+
+Step 1: 
+each octet = 8 1s (128+64+32+16+8+4+2+1=255)
+/24 = 3 octets = 255.255.255.0 (subnet mask)
+
+Step 2: block size = 256 - 0 = 256
+
+Step3:
+Purpose	          IP address
+Network	          192.168.1.0
+First usable	  192.168.1.1
+Last usable	      192.168.1.254
+Broadcast	      192.168.1.255
+
+Ex4. Given 192.168.1.0/26. Find block size and blocksizes and suitable addresses
+
+Step 1: 
+each octet = 8 1s (128+64+32+16+8+4+2+1=255)
+/26 = 3 octets + 2bits = 255.255.255.192 (subnet mask)
+
+Step 2: block size = 256 - 192 = 64 (so just keep adding 64)
+
+Step3:
+Network	          First usable    Last usable	Broadcast
+192.168.1.0	          .1	         .62	      .63
+192.168.1.64       	 .65	        .126	     .127
+192.168.1.128	    .129	        .190	     .191
+192.168.1.192	    .193	        .254	     .255
+
+
+
+7. Supernetting
+Supernetting combines multiple smaller networks into 1 larger network.
+It is also called route aggregation or route summarisation.
+
+Ex. Combine 4 network into 1 network
+
+Network	        IP address range
+192.168.0.0/24	192.168.0.0 – 192.168.0.255
+192.168.1.0/24	192.168.1.0 – 192.168.1.255
+192.168.2.0/24	192.168.2.0 – 192.168.2.255
+192.168.3.0/24	192.168.3.0 – 192.168.3.255
+
+Each /24 network contains 256 IP addresses
+We want to combine all 4 into 1 network.
+
+***Rmb:
+1 bit allows 2 networks
+
+So we have 4 networks so 2 bits
+
+Our original prefix is /24, so 24 - 2 = /22 
+
+/22 is 2 octets + 6 bits = 255.255.252.0 (subnet mask)
+
+block size = 256 - 252 = 4 (increments of 4)
+
+Answer:
+192.168.0.0/22
+Subnet mask: 255.255.252.0
+Network range: 192.168.0.0 – 192.168.3.255
+Usable hosts: 1022 (32-22=10 , 2^10-2=1022)
+
+
+Subnetting: Divides 1 large network into smaller networks.
+Supernetting: Combines multiple smaller networks into 1 larger network.
+
