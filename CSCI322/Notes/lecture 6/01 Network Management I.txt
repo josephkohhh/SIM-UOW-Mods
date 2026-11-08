@@ -1,0 +1,114 @@
+Network Management I 
+
+1. Network Management and FCAPS
+Network management means monitoring, maintaining and controlling a network to ensure it operates properly.
+
+Main responsibilities:
+- Detect network faults.
+- Notify administrators about problems.
+- Monitor network performance.
+- Document and visualise network structure.
+- Manage network devices centrally.
+
+FCAPS – 5 areas of network management
+
+Fault Management
+- Detect, identify and fix network problems
+
+Configuration Management
+- Manage device and network configurations
+
+Accounting Management
+- Track network resource usage
+
+Performance Management
+- Monitor speed, traffic and performance
+
+Security Management
+- Protect network resources and control access
+
+
+2. Troubleshooting, Ping and Traceroute
+
+Troubleshooting
+- Ping local hosts using IP addresses
+- Ping local hosts using hostnames
+- Check firewall settings
+- Check DNS
+
+Ping
+- Uses ICMP ECHO_REQUEST
+  - Checks whether a destination host responds
+  - Displays IP address, sequence number and round-trip time
+  - Helps identify packet loss and network delays
+  - -n disables DNS name lookups
+
+Traceroute
+- Shows the sequence of gateways/routers packets travel through
+- Uses artificially low TTL values
+- Helps identify where a network connection is failing
+
+
+Ping vs Traceroute
+Ping	                  Traceroute
+Tests connectivity	      Shows network path
+Measures response time	  Identifies intermediate gateways
+Detects packet loss	Helps locate where a problem occurs
+
+
+3. Netstat and Sar
+
+Netstat
+Displays network info such as connections, interfaces, routing tables and protocol statistics
+
+commands:
+netstat -i      # Interface information, packet counts and errors)
+netstat -a      # All connections (listening and established)
+netstat -lp     # Listening services and their processes)
+netstat -rn     # Routing table)
+netstat -s      # Statistics for IP, ICMP, TCP and UDP)
+
+Sar
+Used to monitor live network activity
+
+ex command:
+sar -n DEV 2 30   # Monitors packets per second, bandwidth, compressed packets and multicast packets)
+
+-n DEV: Network device statistics
+2: Sample every 2 seconds
+30: Take 30 samples
+
+
+4. Packet Capture and Network Scanning
+
+tcpdump
+A packet sniffer that captures and records network traffic
+
+Option	      Function
+-i	          Select network interface
+-n	          Disable name lookups
+-v / -vv	  Increase packet detail
+-w	          Write captured packets to a file
+-r	          Read packets from a file
+
+nmap
+A network port scanner
+- Checks TCP and UDP ports
+- Identifies services listening on a host
+
+
+tcpdump vs nmap
+tcpdump	                    nmap
+Captures network packets	Scans network ports
+Observes network traffic	Identifies open/closed ports
+Packet analysis	            Service discovery
+
+
+
+Ex qn:
+
+What is the purpose of ping?
+Ping sends ICMP ECHO_REQUEST packets to check whether a destination host responds and measures round-trip time.
+
+What is the purpose of traceroute?
+Traceroute identifies the sequence of gateways/routers that packets pass through to reach their destination.

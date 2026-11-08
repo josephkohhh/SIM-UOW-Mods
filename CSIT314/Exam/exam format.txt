@@ -1,0 +1,18 @@
+
+The exam has 16 questions and is worth 50 marks:
+
+- Part A: 9 fill-in-the-blank questions, with 10 blanks worth 10 marks in total. Each blank requires a term or short phrase.
+
+- Part B: 7 questions based on a project scenario, worth 40 marks in total.
+
+To prepare, review the relevant lecture slides on these topics:
+
+- Software processes: the development lifecycle, prototyping, and the differences between Waterfall, Scrum and Kanban. Be able to explain when an approach may suit a project.
+
+- Requirements and design: user stories, UML use case diagrams, B-C-E and class diagrams, sequence diagrams, and the 4+1 View Model. Practise expressing requirements and modelling a system from a short description.
+
+- Quality and testing: verification and validation, static and dynamic techniques, and test-driven development. Be able to describe a testing approach and write simple test cases.
+
+- Development practices: Extreme Programming, builds, Continuous Delivery, Continuous Deployment and the DevOps lifecycle. Understand the purpose of each practice and how they support a development team.
+
+- Process improvement: the purpose of CMMI maturity levels.

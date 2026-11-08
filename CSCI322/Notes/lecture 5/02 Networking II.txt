@@ -70,6 +70,13 @@ This means packets destined for 192.168.2.0/24 should be forwarded to the next-h
 This is the default route 
 If the router doesn't know where to send a packet using its existing routing table, it sends the packet to the default gateway.
 
+Routing table flags:
+Flag	Meaning
+U	    Route is up (active)
+G	    Route uses a gateway
+H	    Host route
+D	    Created by ICMP redirect
+
 
 10. TCP vs UDP
 TCP and UDP are 2 transport-layer protocols (Layer 4 of the OSI model).

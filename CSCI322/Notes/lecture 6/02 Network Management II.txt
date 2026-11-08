@@ -1,0 +1,123 @@
+Network Management II
+
+5. SNMP and MIB
+
+Simple Network Management Protocol (SNMP)
+
+SNMP v1 – 5 messages
+Message	              Purpose
+Get-Request           Request info
+Get-Next-Request      Request next item
+Set                   Change a value
+Get-Response          Reply to request
+Trap                  Agent reports an event
+
+7 SNMP trap types:
+1. Coldstart
+2. Warmstart
+3. Link down
+4. Link up
+5. Authentication failure
+6. EGP neighbour loss
+7. Enterprise specific
+
+
+Management Information Base (MIB)
+A collection of definitions and information about managed network resources
+
+4 categories:
+Category	            Meaning
+State	                Current condition of resources
+Physical configuration	Device type, serial number, MAC address
+Logical configuration	IP addresses and protocols
+Historical	            Past performance information
+
+*MIB is like a database
+
+
+6. Domain Name System (DNS) 
+A distributed database that translates:
+- Hostnames → IP addresses (forward lookup) 
+- IP addresses → Hostnames (reverse lookup)
+
+DNS Servers, Zones and Records
+
+DNS server types
+Type	             Function
+Authoritative        Official source of information for a domain
+Master/Primary       Holds the original zone data
+Slave/Secondary      Copies data from master
+Non-authoritative    Responds using cached information
+
+***Slave servers obtain information through zone transfers, which use TCP
+
+Recursive vs Non-recursive queries
+Recursive                            Non-recursive
+Server finds the answer itself       Server returns information it already knows
+Returns answer or error              May return a referral to another server
+
+
+DNS zones
+A zone is a domain excluding its delegated subdomains
+
+2 common zones
+Forward zone: Name → IP address
+Reverse zone: IP address → Name
+
+DNS record types – VERY IMPORTANT
+| Record | Purpose                                                |
+| ------ | ------------------------------------------------------ |
+| SOA    | Start of Authority; identifies zone information        |
+| NS     | Identifies authoritative name servers                  |
+| A      | Maps hostname to IPv4 address                          |
+| PTR    | Maps IP address to hostname                            |
+| MX     | Identifies mail servers                                |
+| CNAME  | Creates hostname alias                                 |
+| Glue   | A record for a name server                             |
+| SRV    | Specifies service priority, port and other information |
+| TXT    | Stores arbitrary text                                  |
+
+Forward zone: Name → IP address using A record
+Reverse zone: IP address → Name using PTR record 
+
+***Always update the SOA serial number after modifying zone data
+
+DNS commands
+dig uow.edu.au NS      # retrieves domain's name servers
+dig uow.edu.au MX      # retrieves domain's mail servers
+
+
+
+Ex qn:
+
+What is SNMP?
+SNMP is a protocol used to monitor, manage and diagnose network devices and their performance.
+
+What is MIB?
+MIB is a collection of definitions and information describing managed network resources and their properties.
+
+What is DNS?
+It is a distributed database that translates domain names into IP addresses and IP addresses back into domain names
+
+What is a DNS zone?
+It is a portion of the DNS namespace managed by a particular authority, excluding delegated subdomains.
+
+What is a multi-homed host?
+A multi-homed host is a computer with multiple network interfaces or IP addresses.
+
+
+
+| Command                 | Expected Answer / Description                                       |
+| ----------------------- | ------------------------------------------------------------------- |
+| `ping -n google.com`    | Ping without DNS name lookups                                       |
+| `traceroute google.com` | Display the route to the destination                                |
+| `netstat -i`            | Display network interface statistics                                |
+| `netstat -a`            | Display all network connections                                     |
+| `netstat -lp`           | Display listening services                                          |
+| `netstat -rn`           | Display the routing table                                           |
+| `netstat -s`            | Display protocol statistics                                         |
+| `sar -n DEV 2 30`       | Monitor network interface activity every 2 seconds for 30 intervals |
+| `tcpdump -i eth0`       | Capture packets on the eth0 network interface                       |
+| `nmap -sT localhost`    | Perform a TCP connect scan on localhost                             |
+| `dig uow.edu.au NS`     | Find authoritative name server records                              |
+| `dig uow.edu.au MX`     | Find mail exchange (MX) records                                     |
