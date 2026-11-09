@@ -1,0 +1,47 @@
+UNIX and Network Security II
+
+6. Policy vs Procedure
+
+| Policy                           | Procedure                         |
+| -------------------------------- | --------------------------------- |
+| Defines what must be achieved.   | Explains how to achieve it.       |
+| High-level rules and guidelines. | Detailed instructions and steps.  |
+| Defines security requirements.   | Implements security requirements. |
+
+Policy = All users must use strong passwords.
+Procedure = Passwords must contain at least 12 characters, including uppercase, 
+            lowercase, numbers and symbols.
+
+7. VPN vs Firewall
+
+VPN (Virtual Private Network)
+- Creates an encrypted tunnel over a public network
+- Allows remote users to securely access private networks
+- Protects data from being intercepted during transmission
+
+Device with VPN -> tunnel -> VPN server -> Internet 
+
+***So the website destination sees a vpn ip connected NOT the device ip 
+
+Firewall
+- Monitors and filters network traffic
+- Allows or blocks traffic based on predefined rules
+- Helps prevent unauthorised access
+
+8.*** 4 Major Network Security Threats
+
+- Eavesdropping
+  - Secretly intercepting network communication
+  - Ex. Capturing unencrypted passwords over Wi-Fi
+
+- Spoofing
+  - Pretending to be another device or user
+    - Ex. IP address Spoofing
+
+- Denial of Service (DoS) 
+  - Overwhelming a system to make it unavailable 
+    - Ex. Flooding a server with excessive requests
+
+- Man in the Middle (MITM)
+  - Intercepting and potentially modifying communication between two parties
+    - Attacker intercepts communication between a client and a server 

@@ -1,2 +1,85 @@
-UNIX and Network Security
+UNIX and Network Security I
+
+1. 3 main UNIX security weaknesses
+- Social Engineering
+  - Attackers manipulate users into revealing passwords or sensitive info
+  - Ex. Phishing emails
+  - Soln. Ensure email sender is verified user 
+
+- Software Vulnerabilities
+  - Bugs or weaknesses in software can be exploited by attackers.
+  - Ex. bugs in software logic allowing bypass
+  - Soln. Regularly patch and update software
+
+- Configuration Errors
+  - Incorrect system settings can expose the system to attacks
+  - Ex. incorrect file permissions
+  - Soln. proper system config and disabling unnecessary svc 
+
+
+2. IDS vs IPS
+
+Intrusion Detection System (IDS) 
+- Detects suspicious activities and potential attacks
+- Monitors and generates alerts to admin
+- Generally does not directly block malicious traffic
+
+Intrusion Prevention System (IPS)
+- Detects suspicious activities and potential attacks
+- Monitors, blocks and responds to threats
+- Can automatically block malicious traffic
+
+
+3. Symmetric vs Asymmetric Encryption
+
+Symmetric Encryption
+- Uses 1 shared secret key to encrypt to decrypt 
+- Less safe but faster 
+- Ex. AES (Advanced Encryption Standard)
+
+Asymmetric Encryption
+- Uses a public key and private key pair for encryption and decryption
+- Public key can be shared openly 
+- More safe but slower due to more encryption/decryption processes 
+- Ex. RSA (Rivest–Shamir–Adleman) 
+
+
+4. How do public and private keys provide confidentiality and authentication?
+
+2 important asymmetric encryption operations:
+
+    A. Confidentiality (Encryption)
+    - Sender encrypts a message using the receiver's public key
+    - Receiver decrypts it using their private key
+      - Public Key -> Encrypt
+      - Private Key -> Decrypt 
+    - Only the receiver's private key can decrypt the message
+
+    B. Authentication (Digital Signature)
+    - Sender creates a digital signature using their private key
+    - Receiver verifies the signature using the sender's public key
+      - Private Key -> Sign 
+      - Public Key -> Verify 
+
+| Operation                   | Key used               |
+| --------------------------- | ---------------------- |
+| Encrypt for confidentiality | Receiver's public key  |
+| Decrypt                     | Receiver's private key |
+| Create digital signature    | Sender's private key   |
+| Verify digital signature    | Sender's public key    |
+
+
+5. Differences between Trojan, Rabbit and Rootkit
+
+- Trojan Horse
+  - Malicious software disguised as legitimate software
+    - Ex. Fake software installer that steals passwords
+
+- Rabbit (Wabbit)
+  - Malware that continuously replicates itself and consumes system resources 
+    - Ex. A prog that creates endless copies of itself until the system crashes
+
+- Rootkit 
+  - Malware designed to hide its presence and provide attackers with privileged access.
+    - Hiding malicious processes from system admin  
 
