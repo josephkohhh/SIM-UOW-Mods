@@ -1,0 +1,32 @@
+Notes II  
+
+4. Development Practices
+
+Extreme Programming (XP)
+- To improve code quality, reduce errors and adapt quickly to changing requirements
+
+Builds
+- Convert source code into a working application.
+
+Continuous Delivery (CD)
+- Keep software ready for release with manual approval. (prod = merge request approval)
+
+Continuous Deployment
+- Automatically release tested changes to users
+
+DevOps Lifecycle
+- Combine development and operations to deliver and maintain software efficiently
+
+
+5. Process Improvement – CMMI
+CMMI stands for Capability Maturity Model Integration.
+
+It is a framework used to assess and improve an organisation's software development processes.
+
+| Level | Name                   | Meaning                                                         |
+| ----- | ---------------------- | --------------------------------------------------------------- |
+| 1     | Initial                | Processes are unpredictable and inconsistent.                   |
+| 2     | Managed                | Projects have basic planning and management.                    |
+| 3     | Defined                | Standardised processes are established across the organisation. |
+| 4     | Quantitatively Managed | Processes are measured and controlled using data.               |
+| 5     | Optimising             | Continuous process improvement is emphasised.                   |

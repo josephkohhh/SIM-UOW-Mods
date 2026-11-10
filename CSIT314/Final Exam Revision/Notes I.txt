@@ -1,0 +1,149 @@
+Notes I  
+
+1. Software Processes
+
+Software Development Lifecycle (SDLC)
+It consists of 7 stages in SDLC
+- Planning: Identify the problem, objectives, scope and resources.
+- Requirements analysis: Gather and document user requirements.
+- Design: Plan the system architecture, database and interfaces.
+- Implementation: Write the source code.
+- Testing: Identify defects and verify the system works correctly.
+- Deployment: Release the software to users.
+- Maintenance: Fix bugs and improve the system.
+
+
+Waterfall vs Scrum vs Kanban
+| Approach  | Main Characteristics                                             | Suitable Situation                                      |
+| --------- | ---------------------------------------------------------------- | ------------------------------------------------------- |
+| Waterfall | Sequential phases; each phase is completed before the next.      | Requirements are stable and clearly defined.            |
+| Scrum     | Work is divided into short iterations called sprints.            | Requirements may change and regular feedback is needed. |
+| Kanban    | Work is visualised on a board and moves through workflow stages. | Continuous work and flexible task prioritisation.       |
+
+- waterfall for projects with clear, fixed requirements, such as constructing a building
+- scrum for projects when requirements may change such as developing mobile app with regular customer feedback
+- kanban for projects with continuous tasks such as IT support, customer svc 
+
+
+Important Scrum terminology:
+Product Backlog – prioritised list of requirements.
+Sprint – fixed-length development period.
+Sprint Planning – deciding what to complete during a sprint.
+Daily Scrum – short daily coordination meeting.
+Sprint Review – demonstrate completed work.
+Sprint Retrospective – discuss how to improve the process.
+
+
+Prototyping
+A prototype is an early version or model of a system used to understand requirements and gather feedback.
+- Ex: Build a simple FindMyID homepage to show customers how projects will be displayed before implementing the complete system
+
+Benefits of prototype
+- Clarifies unclear requirements
+- Collects early user feedback
+- Identifies usability problems
+- Reduces the risk of developing the wrong system
+
+
+2. Requirements and Design
+
+User Stories - A user story describes a system requirement from the user's perspective.
+Standard format: As a [user], I want [functionality], so that [benefit].
+- Who? [user]
+- What? [functionality]
+- Why? [benefit]
+
+
+UML Use Case Diagram - Illustrates how external actors interact with a system
+| Element         | Meaning                                                       |
+| --------------- | ------------------------------------------------------------- |
+| Actor           | External user or system interacting with the application.     |
+| Use case        | Function provided by the system.                              |
+| System boundary | Defines the scope of the system.                              |
+| Association     | Connection between actor and use case.                        |
+| `<<include>>`   | Mandatory behaviour reused by another use case.               |
+| `<<extend>>`    | Optional or conditional behaviour extending another use case. |
+
+
+B-C-E Architecture
+Boundary: Handles interaction between the user and system (e.g. user interface, API endpoint).
+Control: Handles application logic and coordinates operations.
+Entity: Represents business data and database operations.
+
+Refer to BCE diagram example
+
+Refer to class diagram example
+
+Refere to sequence diagram example
+
+4+1 View Model
+| View           | What It Describes                                         |
+| -------------- | --------------------------------------------------------- |
+| Logical        | Functional structure, classes and objects.                |
+| Development    | Software organisation, modules and components.            |
+| Process        | Runtime behaviour, processes and communication.           |
+| Physical       | Hardware and deployment environment.                      |
+| Scenarios (+1) | Use cases that connect and validate the other four views. |
+ 
+
+3. Quality and Testing
+
+Verification vs Validation
+
+Verification 
+- Checks whether the software meets specifications
+- Focuses on development correctness
+- Ex. Reviewing code against requirements.
+
+Validation
+- Checks whether the software meets user needs.
+- Focuses on the final product's usefulness.
+- Ex. Asking customers to test the application
+
+
+Static vs Dynamic Testing
+
+Static testing
+- Examines software without executing/running any program
+- Code reviews, inspections and walkthroughs.
+- Finds errors early in development.
+
+Dynamic testing
+- Executes software to identify defects.
+- Unit, integration and system testing.
+- Checks actual system behaviour.
+
+
+Types of Testing
+1. Unit testing: Tests individual functions or components.
+2. Integration testing: Tests whether different components work together.
+3. System testing: Tests the complete application.
+4. Acceptance testing: Determines whether the system meets user requirements.
+
+
+Ex for FindMyID:
+- Unit: Test whether the login function correctly validates passwords.
+- Integration: Test whether login connects correctly to the database.
+- System: Test the complete registration and login workflow.
+- Acceptance: Ask users to test whether registration and project shortlisting meet their needs.
+
+
+Test-Driven Development (TDD)
+TDD is a development approach where tests are written before the actual code.
+
+
+Writing Simple Test Cases
+A test case should contain:
+- Test case ID
+- Input or preconditions
+- Expected result
+- Actual result
+- Pass or fail status
+
+| Test              | Input                                 | Expected Result         | Actual Result             | Pass/Fail |
+| ----------------- | ------------------------------------- | ----------------------- | ------------------------- | --------- |
+| Valid login       | Correct email and password            | Login successful        | User logs in successfully | Pass      |
+| Invalid login     | Incorrect password                    | Error message displayed | Error message displayed   | Pass      |
+| Suspended account | Correct credentials, inactive account | Access denied           | User is denied access     | Pass      |
+
+
