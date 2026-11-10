@@ -6,6 +6,15 @@ Format:
 – Part C: planning and design 2 questions worth 10 marks
 
 
+Q & A
+• Do I need to remember all commands?
+– No, but you need to remember some most basic ones,
+e.g., ping www.google.com
+• Do I need to remember all the files and their formats?
+– No, but you need to remember some most basic ones,
+e.g., the password file.
+
+
 Example Qn:
 
 Part B:

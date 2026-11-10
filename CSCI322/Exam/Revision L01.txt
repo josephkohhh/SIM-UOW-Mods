@@ -1,0 +1,65 @@
+Revision L01: 
+System Admin and Computer Hardware 
+
+1. RISC vs CISC
+2. Pipelining vs Superscalar
+3. Volatile vs Non-volatile
+4. Data vs Address vs Control bus
+5. Context switching
+6. 4 OS managers
+7. HDD structure and performance
+
+
+RISC vs CISC
+- RISC uses a smaller set of simple instructions, whereas CISC uses a larger set of complex instructions. Ex. ARM 
+- RISC instructions perform simpler tasks and may require more instructions to complete a task,  
+  whereas CISC instructions can perform multiple operations in a single instruction. Ex. x86 intel/amd
+
+RISC = Simple instructions, more steps 
+CISC = Complex instructions, fewer steps
+
+
+Pipelining vs Superscalar
+- Pipelining: Overlaps Fetch, Decode and Execute stages of multiple instructions to improve throughput.
+- Superscalar: Uses multiple execution units to execute multiple instructions simultaneously in a single clock cycle.
+
+Pipelining = overlap stages
+Superscalar = multiple instructions/execution units
+
+Volatile vs Non-Volatile RAM
+- Volatile: Data disappears when power is removed. Ex. DRAM, SRAM (cache)
+- Non-volatile: Data remains after power is removed Ex. ROM, PROM, EPROM, EEPROM, magnetic storage
+
+
+3 types of data bus:
+A bus is a communication pathway connecting computer components
+- Data bus (carries actual data)
+- Address bus (where the data should go / come from)
+- Control bus (control signals: read, write, interrupt)
+
+Context switching
+- The OS saves the current process's state into its Process Control Block (PCB).
+- The OS loads the next process's saved state from its PCB, allowing the CPU to resume its execution
+
+
+4 Main OS managers
+- Memory Manager: Allocates and manages RAM.
+- Processor Manager: Schedules processes and allocates CPU time.
+- Device Manager: Controls and manages hardware devices.
+- File Manager: Organises files and manages file access.
+
+
+HDD structure and performance
+- Platter: where data is stored magnetically, 
+- Track: circular path on the platter
+- Sector: subdivision of track  
+- Cylinder: collection of tracks
+- Seek time: time taken for read/write head to reach required track 
+- Rotational latency: time waiting for the required sector to rotate under the read/write head
+
+HDD vs SSD 
+- HDD uses spinning magnetic platters, while SSD uses flash memory.
+
+2 goals of sys admin:
+- Reliability - SLA 99.99% / 99.999%
+- Security - permission 

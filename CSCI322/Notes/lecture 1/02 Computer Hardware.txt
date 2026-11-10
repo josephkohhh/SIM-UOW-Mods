@@ -170,6 +170,7 @@ A 64-bit CPU can handle larger values and addresses (memory) than a 32-bit CPU
 - 64-bit CPU can generally run 32-bit software
 - A 32-bit CPU CANNOT natively run 64-bit software
 
+***64-bit can handle more memory and larger data values
 
 ---------------------------
 2. Cache

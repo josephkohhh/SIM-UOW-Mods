@@ -1,0 +1,91 @@
+Revision L02: 
+OS and shell commands 
+
+1. Difference between kernel, terminal and shell.
+2. cron 
+3. Linux commands: cp, mv, rm, chmod.
+4. Text commands: grep, wc, sort, cut.
+5. Standard streams: stdin, stdout and stderr.
+6. Redirection operators.
+7. Pipes and combining commands.
+8. Variables and environment variables.
+9. Bash script arguments.
+10. Bash if statements and comparisons.
+11. Bash loops and while read.
+
+
+1. Kernel, terminal vs shell
+Kernel: OS core that manages hardware, memory, processes (Linux)
+Terminal: An interface that allows users to enter commands and view the output (GNOME terminal)
+Shell: A command interpreter that translates commands into instructions understood by the OS and executes them (bash)
+
+
+
+2. cron format
+┌──── minute (0-59)
+│ ┌── hour (0-23)
+│ │ ┌ day of month (1-31)
+│ │ │ ┌ month (1-12)
+│ │ │ │ ┌ day of week (0-7)
+│ │ │ │ │
+* * * * *
+
+* * * * * /home/user/script.sh  # Run a script every min
+*/5 * * * * /home/user/script.sh  # Run a script every 5min
+0 * * * * /home/user/script.sh  # Run a script every hour
+0 */2 * * * /home/user/script.sh  # Run a script every 2 hours
+0 2 * * * /home/user/script.sh  # Run a script everyday at 2:00AM
+0 22 * * 1 /home/user/script.sh  # Run a script every mon at 10:00PM
+0 9 * * 1-5 /home/user/script.sh  # Run a script Mon to Fri at 9:00 AM
+
+
+3. Linux commands: cp, mv, rm, chmod.
+
+Copy files/directories
+cp file.txt backup.txt             # Copies file.txt to backup.txt
+cp file.txt /home/user/Documents/  # Copies a file into another directory
+
+Move or rename files
+mv old.txt new.txt                 # Copies file.txt to backup.txt
+mv file.txt /home/user/Documents/  # Moves a file into another directory.
+mv folder1 /home/user/
+
+Remove files or directories
+rm -r folder1 
+rm file.txt 
+
+chmod (change file/dir permissions)
+chmod +r file.txt   # add read permission
+chmod -w file.txt   # remove write permission
+chmod +x file.txt   # add execute permission
+chmod +x script.sh  # give script.sh execute permission
+
+chmod numbers
+owner:group:others
+rwx = 7
+rw- = 6
+r-x = 5
+r-- = 4
+--- = 0 (no perm)
+
+| Command          | Meaning                                               |
+| ---------------- | ----------------------------------------------------- |
+| `chmod 777 file` | Everyone has full permissions (read, write, execute). |
+| `chmod 755 file` | Owner: full; group and others: read + execute.        |
+| `chmod 700 file` | Only owner has full permissions.                      |
+| `chmod 644 file` | Owner: read + write; others: read only.               |
+| `chmod 600 file` | Only owner can read + write.                          |
+
+
+4. Text commands: grep, wc, sort, cut
+
+grep "Alice" users.txt  # search for alice in users.txt
+wc users.txt # count words in a file 
+
+
+5. Standard streams: stdin, stdout and stderr.
+| Stream   | Full name       | File descriptor | Meaning                 |
+| -------- | --------------- | --------------- | ----------------------- |
+| `stdin`  | Standard Input  | 0               | Receives input          |
+| `stdout` | Standard Output | 1               | Displays normal output  |
+| `stderr` | Standard Error  | 2               | Displays error messages |

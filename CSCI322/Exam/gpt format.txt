@@ -1,0 +1,22 @@
+These are the CSCI322 Final Exam format and sample questions.
+
+The exam has 3 parts:
+Section	Format	Marks
+Part A	20 MCQs	20
+Part B	10 short-answer questions	20
+Part C	2 planning and design questions	10
+Total		50
+
+What this tells us about exam preparation
+1. Part A – MCQ: Understand key concepts, terminology, differences and purposes.
+2. Part B – Short answer: Be able to explain concepts clearly and write basic Linux commands.
+3. Part C – Planning and design: Apply your knowledge to practical Linux server scenarios. Explain your design choices and justify them.
+
+
+Q & A
+• Do I need to remember all commands?
+– No, but you need to remember some most basic ones,
+e.g., ping www.google.com
+• Do I need to remember all the files and their formats?
+– No, but you need to remember some most basic ones,
+e.g., the password file
