@@ -13,7 +13,7 @@ System Admin and Computer Hardware
 RISC vs CISC
 - RISC uses a smaller set of simple instructions, whereas CISC uses a larger set of complex instructions. Ex. ARM 
 - RISC instructions perform simpler tasks and may require more instructions to complete a task,  
-  whereas CISC instructions can perform multiple operations in a single instruction. Ex. x86 intel/amd
+  whereas CISC can perform multiple operations in a single instruction. Ex. x86 intel/amd
 
 RISC = Simple instructions, more steps 
 CISC = Complex instructions, fewer steps

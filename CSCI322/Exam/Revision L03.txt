@@ -1,0 +1,67 @@
+Revision L03: 
+User&Group, Filesystem, Permission
+
+1. Linux permissions - chmod, numeric permissions, directory permissions
+2. Users and groups - /etc/passwd, /etc/shadow, UID/GID
+3. Special permissions - SUID, SGID, sticky bit
+4. Hard vs symbolic links - Inodes and deletion behaviour
+5. umask - Calculate resulting permissions
+6. Mounting - Understand mount points
+7. su vs sudo - Differences and security
+
+
+1. in revision L02.txt 
+
+
+2. /etc/passwd vs /etc/shadow
+/etc/passwd stores basic user acc info, such as username, UID, GID, home directory and login shell.
+/etc/shadow stores password hashes and password ageing info. it is restricted to privileged users because it contains sensitive info.
+
+primary groups vs supplementary groups
+Primary group is the user's main group, identified by the primary GID. Supp group are additional groups the user belongs to.
+Group allows users in that group to share access permissions, files and directories.
+
+
+3. purpose of SUID, SGID and sticky bit
+SUID (set userID): executable runs with the root's effective UID.
+- Ex. root user can change pass, alice cannot change pass, SUID enabled program allows alice to change own pass with root's effective UID.
+
+SGID (set groupID): executable runs with the file group's effective GID. On directories, new files inherit the directory's group
+- Ex. A and B belong to students group, both have access to /shared, /shared have SGID enabled. When A or B creates a file 
+      inside /shared, file auto inherit students group allowing collaboration
+
+Sticky bit: restricts deletion or renaming of other users' files in shared directories 
+
+
+4. difference between hard links and symbolic links
+An Inode stores metadata of a file. 
+files with hardlinks share the same inode. Data remains as long as a hardlink exist.
+files with symbolic links has its own unique inode and stores target pathname. symbolic link can become dangling if the target is deleted making the target data inacessible
+
+
+5. purpose of umask and calculate the resulting permissions when umask is 022
+default file perm: 666 (rw-rw-rw-)
+default directory perm: 777 (rwxrwxrwx)
+unmask: 022
+resulting file perm: 644 (rw-r--r--)
+result directory perm: 755 (rwxr-xr-x) 
+
+difference between file permissions and directory permissions
+file permission: rwx (view content, modify content, execute program)
+directory permission: rwx (list entries, create/delete entries, enter/traverse directory)
+
+
+6. purpose of a mount point
+Mounting attaches a filesystem (device) to a directory. 
+A mount point is the directory where the filesystem is attached.
+It allows users to access files stored on another filesystem through that directory.
+Ex. sudo mount /dev/sda4 /users
+    - /dev/sda4 = filesystem
+    - /users = directory (mount point)
+
+
+7. su vs sudo
+su - switches to another user acc (often root user) to run commands
+sudo - run commands as admin (often root user)
+sudo is preferred as it does not require users to share the root password providing security
+
