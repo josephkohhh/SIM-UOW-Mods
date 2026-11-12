@@ -1,0 +1,101 @@
+Revision L04:
+
+1	LVM: PV, VG and LV	
+2	RAID levels	(striping, mirror, parity) 
+3	ZFS features	
+4   mounting - /etc/fstab	
+5	Process states	
+6	Cron vs at	
+7	SIGTERM vs SIGKILL	
+8	nice vs renice	
+9	ps vs top		
+
+
+
+1. Difference between RAID and LVM
+RAID combines multiple disks to improve storage performance and provide data redundancy in case of disk failure
+LVM combines PVs into VG and then creating LVs to allow flexible storage allocation and resizing
+
+PV, VG and LV are components of LVM to manage flexible storage allocation and resizing 
+PV: Physical Volume prepared for LVM use
+VG: Volume Group are storage pool created by combining 1 or more PVs 
+LV: Logical Volume allocated from a VG. It can be formatted and mounted like a partition 
+
+
+2. RAID 4 (dedicated parity) vs RAID 5 (distributed parity)
+Parity means extra info (calculated from data) used to recover lost data if a disk fails 
+RAID 4 (dedicated parity): 1 specific disk stores all parity info
+RAID 5 (distributed parity): parity info is spread across all disks  
+Instead concentrating the workload on 1 disk (creates bottleneck), workload is distributed
+
+RAID-Z1 vs RAID-Z2
+RAID-Z1 uses single parity and can tolerate 1 disk failure
+RAID-Z2 uses double parity and can tolerate 2 disk failures 
+
+
+3. ZFS 3 impt features
+ZFS is a fs manager that provides data integrity and storage management
+Checksums: 
+- Calculates checksums to detect data corruption.
+- Verifies that data has not been accidentally modified or damaged
+
+Self-healing
+- Automatically detects and repairs corrupted data when redundancy (e.g. mirroring or RAID-Z) is available
+- Uses a correct copy to repair damaged data
+Snapshots and Clones
+
+Snapshots and clones
+- Snapshots preserve filesystem states for recovery
+- Clones create writable copies based on snapshots
+
+
+4. purpose of /etc/fstab? Why is it important?
+/etc/fstab is a config file that defines filesystems and mountpoints.
+it allows auto mounting during system startup 
+
+
+5. program vs process:
+Program: A set of instructions stored in a file.
+Process: A program that is currently executing.
+
+PID vs PPID:
+PID: Unique identifier assigned to a process.
+PPID: Identifier of the parent process that created it.
+
+user process vs a daemon
+user process: A process started by a user to perform a task
+daemon: A background process that provides svc without direct user interaction
+
+R vs S process states
+R (Running): Process is running or ready to run
+S (Sleeping): Process is waiting for an event
+
+
+6. Cron vs at	
+both are task schedulers
+cron: schedule command/script to run REPEATEDLY at specific intervals
+at: schedule command/script to run ONCE at specific future time 
+
+
+7.	SIGTERM vs SIGKILL	
+Both are used to terminate a process
+SIGTERM: Politely requests a process to terminate, allowing it to clean up before exiting.
+SIGKILL: Force terminates a process without allowing it to clean up.
+
+
+8.	nice vs renice	
+nice: Set priority when starting a process. Lower niceness value = higher scheduling priority
+renice: Change priority of an existing process
+
+
+9. ps vs top		
+ps: displays a snapshot of currently running processes 
+top: displays running processes in realtime and continuously updates process info   
+
+
+
+
+For Section C (5marks):
+- LVM storage expansion.
+- RAID configuration and fault tolerance.
+- Automated disk monitoring or backup scheduling. 
