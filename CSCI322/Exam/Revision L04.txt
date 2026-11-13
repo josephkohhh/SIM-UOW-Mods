@@ -21,6 +21,10 @@ PV: Physical Volume prepared for LVM use
 VG: Volume Group are storage pool created by combining 1 or more PVs 
 LV: Logical Volume allocated from a VG. It can be formatted and mounted like a partition 
 
+destructive analysis vs non-destructive analysis
+destructive analysis: Testing that modifies, overwrites or destroys existing data on the storage devices
+non-destructive analysis: Testing that examines RAID performance or configuration without intentionally destroying existing data
+
 
 2. RAID 4 (dedicated parity) vs RAID 5 (distributed parity)
 Parity means extra info (calculated from data) used to recover lost data if a disk fails 
