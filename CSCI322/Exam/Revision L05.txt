@@ -1,0 +1,236 @@
+Revision L05:
+
+1	Encapsulation vs Decapsulation
+2	MAC addresses and IP addresses
+3	network address and broadcast address.
+4   routing table
+5	difference between static NAT, dynamic NAT and PAT
+6	ARP (Address Resolution Protocol)
+7	ICMP (Internet Control Message Protocol)
+8	DNS 
+9.  Subnetting calculations, Routing tables, Supernetting
+10. Supernetting 
+
+
+
+
+1. Encapsulation vs Decapsulation
+Encapsulation: Process of adding headers and trailers to data as it travels down the OSI layers before transmission
+Decapsulation: Process of removing headers and trailers from received data as it travels up the OSI layers at the destintaion
+
+2. MAC addresses and IP addresses
+MAC = Identifies a network interface on the local link.
+IP = Identifies a device's network location for routing. 
+
+3. A computer has the IP address 192.168.1.50/24. Determine its network address and broadcast address.
+/24 CIDR notation = 255.255.255.0 (subnet mask)
+network address = 192.168.1.0 
+broadcast address = 192.168.1.255
+
+4. A router has the following routing table entry:
+Destination	   Gateway	    Genmask (subnet mask)
+192.168.2.0	   10.0.0.2	    255.255.255.0
+0.0.0.0        10.0.0.1     0.0.0.0
+
+Explain where packets destined for 192.168.2.100 will be forwarded.
+
+It will be forwarded to the next-hop gateway 10.0.0.2
+- Destination network: 192.168.2.0
+- Subnet mask: 255.255.255.0 (/24)
+- The destination IP 192.168.2.100 belongs to the network 192.168.2.0/24.
+- Therefore, the router forwards the packets to gateway 10.0.0.2.
+
+
+A computer with IP address 192.168.1.10 wants to communicate with 192.168.2.20. 
+Explain why it sends the packet to its default gateway.
+- because they belong to differnt networks 
+  - source: 192.168.1.0
+  - destination: 192.168.2.0
+- therefore, they cannot communicate directly over the same local network.
+
+
+5. what is NAT? 
+Network Address Translation allows devices on a priv network to communicate with internet using
+a public ip address.
+Ex. - PC1 pings to google.com 
+    - router receives the packet and translate the private source ip with its public ip
+    - google receives the request and sends a response to the router's public ip 
+    - router reverse translate the public dest ip to private ip and forwards resp to PC1 
+
+difference between static NAT, dynamic NAT and PAT?
+- Static NAT: One-to-one permanent mapping. (1 -> 1)
+- Dynamic NAT: Maps private IPs using a public IP pool temporary. (1 -> 1)
+- PAT: Multiple private devices share one public IP using port numbers. (n -> 1)
+
+
+Multiple computers share one public IP address when accessing the Internet. 
+Identify the NAT method used and explain how it distinguishes the connections.
+- The NAT method is Port Address Translation (PAT)
+- it allows multiple computers on a private network to share 1 public IP address 
+  by assigning different port numbers to each connection.
+
+
+6. ARP (Address Resolution Protocol)
+- A device needs the destination MAC addr to communicate with another device over the same LAN.
+- ARP is used to find that. 
+
+A computer cannot communicate with another device on the same LAN because it does not know 
+the destination MAC address. Which protocol is used, and what happens next?
+- ARP (Address Resolution Protocol)
+- the computer broadcast an ARP request asking which device own the dest ip addr,
+  the device with the matching IP addr responds with an ARP reply containing its MAC addr  
+
+
+7. ICMP (Internet Control Message Protocol)
+It is a protocol to send error messages and diagnostic info about network communication
+
+A network administrator wants to check whether a remote server is reachable and identify the 
+path packets take to reach it. State the 2 appropriate Linux commands.
+
+the admin can use 
+- ping command which test connectivity by SENDING ICMP echo req and RECEIVING echo resp  
+- traceroute command which identifies the network path (routers/hops) packet take to reach dest server
+
+Ex. 
+- ping www.google.com            # Tests connectivity
+- traceroute www.google.com      # Shows the route taken by packets
+
+
+8. DNS A record vs PTR record 
+- A record: forward lookup = domain name -> ipv4 addr
+- PTR record: reverse lookup = ipv4 addr -> domain name 
+
+dig vs nslookup 
+- dig command returns detailed info such as dns server responsse, query time, ip address, etc
+- nslookup command returns simpler dns query results 
+
+
+10. Combine 4 network into 1 network
+
+Network	        IP address range
+192.168.0.0/24	192.168.0.0 – 192.168.0.255
+192.168.1.0/24	192.168.1.0 – 192.168.1.255
+192.168.2.0/24	192.168.2.0 – 192.168.2.255
+192.168.3.0/24	192.168.3.0 – 192.168.3.255
+
+Each /24 network contains 256 IP addresses
+We want to combine all 4 into 1 network.
+
+***Rmb:
+1 bit = 2 networks
+
+So we have 4 networks = 2 bits
+
+Our original prefix is /24, so 24 - 2 = /22 
+
+/22 is 2 octets + 6 bits = 255.255.252.0 (subnet mask)
+
+block size = 256 - 252 = 4 (increments of 4)
+
+Answer:
+192.168.0.0/22
+Subnet mask: 255.255.252.0
+network address: 192.168.0.0
+usable IP range: 192.168.0.1 – 192.168.3.254
+broadcast address: 192.168.3.255
+Usable hosts: 1022 (32-22=10 , 2^10-2=1022)
+
+
+
+
+
+
+Part C:
+
+1. Design a network with NAT and routing
+
+A company has 2 internal networks connected through a router.
+- Network A: 192.168.1.0/24
+- Network B: 192.168.2.0/24
+- Router connects both networks to the Internet
+
+Explain how you would configure the network to allow:
+A. Devices in Network A to communicate with Network B.
+B. Both networks to access the Internet.
+C. Private IP addresses to access external websites.
+
+
+A. to allow Network A to communicate with Network B:
+   - Enable IP forwarding on the router
+   - Configure the correct IP addresses on both router interfaces 
+   - Set the default gateway on each network's devices 
+
+B. to allow both networks to access Internet:
+   - Create a default route pointing towards the Internet
+     - Ex. 0.0.0.0/0 → ISP gateway
+
+C. to allow private IP addreses to access external websites:
+   - The router needs NAT to translate private IP addr to public IP addr 
+   - use PAT as it allows multiple devices with private IP to share 1 public IP 
+     by assigning different port no. to each connection 
+
+
+
+
+2. Design a network using subnetting 
+
+A company has been allocated the network 192.168.10.0/24
+
+The company needs 3 separate networks:
+- Administration: 50 hosts
+- Students: 25 hosts
+- Servers: 10 hosts
+
+Design an appropriate IP addressing scheme. Include the 
+- network address
+- subnet mask
+- usable IP range and broadcast address for each Network
+
+Ans:
+step1. Calc how many host bits each network needs: 
+    2^h - 2 
+    2^6 - 2 = 62 (admin)
+    2^5 - 2 = 30 (students)
+    2^4 - 2 = 14 (servers)
+
+step2. Calc the CIDR prefix notation:
+    32 - host bits 
+    32 - 6 = /26 
+    32 - 5 = /27
+    32 - 4 = /28 
+
+step3. Calc the subnet masks:
+    (128+64+32+16+8+4+2+1=255)
+    /26 = 255.255.255.192 (admin)
+    /27 = 255.255.255.224 (students)
+    /28 = 255.255.255.240 (servers)
+
+step4. Calc the block size:
+    256 - last octet 
+    256 - 192 = 64 (admin)
+    256 - 224 = 32 (students)
+    256 - 240 = 16 (servers)
+
+step5. Assign network addresses:
+    original network = 192.168.10.0/24
+    
+    admin (.0 to .63):
+    - network addr: 192.168.10.0
+    - usable IP range: 192.168.10.1 - 192.168.10.62
+    - broadcast address: 192.168.10.63
+
+    students (.64 to .95)
+    - network addr: 192.168.10.64
+    - usable IP range: 192.168.10.65 - 192.168.10.94
+    - broadcast address: 192.168.10.95
+
+    servers (.96 to .111)
+    - network addr: 192.168.10.96
+    - usable IP range: 192.168.10.97 - 192.168.10.110
+    - broadcast address: 192.168.10.111
+
+
+
+
+
+

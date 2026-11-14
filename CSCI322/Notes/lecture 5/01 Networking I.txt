@@ -6,7 +6,7 @@ Layer	Name	    Responsibility
 6	Presentation	Handles data formatting, encryption and compression.
 5	Session	        Establishes, manages and terminates communication sessions.
 4	Transport	    Provides end-to-end delivery using TCP or UDP.
-3	Network	        Handles logical addressing and routing using IP.
+3	Network	        Handles logical addressing (IP) and routing between networks.
 2	Data Link	    Handles MAC addresses and Ethernet frames.
 1	Physical	    Transmits raw bits through cables, fibre or wireless signals.
 
@@ -143,9 +143,9 @@ Each /24 network contains 256 IP addresses
 We want to combine all 4 into 1 network.
 
 ***Rmb:
-1 bit allows 2 networks
+1 bit = 2 networks
 
-So we have 4 networks so 2 bits
+So we have 4 networks = 2 bits
 
 Our original prefix is /24, so 24 - 2 = /22 
 
@@ -156,7 +156,9 @@ block size = 256 - 252 = 4 (increments of 4)
 Answer:
 192.168.0.0/22
 Subnet mask: 255.255.252.0
-Network range: 192.168.0.0 – 192.168.3.255
+network address: 192.168.0.0
+usable IP range: 192.168.0.1 – 192.168.3.254
+broadcast addrr: 192.168.3.255
 Usable hosts: 1022 (32-22=10 , 2^10-2=1022)
 
 

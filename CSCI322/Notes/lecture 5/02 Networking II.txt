@@ -161,7 +161,7 @@ How DHCP works — DORA
 - 1. Discover = Client broadcasts: "Is there a DHCP server available?"
 - 2. Offer = Server offers an IP address, e.g. 192.168.1.100.
 - 3. Request = Client requests to use the offered IP address.
-- 4. 4. Acknowledge = Server confirms the assignment. Client can now use the IP address.
+- 4. Acknowledge = Server confirms the assignment. Client can now use the IP address.
 
 
 12.ICMP (Internet Control Message Protocol)
