@@ -80,6 +80,21 @@ both are task schedulers
 cron: schedule command/script to run REPEATEDLY at specific intervals
 at: schedule command/script to run ONCE at specific future time 
 
+A company wants to run backup scripts automatically every day at 2 AM. 
+Explain how to configure the scheduled task using crontab.
+
+cron format
+┌──── minute (0-59)
+│ ┌── hour (0-23)
+│ │ ┌ day of month (1-31)
+│ │ │ ┌ month (1-12)
+│ │ │ │ ┌ day of week (0-7)
+│ │ │ │ │
+* * * * *
+
+- crontab -e which will edit user's scheduled tasks
+- 0 2 * * *
+
 
 7.	SIGTERM vs SIGKILL	
 Both are used to terminate a process
@@ -103,3 +118,33 @@ For Section C (5marks):
 - LVM storage expansion.
 - RAID configuration and fault tolerance.
 - Automated disk monitoring or backup scheduling. 
+
+
+1. A company server is running out of disk space. 
+Design a solution using additional disks, PVs, VGs and LVs to expand storage 
+without rebuilding the entire storage system.
+
+use Logical Volume Management (LVM) which allows storage to be expanded 
+without rebuilding the entire storage system 
+- Install new disks to the server to increase storage capacity
+- Create physical volume (PV) so they can be managed by LVM using pvcreate
+- Add the new PVs to the existing VG using vgextend. this combines storage cap of multiple disks
+- Increase the size of the existing LV using lvextend to allocate the additional storage
+- Expand the filesystem using resize2fs (for ext4) so the operating system can use the newly allocated space
+
+
+2. A company requires data integrity, snapshots and protection against 2 disk failures.
+Recommend a ZFS configuration and explain the purpose of RAID-Z2, checksums and snapshots.
+
+Use ZFS with RAID-Z2, which provides  data integrity, snapshots and protection against 2 disk failures
+- Config ZFS storage pool using RAID-Z2 which provides distributed double parity 
+- Checksums: ZFS automatically calculates checksums to detect data corruption
+- Snapshots: Create snapshots to capture the state of a filesystem enabling data restoration/rollback to a particular point in time 
+- Storage pool: Combine multiple physical disks into a ZFS storage pool to manage sotrage efficiently
+
+
+*so storage expansion use lvm and for storage performance and redudancy use raid
+
+
+
+

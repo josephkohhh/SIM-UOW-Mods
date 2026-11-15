@@ -145,8 +145,8 @@ RAID Levels
 | RAID 0        | Striping                               | High performance; no fault tolerance             |
 | RAID 1        | Mirroring                              | At least two disks; faster reads may be possible |
 | RAID 4        | Block striping with dedicated parity   | Dedicated parity disk can become a bottleneck    |
-| RAID 5        | Block striping with distributed parity | Survives 1 disk failure                        |
-| RAID 6        | Double parity                          | Survives 2 disk failures   
+| RAID 5 (Z1)   | Block striping with distributed parity | Survives 1 disk failure                          |
+| RAID 6 (Z2)   | Double parity                          | Survives 2 disk failures   
 
 RAID 4 vs RAID 5
 - RAID 4 uses a dedicated parity disk

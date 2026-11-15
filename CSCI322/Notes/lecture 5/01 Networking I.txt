@@ -95,7 +95,7 @@ Ex 2. Given 10.10.0.0/16. Find the number of usable hosts.
 Step 1: host bits = 32 − 16 = 16
 Step 2: use formula = 2^16 -2 = 65,534 usable hosts
 
-Ex 3. Given 192.168.1.0/24. Find block size and blocksizes and suitable addresses
+Ex 3. Given 192.168.1.0/24. Find block size and suitable addresses
 
 Step 1: 
 each octet = 8 1s (128+64+32+16+8+4+2+1=255)

@@ -1,0 +1,59 @@
+Revision L07:
+
+1. IDS vs IPS
+2. symmetric vs asymmetric encryption
+3. vpn vs firewall
+4. types of network security threats
+5. 2 ways to improve UNIX system security
+
+
+
+1. Intrusion Detection System vs Intrusion Prevention System 
+IPS: IDS detects suspicious activities and alerts administrators.
+IPS: detects suspicious activities and can automatically block malicious traffic.
+
+
+2. symmetric vs asymmetric encryption
+symmetric encryption: uses 1 shared secret key for encryption and decryption.
+asymmetric encryption: - uses a public and private key pair.
+
+How are public and private keys used to provide confidentiality?
+The sender encrypts the message using the receiver's public key.
+The receiver decrypts it using their private key.
+
+How does a digital signature provide authentication?
+The sender signs the message using their private key.
+The receiver verifies the signature using the sender's public key.
+
+
+3. VPN and Firewall
+VPN creates an encrypted tunnel to protect network communication.
+Firewall monitors and filters network traffic based on predefined rules.
+
+
+4. 4 types of network security threats
+- Eavesdropping – secretly intercepting communication.
+- Spoofing – pretending to be another device or user.
+- DoS – overwhelming a system to make it unavailable.
+- MITM – intercepting and potentially modifying communication between two parties.
+
+
+5. 2 ways to improve UNIX system security
+- Regularly patch and update software
+- Configure correct file permissions and disable unnecessary svcs
+
+
+
+Section C:
+
+A company experiences suspicious network activities, including 
+- intercepted communications, 
+- impersonation and 
+- excessive traffic that makes its server unavailable.
+Identify the threats and recommend appropriate security measures
+
+The threats are Eavesdropping, Spoofing and DoS attack.
+Implement Security measure like Intrusion Prevention system which 
+detects suspicious activities and can automatically block malicious traffic.
+Also, regularly patch and update software and configure correct file permissions
+and disable unnecessary svcs. 

@@ -1,0 +1,42 @@
+Revision L06:
+
+1. SNMP and MIB
+2. FCAPS
+3. dns
+4. netstat
+
+
+1. Explain the purpose of SNMP and MIB:
+
+Simple Network Management Protocol (SNMP):
+A protocol used to monitor and manage network devices remotely, 
+allowing admin to retrieve indo, modify settings and receive alerts
+
+Management Information Base (MIB):
+A database that defines the managed projects and info available on 
+network devices for SNMP to access
+
+
+2. What is FCAPS
+FCAPS is a network management model consisting of Fault, Configuration, Accounting,
+Performance and Security Management. It provides a framework for maintaining network 
+reliability, configuration, resource usage, performance and security.
+
+
+3. difference between Recursive and Non-recursive DNS queries.
+Recursive: The DNS server finds the final IP address on behalf of the client by contacting other DNS servers if necessary.
+Non-recursive: The DNS server responds using its existing records or cache, or provides a referral to another DNS server.
+
+Master DNS vs Slave DNS
+Master DNS server: The main server that stores and manages the original DNS zone records.
+Slave DNS server: A secondary server that copies zone records from the master using zone 
+transfers and provides backup DNS services.
+
+difference between tcpdump and nmap.
+tcpdump: Captures and analyses network traffic travelling across a network.
+nmap: Scans a network to discover devices, open ports and running services.
+
+
+4. What is netstat?
+netstat is used to monitor and display network information, such as active connections, 
+listening ports, network interfaces and routing tables.
