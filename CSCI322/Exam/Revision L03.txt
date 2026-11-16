@@ -23,7 +23,7 @@ Group allows users in that group to share access permissions, files and director
 
 
 3. purpose of SUID, SGID and sticky bit
-SUID (set userID): executable runs with the root's effective UID.
+SUID (set userID): setting a user's UID with owner's effective UID to run certain commands like change pass
 - Ex. root user can change pass, alice cannot change pass, SUID enabled program allows alice to change own pass with root's effective UID.
 
 SGID (set groupID): executable runs with the file group's effective GID. On directories, new files inherit the directory's group
@@ -36,7 +36,8 @@ Sticky bit: restricts deletion or renaming of other users' files in shared direc
 4. difference between hard links and symbolic links
 An Inode stores metadata of a file. 
 files with hardlinks share the same inode. Data remains as long as a hardlink exist.
-files with symbolic links has its own unique inode and stores target pathname. symbolic link can become dangling if the target is deleted making the target data inacessible
+files with symbolic links has its own unique inode and stores target pathname. 
+symbolic link can become dangling if the target is deleted making the target data inacessible
 
 
 5. purpose of umask and calculate the resulting permissions when umask is 022

@@ -16,8 +16,8 @@ Revision L04:
 RAID combines multiple disks to improve storage performance and provide data redundancy in case of disk failure
 LVM combines PVs into VG and then creating LVs to allow flexible storage allocation and resizing
 
-PV, VG and LV are components of LVM to manage flexible storage allocation and resizing 
-PV: Physical Volume prepared for LVM use
+PV, VG and LV are components of LVM to manage flexible storage allocation and resizzing 
+PV: Physical Volume prepared for LVM use 
 VG: Volume Group are storage pool created by combining 1 or more PVs 
 LV: Logical Volume allocated from a VG. It can be formatted and mounted like a partition 
 
@@ -109,7 +109,7 @@ renice: Change priority of an existing process
 
 9. ps vs top		
 ps: displays a snapshot of currently running processes 
-top: displays running processes in realtime and continuously updates process info   
+top: displays running processes and continuously updates process info in realtime
 
 
 
@@ -117,8 +117,6 @@ top: displays running processes in realtime and continuously updates process inf
 For Section C (5marks):
 - LVM storage expansion.
 - RAID configuration and fault tolerance.
-- Automated disk monitoring or backup scheduling. 
-
 
 1. A company server is running out of disk space. 
 Design a solution using additional disks, PVs, VGs and LVs to expand storage 
