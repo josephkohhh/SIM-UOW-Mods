@@ -7,7 +7,7 @@ Goal:
 
 
       Desktop VM
-      192.168.1.2
+      192.168.1.2    
            │
            ▼
     ┌──────────────┐
@@ -89,3 +89,19 @@ Add a port forwarding rule for the VMs
   - DokuWiki: Apache delivered the DokuWiki page to your browser
 
 
+
+1. internal network
+On Desktop VM: ping 192.168.1.1
+On Server VM: ping 192.168.1.2
+
+2. NAT router (show that desktop vm can access internet thru server vm)
+On Desktop VM: ping google.com  
+
+3. DNS
+On Desktop VM: 
+ping -c 4 server.csci322.test
+dig -x 192.168.1.2
+
+On Server VM: 
+ping -c 4 desktop.csci322.test
+dig -x 192.168.1.1

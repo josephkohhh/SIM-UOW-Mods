@@ -10,10 +10,10 @@ Revision L06:
 
 Simple Network Management Protocol (SNMP):
 A protocol used to monitor and manage network devices remotely, 
-allowing admin to retrieve indo, modify settings and receive alerts
-
+allowing admin to retrieve info, modify settings and receive alerts
+`
 Management Information Base (MIB):
-A database that defines the managed projects and info available on 
+A database that defines the managed objects and info available on 
 network devices for SNMP to access
 
 
@@ -26,6 +26,8 @@ reliability, configuration, resource usage, performance and security.
 3. difference between Recursive and Non-recursive DNS queries.
 Recursive: The DNS server finds the final IP address on behalf of the client by contacting other DNS servers if necessary.
 Non-recursive: The DNS server responds using its existing records or cache, or provides a referral to another DNS server.
+
+
 
 Master DNS vs Slave DNS
 Master DNS server: The main server that stores and manages the original DNS zone records.
