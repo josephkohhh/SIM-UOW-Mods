@@ -89,3 +89,12 @@ wc users.txt # count words in a file
 | `stdin`  | Standard Input  | 0               | Receives input          |
 | `stdout` | Standard Output | 1               | Displays normal output  |
 | `stderr` | Standard Error  | 2               | Displays error messages |
+
+stdin (0): Receives input.
+stdout (1): Displays normal output.
+stderr (2): Displays error messages.
+
+command: 
+ls existing.txt missing.txt > output.txt 2> error.txt
+- Normal output goes into output.txt.
+- Error messages go into error.txt.

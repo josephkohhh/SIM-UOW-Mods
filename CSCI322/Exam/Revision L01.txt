@@ -11,9 +11,11 @@ System Admin and Computer Hardware
 
 
 RISC vs CISC
-- RISC uses a smaller set of simple instructions, whereas CISC uses a larger set of complex instructions. Ex. ARM 
-- RISC instructions perform simpler tasks and may require more instructions to complete a task,  
-  whereas CISC can perform multiple operations in a single instruction. Ex. x86 intel/amd
+- RISC uses a smaller set of simple instructions to perform simple tasks.
+  More instructions may be needed to complete a task. Ex. ARM 
+- CISC uses a larger set of complex instructions to perform complex tasks. 
+  Less instructions is required to complete a task. Ex. x86 intel/amd
+
 
 RISC = Simple instructions, more steps 
 CISC = Complex instructions, fewer steps
@@ -44,7 +46,7 @@ Context switching
 
 4 Main OS managers
 - Memory Manager: Allocates and manages RAM.
-- Processor Manager: Schedules processes and allocates CPU time.
+- Process Manager: Schedules processes and allocates CPU time.
 - Device Manager: Controls and manages hardware devices.
 - File Manager: Organises files and manages file access.
 
@@ -54,7 +56,7 @@ HDD structure and performance
 - Track: circular path on the platter
 - Sector: subdivision of track  
 - Cylinder: collection of tracks
-- Seek time: time taken for read/write head to reach required track 
+- Seek time: Time taken for the read/write head to move to the correct track
 - Rotational latency: time waiting for the required sector to rotate under the read/write head
 
 HDD vs SSD 
