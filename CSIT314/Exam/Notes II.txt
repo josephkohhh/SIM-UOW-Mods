@@ -2,17 +2,27 @@ Notes II
 
 4. Development Practices
 
-Extreme Programming (XP)
+Extreme Programming (XP) aka pair programming
 - To improve code quality, reduce errors and adapt quickly to changing requirements
+- Ex. 2 devs assigned to build a feature (pair prog) write automated tests before implementing features
 
 Builds
 - Convert source code into a working application.
+- Ex. the build process compiles the code that can be deployed to server and ship/release to users  
+
+Continous Integration (CI)
+- Frequently mergeing developer code changes into a shared repo follwowed by builds and Tests
+- Ex. merge from feature/devA and feature/devB
 
 Continuous Delivery (CD)
 - Keep software ready for release with manual approval. (prod = merge request approval)
+- Ex. automate running unit/integration tests whenerver new code is merged 
+- Automated testing, manual production release.
 
 Continuous Deployment
 - Automatically release tested changes to users
+- Ex. build a pipeline that can auto build source code and promote to diff env like (dev -> sit -> qa -> prod)
+- Automated testing and automated production release.
 
 DevOps Lifecycle
 - Combine development and operations to deliver and maintain software efficiently

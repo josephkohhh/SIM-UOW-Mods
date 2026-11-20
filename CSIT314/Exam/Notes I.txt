@@ -85,6 +85,19 @@ Refere to sequence diagram example
 | Physical       | Hardware and deployment environment.                      |
 | Scenarios (+1) | Use cases that connect and validate the other four views. |
  
+Ex. 
+- Logical View:     Customer, Order and FoodItem classes
+
+- Development View: The system is divided into Customer Management, 
+                    Ordering and Payment modules.
+
+- Process View:     Customer submits an order, and the system 
+                    processes payment while updating the order status.
+
+- Physical View:    The app runs on a web server connected to a database server.
+
+- Scenario View:    A customer logs in, selects food, adds items to the cart and places an order.
+
 
 3. Quality and Testing
 
@@ -93,12 +106,16 @@ Verification vs Validation
 Verification 
 - Checks whether the software meets specifications
 - Focuses on development correctness
-- Ex. Reviewing code against requirements.
+- Ex. Reviewing code against requirements. Password contains 8 characters
 
 Validation
 - Checks whether the software meets user needs.
-- Focuses on the final product's usefulness.
-- Ex. Asking customers to test the application
+- Focuses on the final product whether it meets actual user needs.
+- Ex. Asking customers to test the application.
+
+
+Verification: Are we building the product right?
+Validation: Are we building the right product?
 
 
 Static vs Dynamic Testing
@@ -130,6 +147,8 @@ Ex for FindMyID:
 
 Test-Driven Development (TDD)
 TDD is a development approach where tests are written before the actual code.
+- it helps detect bugs early because developers test their code continuously throughout development, 
+  making errors easier and cheaper to fix
 
 
 Writing Simple Test Cases

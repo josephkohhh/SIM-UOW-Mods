@@ -1,0 +1,111 @@
+Mock Exam:
+
+Part A – Fill in the blanks (10 marks)
+
+Q1. Software Development Lifecycle (1 mark)
+The software development lifecycle (SDLC) describes the stages involved in developing software. The stage where developers identify what the system should do and gather information from stakeholders is called __________.
+
+Q2. Software Processes (1 mark)
+A software development approach where requirements are defined at the beginning and each development phase must be completed before moving to the next phase is known as the __________ model.
+
+Q3. Scrum (1 mark)  
+In Scrum, development work is divided into fixed-length iterations called __________.
+
+Q4. Kanban (1 mark)
+Kanban uses a visual board to manage tasks and control the amount of work being performed simultaneously. This limitation is known as __________.
+
+Q5. Requirements Engineering (1 mark)
+A short description of a system feature written from the perspective of an end user is called a __________.
+
+Q6. UML Modelling (1 mark)
+In a UML use case diagram, the person or external system interacting with the system is represented by an __________.
+
+Q7. Testing (2 marks)
+a) Testing that examines source code or documents without executing the program is called __________ testing.
+b) Testing that involves executing the software to identify defects is called __________ testing.
+
+Q8. Development Practices (1 mark)
+The practice of automatically deploying every code change that successfully passes the testing pipeline into production is known as Continuous __________.
+
+Q9. Process Improvement (1 mark)
+CMMI provides organisations with a framework to assess and improve their software development processes. Its highest maturity level is Level __________.
+
+
+
+
+Part B – Project Scenario (40 marks)
+7 questions | 40 marks
+Scenario: Online University Course Registration System
+A university wants to develop an Online Course Registration System to replace its existing manual registration process.
+
+Currently, students must visit the administration office to register for courses. This process is slow and often results in errors, such as students registering for courses they are not eligible to take.
+
+The new system should provide the following features:
+- Students can log in and browse available courses.
+- Students can register for courses if they meet the prerequisites.
+- Students can drop courses before the registration deadline.
+- Administrators can create, update and remove courses.
+- Administrators can view student registration records.
+- The system should prevent students from registering for courses that have reached maximum capacity.
+The university has also stated that requirements may change during development because different departments may request additional features.
+
+Q10. Software Development Processes (5 marks)
+a) Explain TWO differences between the Waterfall and Scrum development approaches. (2 marks)
+
+b) Recommend either Waterfall or Scrum for this project. Justify your choice based on the scenario. (3 marks)
+
+Q11. Requirements Engineering (5 marks)
+a) Write TWO user stories for the Online Course Registration System using the following format:
+
+"As a [user], I want [feature], so that [benefit]." (2 marks)
+
+b) Identify TWO functional requirements from the scenario. (2 marks)
+
+c) State ONE non-functional requirement that would be important for this system. (1 mark)
+
+Q12. UML Use Case Diagram (6 marks)
+Based on the scenario:
+
+a) Identify TWO actors that interact with the system. (2 marks)
+
+b) Identify FOUR use cases that should appear in the use case diagram. (2 marks)
+
+c) Explain the purpose of the system boundary in a UML use case diagram. (2 marks)
+
+Q13. System Modelling (6 marks)
+The university wants to understand how the system handles course registration.
+
+a) Identify the three components of the Boundary-Control-Entity (B-C-E) model and briefly explain the responsibility of each. (3 marks)
+
+b) Identify ONE possible Boundary object, ONE Control object and ONE Entity object for the course registration process. (3 marks)
+
+Q14. Software Architecture and Design (6 marks)
+The development team is preparing the system architecture.
+
+a) Explain the purpose of the Logical View in the 4+1 View Model. (2 marks)
+
+b) Explain the purpose of the Development View. (2 marks)
+
+c) Explain the purpose of the Process View. (2 marks)
+
+Q15. Software Quality and Testing (7 marks)
+The development team has implemented the course registration feature.
+
+However, some students report that they can register for courses even when the courses have reached maximum capacity.
+
+a) Explain the difference between Verification and Validation. (2 marks)
+
+b) Identify whether checking the source code to ensure that the maximum-capacity condition has been implemented correctly is Verification or Validation. Explain your answer. (2 marks)
+
+c) Write TWO test cases to test the course registration feature. Each test case should include:
+- Test input or condition
+- Expected result (3 marks)
+
+Q16. Development Practices and Process Improvement (5 marks)
+The university wants the development team to improve software delivery and development quality.
+
+a) Explain ONE benefit of Test-Driven Development (TDD). (1 mark)
+
+b) Explain the difference between Continuous Delivery and Continuous Deployment. (2 marks)
+
+c) Explain the purpose of CMMI maturity levels for a software development organisation. (2 marks)
