@@ -105,7 +105,13 @@ Q16. Development Practices and Process Improvement (5 marks)
 The university wants the development team to improve software delivery and development quality.
 
 a) Explain ONE benefit of Test-Driven Development (TDD). (1 mark)
+- TDD helps detect bugs early because tests are written before the actual code, 
+  allowing developers to identify errors during development
 
 b) Explain the difference between Continuous Delivery and Continuous Deployment. (2 marks)
 
 c) Explain the purpose of CMMI maturity levels for a software development organisation. (2 marks)
+
+
+
+

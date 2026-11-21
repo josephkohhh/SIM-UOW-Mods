@@ -11,21 +11,17 @@ Builds
 - Ex. the build process compiles the code that can be deployed to server and ship/release to users  
 
 Continous Integration (CI)
-- Frequently mergeing developer code changes into a shared repo follwowed by builds and Tests
-- Ex. merge from feature/devA and feature/devB
+- Developers frequently merge their code changes into a shared repo.
+- Every merge triggers automated builds and tests to detect errors early.
+- Helps ensure that different developers' code works together.
 
 Continuous Delivery (CD)
-- Keep software ready for release with manual approval. (prod = merge request approval)
-- Ex. automate running unit/integration tests whenerver new code is merged 
-- Automated testing, manual production release.
+- Automatically builds, tests and prepares software so that it is always ready for release.
+- The software can be deployed to prod, but a manual approval is required before the prod release.
 
 Continuous Deployment
-- Automatically release tested changes to users
-- Ex. build a pipeline that can auto build source code and promote to diff env like (dev -> sit -> qa -> prod)
-- Automated testing and automated production release.
-
-DevOps Lifecycle
-- Combine development and operations to deliver and maintain software efficiently
+- Automatically builds, tests and deploys every successful code change into 
+  production without requiring manual approval.
 
 
 5. Process Improvement – CMMI

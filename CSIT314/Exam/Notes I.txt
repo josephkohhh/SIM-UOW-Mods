@@ -28,6 +28,7 @@ Waterfall vs Scrum vs Kanban
 Important Scrum terminology:
 Product Backlog – prioritised list of requirements.
 Sprint – fixed-length development period.
+Sprint goal - objective of the sprint.
 Sprint Planning – deciding what to complete during a sprint.
 Daily Scrum – short daily coordination meeting.
 Sprint Review – demonstrate completed work.
@@ -109,7 +110,7 @@ Verification
 - Ex. Reviewing code against requirements. Password contains 8 characters
 
 Validation
-- Checks whether the software meets user needs.
+- Checks whether the software meets the user needs 
 - Focuses on the final product whether it meets actual user needs.
 - Ex. Asking customers to test the application.
 
